@@ -1,108 +1,52 @@
-<div align="center">
-  <img src="assets/bithesis_icon.svg" alt="BIThesis Icon">
-
-📖 _Unofficial LaTeX templates for your bachelor graduation thesis (and maybe more)._
-
-[![BIThesis](./assets/bithesis_badge_solid.svg)](https://bithesis.spencerwoo.com/)
-[![Chinese version](./assets/chinese.svg)](./README-zh.md)
-[![Latexmk](https://badgen.net/badge/compiler/Latexmk?color=blue&labelColor=2b2b2b)](https://mg.readthedocs.io/latexmk.html)
-[![License](https://badgen.net/github/license/spencerwooo/BIThesis?color=008080&labelColor=2b2b2b)](./LICENSE)
-[![Join on Slack](https://img.shields.io/badge/Slack%20Community-BIThesis-black?logo=slack&style=social&logoColor=2eb67d)](https://join.slack.com/t/bithesis/shared_invite/zt-epmzkyk0-fJRsUS36AlwMNB2AI_Q~Vw)
-
-</div>
-
-<h2>Welcome</h2>
-
-BIThesis is an unofficial LaTeX template set for your **bachelor graduation thesis** and corresponding reports here at BIT. Hand-crafted following the specifications made by the _[Dept. of Undergraduate Academic Affairs](http://jwc.bit.edu.cn/)_ of _[Beijing Institute of Technology](http://http://www.bit.edu.cn/)_.
-
-> This project is supported by the _[Dept. of Undergraduate Academic Affairs, BIT](http://jwc.bit.edu.cn/)_ and the _[School of Computer Science and Technology, BIT](http://cs.bit.edu.cn/)_. See [Acknowledgements - Official Sponsors](https://bithesis.spencerwoo.com/Guide/5-Acknowledgements/Acknowledgements.html#%E5%AE%98%E6%96%B9%E8%B5%9E%E5%8A%A9-official-sponsors).
-
-<h2>Slack Community</h2>
-
-> Subscribe to new releases, ask questions, request features, etc. Come join our official community on Slack!
-
-[![Join on Slack](./assets/slack.svg)](https://join.slack.com/t/bithesis/shared_invite/zt-epmzkyk0-fJRsUS36AlwMNB2AI_Q~Vw)
-
-<h2>Table of Contents</h2>
-
-- [What's inside?](#whats-inside)
-- [How do I use BIThesis?](#how-do-i-use-bithesis)
-  - [Detailed online Wiki](#detailed-online-wiki)
-  - [PDF handbook](#pdf-handbook)
-  - [Online Video Tutorials](#online-video-tutorials)
-- [Contributing](#contributing)
-- [Contributors](#contributors)
-- [Similar Projects](#similar-projects)
-- [Release status](#release-status)
-
-## What's inside?
-
-This project aims to cover all of your essays, lab reports ... all the way to your final graduation thesis for your undergraduate studies. Currently the project is under heavy maintanence, and we aim to bring you the most reusable LaTeX templates that you can use directly for most of your works.
-
-| Template                                                         | Preview                                                                                         | Features                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Maintainer                                     |
-| :--------------------------------------------------------------- | :---------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------- |
-| **[Proposal Report](./proposal-report)**<br>（开题报告）         | <img src="https://i.loli.net/2020/02/05/HfZUaGqWSjrATbe.png" width="300px" alt="proposal" />    | <ul><li>Graduation Thesis Proposal Report</li><li>Part I of the Graduation Thesis</li><li>Includes cover page and (non-editable) review table</li><li>Includes bibliography and corresponding styles</li><li>[![open in overleaf](https://img.shields.io/badge/open%20in-Overleaf-46a247?logo=overleaf&logoColor=white&labelColor=2b2b2b)](https://www.overleaf.com/latex/templates/bei-jing-li-gong-da-xue-ben-ke-sheng-bi-ye-lun-wen-kai-ti-bao-gao-mo-ban/dgqdjptfqtrn)</li></ul>                                                                                                                            | [@SpencerWoo](https://github.com/spencerwooo)  |
-| **[Graduation Thesis](./graduation-thesis)**<br>（毕业设计论文） | <img src="https://i.loli.net/2020/03/01/hISQql1W6oFgKsC.png" width="300px" alt="grad_thesis" /> | <ul><li>The one and only! **Graduation Thesis**</li><li>With full cover page, abstract, reference and appendix support</li><li>Full equation, tabular and figure caption support</li><li>Bibliography formatted following the specifications of GBT7714-2015</li><li>Compatible with the specifications of BIT School of CS Class 2020.</li><li>[![open in overleaf](https://img.shields.io/badge/open%20in-Overleaf-46a247?logo=overleaf&logoColor=white&labelColor=2b2b2b)](https://www.overleaf.com/latex/templates/bei-jing-li-gong-da-xue-ben-ke-sheng-bi-ye-she-ji-lun-wen-mo-ban/mwhjgqsncxxg)</li></ul> | [@SpencerWoo](https://github.com/spencerwooo)  |
-| **[Lab Report](./lab-report)**<br>（实验报告）                   | <img src="https://i.loli.net/2020/03/08/txzGcKv9YSel3IX.png" width="300px" alt="lab_report" />  | <ul><li>Basic Lab Report Template</li><li>Includes cover page, BIT logo and assets folder</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | [@Silverster](https://github.com/Silverster98) |
-
-## How do I use BIThesis?
-
-### Detailed online Wiki
-
-**For a comprehensive guide on how to install LaTeX, compile BIThesis, and use a single one of BIThesis' template, please refer to BIThesis' Wiki. 👇**
-
-[![BIThesis Wiki](https://img.shields.io/badge/BIThesis-Wiki-009944?logo=wikipedia&labelColor=2b2b2b&style=for-the-badge)](https://bithesis.spencerwoo.com/)
-
-Specifically, detailed guides on how to use a single one of the templates are available at:
-
-- [BIThesis Wiki: Proposal report](https://bithesis.spencerwoo.com/Guide/3-Templates/Proposal-Report.html)
-- [BIThesis Wiki: Graduation thesis](https://bithesis.spencerwoo.com/Guide/3-Templates/Final-Graduation-Thesis.html)
-- [BIThesis Wiki: Lab report](https://bithesis.spencerwoo.com/Guide/3-Templates/Lab-Report.html)
-
-### PDF handbook
-
-We also provide a PDF handbook on how to use BIThesis. You can download the PDF version of the BIThesis handbook here: [`bithesis-documentation.pdf`](https://github.com/spencerwooo/BIThesis/releases/latest).
-
-### Online Video Tutorials
-
-You can watch online video tutorials here:
-
-- Bilibili: [BIThesis —— 教你优雅地撰写论文 | LaTeX 毕设模板系列教程](https://www.bilibili.com/video/BV1GT4y1V78d/)
-- BIThesis documentation videos (including some code which are referenced in the videos): [BIThesis - Videos](https://bithesis.spencerwoo.com/Video/)
-
-## Contributing
-
-For details, please see the [contributing doc](./contributing.md).
-
-## Contributors
-
-> This project exists thanks to all the contributors. For more information, please see: [Acknowledgements](https://bithesis.spencerwoo.com/Guide/5-Acknowledgements/Acknowledgements.html).
-
-[![](https://sourcerer.io/fame/spencerwooo/spencerwooo/BIThesis/images/0)](https://sourcerer.io/fame/spencerwooo/spencerwooo/BIThesis/links/0)[![](https://sourcerer.io/fame/spencerwooo/spencerwooo/BIThesis/images/1)](https://sourcerer.io/fame/spencerwooo/spencerwooo/BIThesis/links/1)[![](https://sourcerer.io/fame/spencerwooo/spencerwooo/BIThesis/images/2)](https://sourcerer.io/fame/spencerwooo/spencerwooo/BIThesis/links/2)[![](https://sourcerer.io/fame/spencerwooo/spencerwooo/BIThesis/images/3)](https://sourcerer.io/fame/spencerwooo/spencerwooo/BIThesis/links/3)[![](https://sourcerer.io/fame/spencerwooo/spencerwooo/BIThesis/images/4)](https://sourcerer.io/fame/spencerwooo/spencerwooo/BIThesis/links/4)[![](https://sourcerer.io/fame/spencerwooo/spencerwooo/BIThesis/images/5)](https://sourcerer.io/fame/spencerwooo/spencerwooo/BIThesis/links/5)[![](https://sourcerer.io/fame/spencerwooo/spencerwooo/BIThesis/images/6)](https://sourcerer.io/fame/spencerwooo/spencerwooo/BIThesis/links/6)[![](https://sourcerer.io/fame/spencerwooo/spencerwooo/BIThesis/images/7)](https://sourcerer.io/fame/spencerwooo/spencerwooo/BIThesis/links/7)
-
-## Similar Projects
-
-- [北京理工大学硕士（博士）学位论文 LaTeX 模板](https://github.com/BIT-thesis/LaTeX-template)
-- [fduthesis（复旦大学论文模板）](https://github.com/stone-zeng/fduthesis)
-- [上海交通大学 XeLaTeX 学位论文及课程论文模板](https://github.com/sjtug/SJTUThesis)
-- ……
-
-## Release status
-
-| CI             | Build status                                                                                                                                                                              |
-| :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GitHub Release | ![GitHub Release](https://github.com/spencerwooo/BIThesis/workflows/Release/badge.svg?branch=master)                                                                                      |
-| Vercel Build   | [![Vercel Build Status](https://badgen.net/https/now.swoo.workers.dev/dpl_JAAPnJYBFWWqVLjtNXcxaU8FJDk6?label=Vercel&labelColor=2b2b2b&icon=zeit)](https://vercel.com/spencerwoo/bithesis) |
-
-
-<!-- ## Disclaimer
-
-This project is not validated by the _Department of Undergraduate Academic Affairs_ of _Beijing Institute of Technology_, nor is it affiliated with _Beijing Institute of Technology_. Use this template at your own risk. 笔芯 (´▽`ʃ♡ƪ) -->
-
+---
+home: true
+heroImage: /img/bithesis.png
+heroText: null
+tagline: 北京理工大学非官方本科生毕业设计、毕业论文的 LaTeX 模板与更多
+actionText: 进入文档 →
+actionLink: /Guide/
+features:
+  - title: 📝 专业的排版格式
+    details: LaTeX 样式与内容分离的设计，一次撰写、处处开花
+  - title: 🔣 畅快的公式插入
+    details: 极具学术风范的专业公式书写，让理工同学直呼厉害
+  - title: 🚀 稳健的参考文献管理
+    details: 用 BibTeX 管理文献库，妈妈再也不用担心参考文献格式问题了
+footer: 2020 ©Spencer Woo. Released under the LaTeX Project Public License.
 ---
 
-📖 **BIThesis** ©Spencer Woo. Released under the [LaTeX Project Public License](LICENSE).
+## BIThesis 是什么？
 
-Authored by Spencer Woo. Maintained with help from [contributors](https://github.com/spencerwooo/BIThesis/graphs/contributors).
+BIThesis 是针对北京理工大学本科同学毕业设计、毕业论文制作的一个非官方的 LaTeX 模板，BIThesis 同时也包括其他本科学习中涉及到的文献综述、实验报告等的 LaTeX 模板。
 
-[@Portfolio](https://spencerwoo.com/) · [@Blog](https://blog.spencerwoo.com/) · [@GitHub](https://github.com/spencerwooo)
+## Q&A
+
+### Q：我真的可以直接将 BIThesis 模板用于我的毕业设计吗？
+
+**A：可以的。**
+
+- 本项目已经经由北京理工大学教务部确认，可以用于北京理工大学本科生毕业论文、毕业设计的撰写之中。更多细节，请进入文档详细了解。
+- 本项目同时也获得了 [北京理工大学教务部](http://jwc.bit.edu.cn/)、[北京理工大学计算机学院](http://cs.bit.edu.cn/) 的认可、背书与大力支持。详见：[致谢 - 官方赞助](/Guide/5-Acknowledgements/Acknowledgements)。
+
+### Q：BIThesis 都包含哪些模板？
+
+**A：如下表。**
+
+| 模板                                                                | 预览                                                                                                          | 特性                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | 维护人                                         |
+| :------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------- |
+| **[本科生开题报告](/Guide/3-Templates/Proposal-Report.md)**         | <img src="https://i.loli.net/2020/02/05/HfZUaGqWSjrATbe.png" width="200px" height="auto" alt="proposal" />    | <ul><li>毕业设计开题报告</li><li>毕设第一部分内容</li><li>包括封面（不可编辑）和评审表</li><li>包括参考文献和相关样式</li><li>[![open in overleaf](https://img.shields.io/badge/open%20in-Overleaf-46a247?logo=overleaf&logoColor=white&labelColor=2b2b2b)](https://www.overleaf.com/latex/templates/bei-jing-li-gong-da-xue-ben-ke-sheng-bi-ye-lun-wen-kai-ti-bao-gao-mo-ban/dgqdjptfqtrn)</li></ul>                                                                                           | [@SpencerWoo](https://github.com/spencerwooo)  |
+| **[本科生毕业论文](/Guide/3-Templates/Final-Graduation-Thesis.md)** | <img src="https://i.loli.net/2020/03/01/hISQql1W6oFgKsC.png" width="200px" height="auto" alt="grad_thesis" /> | <ul><li>**毕业设计论文模板**</li><li>包括封面，摘要，参考文献和附录等支持</li><li>包括公式，表格和图片等支持</li><li>按 GBT7714-2015 规范编排的书目</li><li>符合北京理工大学毕业论文 2016 级（2020 届）版本的格式要求。</li><li>[![open in overleaf](https://img.shields.io/badge/open%20in-Overleaf-46a247?logo=overleaf&logoColor=white&labelColor=2b2b2b)](https://www.overleaf.com/latex/templates/bei-jing-li-gong-da-xue-ben-ke-sheng-bi-ye-she-ji-lun-wen-mo-ban/mwhjgqsncxxg)</li></ul> | [@SpencerWoo](https://github.com/spencerwooo)  |
+| **[通用本科生实验报告](/Guide/3-Templates/Lab-Report.md)**          | <img src="https://i.loli.net/2020/03/08/txzGcKv9YSel3IX.png" width="200px" height="auto" alt="lab_report" />  | <ul><li>基本实验报告模板</li><li>包括封面，BIT logo 和资源文件夹</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                      | [@Silverster](https://github.com/Silverster98) |
+
+### Q：我该如何使用 BIThesis？
+
+:::tip ✅ 使用注意
+请一定在阅读完毕本 BIThesis 使用 Wiki 的全部内容之后，再着手开始正式的论文写作工作。
+:::
+
+**A：两种选择。**
+
+1. 你可以直接进入「[文档指南](/Guide/)」模块进行学习参考，文档中有详细的介绍、使用方法和注意事项。
+2. 你也可以直接前往「[系列视频指导](/Video/)」，根据视频的介绍进行学习使用。
+
+无论如何，BIThesis 的教程参考都几乎涵盖了全部使用 BIThesis 所需的编译环境和基础知识。请大家放心食用。
