@@ -1,52 +1,77 @@
----
-home: true
-heroImage: /img/bithesis.png
-heroText: null
-tagline: 北京理工大学非官方本科生毕业设计、毕业论文的 LaTeX 模板与更多
-actionText: 进入文档 →
-actionLink: /Guide/
-features:
-  - title: 📝 专业的排版格式
-    details: LaTeX 样式与内容分离的设计，一次撰写、处处开花
-  - title: 🔣 畅快的公式插入
-    details: 极具学术风范的专业公式书写，让理工同学直呼厉害
-  - title: 🚀 稳健的参考文献管理
-    details: 用 BibTeX 管理文献库，妈妈再也不用担心参考文献格式问题了
-footer: 2020 ©Spencer Woo. Released under the LaTeX Project Public License.
----
+<div align="center">
+  <img src="assets/bithesis_icon.svg" alt="BIThesis Icon">
 
-## BIThesis 是什么？
+📖 _非官方本科生毕业设计毕业论文 LaTeX 模板（以及更多）在线文档 _
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/81f7b49b-59a1-46bc-ba52-02f8be71d247/deploy-status)](https://app.netlify.com/sites/vigorous-hoover-a697eb/deploys)
+[![BIThesis](./assets/bithesis_badge_solid.svg)](https://github.com/BITNP/BIThesis)
+[![License](https://badgen.net/github/license/BITNP/BIThesis-wiki?color=008080&labelColor=2b2b2b)](./LICENSE)
+[![Join on Slack](https://img.shields.io/badge/Slack%20Community-BIThesis-black?logo=slack&style=social&logoColor=2eb67d)](https://join.slack.com/t/bithesis/shared_invite/zt-epmzkyk0-fJRsUS36AlwMNB2AI_Q~Vw)
+
+</div>
+
+<h2>欢迎</h2>
 
 BIThesis 是针对北京理工大学本科同学毕业设计、毕业论文制作的一个非官方的 LaTeX 模板，BIThesis 同时也包括其他本科学习中涉及到的文献综述、实验报告等的 LaTeX 模板。
 
-## Q&A
+**本项目为 [BIThesis 在线文档](https://bithesis.bitnp.net) 的代码仓库。如果你仅仅想使用 BIThesis，请访问 [BIThesis 宏包](https://github.com/BITNP/BIThesis)仓库以及 [BITthesis 脚手架](https://github.com/BITNP/BIThesis-scaffold)仓库。** 
 
-### Q：我真的可以直接将 BIThesis 模板用于我的毕业设计吗？
 
-**A：可以的。**
+> 本项目获得了 [北京理工大学教务部](http://jwc.bit.edu.cn/)、[北京理工大学计算机学院](http://cs.bit.edu.cn/) 的认可、背书与大力支持。详见：[致谢 - 官方赞助](https://bithesis.bitnp.net/Guide/5-Acknowledgements/Acknowledgements.html#%E5%AE%98%E6%96%B9%E8%B5%9E%E5%8A%A9-official-sponsors)。
 
-- 本项目已经经由北京理工大学教务部确认，可以用于北京理工大学本科生毕业论文、毕业设计的撰写之中。更多细节，请进入文档详细了解。
-- 本项目同时也获得了 [北京理工大学教务部](http://jwc.bit.edu.cn/)、[北京理工大学计算机学院](http://cs.bit.edu.cn/) 的认可、背书与大力支持。详见：[致谢 - 官方赞助](/Guide/5-Acknowledgements/Acknowledgements)。
+<h2>Slack 社区</h2>
 
-### Q：BIThesis 都包含哪些模板？
+> 订阅更新，询问问题，提出需求……来参加 Slack 上面的北理 BIThesis 官方社区！
 
-**A：如下表。**
+[![Join on Slack](./assets/slack.svg)](https://join.slack.com/t/bithesis/shared_invite/zt-epmzkyk0-fJRsUS36AlwMNB2AI_Q~Vw)
 
-| 模板                                                                | 预览                                                                                                          | 特性                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | 维护人                                         |
-| :------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------- |
-| **[本科生开题报告](/Guide/3-Templates/Proposal-Report.md)**         | <img src="https://i.loli.net/2020/02/05/HfZUaGqWSjrATbe.png" width="200px" height="auto" alt="proposal" />    | <ul><li>毕业设计开题报告</li><li>毕设第一部分内容</li><li>包括封面（不可编辑）和评审表</li><li>包括参考文献和相关样式</li><li>[![open in overleaf](https://img.shields.io/badge/open%20in-Overleaf-46a247?logo=overleaf&logoColor=white&labelColor=2b2b2b)](https://www.overleaf.com/latex/templates/bei-jing-li-gong-da-xue-ben-ke-sheng-bi-ye-lun-wen-kai-ti-bao-gao-mo-ban/dgqdjptfqtrn)</li></ul>                                                                                           | [@SpencerWoo](https://github.com/spencerwooo)  |
-| **[本科生毕业论文](/Guide/3-Templates/Final-Graduation-Thesis.md)** | <img src="https://i.loli.net/2020/03/01/hISQql1W6oFgKsC.png" width="200px" height="auto" alt="grad_thesis" /> | <ul><li>**毕业设计论文模板**</li><li>包括封面，摘要，参考文献和附录等支持</li><li>包括公式，表格和图片等支持</li><li>按 GBT7714-2015 规范编排的书目</li><li>符合北京理工大学毕业论文 2016 级（2020 届）版本的格式要求。</li><li>[![open in overleaf](https://img.shields.io/badge/open%20in-Overleaf-46a247?logo=overleaf&logoColor=white&labelColor=2b2b2b)](https://www.overleaf.com/latex/templates/bei-jing-li-gong-da-xue-ben-ke-sheng-bi-ye-she-ji-lun-wen-mo-ban/mwhjgqsncxxg)</li></ul> | [@SpencerWoo](https://github.com/spencerwooo)  |
-| **[通用本科生实验报告](/Guide/3-Templates/Lab-Report.md)**          | <img src="https://i.loli.net/2020/03/08/txzGcKv9YSel3IX.png" width="200px" height="auto" alt="lab_report" />  | <ul><li>基本实验报告模板</li><li>包括封面，BIT logo 和资源文件夹</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                      | [@Silverster](https://github.com/Silverster98) |
 
-### Q：我该如何使用 BIThesis？
+## 本地编译运行
 
-:::tip ✅ 使用注意
-请一定在阅读完毕本 BIThesis 使用 Wiki 的全部内容之后，再着手开始正式的论文写作工作。
-:::
+### 克隆仓库
 
-**A：两种选择。**
+```Bash
+git clone https://github.com/BITNP/BIThesis-wiki
 
-1. 你可以直接进入「[文档指南](/Guide/)」模块进行学习参考，文档中有详细的介绍、使用方法和注意事项。
-2. 你也可以直接前往「[系列视频指导](/Video/)」，根据视频的介绍进行学习使用。
+cd BIThesis-wiki
+```
 
-无论如何，BIThesis 的教程参考都几乎涵盖了全部使用 BIThesis 所需的编译环境和基础知识。请大家放心食用。
+### 安装依赖
+
+```Bash
+yarn
+```
+
+### 编译运行
+
+你可以构建出所有文件:
+```Bash
+yarn build
+```
+
+或者实时预览:
+```Bash
+yarn dev
+```
+
+## 贡献者指南
+
+详情请查看[贡献者指南](https://github.com/BITNP/BIThesis/blob/master/contributing-zh.md)。
+
+## 贡献者
+
+> 本项目的存在离不开以下所有贡献者的辛勤贡献。更多信息请访问：[BIThesis - 致谢](https://bithesis.bitnp.net/Guide/5-Acknowledgements/Acknowledgements.html)。
+
+
+
+## 发布状态
+
+| CI             | Build status                                                                                                                                                                              |
+| :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Netlify Deploy | [![Netlify Status](https://api.netlify.com/api/v1/badges/81f7b49b-59a1-46bc-ba52-02f8be71d247/deploy-status)](https://app.netlify.com/sites/vigorous-hoover-a697eb/deploys)               |
+
+---
+
+📖 **BIThesis** ©BITNP. Released under the [LaTeX Project Public License](LICENSE).
+
+Authored by Spencer Woo. Maintained with help from [contributors](https://github.com/BITNP/BIThesis-wiki/graphs/contributors).
