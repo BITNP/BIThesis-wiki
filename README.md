@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/bithesis_icon.svg" alt="BIThesis Icon">
+  <img src="./assets/bithesis_icon.svg" alt="BIThesis Icon" />
 
 📖 _非官方本科生毕业设计毕业论文 LaTeX 模板（以及更多）在线文档 _
 
@@ -39,7 +39,7 @@ cd BIThesis-wiki
 ### 安装依赖
 
 ```Bash
-yarn
+cd wiki && yarn
 ```
 
 ### 编译运行
