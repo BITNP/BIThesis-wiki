@@ -4,6 +4,25 @@
 
 ## Maintainers
 
+### 2021
+
+<table>
+ <tr>
+    <td align="center"><img src="https://i.loli.net/2020/05/29/Z1YFSty6LRJl8Oc.png" width="100px" alt="FKY"></td>
+    <td align="center"><img src="https://i.loli.net/2021/01/14/zDawdylekZKq9op.png" width="100px" alt="guguguxiao"></td>
+    <td align="center"><img src="https://i.loli.net/2021/01/14/QAMhBaGvle9PbjY.png" width="100px" alt="Kayaks99"></td>
+    <td align="center"><img src="https://i.loli.net/2021/01/14/s9RAkaCFWpoBLub.png" width="100px" alt="DeltaHao"></td>
+  </tr>
+    <tr>
+    <td align="center"><a href="https://github.com/fky2015">FKY</a><br>💻🚧📆💬📖</td>
+    <td align="center"><a href="https://github.com/guguguxiao">guguguxiao</a><br>🚧💬📖</td>
+    <td align="center"><a href="https://github.com/Kayaks99">Kayaks99</a><br>🚧💬📖</td>
+    <td align="center"><a href="https://github.com/DeltaHao">DeltaHao</a><br>🚧💬📖</td>
+  </tr>
+  </table>
+
+### 2020
+
 <table>
   <tr>
     <td align="center"><img src="https://i.loli.net/2020/03/10/KqToYeg1buLGwsh.png" width="100px" alt="Spencer Woo"></td>
