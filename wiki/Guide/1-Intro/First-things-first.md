@@ -74,6 +74,38 @@ brew cask install mactex
 
 出现类似的输出，说明我们编译器安装应该是没有问题的。
 
+## 更新 LaTeX 环境至最新
+
+:::warning ❗ 为什么需要更新 LaTeX 环境？ 
+在 V2.0 版本以后，BIThesis 采用宏集的方式进行核心样式的发布。因此，BIThesis 的 LaTeX 模板必须和 [ bithesis 宏集](https://ctan.org/pkg/bithesis?lang=en) 一起使用。
+
+所幸，bithesis 已经被常见的 TeX 发行版收录（比如 TeX Live 以及 MiKTeX），所以更新环境是为了确保 bithesis 成功安装到你的 LaTeX 环境中。
+:::
+
+### bithesis 宏集的安装与更新
+
+TeX Live 的包管理器是 tlmgr。我们可以在系统命令行中运行以下命令来更新所有 LaTeX 宏包。
+
+```Bash
+tlmgr update --self --all
+```
+
+如果你在使用其他的发行版（如 MikTex），可以使用相应的包管理器更新或者安装 bithesis。
+
+### 验证 bithesis 宏集已经正确安装 
+
+一般来说，你可以尝试运行
+
+```Bash
+texdoc bithesis
+```
+
+来打开 bithesis 的宏集手册（目前手册中仅有少量内容）。
+如果能够打开文档，就意味着 bithesis 正确安装。
+
+![](https://user-images.githubusercontent.com/50431483/103894893-81050c00-512a-11eb-82fa-cbd0c8015408.png)
+
+
 ## 挑选合适的 LaTeX 编辑器
 
 理论上来说，任何一个「文本编辑器」均可以用来撰写 LaTeX 文档，但是一个得心应手的 LaTeX 编辑器一定会让我们撰写论文的效率大增。
