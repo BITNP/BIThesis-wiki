@@ -12,7 +12,7 @@
 ## 下载合适的 LaTeX 发行版
 
 :::warning ❗ 请注意
-BIThesis 中参考文献为了和校方规定的模板格式（[信息与文献 参考文献著录规则 - GB/T 7714-2015](http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=7FA63E9BBA56E60471AEDAEBDE44B14C)）保持一致，使用了仅支持 TeX Live 2019 版本的宏包，如果你曾经安装过 TeX Live 且目前正在使用的 TeX Live 版本不是 2019 版本，那么请及时更新为最新的 TeX Live 2019 版本。
+BIThesis 中参考文献为了和校方规定的模板格式（[信息与文献 参考文献著录规则 - GB/T 7714-2015](http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=7FA63E9BBA56E60471AEDAEBDE44B14C)）保持一致，使用了仅支持 TeX Live 2019 及以上版本的宏包，如果你曾经安装过 TeX Live 且目前正在使用的 TeX Live 版本不是 2019 及以上版本，那么请及时更新为最新的 TeX Live 2019 及以上版本。
 :::
 
 ### Windows 和 Linux 系统
@@ -20,8 +20,11 @@ BIThesis 中参考文献为了和校方规定的模板格式（[信息与文献 
 对于 Windows 和 Linux 系统，我们可以直接下载使用 [TeX Live 发行版](https://www.tug.org/texlive/)。
 
 - **在线安装**：官方的安装指南位于 - [Installing TeX Live over the Internet](https://www.tug.org/texlive/acquire-netinstall.html)。使用这一方法会下载 `install-tl-windows.exe`（Windows）或 `install-tl-unx.tar.gz`（Linux），之后运行相应的可执行程序，安装程序即可将整个 TeX Live 发行版下载安装到我们本机。（通常会安装 3GB 左右的程序。）
-- **离线安装**：使用北京理工大学校园网的同学也可以直接使用我校官方 TeX Live 镜像进行安装。我校 TeX Live 镜像资源位于 [/CTAN/systems/texlive/Images](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/)，其中我们选择下载 `texlive2019.iso` 即可。Windows 10 可直接挂载 ISO 镜像（双击即可），其余系统用合适的软件也可。之后在打开的文件夹中点击执行 `install-tl-windows`（Windows）或 `install-tl`（Linux）即可离线安装全部 TeX Live 组件。
+- **离线安装**：使用北京理工大学校园网的同学也可以直接使用我校官方 TeX Live 镜像进行安装。我校 TeX Live 镜像资源位于 [/CTAN/systems/texlive/Images](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/)，其中我们选择下载 `texlive2020.iso` 即可。Windows 10 可直接挂载 ISO 镜像（双击即可），其余系统用合适的软件也可。之后在打开的文件夹中点击执行 `install-tl-windows`（Windows）或 `install-tl`（Linux）即可离线安装全部 TeX Live 组件。
 
+:::warning ❗ 请注意
+北理工镜像站自 2021 年 2 月 18 日起，已经[停止校外IPv4访问的支持](https://github.com/BITNP/issues/issues/29)。因此当我们访问上面镜像资源时，有可能无法打开。对此我们可以选用其他的镜像源。
+:::
   ![](https://i.loli.net/2020/03/01/HJIRlnDokAwrg1S.png)
 
 - **使用包管理工具进行安装**：使用 Linux 系统的同学也可以选择使用合适的包管理工具进行 TeX Live 的安装。以 Ubuntu 为例子，只需要运行：
@@ -71,6 +74,38 @@ brew cask install mactex
 
 出现类似的输出，说明我们编译器安装应该是没有问题的。
 
+## 更新 LaTeX 环境至最新
+
+:::warning ❗ 为什么需要更新 LaTeX 环境？ 
+在 V2.0 版本以后，BIThesis 采用宏集的方式进行核心样式的发布。因此，BIThesis 的 LaTeX 模板必须和 [ bithesis 宏集](https://ctan.org/pkg/bithesis?lang=en) 一起使用。
+
+所幸，bithesis 已经被常见的 TeX 发行版收录（比如 TeX Live 以及 MiKTeX），所以更新环境是为了确保 bithesis 成功安装到你的 LaTeX 环境中。
+:::
+
+### bithesis 宏集的安装与更新
+
+TeX Live 的包管理器是 tlmgr。我们可以在系统命令行中运行以下命令来更新所有 LaTeX 宏包。
+
+```Bash
+tlmgr update --self --all
+```
+
+如果你在使用其他的发行版（如 MikTex），可以使用相应的包管理器更新或者安装 bithesis。
+
+### 验证 bithesis 宏集已经正确安装 
+
+一般来说，你可以尝试运行
+
+```Bash
+texdoc bithesis
+```
+
+来打开 bithesis 的宏集手册（目前手册中仅有少量内容）。
+如果能够打开文档，就意味着 bithesis 正确安装。
+
+![](https://user-images.githubusercontent.com/50431483/103894893-81050c00-512a-11eb-82fa-cbd0c8015408.png)
+
+
 ## 挑选合适的 LaTeX 编辑器
 
 理论上来说，任何一个「文本编辑器」均可以用来撰写 LaTeX 文档，但是一个得心应手的 LaTeX 编辑器一定会让我们撰写论文的效率大增。
@@ -111,3 +146,4 @@ TeXstudio 是老牌 LaTeX 编辑器，使用跨平台技术 Qt 编写而成。�
 :::
 
 准备就绪后，我们就可以开始使用 BIThesis 提供的模板进行 LaTeX 文档的撰写啦！请继续阅读：[下载与使用模板：Downloading and using templates](/Guide/2-Usage/Downloading-and-using-templates.md)
+
