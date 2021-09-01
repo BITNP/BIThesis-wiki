@@ -24,6 +24,8 @@ BIThesis 中参考文献为了和校方规定的模板格式（[信息与文献 
 
 :::warning ❗ 请注意
 北理工镜像站自 2021 年 2 月 18 日起，已经[停止校外IPv4访问的支持](https://github.com/BITNP/issues/issues/29)。因此当我们访问上面镜像资源时，有可能无法打开。对此我们可以选用其他的镜像源。
+
+另注：安装过程中注意使用合适的权限。
 :::
   ![](https://i.loli.net/2020/03/01/HJIRlnDokAwrg1S.png)
 

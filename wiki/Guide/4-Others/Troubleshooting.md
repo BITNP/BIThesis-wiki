@@ -1,5 +1,15 @@
 # 🥑 疑难杂症
 
+## 编译时报错 "bitbook.cls not found"
+
+原因是：你使用了 V2.x 的模板，但是本机的 LaTeX 环境没有更新到最新，并未包含 `bithesis` 宏集。
+
+解决方案：安装最新的 LaTeX 环境，或手动安装 `bithesis` 宏集。(更多内容请参考[文档](/Guide/1-Intro/First-things-first.md))
+
+## 生僻字无法显示
+
+可以参考示例中的[此部分](https://github.com/BITNP/BIThesis-scaffold/blob/9a32df57e28df2d13baf01e151f1c9171ba2c27c/graduation-thesis/chapters/1_chapter1.tex#L71-L80)。
+
 ## 出现字体缺失的编译失败提示
 
 一般情况下，如果你在编译「毕业设计论文」模板时出现了类似下面的编译报错：
