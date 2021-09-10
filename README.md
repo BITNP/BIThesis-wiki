@@ -68,7 +68,7 @@ yarn dev
 
 | CI             | Build status                                                                                                                                                                              |
 | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Netlify Deploy | [![Netlify Status](https://api.netlify.com/api/v1/badges/81f7b49b-59a1-46bc-ba52-02f8be71d247/deploy-status)](https://app.netlify.com/sites/vigorous-hoover-a697eb/deploys)               |
+| Vercel Deploy | [![Vercel Status](https://img.shields.io/github/deployments/fky2015/BIThesis-wiki/production?label=vercel&style=flat-square)](https://vercel.com/fkynjyq/bithesis-wiki/deployments)               |
 
 ---
 
