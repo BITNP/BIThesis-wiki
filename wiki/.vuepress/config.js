@@ -35,19 +35,19 @@ module.exports = {
     nav: [
       { text: "文档指南", link: "/Guide/" },
       { text: "系列视频指导", link: "/Video/" },
-      { text: "模板下载", link: "https://github.com/spencerwooo/BIThesis/releases/latest" },
+      { text: "模板下载", link: "https://github.com/BITNP/BIThesis/releases/latest" },
       { text: "加入讨论", items: [
         {
-          text: "Slack",
-          link: "https://join.slack.com/t/bithesis/shared_invite/zt-epmzkyk0-fJRsUS36AlwMNB2AI_Q~Vw"
+          text: "QQ群:737548118",
+          link: "https://jq.qq.com/?_wv=1027&k=KYDrmS5z"
         },
         {
           text: "Contributing",
-          link: "https://github.com/spencerwooo/BIThesis/blob/master/contributing.md"
+          link: "https://github.com/BITNP/BIThesis/blob/master/contributing.md"
         }
       ]
      },
-      { text: "GitHub", link: "https://github.com/spencerwooo/BIThesis" }
+      { text: "GitHub", link: "https://github.com/BITNP/BIThesis" }
     ],
     sidebar: {
       "/Guide/": [

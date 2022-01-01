@@ -6,7 +6,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/81f7b49b-59a1-46bc-ba52-02f8be71d247/deploy-status)](https://app.netlify.com/sites/vigorous-hoover-a697eb/deploys)
 [![BIThesis](./assets/bithesis_badge_solid.svg)](https://github.com/BITNP/BIThesis)
 [![License](https://badgen.net/github/license/BITNP/BIThesis-wiki?color=008080&labelColor=2b2b2b)](./LICENSE)
-[![Join on Slack](https://img.shields.io/badge/Slack%20Community-BIThesis-black?logo=slack&style=social&logoColor=2eb67d)](https://join.slack.com/t/bithesis/shared_invite/zt-epmzkyk0-fJRsUS36AlwMNB2AI_Q~Vw)
+[![Join on QQ Chat Group](https://img.shields.io/badge/QQ%E7%BE%A4-737548118-green)](https://jq.qq.com/?_wv=1027&k=KYDrmS5z)
 
 </div>
 
@@ -19,11 +19,11 @@ BIThesis 是针对北京理工大学本科同学毕业设计、毕业论文制�
 
 > 本项目获得了 [北京理工大学教务部](http://jwc.bit.edu.cn/)、[北京理工大学计算机学院](http://cs.bit.edu.cn/) 的认可、背书与大力支持。详见：[致谢 - 官方赞助](https://bithesis.bitnp.net/Guide/5-Acknowledgements/Acknowledgements.html#%E5%AE%98%E6%96%B9%E8%B5%9E%E5%8A%A9-official-sponsors)。
 
-<h2>Slack 社区</h2>
+<h2>交流社区</h2>
 
-> 订阅更新，询问问题，提出需求……来参加 Slack 上面的北理 BIThesis 官方社区！
+> 订阅更新，询问问题，提出需求……请加入北理 BIThesis 官方社区！
 
-[![Join on Slack](./assets/slack.svg)](https://join.slack.com/t/bithesis/shared_invite/zt-epmzkyk0-fJRsUS36AlwMNB2AI_Q~Vw)
+[![Join on QQ Chat Group](https://img.shields.io/badge/QQ%E7%BE%A4-737548118-green)](https://jq.qq.com/?_wv=1027&k=KYDrmS5z)
 
 
 ## 本地编译运行
