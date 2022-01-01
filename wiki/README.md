@@ -12,7 +12,7 @@ features:
     details: 极具学术风范的专业公式书写，让理工同学直呼厉害
   - title: 🚀 稳健的参考文献管理
     details: 用 BibTeX 管理文献库，妈妈再也不用担心参考文献格式问题了
-footer: 2020 ©Spencer Woo. Released under the LaTeX Project Public License.
+footer: 2022 ©BITNP. Released under the LaTeX Project Public License.
 ---
 
 ## BIThesis 是什么？

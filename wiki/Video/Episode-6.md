@@ -8,8 +8,6 @@
 
 - BIThesis 疑难解答页面：[BIThesis - Troubleshooting](https://github.com/BITNP/BIThesis/wiki/Troubleshooting)
 - 项目提问：[BIThesis GitHub issues](https://github.com/BITNP/BIThesis/issues)
-- 项目首席维护者 [Spencer Woo](https://github.com/BITNP)，开发者 [Silvester](https://github.com/Silverster98)
-- 贡献者、测试者 [Felinae](https://github.com/felinae98)，[Zephyr](https://github.com/Zephyr1106)，[mwl0811](https://github.com/mwl0811)
 
 ## 相关参考文献
 
