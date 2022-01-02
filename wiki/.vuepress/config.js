@@ -59,7 +59,8 @@ module.exports = {
           children: [
             ["3-Templates/Proposal-Report", "本科生开题报告"],
             ["3-Templates/Final-Graduation-Thesis", "本科生毕业论文"],
-            ["3-Templates/Lab-Report", "本科生实验报告"]
+            ["3-Templates/Lab-Report", "本科生实验报告"],
+            ["3-Templates/Presentation-Slide", "演示文稿模板"]
           ]
         },
         {
