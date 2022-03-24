@@ -1,10 +1,27 @@
 # 🥑 疑难杂症
 
+## 想要修改部分样式，但是找不到样式在哪里定义
+
+将样式和内容分离是我们采用宏集的主要原因之一。
+
+如果想要手动微调的话，可以将相应的样式文件手动拷贝到项目目录下：
+
+```shell
+# 根据模板中使用的 documentclass 选择 bitbook/bitart
+# 路径仅为示例
+$ kpsewhich bitbook.cls
+/home/xxx/texmf/tex/latex/bithesis/bitbook.cls
+
+$ cp /home/xxx/texmf/tex/latex/bithesis/bitbook.cls .
+```
+
+再次编译时，编译器会自动使用项目路径下的样式文件。
+
 ## 编译时报错 "bitbook.cls not found"
 
 原因是：你使用了 V2.x 的模板，但是本机的 LaTeX 环境没有更新到最新，并未包含 `bithesis` 宏集。
 
-解决方案：安装最新的 LaTeX 环境，或手动安装 `bithesis` 宏集。(更多内容请参考[文档](/Guide/1-Intro/First-things-first.md))
+解决方案：安装最新的 LaTeX 环境，或通过包管理器手动安装 `bithesis` 宏集。(更多内容请参考[文档](/Guide/1-Intro/First-things-first.md))
 
 ## 生僻字无法显示
 
