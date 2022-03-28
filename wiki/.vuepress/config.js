@@ -36,17 +36,18 @@ module.exports = {
       { text: "文档指南", link: "/Guide/" },
       { text: "系列视频指导", link: "/Video/" },
       { text: "模板下载", link: "https://github.com/BITNP/BIThesis/releases/latest" },
-      { text: "加入讨论", items: [
-        {
-          text: "QQ群:737548118",
-          link: "https://jq.qq.com/?_wv=1027&k=KYDrmS5z"
-        },
-        {
-          text: "Contributing",
-          link: "https://github.com/BITNP/BIThesis/blob/master/contributing.md"
-        }
-      ]
-     },
+      {
+        text: "加入讨论", items: [
+          {
+            text: "QQ群:737548118",
+            link: "https://jq.qq.com/?_wv=1027&k=KYDrmS5z"
+          },
+          {
+            text: "Contributing",
+            link: "https://github.com/BITNP/BIThesis/blob/master/contributing.md"
+          }
+        ]
+      },
       { text: "GitHub", link: "https://github.com/BITNP/BIThesis" }
     ],
     sidebar: {
@@ -86,6 +87,11 @@ module.exports = {
     sidebarDepth: 3,
     smoothScroll: true,
     lastUpdated: "Last Updated"
+  },
+  markdown: {
+    extendMarkdown: md => {
+      md.use(require("markdown-it-footnote"));
+    }
   },
   plugins: [
     [
