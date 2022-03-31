@@ -4,7 +4,7 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/BITNP/BIThesis?color=008080&logo=latex&labelColor=2b2b2b)](https://github.com/BITNP/BIThesis/releases/latest)
 
 :::tip 🚀 更新提示
-目前版本的毕业设计论文已经按照北京理工大学 2016 级（2020 届）毕业论文模板进行了设计与排版的更新。
+目前版本的毕业设计论文已经按照北京理工大学 2018 级（2022 届）毕业论文模板进行了设计与排版的更新。
 :::
 
 本文档介绍了北京理工大学本科生毕业设计「毕业论文」模板的使用方法。
