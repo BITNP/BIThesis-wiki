@@ -133,19 +133,11 @@ VS Code 是微软开发的基于 Electron 跨平台技术的新晋代码编辑�
 
 ### 使用 TeXstudio 编辑 LaTeX 文档
 
-:::warning ❗ 请注意
-使用 macOS 的同学，请谨慎使用 TeXstudio，据反映 TeXstudio 有比较复杂难以解决的问题，因此请使用 Mac 的同学尽量使用 VS Code（或下文提到的付费 Texpad）来使用本模板。
-:::
-
 TeXstudio 是老牌 LaTeX 编辑器，使用跨平台技术 Qt 编写而成。虽然界面相对老旧，但是依旧可靠。我们可以去 [TeXstudio 的官网](https://www.texstudio.org/)下载安装各个系统版本的 TeXstudio。
 
 ![](https://i.loli.net/2020/03/01/sqX4DGJrphRyxaz.png)
 
 默认情况下 TeXstudio 的编译工具链均已经配置完毕，基本开箱即用。对于如何用 TeXstudio 编译本模板，请继续阅读 [下载与使用模板：Downloading and using templates](/Guide/2-Usage/Downloading-and-using-templates.md)
-
-:::tip 🤫 小声
-另外，如果你是特别不差钱的 Mac 用户，希望用最好用最牛逼的 LaTeX 编辑器，你也可以去购买目前售价 $29.99 美元（约合人民币 209.69 元）的 [Texpad](https://www.texpad.com/)。使用 macOS、iOS 原生技术栈开发，Texpad 可能是目前使用体验最顺滑的 LaTeX 编辑器，另外由于 Texpad 使用私有 LaTeX 发行版，使得 Texpad 支持实时预览成果 PDF 与双向同步滚动支持。有这方面需要（与金钱）的同学可以考虑入手。
-:::
 
 准备就绪后，我们就可以开始使用 BIThesis 提供的模板进行 LaTeX 文档的撰写啦！请继续阅读：[下载与使用模板：Downloading and using templates](/Guide/2-Usage/Downloading-and-using-templates.md)
 
