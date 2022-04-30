@@ -25,7 +25,7 @@ $ cp /home/xxx/texmf/tex/latex/bithesis/bitbook.cls .
 
 ## 生僻字无法显示
 
-可以参考示例中的[此部分](https://github.com/BITNP/BIThesis-scaffold/blob/9a32df57e28df2d13baf01e151f1c9171ba2c27c/graduation-thesis/chapters/1_chapter1.tex#L71-L80)。
+可以参考示例中的[此部分](https://github.com/BITNP/BIThesis/blob/f882419072dfc8b8d0883fb1dd57182ee23bb229/templates/undergraduate-thesis/chapters/1_chapter1.tex#L76-L80)。
 
 ## 出现字体缺失的编译失败提示
 
