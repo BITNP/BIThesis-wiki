@@ -11,7 +11,7 @@
 
 本模板已经发布在 Overleaf 上，你可以打开直接使用。点击下图所示中的 Open as Template 即可：
 
-[![open in overleaf](https://img.shields.io/badge/open%20in-Overleaf-46a247?logo=overleaf&logoColor=white&labelColor=2b2b2b&style=for-the-badge)](https://www.overleaf.com/latex/templates/bei-jing-li-gong-da-xue-ben-ke-sheng-bi-ye-she-ji-lun-wen-mo-ban/fygqfkjrcvqs?nocdn=true)
+[![open in overleaf](https://img.shields.io/badge/open%20in-Overleaf-46a247?logo=overleaf&logoColor=white&labelColor=2b2b2b&style=for-the-badge)](https://www.overleaf.com/read/bkpwbgcsmkcr)
 
 ![](https://i.loli.net/2020/03/03/cXdPRAlI4BUErZ9.png)
 
