@@ -4,7 +4,8 @@
     "build": "vuepress build"
   },
   "devDependencies": {
-    "vuepress": "^1.4.0"
+    "vuepress": "^1.4.0",
+    "vuepress-plugin-check-md": "^0.0.2"
   },
   "dependencies": {
     "markdown-it-footnote": "^3.0.3"
