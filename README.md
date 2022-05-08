@@ -56,7 +56,7 @@ yarn dev
 
 ## 贡献者指南
 
-详情请查看[贡献者指南](https://github.com/BITNP/BIThesis/blob/master/contributing-zh.md)。
+详情请查看[贡献者指南](https://github.com/BITNP/BIThesis/blob/main/contributing-zh.md)。
 
 ## 贡献者
 

@@ -243,7 +243,7 @@ by the equation $E=mc^2$, discovered in 1905 by Albert Einstein.
 
 ![](https://i.loli.net/2020/03/07/vkPeVtWIjFiNGLY.png)
 
-为了保证与 Word 模板中的数学公式要求一致，我们的 LaTeX 模板中的公式默认会进行相应的编号（比如上面的例子）。在第一章节 `chapters/1_chapter1.tex` 中的 [此处](https://github.com/BITNP/BIThesis/blob/master/graduation-thesis/chapters/1_chapter1.tex#L67-L69) 是一个示范。
+为了保证与 Word 模板中的数学公式要求一致，我们的 LaTeX 模板中的公式默认会进行相应的编号（比如上面的例子）。在第一章节 `chapters/1_chapter1.tex` 中的 [此处](https://github.com/BITNP/BIThesis/blob/main/templates/undergraduate-thesis/chapters/1_chapter1.tex#L67-L69) 是一个示范。
 
 ## 其他
 
