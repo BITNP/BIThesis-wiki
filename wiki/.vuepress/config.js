@@ -102,6 +102,7 @@ module.exports = {
         before: '<pre class="vue-container"><code>',
         after: "</code></pre>"
       }
-    ]
+    ],
+    ['check-md'],
   ]
 };

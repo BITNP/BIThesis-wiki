@@ -10,7 +10,7 @@
 
 - 本项目的 [GitHub Release 页面](https://github.com/BITNP/BIThesis/releases/)
 - [BIThesis 项目首页](https://github.com/BITNP/BIThesis)
-- 个人信息的定义位于 `main.tex` 的 [第 69 行至第 74 行](https://github.com/BITNP/BIThesis/blob/master/graduation-thesis/main.tex#L69-L74)
+- 个人信息的定义位于 `main.tex` 的 [此处](https://github.com/BITNP/BIThesis/blob/main/templates/undergraduate-thesis/main.tex#L63-L70)
   - `\deptName`：你所在学院
   - `\majorName`：你所就读的专业
   - `\yourName`：你的姓名

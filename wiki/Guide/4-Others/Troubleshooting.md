@@ -25,7 +25,7 @@ $ cp /home/xxx/texmf/tex/latex/bithesis/bitbook.cls .
 
 ## 生僻字无法显示
 
-可以参考示例中的[此部分](https://github.com/BITNP/BIThesis-scaffold/blob/9a32df57e28df2d13baf01e151f1c9171ba2c27c/graduation-thesis/chapters/1_chapter1.tex#L71-L80)。
+可以参考示例中的[此部分](https://github.com/BITNP/BIThesis/blob/f882419072dfc8b8d0883fb1dd57182ee23bb229/templates/undergraduate-thesis/chapters/1_chapter1.tex#L76-L80)。
 
 ## 出现字体缺失的编译失败提示
 
@@ -53,7 +53,7 @@ fc-list :lang-zh > fclist.txt
 
 之后，重启电脑，刷新字体缓存，确认编译状况。
 
-如果 LaTeX 编译器依旧找不到相关字体，我推荐重新安装 Windows 系统，或者将定义「华文细黑」字体的地方（毕业论文模板 [`main.tex` 第 61 行至 63 行](https://github.com/BITNP/BIThesis/blob/master/graduation-thesis/main.tex#L61-L63)）与使用「华文细黑」字体的地方（毕业论文模板 [`misc/0_cover.tex` 第 43 行](https://github.com/BITNP/BIThesis/blob/master/graduation-thesis/misc/0_cover.tex#L43)）删除，用默认字体替代。
+如果 LaTeX 编译器依旧找不到相关字体，我推荐重新安装 Windows 系统，或者将定义「华文细黑」字体的地方（毕业论文模板 [`main.tex` 第 61 行至 63 行](https://github.com/BITNP/BIThesis/blob/main/templates/undergraduate-thesis/main.tex#L61-L63)）与使用「华文细黑」字体的地方（毕业论文模板 [`misc/0_cover.tex` 第 43 行](https://github.com/BITNP/BIThesis/blob/main/templates/undergraduate-thesis/misc/0_cover.tex#L43)）删除，用默认字体替代。
 
 ## 出现参考文献样式找不到的编译失败提示
 
