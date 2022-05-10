@@ -2,7 +2,7 @@
 home: true
 heroImage: /img/bithesis.png
 heroText: null
-tagline: 北京理工大学非官方本科生、研究生毕业设计、毕业论文的 LaTeX 模板与更多
+tagline: 北京理工大学非官方本科生、研究生学位论文 LaTeX 模板与更多
 actionText: 进入文档 →
 actionLink: /Guide/
 features:
