@@ -59,7 +59,7 @@ BIThesis 中的模板编译方式大同小异，我们都会使用 `xelatex`、`
 
 ### 徒手编译
 
-> 🙅‍ 不推荐，比较繁琐，下面有配合 LaTeX 编辑器更为方便的编译方法。这里仅供参考。
+> 这里推荐作为其余方式遇到问题时的调试手段。
 
 当然，你完全可以不借助任何编辑器，直接使用「命令行」编译 LaTeX 文档。
 
@@ -69,7 +69,7 @@ BIThesis 中的模板编译方式大同小异，我们都会使用 `xelatex`、`
 
 ```bash
 # 只需要调用一次 latexmk 工具即可
-latexmk -synctex=1 -interaction=nonstopmode -file-line-error -xelatex main.tex
+latexmk
 ```
 
 #### 使用 `xelatex` 编译
@@ -93,12 +93,16 @@ xelatex --interaction=nonstopmode main
 
 ### 使用 VS Code 撰写与编译 LaTeX 模板
 
+> 首先请在 VS Code 的扩展商店中安装 LaTeX Workshop 插件。
+
 VS Code 的设置项目可以通过快捷键 `ctrl/cmd + ,` 打开 UI 设置界面，之后点击右上角 `Open Settings (JSON)` 按钮即可打开相应的 JSON 格式配置文件，我们在这里即可定义 LaTeX 编译工具。其中：
 
 - “编译工具”是在 `"latex-workshop.latex.tools": [ ... ]` 处进行定义，即我们在这里定义每次调用工具 `latexmk` 或 `xelatex` 时所执行的命令
 - “编译工具链”是在 `"latex-workshop.latex.recipes": [ ... ]` 处进行定义，即我们在这里定义编译整个文档的工具链。对我们的模板使用 `xelatex` 的编译方式来说，就是定义 `xelatex -> biber -> xelatex -> xelatex`「四步走」的串联过程
 
 #### 使用 `latexmk` 编译
+
+> 更推荐使用此种方法。因为 `latexmk` 会自动检测编译时需要使用 LaTeX 的次数。（比如，当你尝试重复编译一个文档时，`latexmk` 会跳过所有已完成的步骤。）
 
 这种方法我们只需要使用 `latexmk` 这一个命令行工具。我们在 VS Code 的设置中添加如下的内容定义这一工具：
 
