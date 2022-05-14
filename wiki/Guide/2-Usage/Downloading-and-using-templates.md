@@ -100,6 +100,13 @@ VS Code 的设置项目可以通过快捷键 `ctrl/cmd + ,` 打开 UI 设置界�
 - “编译工具”是在 `"latex-workshop.latex.tools": [ ... ]` 处进行定义，即我们在这里定义每次调用工具 `latexmk` 或 `xelatex` 时所执行的命令
 - “编译工具链”是在 `"latex-workshop.latex.recipes": [ ... ]` 处进行定义，即我们在这里定义编译整个文档的工具链。对我们的模板使用 `xelatex` 的编译方式来说，就是定义 `xelatex -> biber -> xelatex -> xelatex`「四步走」的串联过程
 
+:::warning
+LaTeX Workshop 的默认配置无法对我们的项目进行编译。
+所以请仔细阅读下文并替换相应配置（尽量不要在不清楚参数作用的情况下自行修改参数）。
+
+一份整合了以下两种方式的配置文件可以[可供参考](https://gist.github.com/fky2015/76c8d2b358264f0cfaf80b8dcf68b3f4)。
+:::
+
 #### 使用 `latexmk` 编译
 
 > 更推荐使用此种方法。因为 `latexmk` 会自动检测编译时需要使用 LaTeX 的次数。（比如，当你尝试重复编译一个文档时，`latexmk` 会跳过所有已完成的步骤。）
