@@ -74,4 +74,4 @@ yarn dev
 
 📖 **BIThesis** ©BITNP. Released under the [LaTeX Project Public License](LICENSE).
 
-Authored by Spencer Woo. Maintained with help from [contributors](https://github.com/BITNP/BIThesis-wiki/graphs/contributors).
+Maintained with help from [contributors](https://github.com/BITNP/BIThesis-wiki/graphs/contributors).
