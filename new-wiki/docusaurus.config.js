@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'BIThesis',
+  tagline: '北京理工大学非官方本科生、研究生学位论文 LaTeX 模板与更多',
+  url: 'https://bithesis.bitnp.net',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -57,10 +57,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'BIThesis',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'BIT logo',
+          src: 'img/apple-touch-icon.png',
         },
         items: [
           {
@@ -69,9 +69,9 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/BITNP/BIThesis',
             label: 'GitHub',
             position: 'right',
           },
@@ -93,16 +93,12 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'QQ Chat Group: 737548118',
+                href: 'https://jq.qq.com/?_wv=1027&k=KYDrmS5z',
               },
               {
-                label: 'Discord',
+                label: 'Github',
                 href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
               },
             ],
           },
@@ -110,17 +106,17 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
+                label: 'Overleaf',
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'GitHub Release',
+                href: 'https://github.com/BITNP/BIThesis/releases',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} BITNP. Released under the CC0-1.0 license.`,
       },
       prism: {
         theme: lightCodeTheme,
