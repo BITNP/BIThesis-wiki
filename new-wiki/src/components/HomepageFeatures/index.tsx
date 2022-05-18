@@ -10,38 +10,35 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: '📝 专业的排版格式',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        LaTeX 样式与内容分离的设计，一次撰写、处处开花
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: '🔣 畅快的公式插入',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        极具学术风范的专业公式书写，让理工同学直呼厉害
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '🚀 稳健的参考文献管理',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        用 BibTeX 管理文献库，妈妈再也不用担心参考文献格式问题了
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
