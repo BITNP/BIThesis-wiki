@@ -22,6 +22,11 @@ BIThesis 为各位提供了基于北京理工大学计算机学院给出的「�
 
 ## BIThesis V2.x 和 V1.x 的区别是什么，我应该使用哪个？
 
+:::tip
+此部分内容更新于 2021 年，主要留存给历史用户查阅。如果你是2022年及以后使用的
+BIThesis 的用户，应该只能接触到 V2.x 以上的版本，可以跳过此段阅读。
+:::
+
 首先，推荐使用 V2.x 版本的 BIThesis。今后我们会将工作重心逐渐迁移到 V2.x 版本。
 
 对于用户来说，V2.x 的改动 **仅在于要求用户使用 2021 年及以上版本的 LaTeX 环境，或者手动安装 [ bithesis 宏集 ](https://ctan.org/pkg/bithesis?lang=en)；并使用 [V2.x 以上的 LaTeX 模板](https://github.com/BITNP/BIThesis/releases)** 。相关指南我们已经放在了下一小节中。
