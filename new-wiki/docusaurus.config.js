@@ -34,17 +34,19 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/BITNP/BIThesis-wiki/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/BITNP/BIThesis-wiki/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -67,13 +69,39 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: '文档指南',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          { to: '/blog', label: '视频指导(旧)', position: 'left' },
+          {
+            href: 'https://github.com/BITNP/BIThesis/releases',
+            label: '模板下载',
+            position: 'right',
+          },
+          {
+            type: "dropdown",
+            position: 'right',
+            label: '联系我们',
+            items: [
+              {
+                label: '交流社区(QQ):737548118',
+                href: 'https://jq.qq.com/?_wv=1027&k=KYDrmS5z',
+              },
+              {
+                label: '问题反馈',
+                href: 'https://github.com/BITNP/BIThesis/issues'
+              },
+              {
+                label: "Contributing",
+                href: "https://github.com/BITNP/BIThesis/blob/master/contributing.md"
+              }
+            ]
+
+          },
           {
             href: 'https://github.com/BITNP/BIThesis',
-            label: 'GitHub',
             position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
           },
         ],
       },
@@ -93,7 +121,7 @@ const config = {
             title: 'Community',
             items: [
               {
-              label: 'QQ Chat Group: 737548118',
+                label: 'QQ Chat Group: 737548118',
                 href: 'https://jq.qq.com/?_wv=1027&k=KYDrmS5z',
               },
               {
