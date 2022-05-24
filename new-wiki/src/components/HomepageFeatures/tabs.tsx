@@ -3,6 +3,75 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import List from '@mui/material/List';
+
+// TODO:
+const items: TabItem[] = [
+  {
+    id: 'UT',
+    label: '本科生毕业设计',
+    preview_img: 'https://i.loli.net/2020/03/01/hISQql1W6oFgKsC.png',
+    full_name: "",
+    features: [
+      "包括封面，摘要，参考文献和附录等支持",
+      "包括公式，表格和图片等支持",
+      "按 GBT7714-2015 规范编排的参考文献",
+      "符合北京理工大学本科毕业设计论文的格式要求。"
+    ],
+    overleaf: "https://www.overleaf.com/read/bkpwbgcsmkcr"
+  },
+  {
+    id: 'MT',
+    label: '研究生学位论文',
+    preview_img: 'https://s2.loli.net/2022/03/29/MbXe7dFnDNxUuTa.png',
+    full_name: "",
+    features: [],
+    overleaf: "https://www.overleaf.com/read/xmtqpngsbfgh",
+  },
+  {
+    id: 'UPR',
+    label: '本科生开题报告',
+    preview_img: 'https://i.loli.net/2020/02/05/HfZUaGqWSjrATbe.png',
+    full_name: "",
+    features: [],
+    overleaf: "https://www.overleaf.com/latex/templates/bei-jing-li-gong-da-xue-ben-ke-sheng-bi-ye-lun-wen-kai-ti-bao-gao-mo-ban/dgqdjptfqtrn",
+  },
+  {
+    id: 'PT',
+    label: "本科毕设外文翻译",
+    preview_img: 'https://s2.loli.net/2022/01/01/q1sxEVtorRDOFcJ.png',
+    full_name: "",
+    features: [],
+    overleaf: "https://www.overleaf.com/latex/templates/bei-jing-li-gong-da-xue-ben-ke-sheng-bi-ye-lun-wen-kai-ti-bao-gao-mo-ban/dgqdjptfqtrn",
+  },
+  {
+    id: 'LR',
+    label: '实验报告模板',
+    preview_img: 'https://i.loli.net/2020/03/08/txzGcKv9YSel3IX.png',
+    full_name: "",
+    features: [],
+    overleaf: "https://www.overleaf.com/latex/templates/bei-jing-li-gong-da-xue-ben-ke-sheng-bi-ye-lun-wen-kai-ti-bao-gao-mo-ban/dgqdjptfqtrn",
+  },
+  {
+    id: 'PS',
+    label: '演示文档模板',
+    preview_img: 'https://s2.loli.net/2022/01/02/ezCsDZnYf2LHSIk.png',
+    full_name: "",
+    features: [],
+    overleaf: "https://www.overleaf.com/latex/templates/bei-jing-li-gong-da-xue-ben-ke-sheng-bi-ye-lun-wen-kai-ti-bao-gao-mo-ban/dgqdjptfqtrn",
+  }
+
+]
+
+interface TabItem {
+  id: string;
+  label: string;
+  full_name: string;
+  preview_img: string;
+  features: string[];
+  overleaf: string;
+  reference?: string;
+}
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -48,20 +117,17 @@ export default function BasicTabs() {
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          {
+            items.map((item, index) => <Tab label={item.label} {...a11yProps(index)} />)
+          }
         </Tabs>
       </Box>
-      <TabPanel value={value} index={0}>
-        Item One
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        Item Two
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
+      {
+
+        items.map((item, index) => <TabPanel value={value} index={index}>
+          <img width="300px" src={item.preview_img} />
+        </TabPanel>)
+      }
     </Box>
   );
 }
