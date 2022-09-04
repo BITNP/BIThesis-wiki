@@ -58,11 +58,7 @@ module.exports = {
         {
           title: "BIThesis 模板",
           children: [
-            ["3-Templates/Proposal-Report", "本科生开题报告"],
-            ["3-Templates/Master-Thesis", "研究生学位论文模板（全体硕士及2020级以前博士适用）"],
-            ["3-Templates/Final-Graduation-Thesis", "本科生毕业论文"],
-            ["3-Templates/Lab-Report", "本科生实验报告"],
-            ["3-Templates/Presentation-Slide", "演示文稿模板"]
+            ["3-Templates/Guide-Moved", "模板使用指南已经迁移至示例代码中"]
           ]
         },
         {
