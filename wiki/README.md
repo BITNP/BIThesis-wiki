@@ -17,12 +17,12 @@ footer: 2022 ©BITNP. Released under the LaTeX Project Public License.
 
 ## BIThesis 是什么？
 
-BIThesis 是针对北京理工大学本科同学毕业设计、毕业论文制作的一个非官方的 LaTeX 模板，BIThesis 同时也包括其他本科学习中涉及到的文献综述、实验报告等的 LaTeX 模板。
+BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制作的一个非官方的 LaTeX 模板，BIThesis 同时也包括其他本科学习中涉及到的外文翻译、实验报告等的 LaTeX 模板。
 
 ## 重要提醒
 
 1. _尽管已有大量往届学生使用此项目进行论文撰写，但你仍需要仔细斟酌后决定是否使用我们的项目。_
-2. _本模板仍处于积极维护中，因此不能保证接口的稳定性。在论文撰写的过程中，请慎重考虑是否需要同步更新模板。_
+2. _本模板仍处于积极维护中，因此仍有微小可能会修改部分接口。在论文撰写的过程中，请慎重考虑是否需要同步更新模板。_
 3. 请对自己的撰写内容做好备份（甚至是版本管理）。
 4. 尽管本项目的排版符合学校的要求，但很多时候盲审老师会有一些「自己的想法」；这是本项目无法预料的。
 
@@ -60,9 +60,13 @@ BIThesis 是针对北京理工大学本科同学毕业设计、毕业论文制�
 **A：两种选择。**
 
 1. 你可以直接进入「[文档指南](/Guide/)」模块进行学习参考，文档中有详细的介绍、使用方法和注意事项。
-2. 你也可以直接前往「[系列视频指导](/Video/)」，根据视频的介绍进行学习使用。（录制于 2020 年，与目前的模板使用方式有些许出入）
+2. 你也可以直接前往「[系列视频指导](/Video/)」，根据视频的介绍进行学习使用。（录制于 2020 年，与目前的模板使用方式有些许出入；仅供参考）
 
 无论如何，BIThesis 的教程参考都几乎涵盖了全部使用 BIThesis 所需的编译环境和基础知识。请大家放心食用。
+
+### Q：我应该选择 LaTeX 还是 Word？
+
+网上已经有大量文章进行讨论：比如我写的[这篇](https://blog.fkynjyq.com/should-i-choose-between-bithesis-or-word)。
 
 [repo-LR]: https://github.com/BITNP/BIThesis/tree/main/templates/lab-report
 [repo-MT]: https://github.com/BITNP/BIThesis/tree/main/templates/master-thesis
