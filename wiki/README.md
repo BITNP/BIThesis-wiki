@@ -15,6 +15,8 @@ features:
 footer: 2022 ©BITNP. Released under the LaTeX Project Public License.
 ---
 
+# BIThesis
+
 ## BIThesis 是什么？
 
 BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制作的一个非官方的 LaTeX 模板，BIThesis 同时也包括其他本科学习中涉及到的外文翻译、实验报告等的 LaTeX 模板。

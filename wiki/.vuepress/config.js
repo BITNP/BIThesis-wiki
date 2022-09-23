@@ -1,6 +1,6 @@
 module.exports = {
-  title: "BIThesis",
-  description: "📖 Unofficial LaTeX templates for your bachelor graduation thesis (and more) here at BIT.",
+  title: "BIThesis WIKI | 北京理工大学本科生、研究生毕业论文 LaTeX 模板与更多",
+  description: "北京理工大学非官方 LaTeX 模板集合，包含本科、研究生毕业设计模板，本科全英文专业模板，外文翻译模板以及更多。🎉（更多文档请访问 wiki 和 release 中的手册）",
   head: [
     [
       "link",
@@ -28,7 +28,8 @@ module.exports = {
         href: "/apple-touch-icon.png"
       }
     ],
-    ["link", { rel: "manifest", href: "/site.webmanifest" }]
+    ["link", { rel: "manifest", href: "/site.webmanifest" }],
+    ["meta", { property: "og:image", itemprop:"image primaryImageOfPage", content: "/img/bithesis.png" }]
   ],
   themeConfig: {
     logo: "/apple-touch-icon.png",
