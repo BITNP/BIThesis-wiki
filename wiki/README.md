@@ -75,7 +75,7 @@ BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制�
 [undergraduate-proposal-report]: https://www.overleaf.com/read/zxyktpvqvmyv
 [presentation-slide]: https://www.overleaf.com/read/pmbpnjvznbzd
 [lab-report]: https://www.overleaf.com/read/tscxcqqrkwmq
-[graduate-thesis]: https://www.overleaf.com/read/twrsctjpbjqm
+[graduate-thesis]: https://www.overleaf.com/read/nqxpzvstfftx
 [paper-translation]: https://www.overleaf.com/read/ksbqkjhvwhtf
 
 [repo-LR]: https://github.com/BITNP/BIThesis/tree/main/templates/lab-report
