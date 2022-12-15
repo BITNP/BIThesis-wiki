@@ -7,4 +7,3 @@ export default ({ router }) => {
     { path: '/Guide/3-Templates/Master-Thesis.html', redirect: '/Guide/3-Templates/Guide-Moved.html' },
   ])
 }
-

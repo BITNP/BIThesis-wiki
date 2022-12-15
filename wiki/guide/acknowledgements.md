@@ -15,7 +15,7 @@
   </tr>
 </table>
 
-**感谢[北京理工大学硕士（博士）学位论文LaTeX模板](https://github.com/BIT-thesis/LaTeX-template)提供的研究生学位论文模板。向它的维护者和贡献者致敬！**
+**感谢[北京理工大学硕士（博士）学位论文 LaTeX 模板](https://github.com/BIT-thesis/LaTeX-template)提供的研究生学位论文模板。向它的维护者和贡献者致敬！**
 
 ### 2021
 
@@ -90,13 +90,13 @@
 
 | Emoji |          代表          |                注释                |
 | :---: | :--------------------: | :--------------------------------: |
-|   💻   |          Code          |          撰写项目代码内容          |
-|   🚧   |      Maintenance       |           日常项目维护者           |
-|   📆   |   Project Management   |         项目日程管理与规划         |
-|   💬   |  Answering Questions   |     对 issue 中的问题进行解答      |
-|   📖   |     Documentation      |      撰写项目文档、手册、Wiki      |
-|   🎨   |         Design         |     项目 logo、图标等素材设计      |
-|   🌍   |      Translation       | 国际化，文档、注释与参考资料的翻译 |
-|   📓   |      User Testing      |              参与测试              |
+|  💻   |          Code          |          撰写项目代码内容          |
+|  🚧   |      Maintenance       |           日常项目维护者           |
+|  📆   |   Project Management   |         项目日程管理与规划         |
+|  💬   |  Answering Questions   |     对 issue 中的问题进行解答      |
+|  📖   |     Documentation      |      撰写项目文档、手册、Wiki      |
+|  🎨   |         Design         |     项目 logo、图标等素材设计      |
+|  🌍   |      Translation       | 国际化，文档、注释与参考资料的翻译 |
+|  📓   |      User Testing      |              参与测试              |
 |   🎞   | Video Tutorial Editing |         视频教程文案、剪辑         |
 |   🎙   |      Voice/Sound       |         视频教程配音、调音         |
