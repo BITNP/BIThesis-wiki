@@ -6,7 +6,7 @@ hero:
   text: null
   tagline: 北京理工大学非官方本科生、研究生学位论文 LaTeX 模板与更多
   image:
-    src: /img/bithesis.png
+    src: /bithesis.png
     alt: BIThesis
   actions:
     - theme: brand
