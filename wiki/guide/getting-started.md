@@ -22,12 +22,13 @@ BIThesis 中参考文献为了和校方规定的模板格式（[信息与文献 
 - **在线安装**：官方的安装指南位于 - [Installing TeX Live over the Internet](https://www.tug.org/texlive/acquire-netinstall.html)。使用这一方法会下载 `install-tl-windows.exe`（Windows）或 `install-tl-unx.tar.gz`（Linux），之后运行相应的可执行程序，安装程序即可将整个 TeX Live 发行版下载安装到我们本机。（通常会安装 3GB 左右的程序。）
 - **离线安装**：使用北京理工大学校园网的同学也可以直接使用我校官方 TeX Live 镜像进行安装。我校 TeX Live 镜像资源位于 [/CTAN/systems/texlive/Images](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/)，其中我们选择下载 `texlive2020.iso` 即可。Windows 10 可直接挂载 ISO 镜像（双击即可），其余系统用合适的软件也可。之后在打开的文件夹中点击执行 `install-tl-windows`（Windows）或 `install-tl`（Linux）即可离线安装全部 TeX Live 组件。
 
-:::warning ❗ 请注意
-北理工镜像站自 2021 年 2 月 18 日起，已经[停止校外 IPv4 访问的支持](https://github.com/BITNP/issues/issues/29)。因此当我们访问上面镜像资源时，有可能无法打开。对此我们可以选用其他的镜像源。
+  :::warning ❗ 请注意
+  北理工镜像站自 2021 年 2 月 18 日起，已经[停止校外 IPv4 访问的支持](https://github.com/BITNP/issues/issues/29)。因此当我们访问上面镜像资源时，有可能无法打开。对此我们可以选用其他的镜像源。
 
-另注：安装过程中注意使用合适的权限。
-:::
-![](https://i.loli.net/2020/03/01/HJIRlnDokAwrg1S.png)
+  另注：安装过程中注意使用合适的权限。
+  :::
+
+  ![Download TeXLive from CTAN mirror](../assets/download-texlive-mirror.png)
 
 - **使用包管理工具进行安装**：使用 Linux 系统的同学也可以选择使用合适的包管理工具进行 TeX Live 的安装。以 Ubuntu 为例子，只需要运行：
 
@@ -64,7 +65,7 @@ brew cask install mactex
   xelatex --version
   ```
 
-  ![](https://i.loli.net/2020/04/10/GTalL2kHsA6yOFR.png)
+  ![Verify installation of latexmk and xelatex](../assets/output-xelatex-latexmk.png)
 
 - 验证 `biber` 参考文献编译器的安装情况：
 
@@ -72,14 +73,14 @@ brew cask install mactex
   biber --version
   ```
 
-  ![](https://i.loli.net/2020/04/10/dYitxqzFrEQhM4o.png)
+  ![Verify installation of biber](../assets/output-biber.png)
 
 出现类似的输出，说明我们编译器安装应该是没有问题的。
 
 ## 更新 LaTeX 环境至最新
 
 :::warning ❗ 为什么需要更新 LaTeX 环境？
-在 V2.0 版本以后，BIThesis 采用宏集的方式进行核心样式的发布。因此，BIThesis 的 LaTeX 模板必须和 [ bithesis 宏集](https://ctan.org/pkg/bithesis?lang=en) 一起使用。
+在 V2.0 版本以后，BIThesis 采用宏集的方式进行核心样式的发布。因此，BIThesis 的 LaTeX 模板必须和 [bithesis 宏集](https://ctan.org/pkg/bithesis?lang=en) 一起使用。
 
 所幸，bithesis 已经被常见的 TeX 发行版收录（比如 TeX Live 以及 MiKTeX），所以更新环境是为了确保 bithesis 成功安装到你的 LaTeX 环境中。
 :::
@@ -105,7 +106,7 @@ texdoc bithesis
 来打开 bithesis 的宏集手册（目前手册中仅有少量内容）。
 如果能够打开文档，就意味着 bithesis 正确安装。
 
-![](https://user-images.githubusercontent.com/50431483/103894893-81050c00-512a-11eb-82fa-cbd0c8015408.png)
+![bithesis](https://user-images.githubusercontent.com/50431483/103894893-81050c00-512a-11eb-82fa-cbd0c8015408.png)
 
 ## 挑选合适的 LaTeX 编辑器
 
@@ -115,7 +116,7 @@ texdoc bithesis
 
 VS Code 是微软开发的基于 Electron 跨平台技术的新晋代码编辑器，开源免费、拓展性强、功能强大，是当代开发者的首选。用 VS Code 配合 LaTeX Workshop 插件我们可以打造一个强大的 LaTeX 编辑器。
 
-![](https://i.loli.net/2020/03/01/RVJicxWSwuDq8EY.png)
+![Writing with VS Code](../assets/writing-with-vscode.png)
 
 - 安装 VS Code 编辑器：[Visual Studio Code - Code editing. Redefined.](https://code.visualstudio.com/)
 - 安装插件：
@@ -134,7 +135,7 @@ VS Code 是微软开发的基于 Electron 跨平台技术的新晋代码编辑�
 
 TeXstudio 是老牌 LaTeX 编辑器，使用跨平台技术 Qt 编写而成。虽然界面相对老旧，但是依旧可靠。我们可以去 [TeXstudio 的官网](https://www.texstudio.org/)下载安装各个系统版本的 TeXstudio。
 
-![](https://i.loli.net/2020/03/01/sqX4DGJrphRyxaz.png)
+![TeXstudio](https://i.loli.net/2020/03/01/sqX4DGJrphRyxaz.png)
 
 默认情况下 TeXstudio 的编译工具链均已经配置完毕，基本开箱即用。对于如何用 TeXstudio 编译本模板，请继续阅读 [下载与使用模板：Downloading and using templates](/Guide/2-Usage/Downloading-and-using-templates.md)
 
