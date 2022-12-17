@@ -16,7 +16,7 @@ export default defineConfig({
   themeConfig: {
     logo: '/apple-touch-icon.png',
     nav: [
-      { text: '文档指南', link: '/guide/intro' },
+      { text: '文档指南', link: '/guide/preface' },
       { text: '系列视频指导', link: '/video/intro' },
       { text: '模板下载', link: 'https://github.com/BITNP/BIThesis/releases/latest' },
       {
@@ -36,6 +36,10 @@ export default defineConfig({
     ],
     sidebar: {
       '/guide': [
+        {
+          text: '前言',
+          items: [{ text: '写在开头', link: '/guide/preface' }],
+        },
         {
           text: '食用方法',
           items: [
@@ -72,8 +76,8 @@ export default defineConfig({
     },
     footer: {
       message: 'Released under the <a href="https://www.latex-project.org/lppl/">LaTeX Project Public License</a>.',
-      copyright: 'Copyright © 2020-2022 <a href="https://github.com/BITNP">BITNP</a>'
-    }
+      copyright: 'Copyright © 2020-2022 <a href="https://github.com/BITNP">BITNP</a>',
+    },
   },
   markdown: {
     config: (md) => {

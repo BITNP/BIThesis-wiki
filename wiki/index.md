@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 进入文档 →
-      link: /guide/intro
+      link: /guide/preface
 
 features:
   - icon: 📝
