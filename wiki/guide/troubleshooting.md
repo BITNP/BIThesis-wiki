@@ -21,7 +21,7 @@ $ cp /home/xxx/texmf/tex/latex/bithesis/bitbook.cls .
 
 原因是：你使用了 V2.x 的模板，但是本机的 LaTeX 环境没有更新到最新，并未包含 `bithesis` 宏集。
 
-解决方案：安装最新的 LaTeX 环境，或通过包管理器手动安装 `bithesis` 宏集。(更多内容请参考[文档](/Guide/1-Intro/First-things-first.md))
+解决方案：安装最新的 LaTeX 环境，或通过包管理器手动安装 `bithesis` 宏集。(更多内容请参考 [文档 - 🍌 如何开始](/guide/getting-started)。)
 
 ## 生僻字无法显示
 
@@ -31,7 +31,7 @@ $ cp /home/xxx/texmf/tex/latex/bithesis/bitbook.cls .
 
 一般情况下，如果你在编译「毕业设计论文」模板时出现了类似下面的编译报错：
 
-```
+```text
 Package fontspec Error: The font "STXihei" cannot be found. ...
 ```
 
@@ -45,7 +45,7 @@ fc-list :lang-zh > fclist.txt
 
 这一命令会将你系统中安装的字体全部列出并保存在你执行命令所在目录下的 `fclist.txt` 文件中，你可以用文本编辑器打开这一文件，全局搜索「华文细黑」：
 
-![](https://i.loli.net/2020/03/06/zbvhqZ4OYAE6s85.png)
+![Font spec output on Windows](https://i.loli.net/2020/03/06/zbvhqZ4OYAE6s85.png)
 
 如果你发现自己系统中并没有这一字体，需要手动安装，那么你需要确保安装之后字体文件的名称为 `STXIHEI.TTF`。你可以在 Windows 的 `C:\Windows\Fonts` 目录下找到你系统全局安装的字体，找到「华文细黑」并「右键 » 属性」，确认如下图所示：
 
@@ -59,7 +59,7 @@ fc-list :lang-zh > fclist.txt
 
 开题报告与毕业论文的参考文献均使用了 [biblatex-gb7714-2015](https://github.com/hushidong/biblatex-gb7714-2015) 宏包生成符合《GB/T 7714-2015 信息与文献 参考文献著录规则》规定的参考文献。这一参考文献宏包仅适用于最新版本的 TeX Live 发行版（TeX Live 2019）。如果你在编译过程中出现了类似如下的报错：
 
-```
+```text
 Error: Style 'gb7714-2015' not found.
 ```
 
@@ -67,7 +67,7 @@ Error: Style 'gb7714-2015' not found.
 
 之后，在开始菜单中寻找 TeX Live Manager，点击打开，并搜索 `biblatex-gb7714-2015`，有如下输出表明你的宏包安装成功。
 
-![](https://i.loli.net/2020/03/06/6UdnGP4jDeucfC7.png)
+![Installation of biblatex-gb7714-2015](https://i.loli.net/2020/03/06/6UdnGP4jDeucfC7.png)
 
 ## 无法使用代码高亮 minted 宏包
 
@@ -77,7 +77,7 @@ Error: Style 'gb7714-2015' not found.
 
 如果你出现了类似如下的编译报错：
 
-```
+```text
 "Package minted Error: You must have `pygmentize' installed to use this package."
 ```
 
@@ -93,13 +93,13 @@ pip install pygments
 pygmentize -V
 ```
 
-![](https://i.loli.net/2020/03/07/7rbUosdGfjhpaNC.png)
+![Output of command pygmentize](https://i.loli.net/2020/03/07/7rbUosdGfjhpaNC.png)
 
 ### 添加额外的编译参数
 
 如果你出现了类似如下的编译报错：
 
-```
+```text
 Package minted Error: You must invoke LaTeX with the -shell-escape flag.
 ```
 
@@ -147,13 +147,13 @@ Package minted Error: You must invoke LaTeX with the -shell-escape flag.
 
 如果你出现了类似如下的编译报错：
 
-```
+```text
 ! Undefined control sequence.
 ```
 
 则可能是由于 `minted` 缓存导致。一般如果你编译过带有 `minted` 环境的 LaTeX 项目，根目录都会有一个名称为 `_minted_doc` 的缓存文件夹。你可以尝试将这一文件夹删除，重新编译，排查问题。
 
-![](https://i.loli.net/2020/03/06/D4PQKoxmtgObBN2.png)
+![minted command cache folder](https://i.loli.net/2020/03/06/D4PQKoxmtgObBN2.png)
 
 ## 编译过慢，一次更改需要编译半分钟
 

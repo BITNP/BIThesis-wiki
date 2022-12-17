@@ -129,7 +129,7 @@ VS Code 是微软开发的基于 Electron 跨平台技术的新晋代码编辑�
     - 提供实时 LaTeX 文档字数统计的功能
     - 提供与参考文献管理工具 Zotero 连接的功能
 
-使用 VS Code 作为 LaTeX 编辑器时，我们需要特别配置编译工具 `tools` 与编译工具链 `recipes`。对于包含有目录、参考文献、图片与表格引用的 LaTeX 文档，我们往往需要使用多个编译工具串联编译。具体的 VS Code 编译方法，请继续阅读 [下载与使用模板：Downloading and using templates](/Guide/2-Usage/Downloading-and-using-templates.md)。
+使用 VS Code 作为 LaTeX 编辑器时，我们需要特别配置编译工具 `tools` 与编译工具链 `recipes`。对于包含有目录、参考文献、图片与表格引用的 LaTeX 文档，我们往往需要使用多个编译工具串联编译。具体的 VS Code 编译方法，请继续阅读。
 
 ### 使用 TeXstudio 编辑 LaTeX 文档
 
@@ -137,6 +137,6 @@ TeXstudio 是老牌 LaTeX 编辑器，使用跨平台技术 Qt 编写而成。�
 
 ![TeXstudio](https://i.loli.net/2020/03/01/sqX4DGJrphRyxaz.png)
 
-默认情况下 TeXstudio 的编译工具链均已经配置完毕，基本开箱即用。对于如何用 TeXstudio 编译本模板，请继续阅读 [下载与使用模板：Downloading and using templates](/Guide/2-Usage/Downloading-and-using-templates.md)
+默认情况下 TeXstudio 的编译工具链均已经配置完毕，基本开箱即用。对于如何用 TeXstudio 编译本模板，请继续阅读。
 
-准备就绪后，我们就可以开始使用 BIThesis 提供的模板进行 LaTeX 文档的撰写啦！请继续阅读：[下载与使用模板：Downloading and using templates](/Guide/2-Usage/Downloading-and-using-templates.md)
+准备就绪后，我们就可以开始使用 BIThesis 提供的模板进行 LaTeX 文档的撰写啦！请继续阅读：[📃 下载与使用模板](/guide/downloading-using-templates)。
