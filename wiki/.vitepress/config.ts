@@ -64,6 +64,7 @@ export default defineConfig({
         {
           text: '视频介绍',
           items: [
+            { text: '前言', link: '/video/intro' },
             { text: '第一节 综述', link: '/video/episode-1' },
             { text: '第二节 LaTeX 的下载和安装', link: '/video/episode-2' },
             { text: '第三节 LaTeX 基本介绍', link: '/video/episode-3' },
