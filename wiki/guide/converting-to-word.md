@@ -20,7 +20,7 @@ Pandoc 详细的安装说明请见官方文档：[Installing pandoc](https://pan
   scoop install pandoc
   ```
 
-  **关联阅读：**[「一行代码」搞定软件安装卸载，用 Scoop 管理你的 Windows 软件 ](https://sspai.com/post/52496)
+  **关联阅读：**[「一行代码」搞定软件安装卸载，用 Scoop 管理你的 Windows 软件](https://sspai.com/post/52496)
 
   当然你也可以直接在 [Pandoc 的 GitHub Release 页面](https://github.com/jgm/pandoc/releases/latest) 下载 Windows MSI 安装文件手动安装。
 
@@ -44,13 +44,13 @@ pandoc --version
 
 如果出现类似下面的输出，说明你的 pandoc 安装成功。
 
-![](https://i.loli.net/2020/03/03/urCP6RnKvsdXHLj.png)
+![pandoc output](https://i.loli.net/2020/03/03/urCP6RnKvsdXHLj.png)
 
 ## 完善 Word 格式的模板文件
 
 为了保证导出的 Word 文档格式和学校提供的模板大体一致，我们需要确认 Word 版本的模板**已经准确定义了各级标题、正文等部分的格式。**
 
-![](https://i.loli.net/2020/03/03/PZxjSAEguz1pyf2.png)
+![Word predefined styles](https://i.loli.net/2020/03/03/PZxjSAEguz1pyf2.png)
 
 之后，我们需要将这一文件（`doc` 或 `docx`）保存，**留作 pandoc 的格式参考。**
 

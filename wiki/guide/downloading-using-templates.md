@@ -76,7 +76,7 @@ latexmk
 
 如果你使用 `xelatex` 编译项目，那么你需要按照下面的顺序依次调用 `xelatex` 与 `biber` 命令行工具：
 
-![](https://i.loli.net/2020/03/09/6x7KHDZtnwAamf4.png)
+![xelatex - biber - xelatex * 2](https://i.loli.net/2020/03/09/6x7KHDZtnwAamf4.png)
 
 比如，编译主文档为 `main.tex` 的 LaTeX 项目，我们具体的命令为：
 
@@ -107,9 +107,11 @@ LaTeX Workshop 的默认配置无法对我们的项目进行编译。
 一份整合了以下两种方式的配置文件可以[可供参考](https://gist.github.com/fky2015/76c8d2b358264f0cfaf80b8dcf68b3f4)。
 :::
 
-#### 使用 `latexmk` 编译
+#### 在 VS Code 中使用 `latexmk` 编译
 
-> 更推荐使用此种方法。因为 `latexmk` 会自动检测编译时需要使用 LaTeX 的次数。（比如，当你尝试重复编译一个文档时，`latexmk` 会跳过所有已完成的步骤。）
+:::tip
+更推荐使用此种方法。因为 `latexmk` 会自动检测编译时需要使用 LaTeX 的次数。（比如，当你尝试重复编译一个文档时，`latexmk` 会跳过所有已完成的步骤。）
+:::
 
 这种方法我们只需要使用 `latexmk` 这一个命令行工具。我们在 VS Code 的设置中添加如下的内容定义这一工具：
 
@@ -145,7 +147,7 @@ LaTeX Workshop 的默认配置无法对我们的项目进行编译。
 ]
 ```
 
-#### 使用 `xelatex` 编译
+#### 在 VS Code 中使用 `xelatex` 编译
 
 这种方法需要调用的工具有：`xelatex` 和 `biber`。我们在 VS Code 的设置中加入如下内容定义这两个工具：
 
@@ -196,20 +198,22 @@ LaTeX Workshop 的默认配置无法对我们的项目进行编译。
 
 最后，我们使用快捷键 `ctrl/cmd + shift + P` 打开命令执行栏，并搜索「LaTeX Workshop: Build with recipe」，并选择你所用的 recipe（即上面配置的工具链），即可编译整个 LaTeX 项目。不论用上面介绍的哪种方法，都可以正确的编译 BIThesis 的模板。
 
-![](https://i.loli.net/2020/03/09/2c1uEYlUFjRxJ9w.png)
+![select a recipe](https://i.loli.net/2020/03/09/2c1uEYlUFjRxJ9w.png)
 
 ### 使用 TeXstudio 撰写与编译 LaTeX 模板
 
 TeXstudio 的编译工具大部分已经为我们配置完毕，我们只需要在 TeXstudio 的设置中定义编译所用的编译器即可。在 TeXstudio 中点击「选项 » 设置 TeXstudio」，在打开的窗口中选择「构建」，并在元命令里面将「默认编译器」设置为 `latexmk` 或 `xelatex`，将默认文献工具设置为 `biber` 即可。
 
-![](https://i.loli.net/2020/03/09/qYbDPjw6moLUIS3.png)
+![texstudio selecting compilers](https://i.loli.net/2020/03/09/qYbDPjw6moLUIS3.png)
 
 你可以使用快捷键 `F5` 一键编译与预览 LaTeX 项目。
 
 ## 继续阅读相应的模板使用指南
 
-接下来，请继续阅读各个模板的详细模块介绍与用模板撰写论文的具体实施方法。
+各个模板的使用指南分别位于相应模板的 Releases 文件夹内部。
 
-- [本科生毕业设计 - 开题报告：Proposal report](/Guide/3-Templates/Proposal-Report.md)
-- [本科生毕业设计 - 毕业论文：Undergraduate thesis](/Guide/3-Templates/Final-Graduation-Thesis.md)
-- [本科生实验报告：Lab report](/Guide/3-Templates/Lab-Report.md)
+你可以在[模板使用手册](https://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/bithesis/bithesis.pdf)中找到如何配置参数。
+
+也可以在示例代码的注释中找到相应的说明。
+
+如果你觉得有任何内容缺失，欢迎到我们的[代码仓库提出建议](https://github.com/BITNP/BIThesis/issues)。
