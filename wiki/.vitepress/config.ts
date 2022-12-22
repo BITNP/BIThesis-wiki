@@ -18,6 +18,7 @@ export default defineConfig({
     nav: [
       { text: '文档指南', link: '/guide/preface' },
       { text: '系列视频指导', link: '/video/intro' },
+      { text: 'Overleaf', link: '/guide/preface#q-bithesis-都包含哪些模板' },
       { text: '模板下载', link: 'https://github.com/BITNP/BIThesis/releases/latest' },
       {
         text: '加入讨论',
