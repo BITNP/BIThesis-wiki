@@ -24,3 +24,10 @@ features:
     title: 稳健的参考文献管理
     details: 用 BibTeX 管理文献库，妈妈再也不用担心参考文献格式问题了
 ---
+
+<style>
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #3d80fe, #81d112);
+}
+</style>
