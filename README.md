@@ -38,21 +38,22 @@ cd BIThesis-wiki
 ### 安装依赖
 
 ```Bash
-cd wiki && yarn
+pnpm install
 ```
 
 ### 编译运行
 
-你可以构建出所有文件:
+你可以构建出所有文件（在 `wiki/.vitepress/dist/` 下）:
 
 ```Bash
-yarn build
+pnpm build
 ```
+
 
 或者实时预览:
 
 ```Bash
-yarn dev
+pnpm dev
 ```
 
 ## 贡献者指南
