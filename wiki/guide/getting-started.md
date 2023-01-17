@@ -40,7 +40,7 @@ BIThesis 中参考文献为了和校方规定的模板格式（[信息与文献 
 
 ### macOS 系统
 
-对于 macOS 系统，我们可以直接下载使用 [MacTeX 发行版](https://www.tug.org/mactex/)。MacTeX 发行版是以 `pkg` 文件进行发布安装的，我们进入 [MaxTeX 的下载页面](https://www.tug.org/mactex/mactex-download.html)，点击下载 `MacTeX.pkg` 即可下载完整的 MacTeX 安装包（大约 3.9GB）。之后双击运行即可安装。
+对于 macOS 系统，我们可以直接下载使用 [MacTeX 发行版](https://www.tug.org/mactex/)。MacTeX 发行版是以 `pkg` 文件进行发布安装的，我们进入 [MacTeX 的下载页面](https://www.tug.org/mactex/mactex-download.html)，点击下载 `MacTeX.pkg` 即可下载完整的 MacTeX 安装包（大约 3.9GB）。之后双击运行即可安装。
 
 另外，使用 Homebrew 包管理的同学，也可以通过 Homebrew Cask 直接安装 MacTeX：
 
