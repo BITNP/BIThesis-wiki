@@ -3,7 +3,8 @@
     "dev": "vitepress dev wiki",
     "build": "vitepress build wiki",
     "preview": "vitepress preview wiki",
-    "format": "prettier --write --ignore-path .gitignore ."
+    "format": "prettier --write --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check --ignore-path .gitignore ."
   },
   "devDependencies": {
     "@types/node": "^18.11.15",
