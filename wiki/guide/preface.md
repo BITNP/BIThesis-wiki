@@ -55,7 +55,7 @@ BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制�
 
 [undergraduate-thesis-en]: https://www.overleaf.com/read/nmxnxdxxychf
 [undergraduate-thesis]: https://www.overleaf.com/read/vnzqvcdtgqvj
-[undergraduate-proposal-report]: https://www.overleaf.com/read/vnzqvcdtgqvj
+[undergraduate-proposal-report]: https://www.overleaf.com/read/fngjzzdcbpcz
 [presentation-slide]: https://www.overleaf.com/read/txpnfkqkdvcr
 [paper-translation]: https://www.overleaf.com/read/tgtbbsdmybpm
 [lab-report]: https://www.overleaf.com/read/vzrysnnbvqjy
