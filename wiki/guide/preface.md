@@ -53,13 +53,13 @@ BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制�
 
 网上已经有大量文章进行讨论：比如我写的[这篇](https://blog.fkynjyq.com/should-i-choose-between-bithesis-or-word)。
 
-[undergraduate-thesis-en]: https://www.overleaf.com/read/hqrbyqtqfkxd
-[undergraduate-thesis]: https://www.overleaf.com/read/rffqfqqvtprh
-[undergraduate-proposal-report]: https://www.overleaf.com/read/wtjvwkybbwcd
-[presentation-slide]: https://www.overleaf.com/read/fpwzyzdjzkwr
-[paper-translation]: https://www.overleaf.com/read/mvqnhxhvdtfc
-[lab-report]: https://www.overleaf.com/read/knnbnjkgrfyt
-[graduate-thesis]: https://www.overleaf.com/read/vzcbbnpkxvzh
+[undergraduate-thesis-en]: https://www.overleaf.com/read/nmxnxdxxychf
+[undergraduate-thesis]: https://www.overleaf.com/read/vnzqvcdtgqvj
+[undergraduate-proposal-report]: https://www.overleaf.com/read/vnzqvcdtgqvj
+[presentation-slide]: https://www.overleaf.com/read/txpnfkqkdvcr
+[paper-translation]: https://www.overleaf.com/read/tgtbbsdmybpm
+[lab-report]: https://www.overleaf.com/read/vzrysnnbvqjy
+[graduate-thesis]: https://www.overleaf.com/read/bdtyvhshcwdj
 [repo-lr]: https://github.com/BITNP/BIThesis/tree/main/templates/lab-report
 [repo-mt]: https://github.com/BITNP/BIThesis/tree/main/templates/master-thesis
 [repo-pt]: https://github.com/BITNP/BIThesis/tree/main/templates/paper-translation
