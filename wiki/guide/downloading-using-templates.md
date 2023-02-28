@@ -202,7 +202,12 @@ LaTeX Workshop 的默认配置无法对我们的项目进行编译。
 
 ### 使用 TeXstudio 撰写与编译 LaTeX 模板
 
-TeXstudio 的编译工具大部分已经为我们配置完毕，我们只需要在 TeXstudio 的设置中定义编译所用的编译器即可。在 TeXstudio 中点击「选项 » 设置 TeXstudio」，在打开的窗口中选择「构建」，并在元命令里面将「默认编译器」设置为 `latexmk` 或 `xelatex`，将默认文献工具设置为 `biber` 即可。
+TeXstudio 的编译工具大部分已经为我们配置完毕，我们只需要在 TeXstudio 的设置中定义编译所用的编译器即可。在 TeXstudio 中点击「选项 » 设置 TeXstudio」，在打开的窗口中选择「构建」，并在元命令里面将「默认编译器」设置为 `xelatex`，将默认文献工具设置为 `biber` 即可。
+
+:::warning
+尽管我们提供了 `latexmk` 编译支持，但是在 TeXstudio 中如果将「默认编译器」设置为 `latexmk`，
+会出现无法编译的问题。因此建议使用 `xelatex` 选项。
+:::
 
 ![texstudio selecting compilers](https://i.loli.net/2020/03/09/qYbDPjw6moLUIS3.png)
 
