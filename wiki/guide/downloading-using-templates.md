@@ -27,8 +27,8 @@
 
 在 Release 页面，你会看到：
 
-- `undergraduate-proposal-report.zip`：本科生毕业设计开题报告模板压缩包
 - `undergraduate-thesis.zip`：本科生毕业设计毕业论文模板压缩包
+- `graduate-thesis.zip`：研究生学位论文模板压缩包
 - `lab-report.zip`：实验报告模板压缩包
 - ...
 
