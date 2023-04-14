@@ -52,12 +52,12 @@ BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制�
 
 网上已经有大量文章进行讨论：比如我写的[这篇](https://blog.fkynjyq.com/should-i-choose-between-bithesis-or-word)。
 
-[undergraduate-thesis-en]: https://www.overleaf.com/read/hdtphxcxqgnh
-[undergraduate-thesis]: https://www.overleaf.com/read/ytmkzvwffksj
+[undergraduate-thesis-en]: https://www.overleaf.com/read/vmnmmkdsbmnd
+[undergraduate-thesis]: https://www.overleaf.com/read/ggfybckkmhqz
 [presentation-slide]: https://www.overleaf.com/read/ttgnpjsvkbjz
-[paper-translation]: https://www.overleaf.com/read/qxhshcmmtkcr
+[paper-translation]: https://www.overleaf.com/read/vtnwrrgwsjpt
 [lab-report]: https://www.overleaf.com/read/ybbrgnvkycwq
-[graduate-thesis]: https://www.overleaf.com/read/mnxchhswjthd
+[graduate-thesis]: https://www.overleaf.com/read/mjdjnkhrmpxb
 [repo-lr]: https://github.com/BITNP/BIThesis/tree/main/templates/lab-report
 [repo-mt]: https://github.com/BITNP/BIThesis/tree/main/templates/master-thesis
 [repo-pt]: https://github.com/BITNP/BIThesis/tree/main/templates/paper-translation
