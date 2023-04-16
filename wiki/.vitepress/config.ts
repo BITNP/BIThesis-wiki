@@ -14,9 +14,17 @@ export default defineConfig({
   ],
   lastUpdated: true,
   themeConfig: {
+    search: {
+      provider: 'local'
+    },
+    editLink: {
+      pattern: 'https://github.com/BITNP/BIThesis-wiki/edit/main/wiki/:path',
+      text: '帮助我们改善此页面！'
+    },
     logo: '/apple-touch-icon.png',
     nav: [
       { text: '文档指南', link: '/guide/preface' },
+      { text: '疑难杂症', link: '/guide/troubleshooting'},
       { text: '系列视频指导', link: '/video/intro' },
       { text: 'Overleaf', link: '/guide/preface#q-bithesis-都包含哪些模板' },
       { text: '模板下载', link: 'https://github.com/BITNP/BIThesis/releases/latest' },
@@ -47,6 +55,7 @@ export default defineConfig({
             { text: '简介', link: '/guide/intro' },
             { text: '如何开始', link: '/guide/getting-started' },
             { text: '下载模板', link: '/guide/downloading-using-templates' },
+            { text: '编辑器配置与模板编译', link: '/guide/configure-and-compile' },
           ],
         },
         {
@@ -54,6 +63,7 @@ export default defineConfig({
           items: [
             { text: '将 LaTeX 转换为 Word', link: '/guide/converting-to-word' },
             { text: '疑难杂症', link: '/guide/troubleshooting' },
+            { text: 'LaTeX 学习与使用资源', link: '/guide/resources' },
           ],
         },
         {

@@ -25,7 +25,7 @@ $ cp /home/xxx/texmf/tex/latex/bithesis/bitbook.cls .
 
 一般情况下，如果你在编译「毕业设计论文」模板时出现了类似下面的编译报错：
 
-```text
+```txt
 Package fontspec Error: The font "STXihei" cannot be found. ...
 ```
 
@@ -53,7 +53,7 @@ fc-list :lang-zh > fclist.txt
 
 开题报告与毕业论文的参考文献均使用了 [biblatex-gb7714-2015](https://github.com/hushidong/biblatex-gb7714-2015) 宏包生成符合《GB/T 7714-2015 信息与文献 参考文献著录规则》规定的参考文献。这一参考文献宏包仅适用于最新版本的 TeX Live 发行版（TeX Live 2019）。如果你在编译过程中出现了类似如下的报错：
 
-```text
+```txt
 Error: Style 'gb7714-2015' not found.
 ```
 
@@ -71,7 +71,7 @@ Error: Style 'gb7714-2015' not found.
 
 如果你出现了类似如下的编译报错：
 
-```text
+```txt
 "Package minted Error: You must have `pygmentize' installed to use this package."
 ```
 
@@ -93,7 +93,7 @@ pygmentize -V
 
 如果你出现了类似如下的编译报错：
 
-```text
+```txt
 Package minted Error: You must invoke LaTeX with the -shell-escape flag.
 ```
 
@@ -141,7 +141,7 @@ Package minted Error: You must invoke LaTeX with the -shell-escape flag.
 
 如果你出现了类似如下的编译报错：
 
-```text
+```txt
 ! Undefined control sequence.
 ```
 
