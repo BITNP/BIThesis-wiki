@@ -32,8 +32,8 @@ devDependencies:
     specifier: ^5.0.0
     version: 5.0.2
   vitepress:
-    specifier: 1.0.0-alpha.70
-    version: 1.0.0-alpha.70(@types/node@18.11.15)
+    specifier: 1.0.0-alpha.72
+    version: 1.0.0-alpha.72(@types/node@18.11.15)
   vue:
     specifier: ^3.2.45
     version: 3.2.45
@@ -1834,8 +1834,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress@1.0.0-alpha.70(@types/node@18.11.15):
-    resolution: {integrity: sha512-FuyPNJdNMGl/ddYYGgMhn3wzPFUPLkUq27a3FOsLN4iFfvF+w/3Gg+V3dFd25OattrITmaFGFc/x18foEe2eAA==}
+  /vitepress@1.0.0-alpha.72(@types/node@18.11.15):
+    resolution: {integrity: sha512-Ou7fNE/OVYLrKGQMHSTVG6AcNsdv7tm4ACrdhx93SPMzEDj8UgIb4RFa5CTTowaYf3jeDGi2EAJlzXVC+IE3dg==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.3
