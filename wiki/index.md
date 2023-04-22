@@ -12,6 +12,9 @@ hero:
     - theme: brand
       text: 进入文档 →
       link: /guide/preface
+    - theme: alt
+      text: 进入代码仓库 →
+      link: https://github.com/BITNP/BIThesis
 
 features:
   - icon: 📝
