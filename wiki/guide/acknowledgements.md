@@ -1,3 +1,19 @@
+<script setup>
+import { VPTeamMembers } from 'vitepress/theme'
+
+const members = [
+  // {
+  //   avatar: 'https://www.github.com/yyx990803.png',
+  //   name: 'Evan You',
+  //   title: 'Creator',
+  //   links: [
+  //     { icon: 'github', link: 'https://github.com/yyx990803' },
+  //     { icon: 'twitter', link: 'https://twitter.com/youyuxi' }
+  //   ]
+  // },
+]
+</script>
+
 # 🙇‍♂️ 致谢
 
 **BIThesis 项目的实现离不开以下单位、领导、老师和同学们的大力支持与卓越贡献。**
@@ -18,6 +34,9 @@
 **感谢[北京理工大学硕士（博士）学位论文 LaTeX 模板](https://github.com/BIT-thesis/LaTeX-template)提供的研究生学位论文模板。向它的维护者和贡献者致敬！**
 
 ### 2021
+
+
+<VPTeamMembers size="small" :members="members" />
 
 <table>
   <tr>
