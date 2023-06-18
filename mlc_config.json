@@ -1,0 +1,21 @@
+{
+  "replacementPatterns": [
+    {
+      "pattern": "^/",
+      "replacement": "{{BASEURL}}/wiki/"
+    }
+  ],
+  "ignorePatterns": [
+    {
+      "pattern": "grd.bit.edu.cn"
+    },
+    {
+      "pattern": "jwb.bit.edu.cn"
+    }
+  ],
+  "timeout": "20s",
+  "retryOn429": true,
+  "retryCount": 5,
+  "fallbackRetryDelay": "30s",
+  "aliveStatusCodes": [200, 206]
+}

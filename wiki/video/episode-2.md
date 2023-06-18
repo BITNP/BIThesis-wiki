@@ -7,7 +7,6 @@
 ## 视频相关说明
 
 - 官方的安装指南：[Installing TeX Live over the Internet](https://www.tug.org/texlive/acquire-netinstall.html)
-- 我校镜像网站：[/CTAN/systems/texlive/Images](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/)
 - 以 Ubuntu 为例子，安装 TeX Live 发行版。
 
   ```bash
