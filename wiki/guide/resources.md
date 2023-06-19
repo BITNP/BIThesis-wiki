@@ -18,4 +18,3 @@
 - [使用 BibLaTeX 管理参考文献：Bibliography management in LaTeX](https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX)
 
 有关 LaTeX 使用的更多技巧，请直接前往 [Overleaf 官方文档](https://www.overleaf.com/learn/latex/Main_Page)进行查看。准备就绪之后，你就可以前往下载 BIThesis 模板啦。
-

@@ -35,7 +35,6 @@ const members = [
 
 ### 2021
 
-
 <VPTeamMembers size="small" :members="members" />
 
 <table>

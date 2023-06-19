@@ -15,16 +15,16 @@ export default defineConfig({
   lastUpdated: true,
   themeConfig: {
     search: {
-      provider: 'local'
+      provider: 'local',
     },
     editLink: {
       pattern: 'https://github.com/BITNP/BIThesis-wiki/edit/main/wiki/:path',
-      text: '帮助我们改善此页面！'
+      text: '帮助我们改善此页面！',
     },
     logo: '/apple-touch-icon.png',
     nav: [
       { text: '文档指南', link: '/guide/preface' },
-      { text: '疑难杂症', link: '/guide/troubleshooting'},
+      { text: '疑难杂症', link: '/guide/troubleshooting' },
       { text: 'Overleaf', link: '/guide/preface#q-bithesis-都包含哪些模板' },
       { text: '模板下载', link: 'https://github.com/BITNP/BIThesis/releases/latest' },
       {
