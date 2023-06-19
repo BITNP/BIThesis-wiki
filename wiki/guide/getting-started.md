@@ -108,4 +108,4 @@ TeXstudio 是老牌 LaTeX 编辑器，使用跨平台技术 Qt 编写而成。�
 
 默认情况下 TeXstudio 的编译工具链均已经配置完毕，基本开箱即用。对于如何用 TeXstudio 编译本模板，请继续阅读。
 
-准备就绪后，我们就可以开始使用 BIThesis 提供的模板进行 LaTeX 文档的撰写啦！请继续阅读：[📃 下载与使用模板](/guide/downloading-using-templates)。
+准备就绪后，我们就可以开始使用 BIThesis 提供的模板进行 LaTeX 文档的撰写啦！请继续阅读：[📃 下载与使用模板](/guide/downloading-using-templates.md)。

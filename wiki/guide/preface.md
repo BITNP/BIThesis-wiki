@@ -18,7 +18,7 @@ BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制�
 **A：可以的。**
 
 - 本项目已经经由北京理工大学教务部确认，可以用于北京理工大学本科生毕业论文、毕业设计的撰写之中。更多细节，请进入文档详细了解。
-- 本项目同时也获得了 [北京理工大学教务部](http://jwc.bit.edu.cn/)、[北京理工大学计算机学院](http://cs.bit.edu.cn/) 的认可、背书与大力支持。详见：[致谢 - 官方赞助](/guide/acknowledgements)。
+- 本项目同时也获得了 [北京理工大学教务部](http://jwc.bit.edu.cn/)、[北京理工大学计算机学院](http://cs.bit.edu.cn/) 的认可、背书与大力支持。详见：[致谢 - 官方赞助](/guide/acknowledgements.md)。
 
 **我们正在对项目持续更新！目前，你完全可以使用现有的版本开始你的毕业设计开题报告的写作；不过与此同时，我们也在持续推进代码的升级和更新（主要是不影响使用的底层逻辑）。更多开发计划请访问我们的 [Roadmap](https://github.com/BITNP/BIThesis/projects)。想帮助这个项目持续前进？参见我们的[贡献者指南](https://github.com/BITNP/BIThesis/blob/main/contributing-zh.md)**
 
@@ -28,8 +28,8 @@ BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制�
 
 | 模板                                                     | 预览                                                                                                    | 特性                                                                                                                                                                                                                                                                                                                                                                                  |
 | :------------------------------------------------------- | :------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **[研究生学位论文模板][repo-mt]**<br>                    | <img src="https://s2.loli.net/2022/03/29/MbXe7dFnDNxUuTa.png" width="300px" alt="master-thesis" />      | <ul><li>**研究生学位论文模板**</li><li>包括封面，摘要，参考文献和附录等支持</li><li>包括公式，表格和图片等支持</li><li>按 GBT7714-2015 规范编排的书目</li><li>符合研究生学位论文模版的格式[^1]要求。</li><li>[![open in overleaf](https://img.shields.io/badge/open%20in-Overleaf-46a247?logo=overleaf&logoColor=white&labelColor=2b2b2b)][graduate-thesis]</li></ul>                 |
-| **[本科生毕业设计论文模板][repo-ut]**<br>                | <img src="https://s2.loli.net/2023/04/07/zJBgZwrdtUQGNjp.png" width="300px" alt="grad_thesis" />         | <ul><li>**毕业设计论文模板**</li><li>包括封面，摘要，参考文献和附录等支持</li><li>包括公式，表格和图片等支持</li><li>按 GBT7714-2015 规范编排的书目</li><li>符合北京理工大学本科毕业设计论文的格式[^2]要求。</li><li>[![open in overleaf](https://img.shields.io/badge/open%20in-Overleaf-46a247?logo=overleaf&logoColor=white&labelColor=2b2b2b)][undergraduate-thesis]</li></ul>    |
+| **[研究生学位论文模板][repo-gt]**<br>                    | <img src="https://s2.loli.net/2022/03/29/MbXe7dFnDNxUuTa.png" width="300px" alt="master-thesis" />      | <ul><li>**研究生学位论文模板**</li><li>包括封面，摘要，参考文献和附录等支持</li><li>包括公式，表格和图片等支持</li><li>按 GBT7714-2015 规范编排的书目</li><li>符合研究生学位论文模版的格式[^1]要求。</li><li>[![open in overleaf](https://img.shields.io/badge/open%20in-Overleaf-46a247?logo=overleaf&logoColor=white&labelColor=2b2b2b)][graduate-thesis]</li></ul>                 |
+| **[本科生毕业设计论文模板][repo-ut]**<br>                | <img src="https://s2.loli.net/2023/04/07/zJBgZwrdtUQGNjp.png" width="300px" alt="grad_thesis" />        | <ul><li>**毕业设计论文模板**</li><li>包括封面，摘要，参考文献和附录等支持</li><li>包括公式，表格和图片等支持</li><li>按 GBT7714-2015 规范编排的书目</li><li>符合北京理工大学本科毕业设计论文的格式[^2]要求。</li><li>[![open in overleaf](https://img.shields.io/badge/open%20in-Overleaf-46a247?logo=overleaf&logoColor=white&labelColor=2b2b2b)][undergraduate-thesis]</li></ul>    |
 | **[本科生毕业设计论文模板（全英文专业）][repo-ute]**<br> | <img src="https://s2.loli.net/2022/09/04/kd6PDqusBciAn7Q.png" width="300px" alt="grad_thesis" />        | <ul><li>**毕业设计论文模板**</li><li>包括封面，摘要，参考文献和附录等支持</li><li>包括公式，表格和图片等支持</li><li>按 GBT7714-2015 规范编排的书目</li><li>符合北京理工大学本科毕业设计论文的格式[^2]要求。</li><li>[![open in overleaf](https://img.shields.io/badge/open%20in-Overleaf-46a247?logo=overleaf&logoColor=white&labelColor=2b2b2b)][undergraduate-thesis-en]</li></ul> |
 | **[本科生毕业设计论文外文翻译模板][repo-pt]**<br>        | <img src="https://s2.loli.net/2023/04/07/Q7H8kYbteBldENZ.png" width="300px" alt="paper_trans" />        | <ul><li>外文翻译模板</li><li>由毕设模板迁移而来</li><li>符合北京理工大学本科毕业设计模板的格式[^2]要求。</li><li>[![open in overleaf](https://img.shields.io/badge/open%20in-Overleaf-46a247?logo=overleaf&logoColor=white&labelColor=2b2b2b)][paper-translation]</li></ul>                                                                                                           |
 | **[实验报告][repo-lr]**<br>                              | <img src="https://i.loli.net/2020/03/08/txzGcKv9YSel3IX.png" width="300px" alt="lab_report" />          | <ul><li>基本实验报告模板</li><li>包括封面，BIT logo</li><li>适用于无格式要求的实验报告写作</li><li>[![open in overleaf](https://img.shields.io/badge/open%20in-Overleaf-46a247?logo=overleaf&logoColor=white&labelColor=2b2b2b)][lab-report]</li></ul>                                                                                                                                |
@@ -43,8 +43,8 @@ BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制�
 
 **A：两种选择。**
 
-1. 你可以直接进入「[文档指南](/guide/intro)」模块进行学习参考，文档中有详细的介绍、使用方法和注意事项。
-2. 你也可以直接前往「[系列视频指导](/video/intro)」，根据视频的介绍进行学习使用。（录制于 2020 年，与目前的模板使用方式有些许出入；仅供参考）
+1. 你可以直接进入「[文档指南](/guide/intro.md)」模块进行学习参考，文档中有详细的介绍、使用方法和注意事项。
+2. 你也可以直接前往「[系列视频指导](/video/intro.md)」，根据视频的介绍进行学习使用。（录制于 2020 年，与目前的模板使用方式有些许出入；仅供参考）
 
 无论如何，BIThesis 的教程参考都几乎涵盖了全部使用 BIThesis 所需的编译环境和基础知识。请大家放心食用。
 
@@ -59,11 +59,11 @@ BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制�
 [lab-report]: https://www.overleaf.com/read/ybbrgnvkycwq
 [graduate-thesis]: https://www.overleaf.com/read/qhjhwwpnwtyc
 [repo-lr]: https://github.com/BITNP/BIThesis/tree/main/templates/lab-report
-[repo-mt]: https://github.com/BITNP/BIThesis/tree/main/templates/master-thesis
+[repo-gt]: https://github.com/BITNP/BIThesis/tree/main/templates/graduate-thesis
 [repo-pt]: https://github.com/BITNP/BIThesis/tree/main/templates/paper-translation
 [repo-ps]: https://github.com/BITNP/BIThesis/tree/main/templates/presentation-slide
 [repo-ut]: https://github.com/BITNP/BIThesis/tree/main/templates/undergraduate-thesis
 [repo-ute]: https://github.com/BITNP/BIThesis/tree/main/templates/undergraduate-thesis-en
 
-[^2]: [关于 2022 届本科生毕业设计（论文）工作安排的通知；北京理工大学教务部；2021-10-12](https://jwc.bit.edu.cn/sjjx/bysj/e06605ca60ec480d80bd6497560f70f7.htm)
 [^1]: [研究生学位论文模版；北京理工大学研究生院；2018-04-04](https://grd.bit.edu.cn/xwgz/xwgz2/wjxz_xwgz/b119746.htm)
+[^2]: [关于开展 2023 届本科毕业设计（论文）检测、评阅、抽检及答辩相关工作的通知](https://jwb.bit.edu.cn//tzgg/44bd72939d7047bab384fdc538e8729b.htm)
