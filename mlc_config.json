@@ -11,6 +11,12 @@
     },
     {
       "pattern": "jwb.bit.edu.cn"
+    },
+    {
+      "pattern": "jwc.bit.edu.cn"
+    },
+    {
+      "pattern": "cs.bit.edu.cn"
     }
   ],
   "timeout": "20s",
