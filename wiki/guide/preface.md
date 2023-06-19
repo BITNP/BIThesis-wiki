@@ -18,7 +18,7 @@ BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制�
 **A：可以的。**
 
 - 本项目已经经由北京理工大学教务部确认，可以用于北京理工大学本科生毕业论文、毕业设计的撰写之中。更多细节，请进入文档详细了解。
-- 本项目同时也获得了 [北京理工大学教务部](http://jwc.bit.edu.cn/)、[北京理工大学计算机学院](http://cs.bit.edu.cn/) 的认可、背书与大力支持。详见：[致谢 - 官方赞助](/guide/acknowledgements.md)。
+- 本项目同时也获得了 [北京理工大学教务部](https://jwc.bit.edu.cn/)、[北京理工大学计算机学院](http://cs.bit.edu.cn/) 的认可、背书与大力支持。详见：[致谢 - 官方赞助](/guide/acknowledgements.md)。
 
 **我们正在对项目持续更新！目前，你完全可以使用现有的版本开始你的毕业设计开题报告的写作；不过与此同时，我们也在持续推进代码的升级和更新（主要是不影响使用的底层逻辑）。更多开发计划请访问我们的 [Roadmap](https://github.com/BITNP/BIThesis/projects)。想帮助这个项目持续前进？参见我们的[贡献者指南](https://github.com/BITNP/BIThesis/blob/main/contributing-zh.md)**
 
