@@ -55,9 +55,9 @@ xelatex --interaction=nonstopmode main
 
 ### 使用 VS Code 撰写与编译 LaTeX 模板
 
-> 首先请在 VS Code 的扩展商店中安装 LaTeX Workshop 插件。
+> 首先请在 VS Code 的扩展商店中安装 [LaTeX Workshop 插件](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)。
 
-VS Code 的设置项目可以通过快捷键 `ctrl/cmd + ,` 打开 UI 设置界面，之后点击右上角 `Open Settings (JSON)` 按钮即可打开相应的 JSON 格式配置文件，我们在这里即可定义 LaTeX 编译工具。其中：
+VS Code 的设置项目可以通过打开 UI 设置界面（快捷键 `ctrl/cmd + ,` ），之后点击右上角 <img src="../assets/codicon-go-to-file.svg" alt="Open Settings (JSON)" title="Open Settings (JSON)" class="icon"> 按钮即可打开相应的 JSON 格式配置文件，我们在这里即可定义 LaTeX 编译工具。其中：
 
 - “编译工具”是在 `"latex-workshop.latex.tools": [ ... ]` 处进行定义，即我们在这里定义每次调用工具 `latexmk` 或 `xelatex` 时所执行的命令
 - “编译工具链”是在 `"latex-workshop.latex.recipes": [ ... ]` 处进行定义，即我们在这里定义编译整个文档的工具链。对我们的模板使用 `xelatex` 的编译方式来说，就是定义 `xelatex -> biber -> xelatex -> xelatex`「四步走」的串联过程
