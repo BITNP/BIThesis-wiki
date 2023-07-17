@@ -12,7 +12,7 @@
 ## 下载合适的 LaTeX 发行版
 
 :::warning ❗ 请注意
-BIThesis 中参考文献为了和校方规定的模板格式（[信息与文献 参考文献著录规则 - GB/T 7714-2015](http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=7FA63E9BBA56E60471AEDAEBDE44B14C)）保持一致，使用了仅支持 TeX Live 2019 及以上版本的宏包，如果你曾经安装过 TeX Live 且目前正在使用的 TeX Live 版本不是 2019 及以上版本，那么请及时更新为最新的 TeX Live 2019 及以上版本。
+BIThesis 中参考文献为了和校方规定的模板格式（[信息与文献 参考文献著录规则 - GB/T 7714-2015](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=7FA63E9BBA56E60471AEDAEBDE44B14C)）保持一致，使用了仅支持 TeX Live 2019 及以上版本的宏包，如果你曾经安装过 TeX Live 且目前正在使用的 TeX Live 版本不是 2019 及以上版本，那么请及时更新为最新的 TeX Live 2019 及以上版本。
 :::
 
 ### Windows 和 Linux 系统
