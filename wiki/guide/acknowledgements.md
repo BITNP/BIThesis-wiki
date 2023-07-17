@@ -100,7 +100,7 @@ const members = [
 
 **本项目获得了北京理工大学教务部、北京理工大学计算机学院的认可、背书与大力支持。**
 
-<a href="https://jwc.bit.edu.cn"><img src="https://i.loli.net/2020/03/10/5lVXDqyHCOSczjh.png" alt="Dept. of Undergraduate Academic Affairs" width="auto" height="60px"/></a> <a href="https://cs.bit.edu.cn"><img src="https://i.loli.net/2020/03/10/bXHpTfwm1jdBuCS.png" alt="School of Computer Science and Technology, BIT" width="auto" height="60px"/></a>
+<a href="https://jwb.bit.edu.cn"><img src="https://i.loli.net/2020/03/10/5lVXDqyHCOSczjh.png" alt="Dept. of Undergraduate Academic Affairs" width="auto" height="60px"/></a> <a href="https://cs.bit.edu.cn"><img src="https://i.loli.net/2020/03/10/bXHpTfwm1jdBuCS.png" alt="School of Computer Science and Technology, BIT" width="auto" height="60px"/></a>
 
 ---
 

@@ -179,7 +179,7 @@ TeXstudio 的编译工具大部分已经为我们配置完毕，我们只需要�
 
 各个模板的使用指南分别位于相应模板的 Releases 文件夹内部。
 
-你可以在[模板使用手册](http://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis.pdf)中找到如何配置参数。
+你可以在[模板使用手册](https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis.pdf)中找到如何配置参数。
 
 也可以在示例代码的注释中找到相应的说明。
 
