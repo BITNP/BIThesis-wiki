@@ -36,8 +36,8 @@ devDependencies:
     specifier: ^5.1.3
     version: 5.1.3
   vitepress:
-    specifier: 1.0.0-rc.2
-    version: 1.0.0-rc.2(@types/node@18.16.18)(search-insights@2.7.0)
+    specifier: 1.0.0-rc.4
+    version: 1.0.0-rc.4(@types/node@18.16.18)(search-insights@2.7.0)
   vue:
     specifier: ^3.3.4
     version: 3.3.4
@@ -1814,8 +1814,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress@1.0.0-rc.2(@types/node@18.16.18)(search-insights@2.7.0):
-    resolution: {integrity: sha512-Phgqfq7kcw8DKSgvgjiGVwSRf6lyMKD8lY436vsiCYx04d1HVnfdNRiiWgWwg7vNh6iG9vfhf8thRkY2g9HTDw==}
+  /vitepress@1.0.0-rc.4(@types/node@18.16.18)(search-insights@2.7.0):
+    resolution: {integrity: sha512-JCQ89Bm6ECUTnyzyas3JENo00UDJeK8q1SUQyJYou+4Yz5BKEc/F3O21cu++DnUT2zXc0kvQ2Aj4BZCc/nioXQ==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.5.1
