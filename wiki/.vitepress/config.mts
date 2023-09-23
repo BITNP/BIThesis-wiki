@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import * as footnote from 'markdown-it-footnote'
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -92,7 +93,7 @@ export default defineConfig({
   },
   markdown: {
     config: (md) => {
-      md.use(require('markdown-it-footnote'))
+      md.use(footnote.default ?? footnote)
     },
   },
 })
