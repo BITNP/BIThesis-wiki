@@ -53,13 +53,13 @@ BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制�
 
 网上已经有大量文章进行讨论：比如我写的[这篇](https://blog.fkynjyq.com/should-i-choose-between-bithesis-or-word)。
 
-[undergraduate-thesis-en]: https://www.overleaf.com/read/mbrwpwqhpgvb
-[undergraduate-thesis]: https://www.overleaf.com/read/mgntzxyqckrw
-[presentation-slide]: https://www.overleaf.com/read/wbfzjwymszry
-[paper-translation]: https://www.overleaf.com/read/tvvpjfzrnwwv
-[lab-report]: https://www.overleaf.com/read/ybbrgnvkycwq
-[graduate-thesis]: https://www.overleaf.com/read/qhjhwwpnwtyc
+[undergraduate-thesis-en]: https://www.overleaf.com/read/jtgzkqcvwmqc
+[undergraduate-thesis]: https://www.overleaf.com/read/zfzvxwjgkrcs
 [reading-report]: https://www.overleaf.com/read/hmyvchvkkhdt
+[presentation-slide]: https://www.overleaf.com/read/vpsqnskywftr
+[paper-translation]: https://www.overleaf.com/read/gpmmzkxfnvzw
+[lab-report]: https://www.overleaf.com/read/pjqgtwvjdmhd
+[graduate-thesis]: https://www.overleaf.com/read/crgsvzchcjxt
 [repo-lr]: https://github.com/BITNP/BIThesis/tree/main/templates/lab-report
 [repo-gt]: https://github.com/BITNP/BIThesis/tree/main/templates/graduate-thesis
 [repo-rr]: https://github.com/BITNP/BIThesis/tree/main/templates/reading-report
