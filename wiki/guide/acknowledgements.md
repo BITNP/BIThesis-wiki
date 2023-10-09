@@ -20,6 +20,19 @@ const members = [
 
 ## Maintainers
 
+### 2023
+
+<table>
+  <tr>
+     <td align="center"><img src="https://i.loli.net/2020/05/29/Z1YFSty6LRJl8Oc.png" width="100px" alt="FKY"></td>
+     <td align="center"><img src="https://s2.loli.net/2023/10/09/jXiDgmCd865HAue.png" width="100px" alt="YDX-2147483647"></td>
+  </tr>
+  <tr>
+     <td align="center"><a href="https://github.com/fky2015">FKY</a><br>💻🚧📆💬📖</td>
+     <td align="center"><a href="https://github.com/YDX-2147483647">YDX-2147483647</a><br>💻💬📖</td>
+  </tr>
+</table>
+
 ### 2022
 
 <table>
