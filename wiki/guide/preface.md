@@ -24,6 +24,9 @@ BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制�
 
 ### Q：BIThesis 都包含哪些模板？
 
+
+_如果打开 Overleaf 版本略微落后于最新版本，有可能是因为此模板在最近几个版本中没有更新。_
+
 **A：如下表。**
 
 | 模板                                                     | 预览                                                                                                    | 特性                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -53,13 +56,13 @@ BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制�
 
 网上已经有大量文章进行讨论：比如我写的[这篇](https://blog.fkynjyq.com/should-i-choose-between-bithesis-or-word)。
 
-[undergraduate-thesis-en]: https://www.overleaf.com/read/jtgzkqcvwmqc
-[undergraduate-thesis]: https://www.overleaf.com/read/zfzvxwjgkrcs
+[undergraduate-thesis-en]: https://www.overleaf.com/read/bhnpzhxktcfx#2cf9a8
+[undergraduate-thesis]: https://www.overleaf.com/read/szjwxvmbtpkk#b03b78
 [reading-report]: https://www.overleaf.com/read/hmyvchvkkhdt
 [presentation-slide]: https://www.overleaf.com/read/vpsqnskywftr
-[paper-translation]: https://www.overleaf.com/read/gpmmzkxfnvzw
+[paper-translation]: https://www.overleaf.com/read/kjjdwmgcbwqb#299eb2
 [lab-report]: https://www.overleaf.com/read/pjqgtwvjdmhd
-[graduate-thesis]: https://www.overleaf.com/read/crgsvzchcjxt
+[graduate-thesis]: https://www.overleaf.com/read/dgrphwcybvct#9e8c8f
 [repo-lr]: https://github.com/BITNP/BIThesis/tree/main/templates/lab-report
 [repo-gt]: https://github.com/BITNP/BIThesis/tree/main/templates/graduate-thesis
 [repo-rr]: https://github.com/BITNP/BIThesis/tree/main/templates/reading-report
