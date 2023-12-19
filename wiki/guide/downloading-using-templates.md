@@ -13,8 +13,6 @@
 - `lab-report.zip`：实验报告模板压缩包
 - ...
 
-<!-- TODO -->
+![Templates from GitHub Release](../assets/templates-from-release.png)
 
-<img src="https://i.loli.net/2020/03/02/wJghlZkXzsK9GNU.png" alt="Release page" width="660px" height="auto">
-
-根据你的选择，下载其中你所要使用的模板即可。（当然，你也可以直接用 Git 将本项目完整克隆至本地，使用最新版本的模板。）
+根据你的选择，下载其中你所要使用的模板即可。

@@ -16,8 +16,6 @@ BIThesis 为各位提供了基于北京理工大学计算机学院给出的「�
 
 ## 开始阅读文档
 
-这里是 BIThesis 的项目 Wiki，提供了 LaTeX 的基本安装方法、LaTeX 项目的使用方法、BIThesis 的编译方法……你可以按照下面的流程图所示的顺序来下载与使用 BIThesis：
-
-TODO: Update this diagram.
+这里是 BIThesis 的项目 Wiki，提供了 LaTeX 的基本安装方法、LaTeX 项目的使用方法、BIThesis 的编译方法，等等。
 
 在使用 BIThesis 之前，请务必仔细阅读相关章节，只有清晰理解 BIThesis 的各部分内容与功能，我们才能借助 BIThesis 模板撰写优秀的论文。
