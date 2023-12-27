@@ -49,7 +49,7 @@ fc-list :lang-zh > fclist.txt
 
 ## 出现参考文献样式找不到的编译失败提示
 
-开题报告与毕业论文的参考文献均使用了 [biblatex-gb7714-2015](https://github.com/hushidong/biblatex-gb7714-2015) 宏包生成符合《GB/T 7714-2015 信息与文献 参考文献著录规则》规定的参考文献。这一参考文献宏包仅适用于最新版本的 TeX Live 发行版（TeX Live 2019）。如果你在编译过程中出现了类似如下的报错：
+毕业论文的参考文献使用了 [biblatex-gb7714-2015](https://github.com/hushidong/biblatex-gb7714-2015) 宏包生成符合《GB/T 7714-2015 信息与文献 参考文献著录规则》规定的参考文献。这一参考文献宏包仅适用于最新版本的 TeX Live 发行版（TeX Live 2019）。如果你在编译过程中出现了类似如下的报错：
 
 ```txt
 Error: Style 'gb7714-2015' not found.
