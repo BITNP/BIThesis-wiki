@@ -20,7 +20,7 @@ BIThesis 中参考文献为了和校方规定的模板格式（[信息与文献 
 对于 Windows 和 Linux 系统，我们可以直接下载使用 [TeX Live 发行版](https://www.tug.org/texlive/)。
 
 - **在线安装**：官方的安装指南位于 - [Installing TeX Live over the Internet](https://www.tug.org/texlive/acquire-netinstall.html)。使用这一方法会下载 `install-tl-windows.exe`（Windows）或 `install-tl-unx.tar.gz`（Linux），之后运行相应的可执行程序，安装程序即可将整个 TeX Live 发行版下载安装到我们本机。（通常会安装 3GB 左右的程序。）
-- **离线安装**：使用北京理工大学校园网的同学也可以直接使用我校官方 TeX Live 镜像进行安装。我校 TeX Live 镜像资源位于 [/CTAN/systems/texlive/Images](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/)，其中我们选择下载 `texlive2020.iso` 即可。Windows 10 可直接挂载 ISO 镜像（双击即可），其余系统用合适的软件也可。之后在打开的文件夹中点击执行 `install-tl-windows`（Windows）或 `install-tl`（Linux）即可离线安装全部 TeX Live 组件。
+- **离线安装**：使用北京理工大学校园网的同学也可以直接使用我校官方 TeX Live 镜像进行安装。我校 TeX Live 镜像资源位于 [/CTAN/systems/texlive/Images](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/)，其中我们选择下载 `texlive20xx.iso` 即可。Windows 10 可直接挂载 ISO 镜像（双击即可），其余系统用合适的软件也可。之后在打开的文件夹中点击执行 `install-tl-windows`（Windows）或 `install-tl`（Linux）即可离线安装全部 TeX Live 组件。
 
   :::warning ❗ 请注意
   北理工镜像站自 2021 年 2 月 18 日起，已经[停止校外 IPv4 访问的支持](https://github.com/BITNP/issues/issues/29)。因此当我们访问上面镜像资源时，有可能无法打开。对此我们可以选用其他的镜像源。
