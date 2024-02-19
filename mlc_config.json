@@ -17,6 +17,9 @@
     },
     {
       "pattern": "cs.bit.edu.cn"
+    },
+    {
+      "pattern": "tex.stackexchange.com"
     }
   ],
   "timeout": "20s",
