@@ -55,13 +55,13 @@ _如果打开 Overleaf 版本略微落后于最新版本，有可能是因为此
 
 网上已经有大量文章进行讨论：比如我写的[这篇](https://blog.fkynjyq.com/should-i-choose-between-bithesis-or-word)。
 
-[undergraduate-thesis-en]: https://cn.overleaf.com/read/ttcsfrgtjrvk#6f673c
-[undergraduate-thesis]: https://cn.overleaf.com/read/zkmnmyydkkxv#7c558c
+[undergraduate-thesis-en]: https://cn.overleaf.com/read/yswhqvtydnpm#701fec
+[undergraduate-thesis]: https://cn.overleaf.com/read/smxjydnzwvbn#708757
 [reading-report]: https://cn.overleaf.com/read/zykvpjhpkbzr#0a731a
 [presentation-slide]: https://www.overleaf.com/read/bpntgjhftvdf#a32894
 [paper-translation]: https://cn.overleaf.com/read/nwpxvwzpxwbm#8c9e30
 [lab-report]: https://www.overleaf.com/read/gzkmrbbyhskg#c48f6b
-[graduate-thesis]: https://cn.overleaf.com/read/nsbnbggrrddv#8a1202
+[graduate-thesis]: https://cn.overleaf.com/read/nbgpkpgnggpc#e83ead
 [repo-lr]: https://github.com/BITNP/BIThesis/tree/main/templates/lab-report
 [repo-gt]: https://github.com/BITNP/BIThesis/tree/main/templates/graduate-thesis
 [repo-rr]: https://github.com/BITNP/BIThesis/tree/main/templates/reading-report
