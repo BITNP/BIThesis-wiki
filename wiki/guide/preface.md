@@ -61,7 +61,7 @@ _如果打开 Overleaf 版本略微落后于最新版本，有可能是因为此
 [presentation-slide]: https://www.overleaf.com/read/bpntgjhftvdf#a32894
 [paper-translation]: https://cn.overleaf.com/read/nwpxvwzpxwbm#8c9e30
 [lab-report]: https://www.overleaf.com/read/gzkmrbbyhskg#c48f6b
-[graduate-thesis]: https://cn.overleaf.com/read/nbgpkpgnggpc#e83ead
+[graduate-thesis]: https://cn.overleaf.com/read/bdzrwpfhvfhf#57cdd9
 [repo-lr]: https://github.com/BITNP/BIThesis/tree/main/templates/lab-report
 [repo-gt]: https://github.com/BITNP/BIThesis/tree/main/templates/graduate-thesis
 [repo-rr]: https://github.com/BITNP/BIThesis/tree/main/templates/reading-report
