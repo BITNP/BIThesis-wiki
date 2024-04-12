@@ -55,13 +55,13 @@ _如果打开 Overleaf 版本略微落后于最新版本，有可能是因为此
 
 网上已经有大量文章进行讨论：比如我写的[这篇](https://blog.fkynjyq.com/should-i-choose-between-bithesis-or-word)。
 
-[undergraduate-thesis-en]: https://www.overleaf.com/read/zrpgdkdgxdsp#470c2b
-[undergraduate-thesis]: https://www.overleaf.com/read/kqvqwfnrqmsc#ed1dea
-[reading-report]: https://www.overleaf.com/read/hrhvfgndyvxq#dee4a9
-[presentation-slide]: https://www.overleaf.com/read/knnqrfctjmvf#305949
-[paper-translation]: https://www.overleaf.com/read/dyvppfbfjzys#1227a3
-[lab-report]: https://www.overleaf.com/read/znnjnsjzsfjp#bc9ae4
-[graduate-thesis]: https://www.overleaf.com/read/mqscwmzgvgsx#644208
+[undergraduate-thesis-en]: https://cn.overleaf.com/read/cjfwswfzmdkc#ebde12
+[undergraduate-thesis]: https://cn.overleaf.com/read/jjqbcgrjhfwd#f4788b
+[reading-report]: https://cn.overleaf.com/read/mnncdsjxmmgw#c378ec
+[presentation-slide]: https://cn.overleaf.com/read/mvbkqvjkwtmh#468fe1
+[paper-translation]: https://cn.overleaf.com/read/fxtnqvwwwvmf#52e061
+[lab-report]: https://cn.overleaf.com/read/qmcmydrqbpkt#d17d8d
+[graduate-thesis]: https://cn.overleaf.com/read/dhsqnwxywtvn#d32254
 [repo-lr]: https://github.com/BITNP/BIThesis/tree/main/templates/lab-report
 [repo-gt]: https://github.com/BITNP/BIThesis/tree/main/templates/graduate-thesis
 [repo-rr]: https://github.com/BITNP/BIThesis/tree/main/templates/reading-report
