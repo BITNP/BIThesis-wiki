@@ -25,7 +25,7 @@ devDependencies:
     version: 0.44.0(eslint@9.0.0)
   eslint-plugin-vue:
     specifier: ^9.15.1
-    version: 9.24.1(eslint@9.0.0)
+    version: 9.25.0(eslint@9.0.0)
   markdown-it-footnote:
     specifier: ^4.0.0
     version: 4.0.0
@@ -1273,8 +1273,8 @@ packages:
       eslint: 9.0.0
     dev: true
 
-  /eslint-plugin-vue@9.24.1(eslint@9.0.0):
-    resolution: {integrity: sha512-wk3SuwmS1pZdcuJlokGYEi/buDOwD6KltvhIZyOnpJ/378dcQ4zchu9PAMbbLAaydCz1iYc5AozszcOOgZIIOg==}
+  /eslint-plugin-vue@9.25.0(eslint@9.0.0):
+    resolution: {integrity: sha512-tDWlx14bVe6Bs+Nnh3IGrD+hb11kf2nukfm6jLsmJIhmiRQ1SUaksvwY9U5MvPB0pcrg0QK0xapQkfITs3RKOA==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
