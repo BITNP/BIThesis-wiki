@@ -13,8 +13,8 @@ hero:
       text: 进入文档 →
       link: /guide/preface
     - theme: alt
-      text: 进入代码仓库 →
-      link: https://github.com/BITNP/BIThesis
+      text: 下载模板 →
+      link: /guide/downloading-using-templates
 
 features:
   - icon: 📝
