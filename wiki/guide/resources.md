@@ -16,10 +16,20 @@
 - 插入
 
   - [图片（Inserting Images）](https://www.overleaf.com/learn/latex/Inserting_Images)
-  - [表格（Tables）](https://www.overleaf.com/learn/latex/Tables)——另外可用 [TablesGenerator.com](https://www.tablesgenerator.com/) 生成。
-  - [数学公式（Mathematical expressions）](https://www.overleaf.com/learn/latex/Mathematical_expressions)——此外可用 [Detexify](https://detexify.kirelabs.org/classify.html) 识别“≳”这样的特殊符号。
+
+  - [表格（Tables）](https://www.overleaf.com/learn/latex/Tables)
+
+    另外可用 [TablesGenerator.com](https://www.tablesgenerator.com/)、[LaTeX-Tables.com](https://www.latex-tables.com/) 等生成。
+
+  - [数学公式（Mathematical expressions）](https://www.overleaf.com/learn/latex/Mathematical_expressions)
+
+    此外可用 [Detexify](https://detexify.kirelabs.org/classify.html) 识别“≳”这样的特殊符号。
+
   - [代码及高亮（Code Highlighting with minted）](https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted)
+
   - [算法伪代码描述（Algorithms）](https://www.overleaf.com/learn/latex/algorithms)
+
+    其中`algorithm`+X和`algorithm2e`两种方式都适配了，不过采用`algorithm2e`方式时，要加上选项`algochapter`才能按学校要求分章编号（例如`\usepackage[ruled,algochapter]{algorithm2e}`）。
 
 - [使用 BibLaTeX 管理参考文献（Bibliography management in LaTeX）](https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX)
 
