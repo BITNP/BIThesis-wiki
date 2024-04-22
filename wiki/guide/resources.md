@@ -29,7 +29,7 @@
 
   - [算法伪代码描述（Algorithms）](https://www.overleaf.com/learn/latex/algorithms)
 
-    其中`algorithm`+X和`algorithm2e`两种方式都适配了，不过采用`algorithm2e`方式时，要加上选项`algochapter`才能按学校要求分章编号（例如`\usepackage[ruled,algochapter]{algorithm2e}`）。
+    其中`algorithm`+X和`algorithm2e`两种方式都适配了，不过为了按学校要求分章编号，引入`algorithm`宏包时要加上选项`chapter`，引入`algorithm2e`则要加`algochapter`。更完整的示例请在手册搜索“如何排版算法”。
 
 - [使用 BibLaTeX 管理参考文献（Bibliography management in LaTeX）](https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX)
 
