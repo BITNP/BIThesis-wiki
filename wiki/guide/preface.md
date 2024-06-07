@@ -24,8 +24,6 @@ BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制�
 
 ### Q：BIThesis 都包含哪些模板？
 
-_如果打开 Overleaf 版本略微落后于最新版本，有可能是因为此模板在最近几个版本中没有更新。_
-
 **A：如下表。**
 
 | 模板                                                     | 预览                                                                                                    | 特性                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -44,10 +42,20 @@ _如果打开 Overleaf 版本略微落后于最新版本，有可能是因为此
 请一定在阅读完毕本 BIThesis 使用 Wiki 的全部内容之后，再着手开始正式的论文写作工作。
 :::
 
-**A：两种选择。**
+**A：有几种选择。**
 
-1. 你可以直接进入「[文档指南](/guide/intro.md)」模块进行学习参考，文档中有详细的介绍、使用方法和注意事项。
-2. 你也可以直接前往「[系列视频指导](/video/intro.md)」，根据视频的介绍进行学习使用。（录制于 2020 年，与目前的模板使用方式有些许出入；仅供参考）
+1. 「**快速使用指南**」（[本科][undergraduate-handbook]／[硕博][graduate-handbook]）
+
+   - 面向没有太多计算机基础的同学
+   - 附图的 PDF
+
+2. 本 Wiki 「[**食用方法**](/guide/intro.md)」
+
+   - 面向有一定计算机基础的同学
+   - 一系列网页
+   - 详细介绍各种情况的使用方法和注意事项
+
+此外也可直接前往「[系列视频指导](/video/intro.md)」，根据视频的介绍进行学习使用。（录制于 2020 年，与目前的模板使用方式有些许出入；仅供参考）
 
 无论如何，BIThesis 的教程参考都几乎涵盖了全部使用 BIThesis 所需的编译环境和基础知识。请大家放心食用。
 
@@ -55,13 +63,13 @@ _如果打开 Overleaf 版本略微落后于最新版本，有可能是因为此
 
 网上已经有大量文章进行讨论：比如我写的[这篇](https://blog.fkynjyq.com/should-i-choose-between-bithesis-or-word)。
 
-[undergraduate-thesis-en]: https://cn.overleaf.com/read/xgzntnsxnwwx#0dc50d
-[undergraduate-thesis]: https://cn.overleaf.com/read/dryhtswnnjxq#f07bd5
-[reading-report]: https://cn.overleaf.com/read/dfpyscbvryzp#50de57
-[presentation-slide]: https://cn.overleaf.com/read/hnvdbnwtbnzv#846418
-[paper-translation]: https://cn.overleaf.com/read/wqsvbvndryqn#f5fdc7
-[lab-report]: https://cn.overleaf.com/read/mkffssqqbdmg#37d36a
-[graduate-thesis]: https://cn.overleaf.com/read/hrtyqxcgrxxy#146647
+[undergraduate-thesis-en]: https://cn.overleaf.com/docs?engine=xelatex&snip_uri=https://github.com/BITNP/BIThesis/releases/latest/download/undergraduate-thesis-en.zip
+[undergraduate-thesis]: https://cn.overleaf.com/docs?engine=xelatex&snip_uri=https://github.com/BITNP/BIThesis/releases/latest/download/undergraduate-thesis.zip
+[reading-report]: https://cn.overleaf.com/docs?engine=xelatex&snip_uri=https://github.com/BITNP/BIThesis/releases/latest/download/reading-report.zip
+[presentation-slide]: https://cn.overleaf.com/docs?engine=xelatex&snip_uri=https://github.com/BITNP/BIThesis/releases/latest/download/presentation-slide.zip
+[paper-translation]: https://cn.overleaf.com/docs?engine=xelatex&snip_uri=https://github.com/BITNP/BIThesis/releases/latest/download/paper-translation.zip
+[lab-report]: https://cn.overleaf.com/docs?engine=xelatex&snip_uri=https://github.com/BITNP/BIThesis/releases/latest/download/lab-report.zip
+[graduate-thesis]: https://cn.overleaf.com/docs?engine=xelatex&snip_uri=https://github.com/BITNP/BIThesis/releases/latest/download/graduate-thesis.zip
 [repo-lr]: https://github.com/BITNP/BIThesis/tree/main/templates/lab-report
 [repo-gt]: https://github.com/BITNP/BIThesis/tree/main/templates/graduate-thesis
 [repo-rr]: https://github.com/BITNP/BIThesis/tree/main/templates/reading-report
@@ -69,6 +77,9 @@ _如果打开 Overleaf 版本略微落后于最新版本，有可能是因为此
 [repo-ps]: https://github.com/BITNP/BIThesis/tree/main/templates/presentation-slide
 [repo-ut]: https://github.com/BITNP/BIThesis/tree/main/templates/undergraduate-thesis
 [repo-ute]: https://github.com/BITNP/BIThesis/tree/main/templates/undergraduate-thesis-en
+[undergraduate-handbook]: https://github.com/BITNP/BIThesis/releases/latest/download/undergraduate-handbook.pdf
+[graduate-handbook]: https://github.com/BITNP/BIThesis/releases/latest/download/graduate-handbook.pdf
 
 [^1]: [研究生学位论文模版；北京理工大学研究生院；2018-04-04](https://grd.bit.edu.cn/xwgz/xwgz2/wjxz_xwgz/b119746.htm)
+
 [^2]: [关于开展 2023 届本科毕业设计（论文）检测、评阅、抽检及答辩相关工作的通知](https://jwb.bit.edu.cn//tzgg/44bd72939d7047bab384fdc538e8729b.htm)
