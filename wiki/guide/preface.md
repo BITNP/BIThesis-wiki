@@ -71,4 +71,5 @@ _如果打开 Overleaf 版本略微落后于最新版本，有可能是因为此
 [repo-ute]: https://github.com/BITNP/BIThesis/tree/main/templates/undergraduate-thesis-en
 
 [^1]: [研究生学位论文模版；北京理工大学研究生院；2018-04-04](https://grd.bit.edu.cn/xwgz/xwgz2/wjxz_xwgz/b119746.htm)
+
 [^2]: [关于开展 2023 届本科毕业设计（论文）检测、评阅、抽检及答辩相关工作的通知](https://jwb.bit.edu.cn//tzgg/44bd72939d7047bab384fdc538e8729b.htm)
