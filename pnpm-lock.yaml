@@ -419,11 +419,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@shikijs/core@1.6.5':
-    resolution: {integrity: sha512-XcQYt6e4L61ruAxHiL3Xg1DL/XkWWjzDdeckB/DtN8jAxoAU+bcxsV6DetC8NafHpL4YpGhxy9iXF0ND/u6HmA==}
+  '@shikijs/core@1.9.0':
+    resolution: {integrity: sha512-cbSoY8P/jgGByG8UOl3jnP/CWg/Qk+1q+eAKWtcrU3pNoILF8wTsLB0jT44qUBV8Ce1SvA9uqcM9Xf+u3fJFBw==}
 
-  '@shikijs/transformers@1.6.5':
-    resolution: {integrity: sha512-iuKa1uQtPQEe5vgCsXIb162b/3imRiAIdoF5IqafrTWL1uqZUpipfPjWZPuAAszOzYU//yIYRbhUk8reHVXA/w==}
+  '@shikijs/transformers@1.9.0':
+    resolution: {integrity: sha512-wo8dNbZtFtVhKtw8BnXIT/FDTGMwEdWcQSIRa78ou14JGkMYxSCBN942W5+IRUifP5BwVUWgkXBYX/M3FUFkeg==}
 
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
@@ -520,16 +520,14 @@ packages:
   '@vue/compiler-ssr@3.4.30':
     resolution: {integrity: sha512-ZJ56YZGXJDd6jky4mmM0rNaNP6kIbQu9LTKZDhcpddGe/3QIalB1WHHmZ6iZfFNyj5mSypTa4+qDJa5VIuxMSg==}
 
-  '@vue/devtools-api@7.3.0':
-    resolution: {integrity: sha512-EQ6DIm9AuL9q6IzjjnxeHWgzHzZTI+0ZGyLyG6faLN1e0tzLWPut58OtvFbLP/hbEhE5zPlsdUsH1uFr7RVFYw==}
+  '@vue/devtools-api@7.3.4':
+    resolution: {integrity: sha512-E5dJlLW+NgGb+WS33y99ioOJL2OXpVhje6VwXGJ/q5fNizJDpe67Ml0GBSrlYOKNSjZs2mwcZd7B3e12th3Q0g==}
 
-  '@vue/devtools-kit@7.3.0':
-    resolution: {integrity: sha512-J9C+ue3Ka8cumQY/hMsNTcbb1tczqVBBXFMw4isa5YvPjyIBgEtJBfDSUVIK3nE+YWk7UNliUuCcE1GHEKaGcw==}
-    peerDependencies:
-      vue: ^3.0.0
+  '@vue/devtools-kit@7.3.4':
+    resolution: {integrity: sha512-DalQZWaFLRyA4qfKT0WT7e+q2AwvYoTwd0pWqswHqcpviXw+oU6FlSJHMrEACB3lBHjN1KBS9Kh527sWIe1vcg==}
 
-  '@vue/devtools-shared@7.3.0':
-    resolution: {integrity: sha512-bYw4BtZclxzVrYBeYYHzNOcLlvVZbe9tutwtrixTtdgynHvuSJa5KI2MqWiumpGYm2feFI5sHlC8Vt61v4z18g==}
+  '@vue/devtools-shared@7.3.4':
+    resolution: {integrity: sha512-5S5cHh7oWLZdboujnLteR3rT8UGfKHfA34aGLyFRB/B5TqBxmeLW1Rq32xW6TCDEy4isoYsYHGwJVp6DQcpiDA==}
 
   '@vue/reactivity@3.4.30':
     resolution: {integrity: sha512-bVJurnCe3LS0JII8PPoAA63Zd2MBzcKrEzwdQl92eHCcxtIbxD2fhNwJpa+KkM3Y/A4T5FUnmdhgKwOf6BfbcA==}
@@ -544,9 +542,6 @@ packages:
     resolution: {integrity: sha512-TBD3eqR1DeDc0cMrXS/vEs/PWzq1uXxnvjoqQuDGFIEHFIwuDTX/KWAQKIBjyMWLFHEeTDGYVsYci85z2UbTDg==}
     peerDependencies:
       vue: 3.4.30
-
-  '@vue/shared@3.4.29':
-    resolution: {integrity: sha512-hQ2gAQcBO/CDpC82DCrinJNgOHI2v+FA7BDW4lMSPeBpQ7sRe2OLHWe5cph1s7D8DUQAwRt18dBDfJJ220APEA==}
 
   '@vue/shared@3.4.30':
     resolution: {integrity: sha512-CLg+f8RQCHQnKvuHY9adMsMaQOcqclh6Z5V9TaoMgy0ut0tz848joZ7/CYFFyF/yZ5i2yaw7Fn498C+CNZVHIg==}
@@ -756,8 +751,8 @@ packages:
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     hasBin: true
 
-  espree@10.0.1:
-    resolution: {integrity: sha512-MWkrWZbJsL2UwnjxTX3gG8FneachS/Mwg7tdGXce011sJd5b0JG54vat5KHnfSBODZ3Wvzd2WnjxyzsRoVv+ww==}
+  espree@10.1.0:
+    resolution: {integrity: sha512-M1M6CpiE6ffoigIOWYO9UDP8TMUw9kqb21tf+08IgDYjCsOvCuDt4jQcZmoYxx+w7zlKw9/N0KXfto+I8/FrXA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   espree@9.6.1:
@@ -1065,8 +1060,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shiki@1.6.5:
-    resolution: {integrity: sha512-iFzypldJG0zeyRHKAhaSGCf+YWXpMMyUyOrCVFBFKGGdF5vrB6jbd66/SQljxV20aSrVZEAQwUto/hhuNi/CIg==}
+  shiki@1.9.0:
+    resolution: {integrity: sha512-i6//Lqgn7+7nZA0qVjoYH0085YdNk4MC+tJV4bo+HgjgRMJ0JmkLZzFAuvVioJqLkcGDK5GAMpghZEZkCnwxpQ==}
 
   slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
@@ -1452,7 +1447,7 @@ snapshots:
     dependencies:
       ajv: 6.12.6
       debug: 4.3.5
-      espree: 10.0.1
+      espree: 10.1.0
       globals: 14.0.0
       ignore: 5.3.1
       import-fresh: 3.3.0
@@ -1532,11 +1527,11 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.18.0':
     optional: true
 
-  '@shikijs/core@1.6.5': {}
+  '@shikijs/core@1.9.0': {}
 
-  '@shikijs/transformers@1.6.5':
+  '@shikijs/transformers@1.9.0':
     dependencies:
-      shiki: 1.6.5
+      shiki: 1.9.0
 
   '@types/estree@1.0.5': {}
 
@@ -1671,24 +1666,21 @@ snapshots:
       '@vue/compiler-dom': 3.4.30
       '@vue/shared': 3.4.30
 
-  '@vue/devtools-api@7.3.0(vue@3.4.30(typescript@5.5.2))':
+  '@vue/devtools-api@7.3.4':
     dependencies:
-      '@vue/devtools-kit': 7.3.0(vue@3.4.30(typescript@5.5.2))
-    transitivePeerDependencies:
-      - vue
+      '@vue/devtools-kit': 7.3.4
 
-  '@vue/devtools-kit@7.3.0(vue@3.4.30(typescript@5.5.2))':
+  '@vue/devtools-kit@7.3.4':
     dependencies:
-      '@vue/devtools-shared': 7.3.0
+      '@vue/devtools-shared': 7.3.4
       birpc: 0.2.17
       hookable: 5.5.3
       mitt: 3.0.1
       perfect-debounce: 1.0.0
       speakingurl: 14.0.1
       superjson: 2.2.1
-      vue: 3.4.30(typescript@5.5.2)
 
-  '@vue/devtools-shared@7.3.0':
+  '@vue/devtools-shared@7.3.4':
     dependencies:
       rfdc: 1.4.1
 
@@ -1713,8 +1705,6 @@ snapshots:
       '@vue/compiler-ssr': 3.4.30
       '@vue/shared': 3.4.30
       vue: 3.4.30(typescript@5.5.2)
-
-  '@vue/shared@3.4.29': {}
 
   '@vue/shared@3.4.30': {}
 
@@ -1933,7 +1923,7 @@ snapshots:
       escape-string-regexp: 4.0.0
       eslint-scope: 8.0.1
       eslint-visitor-keys: 4.0.0
-      espree: 10.0.1
+      espree: 10.1.0
       esquery: 1.5.0
       esutils: 2.0.3
       fast-deep-equal: 3.1.3
@@ -1955,7 +1945,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  espree@10.0.1:
+  espree@10.1.0:
     dependencies:
       acorn: 8.12.0
       acorn-jsx: 5.3.2(acorn@8.12.0)
@@ -2238,9 +2228,9 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shiki@1.6.5:
+  shiki@1.9.0:
     dependencies:
-      '@shikijs/core': 1.6.5
+      '@shikijs/core': 1.9.0
 
   slash@3.0.0: {}
 
@@ -2305,18 +2295,18 @@ snapshots:
     dependencies:
       '@docsearch/css': 3.6.0
       '@docsearch/js': 3.6.0(@algolia/client-search@4.23.3)(search-insights@2.14.0)
-      '@shikijs/core': 1.6.5
-      '@shikijs/transformers': 1.6.5
+      '@shikijs/core': 1.9.0
+      '@shikijs/transformers': 1.9.0
       '@types/markdown-it': 14.1.1
       '@vitejs/plugin-vue': 5.0.5(vite@5.3.1(@types/node@20.14.8))(vue@3.4.30(typescript@5.5.2))
-      '@vue/devtools-api': 7.3.0(vue@3.4.30(typescript@5.5.2))
-      '@vue/shared': 3.4.29
+      '@vue/devtools-api': 7.3.4
+      '@vue/shared': 3.4.30
       '@vueuse/core': 10.11.0(vue@3.4.30(typescript@5.5.2))
       '@vueuse/integrations': 10.11.0(focus-trap@7.5.4)(vue@3.4.30(typescript@5.5.2))
       focus-trap: 7.5.4
       mark.js: 8.11.1
       minisearch: 6.3.0
-      shiki: 1.6.5
+      shiki: 1.9.0
       vite: 5.3.1(@types/node@20.14.8)
       vue: 3.4.30(typescript@5.5.2)
     optionalDependencies:
