@@ -62,6 +62,7 @@ export default defineConfig({
           text: '常见问题',
           items: [
             { text: '将 LaTeX 转换为 Word', link: '/guide/converting-to-word' },
+            { text: '常用指令', link: '/guide/usefulcommand' },
             { text: '疑难杂症', link: '/guide/troubleshooting' },
             { text: 'LaTeX 学习与使用资源', link: '/guide/resources' },
           ],
