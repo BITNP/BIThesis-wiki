@@ -1,10 +1,11 @@
 # 📃 下载与使用模板
 
 :::warning 📖 初次使用？
-若是初次使用，请先阅读本 Wiki 全部内容，再开始写作。
+若是初次使用，请先阅读本 Wiki 全部内容或快速使用指南，再开始写作。
 
-您可以[从这里开始](./preface.md)。
-:::
+- 阅读本 **Wiki**：[从这里开始](./preface.md)。
+- **快速使用指南**：[本科][undergraduate-handbook]／[硕博][graduate-handbook]。
+  :::
 
 ## 到 Releases 下载模板并解压
 
@@ -33,3 +34,5 @@
 
 [releases]: https://github.com/BITNP/BIThesis/releases/ 'Releases · BITNP/BIThesis'
 [latest-release]: https://github.com/BITNP/BIThesis/releases/latest 'Latest Release · BITNP/BIThesis'
+[undergraduate-handbook]: https://github.com/BITNP/BIThesis/releases/latest/download/undergraduate-handbook.pdf
+[graduate-handbook]: https://github.com/BITNP/BIThesis/releases/latest/download/graduate-handbook.pdf
