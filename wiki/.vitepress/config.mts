@@ -87,6 +87,10 @@ export default defineConfig({
         },
       ],
     },
+    outline: {
+      level: [2, 4],
+      label: '本页目录',
+    },
     footer: {
       message: 'Released under the <a href="https://www.latex-project.org/lppl/">LaTeX Project Public License</a>.',
       copyright: 'Copyright © 2020–2024 <a href="https://github.com/BITNP">BITNP</a>',

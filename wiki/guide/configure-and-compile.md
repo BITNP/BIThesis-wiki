@@ -13,9 +13,9 @@ BIThesis 中的模板编译方式大同小异，我们都会使用 `xelatex`、`
 
 在这里，我挑选了三种常见的 LaTeX 编写环境：
 
-- 直接使用「命令行」徒手编写编译
-- 使用 VS Code 配合 LaTeX Workshop 编写与编译
-- 使用 TeXstudio 编写与编译
+- [直接使用「命令行」徒手编写编译](#徒手编译)
+- [使用 VS Code 配合 LaTeX Workshop 编写与编译](#使用-vs-code-撰写与编译-latex-模板)
+- [使用 TeXstudio 编写与编译](#使用-texstudio-撰写与编译-latex-模板)
 
 我会依次介绍在这三种环境下 LaTeX 编译器配置方法。
 
@@ -59,8 +59,8 @@ xelatex --interaction=nonstopmode main
 
 VS Code 的设置项目可以通过打开 UI 设置界面（快捷键 `ctrl/cmd + ,` ），之后点击右上角 <img src="../assets/codicon-go-to-file.svg" alt="Open Settings (JSON)" title="Open Settings (JSON)" class="icon"> 按钮即可打开相应的 JSON 格式配置文件，我们在这里即可定义 LaTeX 编译工具。其中：
 
-- “编译工具”是在 `"latex-workshop.latex.tools": [ ... ]` 处进行定义，即我们在这里定义每次调用工具 `latexmk` 或 `xelatex` 时所执行的命令
-- “编译工具链”是在 `"latex-workshop.latex.recipes": [ ... ]` 处进行定义，即我们在这里定义编译整个文档的工具链。对我们的模板使用 `xelatex` 的编译方式来说，就是定义 `xelatex -> biber -> xelatex -> xelatex`「四步走」的串联过程
+- “编译**工具**”是在 `"latex-workshop.latex.tools": [ ... ]` 处进行定义，即我们在这里定义每次调用工具 `latexmk` 或 `xelatex` 时所执行的命令
+- “编译工具**链**”是在 `"latex-workshop.latex.recipes": [ ... ]` 处进行定义，即我们在这里定义编译整个文档的工具链。对我们的模板使用 `xelatex` 的编译方式来说，就是定义 `xelatex -> biber -> xelatex -> xelatex`「四步走」的串联过程
 
 :::warning
 LaTeX Workshop 的默认配置无法对我们的项目进行编译。
@@ -158,9 +158,11 @@ LaTeX Workshop 的默认配置无法对我们的项目进行编译。
 
 #### 调用相应的编译 recipe
 
-最后，我们使用快捷键 `ctrl/cmd + shift + P` 打开命令执行栏，并搜索「LaTeX Workshop: Build with recipe」，并选择你所用的 recipe（即上面配置的工具链），即可编译整个 LaTeX 项目。不论用上面介绍的哪种方法，都可以正确的编译 BIThesis 的模板。
+最后，我们使用快捷键 `ctrl/cmd + shift + P` 打开命令执行栏，并搜索「LaTeX Workshop: Build with recipe」，并选择你所用的 recipe（即上面配置的工具**链**），即可编译整个 LaTeX 项目。
 
 ![select a recipe](https://i.loli.net/2020/03/09/2c1uEYlUFjRxJ9w.png)
+
+不论用上面介绍的`latexmk`还是`xelatex -> biber -> xelatex * 2`，都可以正确编译 BIThesis 的模板。
 
 ### 使用 TeXstudio 撰写与编译 LaTeX 模板
 
