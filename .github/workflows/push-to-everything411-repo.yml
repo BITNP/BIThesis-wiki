@@ -1,0 +1,20 @@
+name: push-to-everything411-repo
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+jobs:
+  gitee:
+    name: Sync to everything411 repo
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Push
+        uses: wangchucheng/git-repo-sync@v0.1.0
+        with:
+          target-url: https://github.com/everything411/BIThesis-wiki.git
+          target-username: everything411
+          target-token: ${{ secrets.E411_GITHUB_TOKEN }}
