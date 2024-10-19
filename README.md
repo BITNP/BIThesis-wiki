@@ -62,7 +62,7 @@ pnpm dev
 
 ## 贡献者
 
-> 本项目的存在离不开以下所有贡献者的辛勤贡献。参见   [GitHub Contributors](https://github.com/BITNP/BIThesis/graphs/contributors) 与 [BIThesis - 致谢](https://bithesis.bitnp.net/guide/acknowledgements.html)。
+> 本项目的存在离不开以下所有贡献者的辛勤贡献。参见 [GitHub Contributors](https://github.com/BITNP/BIThesis/graphs/contributors) 与 [BIThesis - 致谢](https://bithesis.bitnp.net/guide/acknowledgements.html)。
 
 ---
 
