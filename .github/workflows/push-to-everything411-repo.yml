@@ -2,7 +2,7 @@ name: push-to-everything411-repo
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
 jobs:
   gitee:
