@@ -1,9 +1,11 @@
 name: push-to-everything411-repo
+
 on:
   push:
     branches:
       - main
   workflow_dispatch:
+
 jobs:
   gitee:
     name: Sync to everything411 repo
@@ -11,6 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          token: ${{ secrets.E411_GITHUB_TOKEN }}
           fetch-depth: 0
       - name: Push
         uses: wangchucheng/git-repo-sync@v0.1.0
