@@ -4,6 +4,7 @@
   "schedule": ["every 3 months on the first day of the month"],
   "lockFileMaintenance": {
     "enabled": true,
+    "schedule": ["every 3 months on the first day of the month"],
     "automerge": true,
     "automergeType": "pr",
     "platformAutomerge": true
