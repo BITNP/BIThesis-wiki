@@ -2,3 +2,4 @@ node_modules
 wiki/.vitepress/dist
 .DS_Store
 wiki/.vitepress/cache
+.lycheecache

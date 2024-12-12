@@ -5,7 +5,7 @@ BIThesis 主创团队也联合北京理工大学「京工拾光工作室」为�
 :::
 
 :::danger `v3.x.x` 观看提示
-此系列视频制作于 2020 年年初，主要针对 `v1.x` 版本（2019 - 2020）的 BIThesis 进行解说。但在 `v3.x.x` 版本（2022 - 今）中，BIThesis 的使用方式与原有版本有些出入（详见下文）。我们十分建议你在观看视频的同时，也阅读相应的 [文档指南](/guide/intro.md) 作为补充。
+此系列视频制作于 2020 年年初，主要针对 `v1.x` 版本（2019 - 2020）的 BIThesis 进行解说。但在 `v3.x.x` 版本（2022 - 今）中，BIThesis 的使用方式与原有版本有些出入（详见下文）。我们十分建议你在观看视频的同时，也阅读相应的 [文档指南](../guide/intro.md) 作为补充。
 :::
 
 ## BIThesis `v3.x.x`、`v2.x.x` 和 `v1.x.x` 的区别是什么？
@@ -40,5 +40,5 @@ BIThesis 主创团队也联合北京理工大学「京工拾光工作室」为�
 ## BIThesis 预告片 <Badge text="大误"/>
 
 <div id="embed-video">
-  <iframe src="//player.bilibili.com/player.html?aid=925350795&bvid=BV1GT4y1V78d&cid=181709301&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" ></iframe>
+  <iframe src="https://player.bilibili.com/player.html?aid=925350795&bvid=BV1GT4y1V78d&cid=181709301&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" ></iframe>
 </div>
