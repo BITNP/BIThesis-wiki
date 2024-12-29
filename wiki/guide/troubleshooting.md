@@ -65,7 +65,23 @@ Error: Style 'gb7714-2015' not found.
 
 在论文中不可避免的要加入「代码块」。一般我们代码高亮使用的宏包都是 `minted`，如果你发现插入 `minted` 环境后，编译失败，你可以尝试如下的方法解决：
 
+### 删除 `minted` 宏包的缓存文件夹
+
+如果你出现了类似如下的编译报错：
+
+```txt
+! Undefined control sequence.
+```
+
+则可能是由于 `minted` 缓存导致。一般如果你编译过带有 `minted` 环境的 LaTeX 项目，根目录都会有一个名称为 `_minted` 或 `_minted-{jobname}` 的缓存文件夹。你可以尝试将这一文件夹删除，重新编译，排查问题。
+
+![minted command cache folder](https://i.loli.net/2020/03/06/D4PQKoxmtgObBN2.png)
+
 ### 排查是否正确安装 Python 与 `pygments` 包
+
+:::tip 仅限 minted v2
+该问题只可能在 minted v2 上出现。如遇到此问题，也可考虑升级到 v3。
+:::
 
 如果你出现了类似如下的编译报错：
 
@@ -88,6 +104,10 @@ pygmentize -V
 ![Output of command pygmentize](https://i.loli.net/2020/03/07/7rbUosdGfjhpaNC.png)
 
 ### 添加额外的编译参数
+
+:::tip 仅限 minted v2
+该问题只可能在 minted v2 上出现。如遇到此问题，也可考虑升级到 v3。
+:::
 
 如果你出现了类似如下的编译报错：
 
@@ -134,18 +154,6 @@ Package minted Error: You must invoke LaTeX with the -shell-escape flag.
     "env": {}
 },
 ```
-
-### 删除 `minted` 宏包的缓存文件夹
-
-如果你出现了类似如下的编译报错：
-
-```txt
-! Undefined control sequence.
-```
-
-则可能是由于 `minted` 缓存导致。一般如果你编译过带有 `minted` 环境的 LaTeX 项目，根目录都会有一个名称为 `_minted_doc` 的缓存文件夹。你可以尝试将这一文件夹删除，重新编译，排查问题。
-
-![minted command cache folder](https://i.loli.net/2020/03/06/D4PQKoxmtgObBN2.png)
 
 ## 编译过慢，一次更改需要编译半分钟
 
