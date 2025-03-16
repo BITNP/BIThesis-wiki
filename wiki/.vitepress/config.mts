@@ -33,6 +33,20 @@ export default defineConfig({
             return html
           }
         },
+        miniSearch: {
+          options: {
+            processTerm: (term) => {
+              // @ts-ignore
+              const segmenter = Intl.Segmenter && new Intl.Segmenter('zh', { granularity: 'word' })
+              if (!segmenter) return term
+              const tokens: string[] = []
+              for (const seg of segmenter.segment(term)) {
+                tokens.push(seg.segment)
+              }
+              return tokens
+            },
+          },
+        },
       },
     },
     editLink: {
