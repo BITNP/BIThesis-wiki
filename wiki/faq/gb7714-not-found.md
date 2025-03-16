@@ -1,9 +1,9 @@
 ---
+title: 参考文献样式找不到，编译失败
+tag: biblatex-gb7714-2015
 lastUpdated: 2023-12-13 13:47:53 +08:00
 # commit 8749324e0ececc2788ef82c6e3e2a55cc3914c94
 ---
-
-# 出现参考文献样式找不到的编译失败提示
 
 毕业论文的参考文献使用了 [biblatex-gb7714-2015](https://github.com/hushidong/biblatex-gb7714-2015) 宏包生成符合《GB/T 7714-2015 信息与文献 参考文献著录规则》规定的参考文献。这一参考文献宏包仅适用于最新版本的 TeX Live 发行版（TeX Live 2019）。如果你在编译过程中出现了类似如下的报错：
 
