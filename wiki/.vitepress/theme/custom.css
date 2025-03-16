@@ -51,3 +51,7 @@ img.icon {
     background-color: var(--vp-custom-block-tip-border);
   }
 }
+
+a.wikitext-ish-link {
+  text-decoration: none;
+}

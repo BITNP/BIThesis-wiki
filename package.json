@@ -8,6 +8,7 @@
     "lint:prettier": "prettier --check --ignore-path .prettierignore ."
   },
   "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
     "@types/node": "^22.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",

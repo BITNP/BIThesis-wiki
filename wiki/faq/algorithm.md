@@ -7,9 +7,9 @@ tag:
 
 有以下三种互不兼容的方式。
 
-## `algorithm`+X 方式
+## [[pkg:algorithms|algorithm]] + X 方式
 
-引入 `algorithm` 宏包时，要加上选项 `chapter` 才能按学校要求分章编号，示例如下。
+引入[[pkg:algorithms|algorithm]]时，要加上选项 `chapter` 才能按学校要求分章编号，示例如下。
 
 ```latex
 \usepackage[chapter]{algorithm}
@@ -18,7 +18,7 @@ tag:
 
 使用示例请参考 [Algorithms - Overleaf 文档](https://www.overleaf.com/learn/latex/Algorithms)。
 
-## `algorithm2e` 方式
+## [[pkg:algorithm2e]]方式
 
 引入宏包时，要加上选项 `algochapter` 才能按学校要求分章编号，示例如下。
 

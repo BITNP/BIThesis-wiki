@@ -41,4 +41,11 @@ tag:
 可以添加链接：[改进“疑难杂症”页面 · Issue #475 · BITNP/BIThesis-wiki](https://github.com/BITNP/BIThesis-wiki/issues/475)
 ````
 
+可用如下方式指代宏包、手册。
+
+- `[[pkg:bithesis]]` ⇒ [[pkg:bithesis]]
+- `[[pkg:algorithms|algorithmic]]` ⇒ [[pkg:algorithms|algorithmic]]
+- `[[texdoc:unicode-math]]` ⇒ [[texdoc:unicode-math]]
+- ``[[texdoc:lshort-zh-cn|那份介绍（`lshort`中文版）]]`` ⇒ [[texdoc:lshort-zh-cn|那份介绍（`lshort`中文版）]]
+
 :::

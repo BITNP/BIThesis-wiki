@@ -21,4 +21,4 @@ tag: package
 
 详见：[列表项的行距过大 · Issue #293 · BITNP/BIThesis · GitHub](https://github.com/BITNP/BIThesis/issues/293)
 
-_以上功能由 `enumitem` 宏包支持。通过导入 `bithesis`，该宏包已经被自动导入。_
+以上功能由[[pkg:enumitem]]支持。通过导入[[pkg:bithesis]]，该宏包已经被自动导入。

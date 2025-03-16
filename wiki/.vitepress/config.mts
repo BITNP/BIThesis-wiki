@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress'
 import * as footnote from 'markdown-it-footnote'
 
+import LinkRender from './theme/link_render'
+
 export default defineConfig({
   lang: 'zh-CN',
   title: 'BIThesis',
@@ -98,7 +100,15 @@ export default defineConfig({
   },
   markdown: {
     config: (md) => {
-      md.use(footnote.default ?? footnote)
+      md.use(footnote.default ?? footnote).use(LinkRender)
+    },
+    anchor: {
+      getTokensText: (tokens) =>
+        tokens
+          // Add `html_inline` from `LinkRender`
+          .filter((t) => ['text', 'code_inline', 'html_inline'].includes(t.type))
+          .map((t) => t.meta?.slug ?? t.content)
+          .join(''),
     },
   },
   transformHead({ pageData: { frontmatter } }) {

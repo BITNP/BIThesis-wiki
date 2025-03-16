@@ -5,7 +5,7 @@ tag:
   - font
 ---
 
-可以在导言区引入 `unicode-math` 宏包，
+可以在导言区引入[[pkg:unicode-math]]，
 并使用 `\setmathfont{XITS Math}` 修改数学环境下字体：
 
 ```latex
@@ -26,6 +26,4 @@ tag:
 \SetMathEnvironmentSinglespace{1.05}
 ```
 
-更多字体与使用方法请参考
-[unicode-math 手册](https://ctan.org/pkg/unicode-math?lang=zh)和
-[zhlineskip 手册](https://ctan.org/pkg/zhlineskip)。
+更多字体与使用方法请参考[[texdoc:unicode-math]]和[[texdoc:zhlineskip]]。
