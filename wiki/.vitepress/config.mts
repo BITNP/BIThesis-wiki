@@ -25,7 +25,7 @@ export default defineConfig({
     logo: '/apple-touch-icon.png',
     nav: [
       { text: '文档指南', link: '/guide/preface' },
-      { text: '疑难杂症', link: '/guide/troubleshooting' },
+      { text: '疑难杂症', link: '/faq' },
       { text: 'Overleaf', link: '/guide/preface#q-bithesis-都包含哪些模板' },
       { text: '模板下载', link: 'https://github.com/BITNP/BIThesis/releases/latest' },
       {
@@ -64,7 +64,7 @@ export default defineConfig({
             { text: '将 LaTeX 转换为 Word', link: '/guide/converting-to-word' },
             { text: 'LaTeX 学习与使用资源', link: '/guide/resources' },
             { text: '常用命令', link: '/guide/commands' },
-            { text: '疑难杂症', link: '/guide/troubleshooting' },
+            { text: '疑难杂症', link: '/faq' },
           ],
         },
         {
@@ -93,12 +93,29 @@ export default defineConfig({
     },
     footer: {
       message: 'Released under the <a href="https://www.latex-project.org/lppl/">LaTeX Project Public License</a>.',
-      copyright: 'Copyright © 2020–2024 <a href="https://github.com/BITNP">BITNP</a>',
+      copyright: 'Copyright © 2020–2025 <a href="https://github.com/BITNP">BITNP</a>',
     },
   },
   markdown: {
     config: (md) => {
       md.use(footnote.default ?? footnote)
     },
+  },
+  transformHead({ pageData: { frontmatter } }) {
+    if (frontmatter['redirect-to']) {
+      // Perform a redirect by serving the HTML file with an HTTP-REFRESH meta tag.
+      // https://github.com/jekyll/jekyll-redirect-from/blob/0378df2984ef689ce16fbe9912ee4e0a199ded73/lib/jekyll-redirect-from/redirect.html
+
+      // 正常应该配置服务器，然而有多种部署方式，且只用于 wiki/guide/troubleshooting，就退而求其次了。
+
+      const to = frontmatter['redirect-to']
+
+      return [
+        ['link', { rel: 'canonical', href: to }],
+        ['meta', { 'http-equiv': 'refresh', content: `0; url=${to}` }],
+        ['meta', { name: 'robots', content: 'noindex' }],
+        ['script', {}, `window.location = "${to}"`],
+      ]
+    }
   },
 })
