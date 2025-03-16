@@ -1,9 +1,10 @@
 ---
-title: 如何修改数学公式的字体？
 tag:
   - package
   - font
 ---
+
+# 如何修改数学公式的字体？
 
 可以在导言区引入[[pkg:unicode-math]]，
 并使用 `\setmathfont{XITS Math}` 修改数学环境下字体：

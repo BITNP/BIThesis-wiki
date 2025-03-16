@@ -22,15 +22,12 @@ import FAQList from './.vitepress/theme/FAQList.vue'
 
 ````markdown
 ---
-title: 标题（不支持 markdown）
 tag:
   - bithesis # 仅适用于 bithesis 的，加上此标签
   - package # 需要用到其它宏包的，加上此标签
 ---
 
-正文
-
-## 如需分章节，从二级开始
+# 标题
 
 引入宏包时，要加上选项`algochapter`才能按学校要求分章编号，示例如下。
 

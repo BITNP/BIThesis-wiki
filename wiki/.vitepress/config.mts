@@ -20,19 +20,6 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
-        async _render(src, env, md) {
-          if (env.frontmatter?.search === false) {
-            return ''
-          }
-
-          const html = await md.render(src, env)
-          if (env.frontmatter?.title) {
-            // Add anchors for FAQ pages
-            return (await md.render(`# ${env.frontmatter.title}`)) + html
-          } else {
-            return html
-          }
-        },
         miniSearch: {
           options: {
             processTerm: (term) => {
