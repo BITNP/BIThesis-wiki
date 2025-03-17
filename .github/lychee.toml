@@ -8,4 +8,5 @@ exclude = [
   '^https://(grd|jwb|mirrors|cs)\.bit\.edu\.cn',
   '^https://tex\.stackexchange\.com',
   '^https://www\.tablesgenerator\.com',
+  '^https://.+\.zhihu\.com',
 ]
