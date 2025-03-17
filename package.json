@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "scripts": {
     "dev": "vitepress dev wiki",
     "build": "vitepress build wiki",
@@ -7,6 +8,7 @@
     "lint:prettier": "prettier --check --ignore-path .prettierignore ."
   },
   "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
     "@types/node": "^22.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
@@ -14,6 +16,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-xo": "^0.46.0",
     "eslint-plugin-vue": "^9.15.1",
+    "gray-matter": "^4.0.3",
     "markdown-it-footnote": "^4.0.0",
     "prettier": "^3.0.0",
     "typescript": "^5.1.3",

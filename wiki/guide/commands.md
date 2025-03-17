@@ -62,13 +62,14 @@ Subcounts:
 
 用 [texdoc](https://tug.org/texdoc/) 可按关键词查找、打开各种帮助文档。
 
-```shell
-$ texdoc biblatex-gb7714-2015
-👆打开指定宏包的文档，这里会弹出《符合 GB/T 7714-2015 标准的 biblatex 参考文献样式》
+- `texdoc biblatex-gb7714-2015`
 
-$ texdoc texcount
-👆打开指定工具的文档
+  👆打开指定宏包的文档，这里会弹出《[[texdoc:biblatex-gb7714-2015|符合 GB/T 7714-2015 标准的 biblatex 参考文献样式]]》
 
-$ texdoc lshort-zh-cn
-👆打开指定参考资料，这里会弹出《一份（不太）简短的 LaTeX2e 介绍》
-```
+- `texdoc texcount`
+
+  👆打开指定工具的文档
+
+- `texdoc lshort-zh-cn`
+
+  👆打开指定参考资料，这里会弹出《[[texdoc:lshort-zh-cn|一份（不太）简短的 LaTeX2e 介绍]]》
