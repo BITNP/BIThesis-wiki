@@ -43,7 +43,7 @@ export default defineConfig({
     logo: '/apple-touch-icon.png',
     nav: [
       { text: '文档指南', link: '/guide/preface' },
-      { text: '疑难杂症', link: '/faq' },
+      { text: '疑难杂症', link: '/faq/' },
       { text: 'Overleaf', link: '/guide/preface#q-bithesis-都包含哪些模板' },
       { text: '模板下载', link: 'https://github.com/BITNP/BIThesis/releases/latest' },
       {
@@ -82,7 +82,7 @@ export default defineConfig({
             { text: '将 LaTeX 转换为 Word', link: '/guide/converting-to-word' },
             { text: 'LaTeX 学习与使用资源', link: '/guide/resources' },
             { text: '常用命令', link: '/guide/commands' },
-            { text: '疑难杂症', link: '/faq' },
+            { text: '疑难杂症', link: '/faq/' },
           ],
         },
         {
