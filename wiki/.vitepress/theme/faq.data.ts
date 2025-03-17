@@ -16,6 +16,7 @@ export default createContentLoader('faq/*.md', {
   includeSrc: true,
   transform(raw): FAQItem[] {
     return raw
+      .filter(({ url }) => url !== '/faq/') // Ignore `index.md`
       .map(({ url, frontmatter, src }) => {
         const title = getTitleFromSrc(src as string)
         if (!title) {
@@ -23,7 +24,7 @@ export default createContentLoader('faq/*.md', {
         }
 
         const tag = normalizeTag(frontmatter.tag)
-        if (!tag) {
+        if (tag.length === 0) {
           console.warn(`${url}（${title}）应当在 frontmatter 中标注至少一个 tag，但目前缺失`)
         }
 

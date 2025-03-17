@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import FAQList from './.vitepress/theme/FAQList.vue'
+import FAQList from '../.vitepress/theme/FAQList.vue'
 </script>
 
 # 🥑 疑难杂症
