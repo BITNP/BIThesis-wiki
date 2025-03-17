@@ -2,11 +2,39 @@
 tag: package
 ---
 
-# 无法使用代码高亮 minted 宏包
+# 如何使用 minted 宏包代码高亮？
 
-在论文中不可避免的要加入「代码块」。一般我们代码高亮使用的都是[[pkg:minted]]，如果你发现插入 `minted` 环境后，编译失败，你可以尝试如下的方法解决：
+<!-- https://github.com/BITNP/BIThesis/discussions/527 -->
 
-## 删除 `minted` 宏包的缓存文件夹
+在论文中不可避免的要加入「代码块」。一般我们代码高亮使用的都是[[pkg:minted]]。
+
+## 使用示例
+
+编辑`main.tex`，在导言区导入宏包：
+
+```latex
+\usepackage[chapter, newfloat]{minted}  % chatper按章编号，newfloat 用于下一行
+\SetupFloatingEnvironment{listing}{name = 代码}  % 修改caption和autorefname为中文
+\renewcommand*{\thelisting}{\thechapter-\arabic{listing}}  % 编号格式中 1.1 改为 1-1
+\captionsetup[listing]{font=small, labelsep=space}  % 修改 caption 的样式
+```
+
+在正文写：
+
+```latex
+\begin{listing}[ht]
+  \begin{minted}{python3}
+    >>> import antigravity
+  \end{minted}
+  \caption{反重力} \label{raw:antigravity}
+\end{listing}
+```
+
+## 排查问题
+
+如果你发现插入 `minted` 环境后，编译失败，你可以尝试如下的方法解决：
+
+### 删除 `minted` 宏包的缓存文件夹
 
 如果你出现了类似如下的编译报错：
 
@@ -18,7 +46,7 @@ tag: package
 
 ![minted command cache folder](https://i.loli.net/2020/03/06/D4PQKoxmtgObBN2.png)
 
-## 排查是否正确安装 Python 与 `pygments` 包
+### 排查是否正确安装 Python 与 `pygments` 包
 
 :::tip 仅限 minted v2
 该问题只可能在 minted v2 上出现。如遇到此问题，也可考虑升级到 v3。
@@ -44,7 +72,7 @@ pygmentize -V
 
 ![Output of command pygmentize](https://i.loli.net/2020/03/07/7rbUosdGfjhpaNC.png)
 
-## 添加额外的编译参数
+### 添加额外的编译参数
 
 :::tip 仅限 minted v2
 该问题只可能在 minted v2 上出现。如遇到此问题，也可考虑升级到 v3。
