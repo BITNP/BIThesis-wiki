@@ -81,9 +81,43 @@ export async function generate_index_tex(site: SiteConfig) {
 
   const index_tex = [
     '\\begin{itemize}',
-    ...pages.map(({ title, url }) => `  \\item \\href{https://bithesis.bitnp.net${url}}{${title}}`),
+    ...pages.map(({ title, url }) => '  \\item ' + as_latex_href(title, `https://bithesis.bitnp.net${url}`)),
     '\\end{itemize}',
   ].join('\n')
 
   writeFileSync(path.join(site.outDir, 'faq/index.tex'), index_tex)
+}
+
+// https://github.com/roosta/yank/blob/57373daffcbc15d48e69a3aa67ad7678e6ad26a1/src/format.js
+
+/**
+ * Replace in string `s`, with an array of [[regex, replacement], …]
+ * https://github.com/roosta/yank/blob/57373daffcbc15d48e69a3aa67ad7678e6ad26a1/src/format.js#L2-L7
+ */
+function str_esc(s: string, m: [string, string][]): string {
+  return m.reduce((acc, [re, repl]) => {
+    return acc.replace(new RegExp(`${re}`, 'g'), repl)
+  }, s)
+}
+
+/**
+ * Format as a LaTeX `\href`
+ * https://github.com/roosta/yank/blob/57373daffcbc15d48e69a3aa67ad7678e6ad26a1/src/format.js#L60-L80
+ */
+function as_latex_href(title: string, url: string): string {
+  const escaped = str_esc(title, [
+    ['\\\\', '\\textbackslash{}'],
+    ['(?<!textbackslash|textasciitilde|textgreater|textless|textasciicircum){', '\\{'],
+    ['(?<!textbackslash{|textasciitilde{|textless{|textgreater{|textasciicircum{)}', '\\}'],
+    ['&', '\\&'],
+    ['%', '\\%'],
+    ['\\$', '\\$'],
+    ['#', '\\#'],
+    ['_', '\\_'],
+    ['\\~', '\\textasciitilde{}'],
+    ['<', '\\textless{}'],
+    ['>', '\\textgreater{}'],
+    ['\\^', '\\textasciicircum{}'],
+  ])
+  return `\\href{${url}}{${escaped}}`
 }
