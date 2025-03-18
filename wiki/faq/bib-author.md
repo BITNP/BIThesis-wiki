@@ -1,6 +1,7 @@
 ---
 tag:
   - bithesis
+  - pub
   - biblatex-gb7714-2015
 ---
 
