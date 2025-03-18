@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import * as footnote from 'markdown-it-footnote'
 
+import { generate_index_tex } from './theme/faq_data'
 import LinkRender from './theme/link_render'
 
 export default defineConfig({
@@ -144,4 +145,5 @@ export default defineConfig({
       ]
     }
   },
+  buildEnd: generate_index_tex,
 })
