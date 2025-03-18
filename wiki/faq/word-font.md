@@ -10,7 +10,13 @@ tag: font
 
 对于 Linux 和 macOS 用户，由于版权问题，系统中并不包含中易字库。因此，用户有两种选择：
 
-- 手动在系统中安装中易字库（一般包括 SimSun、SimHei、KaiTi、FangSong 等）。**请注意，是 KaiTi 而不是 SimKai。**并通过 `\documentclass[…, ctex={fontset=windows}]{bithesis}` 选项强制使用中易字库。
+- 手动在系统中安装中易字库，并通过`fontset=windows`选项强制使用中易字库。
+
+  ```latex
+  \documentclass[…, ctex={fontset=windows}]{bithesis}
+  ```
+
+  中易字库一般包括 SimSun、SimHei、KaiTi（注意并非 SimKai）、FangSong 等。
 
 - 在 Windows 系统下编译最终的 PDF 文件。
 
