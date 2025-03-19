@@ -10,11 +10,14 @@ hero:
     alt: BIThesis
   actions:
     - theme: brand
-      text: 进入文档 →
+      text: 进入文档 🍌
       link: /guide/preface
     - theme: alt
-      text: 下载模板 →
+      text: 下载模板 📁
       link: /guide/downloading-using-templates
+    - theme: alt
+      text: 疑难杂症 🥑
+      link: /faq/
 
 features:
   - icon: 📝
