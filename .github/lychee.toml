@@ -9,5 +9,8 @@ exclude = [
   '^https://tex\.stackexchange\.com',
   '^https://www\.tablesgenerator\.com',
   '^https://.+\.zhihu\.com',
+  # 已坏，但仅用于 URL 示例
   '^https://www\.cnnic\.net\.cn/hlwfzyj/hlwxzbg/201201/P020120709345264469680',
+  # 经常超时或 403 Forbidden
+  '^https://www\.adobe\.com/acrobat/online',
 ]

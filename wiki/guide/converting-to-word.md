@@ -28,7 +28,7 @@
 
 - [iLovePDF](https://www.ilovepdf.com/pdf_to_word)：整体效果好，包括页眉和页脚；公式支持差。
 
-- [Adobe Acrobat online tools](https://www.adobe.com/acrobat/online/pdf-to-word.html)：效果与 iLovePDF 类似；可能需要科学上网。
+- [Adobe Acrobat online tools](https://www.adobe.com/acrobat/online/pdf-to-word.html)：效果与 iLovePDF 类似；虽然是大公司，但访问性差，可能超时或提示“Access Denied”。
 
 需要注册的：
 
