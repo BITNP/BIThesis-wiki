@@ -46,6 +46,8 @@ tag: bithesis
    …
    ```
 
+   如需进一步调整水印透明度，可参考：[graphics - Includegraphics: set image opacity - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/86500/includegraphics-set-image-opacity)。
+
 3. **重新编译**
 
 ## 另法：直接操作 PDF
