@@ -1,7 +1,9 @@
-import { defineConfig } from 'vitepress'
+import assert from 'node:assert'
+
+import { defineConfig, type DefaultTheme } from 'vitepress'
 import * as footnote from 'markdown-it-footnote'
 
-import { generate_index_tex } from './theme/faq_data'
+import { generate_index_tex, generate_prev_next_links } from './theme/faq_data'
 import LinkRender from './theme/link_render'
 
 export default defineConfig({
@@ -83,6 +85,7 @@ export default defineConfig({
             { text: '将 LaTeX 转换为 Word', link: '/guide/converting-to-word' },
             { text: 'LaTeX 学习与使用资源', link: '/guide/resources' },
             { text: '常用命令', link: '/guide/commands' },
+            // `/faq/`会记于`*.tex`的注释中，需尽量简短，故不前缀`/guide/`；相关影响在`transformPageData`中修复
             { text: '疑难杂症', link: '/faq/' },
           ],
         },
@@ -146,4 +149,24 @@ export default defineConfig({
     }
   },
   buildEnd: generate_index_tex,
+  transformPageData(page, context) {
+    // Add pre/next links to `/faq/*`
+    // https://vitepress.dev/reference/default-theme-prev-next-links
+    if (page.relativePath === 'faq/index.md') {
+      // 确认`sidebar`改得不太多
+      const sidebar = context.siteConfig.userConfig.themeConfig.sidebar['/guide'] as DefaultTheme.SidebarItem[]
+      assert.ok(sidebar)
+      const section = sidebar.at(-2)
+      assert.strictEqual(section?.text, '常见问题')
+      assert.strictEqual(section.items?.at(-1)?.link, '/faq/')
+
+      // Fix pre/next links
+      page.frontmatter.prev ??= section.items.at(-2)
+      page.frontmatter.next ??= sidebar.at(-1)?.items?.at(0)
+    } else if (page.relativePath.startsWith('faq/')) {
+      const { prev, next } = generate_prev_next_links(page)
+      page.frontmatter.prev ??= prev
+      page.frontmatter.next ??= next
+    }
+  },
 })
