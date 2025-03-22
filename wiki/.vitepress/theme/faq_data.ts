@@ -6,9 +6,9 @@ import { writeFileSync } from 'node:fs'
 import path from 'node:path'
 
 import matter from 'gray-matter'
-import { createContentLoader, type SiteConfig } from 'vitepress'
+import { createContentLoader, type PageData, type SiteConfig } from 'vitepress'
 
-import { normalizeTag } from './util'
+import { normalizeTag, tagURL } from './util'
 
 export interface FAQItem {
   title: string
@@ -120,4 +120,19 @@ function as_latex_href(title: string, url: string): string {
     ['\\^', '\\textasciicircum{}'],
   ])
   return `\\href{${url}}{${escaped}}`
+}
+
+/**
+ * Generate [prev/next links](https://vitepress.dev/reference/default-theme-prev-next-links).
+ */
+export function generate_prev_next_links(page: PageData): {
+  prev: { text: string; link: string }
+  next?: { text: string; link: string }
+} {
+  const prev = { text: '疑难解答', link: '/faq/' }
+
+  const tag = normalizeTag(page.frontmatter.tag).at(0)
+  const next = tag ? { text: `${tag} 问题目录`, link: tagURL(tag) } : undefined
+
+  return { prev, next }
 }
