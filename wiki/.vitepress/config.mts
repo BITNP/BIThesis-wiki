@@ -19,6 +19,9 @@ export default defineConfig({
     ['meta', { property: 'og:image', itemprop: 'image primaryImageOfPage', content: '/bithesis.png' }],
   ],
   lastUpdated: true,
+  sitemap: {
+    hostname: 'https://bithesis.bitnp/net',
+  },
   themeConfig: {
     search: {
       provider: 'local',
