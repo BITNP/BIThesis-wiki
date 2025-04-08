@@ -1,126 +1,71 @@
 <script setup>
-import { VPTeamMembers } from 'vitepress/theme'
-
-const members = [
-  // {
-  //   avatar: 'https://www.github.com/yyx990803.png',
-  //   name: 'Evan You',
-  //   title: 'Creator',
-  //   links: [
-  //     { icon: 'github', link: 'https://github.com/yyx990803' },
-  //     { icon: 'twitter', link: 'https://twitter.com/youyuxi' }
-  //   ]
-  // },
-]
+import Contribution from '../.vitepress/theme/Contribution.vue'
 </script>
 
 # 🙇‍♂️ 致谢
 
 **BIThesis 项目的实现离不开以下单位、领导、老师和同学们的大力支持与卓越贡献。**
 
+<!--
+  补充方法：
+  1. 记录名字、头像到 wiki/.vitepress/theme/contributors_data.ts
+  2. 在下面补充贡献，参考文末 Emoji 索引
+-->
+
 ## Maintainers
 
 ### 2024
 
-<table>
-  <tr>
-     <td align="center"><img src="https://s2.loli.net/2023/10/09/jXiDgmCd865HAue.png" width="100px" alt="YDX-2147483647"></td>
-     <td align="center"><img src="https://i.loli.net/2020/05/29/Z1YFSty6LRJl8Oc.png" width="100px" alt="FKY"></td>
-  </tr>
-  <tr>
-     <td align="center"><a href="https://github.com/YDX-2147483647">YDX-2147483647</a><br>💻🚧📆💬📖</td>
-     <td align="center"><a href="https://github.com/fky2015">FKY</a><br>💬📖</td>
-  </tr>
-</table>
+<Contribution :cells="[
+  ['YDX-2147483647', '💻🚧📆💬📖'], 
+  ['FKY', '💬📖'],
+]" />
 
 ### 2023
 
-<table>
-  <tr>
-     <td align="center"><img src="https://i.loli.net/2020/05/29/Z1YFSty6LRJl8Oc.png" width="100px" alt="FKY"></td>
-     <td align="center"><img src="https://s2.loli.net/2023/10/09/jXiDgmCd865HAue.png" width="100px" alt="YDX-2147483647"></td>
-  </tr>
-  <tr>
-     <td align="center"><a href="https://github.com/fky2015">FKY</a><br>💻🚧📆💬📖</td>
-     <td align="center"><a href="https://github.com/YDX-2147483647">YDX-2147483647</a><br>💻💬📖</td>
-  </tr>
-</table>
+<Contribution :cells="[
+  ['FKY', '💻🚧📆💬📖'],
+  ['YDX-2147483647', '💻💬📖'],
+]" />
 
 ### 2022
 
-<table>
-  <tr>
-    <td align="center"><img src="https://i.loli.net/2020/05/29/Z1YFSty6LRJl8Oc.png" width="100px" alt="FKY"></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/fky2015">FKY</a><br>💻🚧📆💬📖</td>
-  </tr>
-</table>
+<Contribution :cells="[
+  ['FKY', '💻🚧📆💬📖'],
+]" />
 
 **感谢[北京理工大学硕士（博士）学位论文 LaTeX 模板](https://github.com/BIT-thesis/LaTeX-template)提供的研究生学位论文模板。向它的维护者和贡献者致敬！**
 
 ### 2021
 
-<VPTeamMembers size="small" :members="members" />
-
-<table>
-  <tr>
-    <td align="center"><img src="https://i.loli.net/2020/05/29/Z1YFSty6LRJl8Oc.png" width="100px" alt="FKY"></td>
-    <td align="center"><img src="https://i.loli.net/2021/01/14/zDawdylekZKq9op.png" width="100px" alt="guguguxiao"></td>
-    <td align="center"><img src="https://i.loli.net/2021/01/14/QAMhBaGvle9PbjY.png" width="100px" alt="Kayaks99"></td>
-    <td align="center"><img src="https://i.loli.net/2021/01/14/s9RAkaCFWpoBLub.png" width="100px" alt="DeltaHao"></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/fky2015">FKY</a><br>💻🚧📆💬📖</td>
-    <td align="center"><a href="https://github.com/guguguxiao">guguguxiao</a><br>🚧💬📖</td>
-    <td align="center"><a href="https://github.com/Kayaks99">Kayaks99</a><br>🚧💬📖</td>
-    <td align="center"><a href="https://github.com/DeltaHao">DeltaHao</a><br>🚧💬📖</td>
-  </tr>
-</table>
+<Contribution :cells="[
+  ['FKY', '💻🚧📆💬📖'],
+  ['guguguxiao', '🚧💬📖'],
+  ['Kayaks99', '🚧💬📖'],
+  ['DeltaHao', '🚧💬📖'],
+]" />
 
 ### 2020
 
-<table>
-  <tr>
-    <td align="center"><img src="https://i.loli.net/2020/03/10/KqToYeg1buLGwsh.png" width="100px" alt="Spencer Woo"></td>
-    <td align="center"><img src="https://i.loli.net/2020/03/10/pYkbBwm3nRrhzcT.png" width="100px" alt="Silverster"></td>
-    <td align="center"><img src="https://i.loli.net/2020/05/29/SL6KApDxuYqPjk3.png" width="100px" alt="Lancern"></td>
-    <td align="center"><img src="https://i.loli.net/2020/03/10/rRogJdmUFv7iDx3.png" width="100px" alt="Felinae"></td>
-    <td align="center"><img src="https://i.loli.net/2020/05/29/Z1YFSty6LRJl8Oc.png" width="100px" alt="FKY"></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/BITNP">Spencer Woo</a><br>💻🚧📆💬📖🎨</td>
-    <td align="center"><a href="https://github.com/Silverster98">Silvester</a><br>💻🚧📖🌍</td>
-    <td align="center"><a href="https://github.com/Lancern">Lancern</a><br>💻🚧📖💬</td>
-    <td align="center"><a href="https://github.com/felinae98">Felinae</a><br>📓💻💬</td>
-    <td align="center"><a href="https://github.com/fky2015">FKY</a><br>🚧📖</td>
-  </tr>
-  <tr>
-    <td align="center"><img src="https://i.loli.net/2020/03/10/fTCIvEurgi5ezWA.png" width="100px" alt="1s Zhan"></td>
-    <td align="center"><img src="https://i.loli.net/2020/03/27/w2EyRtAsxpivJMO.png" width="100px" alt="mwl0811"></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/Zephyr1106">Zephyr</a><br>📓</td>
-    <td align="center"><a href="https://github.com/mwl0811">mwl0811</a><br>💻</td>
-  </tr>
-</table>
+<Contribution :cells="[
+  ['Spencer Woo', '💻🚧📆💬📖🎨'],
+  ['Silvester', '💻🚧📖🌍'],
+  ['Lancern', '💻🚧📖💬'],
+  ['Felinae', '📓💻💬'],
+  ['FKY', '🚧📖'],
+  ['Zephyr', '📓'],
+  ['mwl0811', '💻'],
+]" />
 
 ## Video Tutorials
 
 > 视频教程由「京工拾光工作室」制作、配音与剪辑，感谢。
 
-<table>
-  <tr>
-    <td align="center"><img src="https://i.loli.net/2020/04/22/1REvcJuP4iLYfQp.jpg" width="100px" alt=""></td>
-    <td align="center"><img src="https://i.loli.net/2020/04/22/d93DQvqIABJcPOm.jpg" width="100px" alt=""></td>
-    <td align="center"><img src="https://i.loli.net/2020/04/22/81cFkyVpwQZq4O5.jpg" width="100px" alt=""></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/ZIJIN-Evan">🎞 子衿</a></td>
-    <td align="center">🎙 甲²级的胖头鱼</td>
-    <td align="center">🎙 乌鸢</td>
-  </tr>
-</table>
+<Contribution :cells="[
+  ['子衿', '🎞'],
+  ['甲²级的胖头鱼', '🎙'],
+  ['乌鸢', '🎙'],
+]" />
 
 ## 官方赞助 Official sponsors
 
