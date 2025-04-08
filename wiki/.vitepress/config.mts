@@ -20,7 +20,7 @@ export default defineConfig({
   ],
   lastUpdated: true,
   sitemap: {
-    hostname: 'https://bithesis.bitnp/net',
+    hostname: 'https://bithesis.bitnp.net',
   },
   themeConfig: {
     search: {
