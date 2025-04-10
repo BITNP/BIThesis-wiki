@@ -8,7 +8,7 @@ tag:
 
 <!-- https://github.com/BITNP/BIThesis/discussions/447 -->
 
-如果您遇到以下任何现象，请参考[生僻字无法显示](./char-missing.md)，解决办法完全相同。
+如果您遇到以下任何现象，请参考[如何换用中易字库](./word-font.md)。
 
 - [逗号不像宋体](https://ask.latexstudio.net/ask/question/8035.html)
 

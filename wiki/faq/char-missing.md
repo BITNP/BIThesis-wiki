@@ -9,30 +9,15 @@ tag: font
   https://github.com/BITNP/BIThesis/discussions/447
 -->
 
-## 使用 Windows 字体
+- **Windows 平台**预装了中易字库，字符较全，一般正常。
 
-本地编译：
+  如果您那儿确实有问题，请参考下文[另外定义字体](#另外定义字体)。
 
-- Windows 用户一般正常。如果您那儿确实有问题，请参考下文[另外定义字体](#另外定义字体)。
-
-- 如果您使用 Linux、macOS 或 WSL，请参考[如何采用与 Word 相同的中文字体](./word-font.md)。
-
-在线平台：
-
-- 如果您使用 [TeXPage](https://www.texpage.com)，那么已经装了 Windows 字体，只要调用即可。
-
-  请编辑`main.tex`，在开头如下设置，让[[pkg:ctex]]跳过操作系统检测，直接使用 Windows 字体。
-
-  ```latex
-  \documentclass[…]{bithesis}  % [!code --]
-  \documentclass[…, ctex={fontset=windows}]{bithesis}  % [!code ++]
-  ```
-
-- 如果您使用 [Overleaf](https://cn.overleaf.com)，由于这个环境就是没有字体，请参考下文[另外定义字体](#另外定义字体)。
+- **其它平台**默认用 Fandol 等字库，可能缺字。请优先参考[如何换用中易字库](./word-font.md)。
 
 ## 另外定义字体
 
-请参考[`1_chapter1.tex`中的注释](https://github.com/BITNP/BIThesis/blob/7c37def77a9b809af1b4dcee26a04ca393df226e/templates/undergraduate-thesis/chapters/1_chapter1.tex#L67-L76)。
+<!-- https://github.com/BITNP/BIThesis/blob/7c37def77a9b809af1b4dcee26a04ca393df226e/templates/undergraduate-thesis/chapters/1_chapter1.tex#L67-L76 -->
 
 1. 定义一个包含生僻字的字体`custom-font`，注意要确保你的系统存在[该字体](https://mirrors.cernet.edu.cn/font/GoogleFonts)。
 
@@ -49,6 +34,10 @@ tag: font
    `\CJKfamily`会切换字体，影响之后所有内容。故另套`{}`来分组，限制其作用范围。
 
 更多解释请参考[[texdoc:lshort-zh-cn]]或[[texdoc:ctex]]。
+
+::: warning ↕️​​ 字可能上下错位
+有个别同学反映，自定义字体的字会上下错位。这是因为不同字体的基线没对齐。可以考虑用`\raisebox{<竖直位移>}{<内容>}`等方法微调，或者忽略。
+:::
 
 ## 备用办法
 
