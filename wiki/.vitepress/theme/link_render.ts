@@ -11,13 +11,13 @@ function parse(raw: string): ParsingResult {
   if (url.startsWith('pkg:')) {
     const pkg = url.replace(/^pkg:/, '')
     url = `https://www.ctan.org/pkg/${pkg}`
-    inner = '`' + (inner ?? pkg) + '`宏包'
+    inner = '`' + (inner ?? pkg) + '`{.pkg}宏包'
   }
 
   if (url.startsWith('texdoc:')) {
     const pkg = url.replace(/^texdoc:/, '')
     url = `https://texdoc.org/pkg/${pkg}`
-    inner ??= '`' + pkg + '`手册'
+    inner ??= '`' + pkg + '`{.pkg}手册'
   }
 
   inner ??= url
@@ -62,7 +62,7 @@ export default function LinkRender(md: MarkdownIt) {
       const token = state.push('link_open', 'a', 1)
       token.attrs = [
         ['href', parsed.url],
-        ['class', 'wikitext-ish-link'],
+        ['class', 'wikitext-ish-link no-icon'], // Disable https://vitepress.dev/reference/default-theme-config#externallinkicon
       ]
       token.info = 'auto'
 

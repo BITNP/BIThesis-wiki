@@ -33,9 +33,3 @@ const currentPages = computed(() => {
     </li>
   </ul>
 </template>
-
-<style>
-.vp-doc .faq a {
-  text-decoration: none;
-}
-</style>

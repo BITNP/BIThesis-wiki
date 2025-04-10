@@ -17,7 +17,7 @@ Latexmk: Doing main (small) clean up for 'main.tex'
 
 此命令也可用于释放磁盘空间或保持文件整洁。
 
-更多细节请查阅 [latexmk 的文档](https://www.ctan.org/pkg/latexmk)或 [tldr 太长不看版](https://tldr.inbrowser.app/pages/common/latexmk)。
+更多细节请查阅[[texdoc:latexmk]]或 [tldr 太长不看版](https://tldr.inbrowser.app/pages/common/latexmk)。
 
 ## 统计字数
 
@@ -56,7 +56,7 @@ Subcounts:
 
 :::
 
-更多细节请查阅 [TeXcount 的文档](https://www.ctan.org/pkg/texcount)或 [tldr 太长不看版](https://tldr.inbrowser.app/pages/common/texcount)。
+更多细节请查阅[[texdoc:TeXcount]]或 [tldr 太长不看版](https://tldr.inbrowser.app/pages/common/texcount)。
 
 ## 查找帮助文档
 

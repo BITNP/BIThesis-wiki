@@ -39,7 +39,7 @@
 
 1. 手册《[**一份（不太）简短的 LaTeX2e 介绍**——或 111 分钟了解 LaTeX2e](https://mirrors.ctan.org/info/lshort/chinese/lshort-zh-cn.pdf '通常你也可在终端运行“texdoc lshort-zh-cn”获取')》
 
-   - [`lshort`](https://www.ctan.org/pkg/lshort)中文版，考虑了中文的特殊之处。
+   - [[texdoc:lshort|`lshort`]]中文版，考虑了中文的特殊之处。
 
    - 有许多小技巧。
 
