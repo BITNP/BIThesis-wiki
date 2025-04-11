@@ -31,7 +31,7 @@ const cells = computed<{ contributor: Contributor; contribution: string }[]>(() 
       />
       <p>
         <span v-if="cell.contributor.homepage">
-          <a :href="cell.contributor.homepage">{{ cell.contributor.name }}</a>
+          <a :href="cell.contributor.homepage" class="no-icon">{{ cell.contributor.name }}</a>
         </span>
         <span v-else>
           {{ cell.contributor.name }}
@@ -65,10 +65,6 @@ const cells = computed<{ contributor: Contributor; contribution: string }[]>(() 
 
   p {
     margin: 0 1em;
-
-    a {
-      text-decoration: none;
-    }
   }
 }
 </style>

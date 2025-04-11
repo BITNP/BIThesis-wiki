@@ -1,0 +1,30 @@
+%% Modified from `texmf-dist/tex/latex/ctex/fontset/ctex-fontset-windows.def'.
+%% The LaTeX Project Public License 1.3c
+
+\GetIdInfo$Id: ctex.dtx 13a2256 2022-07-14 18:54:09 +0800 Qing Lee <sobenlee@gmail.com> $
+  {
+    Windows fonts definition (CTEX, by file name)
+    See https://bithesis.bitnp.net/faq/word-font.html
+  }
+\ProvidesExplFile{ctex-fontset-windows.def}
+  {\ExplFileDate}{2.5.10}{\ExplFileDescription}
+
+% SimSun → simsun.ttc, SimHei → simhei.ttf, KaiTi → simkai.ttf, FangSong → simfang.ttf
+\setCJKmainfont   { simsun.ttc } [ BoldFont = simhei.ttf , ItalicFont = simkai.ttf ]
+\setCJKsansfont   { Microsoft~YaHei } [ BoldFont = *~Bold ]
+\setCJKmonofont   { simfang.ttf }
+\setCJKfamilyfont { zhsong  } { simsun.ttc          }
+\setCJKfamilyfont { zhhei   } { simhei.ttf          }
+\setCJKfamilyfont { zhfs    } { simfang.ttf        }
+\setCJKfamilyfont { zhkai   } { KaiTi           }
+\setCJKfamilyfont { zhyahei } { Microsoft~YaHei } [ BoldFont = *~Bold ]
+\setCJKfamilyfont { zhli    } { LiSu            }
+\setCJKfamilyfont { zhyou   } { YouYuan         }
+
+\NewDocumentCommand \songti   { } { \CJKfamily { zhsong  } }
+\NewDocumentCommand \heiti    { } { \CJKfamily { zhhei   } }
+\NewDocumentCommand \fangsong { } { \CJKfamily { zhfs    } }
+\NewDocumentCommand \kaishu   { } { \CJKfamily { zhkai   } }
+\NewDocumentCommand \lishu    { } { \CJKfamily { zhli    } }
+\NewDocumentCommand \youyuan  { } { \CJKfamily { zhyou   } }
+\NewDocumentCommand \yahei    { } { \CJKfamily { zhyahei } }

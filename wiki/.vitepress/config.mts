@@ -23,25 +23,6 @@ export default defineConfig({
     hostname: 'https://bithesis.bitnp.net',
   },
   themeConfig: {
-    search: {
-      provider: 'local',
-      options: {
-        miniSearch: {
-          options: {
-            processTerm: (term) => {
-              // @ts-ignore
-              const segmenter = Intl.Segmenter && new Intl.Segmenter('zh', { granularity: 'word' })
-              if (!segmenter) return term
-              const tokens: string[] = []
-              for (const seg of segmenter.segment(term)) {
-                tokens.push(seg.segment)
-              }
-              return tokens
-            },
-          },
-        },
-      },
-    },
     editLink: {
       pattern: 'https://github.com/BITNP/BIThesis-wiki/edit/main/wiki/:path',
       text: '帮助我们改善此页面！',
@@ -119,6 +100,21 @@ export default defineConfig({
     footer: {
       message: 'Released under the <a href="https://www.latex-project.org/lppl/">LaTeX Project Public License</a>.',
       copyright: 'Copyright © 2020–2025 <a href="https://github.com/BITNP">BITNP</a>',
+    },
+    externalLinkIcon: true,
+    search: {
+      provider: 'local',
+      options: {
+        miniSearch: {
+          options: {
+            processTerm: (term) => {
+              const segmenter = new Intl.Segmenter('zh', { granularity: 'word' })
+              if (!segmenter) return term
+              return Array.from(segmenter.segment(term)).map(({ segment }) => segment)
+            },
+          },
+        },
+      },
     },
   },
   markdown: {
