@@ -106,10 +106,14 @@ fc-cache -fv
 - `docker.io/everything411/sharelatex-base:2022.1`
 - `docker.io/everything411/sharelatex-base:2020.1`
 
-另见：[提供自建Overleaf实例的教程 · Issue #445 · BITNP/BIThesis-wiki](https://github.com/BITNP/BIThesis-wiki/issues/445#issuecomment-2728226319)
-
 ::: warning 📅 最后检查于2025年4月
 这些镜像违反了[微软的再分发规则][ms-font-faq]，有潜在失效风险。
+:::
+
+另见：[提供自建Overleaf实例的教程 · Issue #445 · BITNP/BIThesis-wiki](https://github.com/BITNP/BIThesis-wiki/issues/445#issuecomment-2728226319)
+
+::: info 也许能更简单
+也许可以修改[`services/clsi/app/js/DockerRunner.js`](https://github.com/lcpu-club/overleaf/blob/3ebfd0a523adfef3164a1b14419eb9e2c968c78f/services/clsi/app/js/DockerRunner.js#L4)中的 docker 调用规则，允许创建容器时额外挂载，从而添加字体。待测试补充。
 :::
 
 ::: tip 🏃‍♀️ 树挪死，人挪活
