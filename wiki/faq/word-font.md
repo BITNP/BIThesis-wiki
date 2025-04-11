@@ -86,7 +86,7 @@ fc-cache -fv
 
 2. 创建[`ctex-fontset-windows.def`](../assets/word-font-ctex-fontset-windows.def){download="ctex-fontset-windows.def"}，与`main.tex`并列，内容如下。
 
-   :::: details `ctex-fontset-windows.def`
+   :::: details `ctex-fontset-windows.def`（单击展开）
 
    <<< ../assets/word-font-ctex-fontset-windows.def{latex}
 

@@ -2,7 +2,10 @@
 %% The LaTeX Project Public License 1.3c
 
 \GetIdInfo$Id: ctex.dtx 13a2256 2022-07-14 18:54:09 +0800 Qing Lee <sobenlee@gmail.com> $
-  {Windows fonts definition (CTEX)}
+  {
+    Windows fonts definition (CTEX, by file name)
+    See https://bithesis.bitnp.net/faq/word-font.html
+  }
 \ProvidesExplFile{ctex-fontset-windows.def}
   {\ExplFileDate}{2.5.10}{\ExplFileDescription}
 
