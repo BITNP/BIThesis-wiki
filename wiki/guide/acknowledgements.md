@@ -19,6 +19,7 @@ import Contribution from '../.vitepress/theme/Contribution.vue'
 <Contribution :cells="[
   ['YDX-2147483647', '💻🚧📆💬📖'], 
   ['FKY', '💬📖'],
+  ['everything411', '📖'],
 ]" />
 
 ### 2023
