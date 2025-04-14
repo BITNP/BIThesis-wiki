@@ -14,7 +14,7 @@ tag: bithesis
 
 如果想要「缩略词表」，可以编辑`misc/0_symbols.tex`，直接写表格：
 
-```latex {14-17}
+```latex {15-18}
 \chapter*{缩略词表}  % 星号表示不写入目录
 \currentpdfbookmark{缩略词表}{ch:acronym}  % 但仍加入PDF书签（详见hyperref手册）
 
