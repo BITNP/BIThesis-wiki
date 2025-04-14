@@ -32,7 +32,7 @@ export default defineConfig({
       { text: '文档指南', link: '/guide/preface' },
       { text: '疑难杂症', link: '/faq/' },
       { text: 'Overleaf', link: '/guide/preface#q-bithesis-都包含哪些模板' },
-      { text: '模板下载', link: 'https://github.com/BITNP/BIThesis/releases/latest' },
+      { text: '模板下载', link: '/guide/downloading-using-templates' },
       {
         text: '加入讨论',
         items: [

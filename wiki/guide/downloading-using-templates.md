@@ -8,7 +8,18 @@
 
 :::
 
-## 到 Releases 下载模板包并解压
+## 方案1：从北京理工大学开源镜像站下载
+
+使用北京理工大学校园网的同学可以从北京理工大学开源镜像站下载。
+
+最新版本：👉  [北京理工大学开源镜像站 - BIThesis镜像][mirror]。
+
+- 模板包·本科·毕业设计·论文 — `undergraduate-thesis.zip`
+- 模板包·硕博·学位论文 — `graduate-thesis.zip`
+- 模板包·实验报告 — `lab-report.zip`
+- ……
+
+## 方案2：到 Github Releases 下载模板包并解压
 
 最新版本：👉 [BIThesis - Latest Release][latest-release]
 
@@ -33,10 +44,11 @@
 
 BIThesis 会不时更新，主要是满足学校、同学新的细节要求，此外适配宏包、改善文档。如果使用遇到问题，可考虑升级模板：
 
-1. 从 [Releases][releases] 下载`bithesis.cls`（或其它相应文档类）
+1. 从 [北京理工大学开源镜像站 - BIThesis镜像][mirror] 或 [Releases][releases] 下载`bithesis.cls`（或其它相应文档类）
 2. 替换原有文件
 3. 重新编译
 
+[mirror]: https://mirror.bit.edu.cn/github-release/BITNP/BIThesis/LatestRelease/ '北京理工大学开源镜像站 - BIThesis镜像'
 [releases]: https://github.com/BITNP/BIThesis/releases/ 'Releases · BITNP/BIThesis'
 [latest-release]: https://github.com/BITNP/BIThesis/releases/latest 'Latest Release · BITNP/BIThesis'
 [undergraduate-handbook]: https://github.com/BITNP/BIThesis/releases/latest/download/undergraduate-handbook.pdf
