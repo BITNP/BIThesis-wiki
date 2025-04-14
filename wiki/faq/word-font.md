@@ -84,7 +84,7 @@ fc-cache -fv
 
 1. 找个 Windows 系统，在`C:/Windows/Fonts/`找到`simsun.ttc`和`sim{hei,kai,fang}.ttf`，上传到 LaTeX 项目，与`main.tex`并列。
 
-2. 创建[`ctex-fontset-windows.def`](../assets/word-font-ctex-fontset-windows.def){download="ctex-fontset-windows.def"}，与`main.tex`并列，内容如下。
+2. 创建`ctex-fontset-windows.def`，与`main.tex`并列，内容如下。
 
    :::: details `ctex-fontset-windows.def`（单击展开）
 

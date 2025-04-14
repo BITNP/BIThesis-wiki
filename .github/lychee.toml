@@ -5,6 +5,11 @@ max_retries = 5
 retry_wait_time = 30 # seconds
 
 exclude = [
+  # 无需检查
+  '^https://github\.com/BITNP/BIThesis-wiki/edit/main/',
+  '^file://.*/\.vitepress/dist/assets/.+\.(css|js|woff2)',
+
+  # 经常被屏蔽或访问不到
   '^https://(grd|jwb|mirrors|cs|mirror)\.bit\.edu\.cn',
   '^https://tex\.stackexchange\.com',
   '^https://www\.tablesgenerator\.com',
