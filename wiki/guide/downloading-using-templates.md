@@ -12,7 +12,7 @@
 
 使用北京理工大学校园网的同学可以从北京理工大学开源镜像站下载。
 
-最新版本：👉  [北京理工大学开源镜像站 - BIThesis镜像][mirror]。
+最新版本：👉 [北京理工大学开源镜像站 - BIThesis镜像][mirror]。
 
 - 模板包·本科·毕业设计·论文 — `undergraduate-thesis.zip`
 - 模板包·硕博·学位论文 — `graduate-thesis.zip`
