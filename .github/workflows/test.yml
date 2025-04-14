@@ -24,9 +24,14 @@ jobs:
       - run: pnpm install
       - run: pnpm build
       - run: pnpm lint:prettier
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vitepress-dist
+          path: wiki/.vitepress/dist/
 
   check-links:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - uses: actions/checkout@v4
       - name: Restore the cache
@@ -35,7 +40,7 @@ jobs:
           path: .lycheecache
           key: lychee-${{ github.sha }}
           restore-keys: lychee-
-      - name: Check links
+      - name: Check links in README and other markdown files
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
@@ -43,3 +48,17 @@ jobs:
             --no-progress
             --config .github/lychee.toml
             .
+      - uses: actions/download-artifact@v4
+        with:
+          name: vitepress-dist
+          path: wiki/.vitepress/dist/
+      - name: Check links in the website
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # 必须检查构建结果，因为有些链接在 *.md 里没有，如 wiki/.vitepress/theme/link_render.ts
+          args: >-
+            --verbose
+            --no-progress
+            --config .github/lychee.toml
+            --root-dir "${{ github.workspace }}/wiki/.vitepress/dist/"
+            ./wiki/.vitepress/dist/
