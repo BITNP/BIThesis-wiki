@@ -5,7 +5,7 @@ max_retries = 5
 retry_wait_time = 30 # seconds
 
 exclude = [
-  '^https://(grd|jwb|mirrors|cs)\.bit\.edu\.cn',
+  '^https://(grd|jwb|mirrors|cs|mirror)\.bit\.edu\.cn',
   '^https://tex\.stackexchange\.com',
   '^https://www\.tablesgenerator\.com',
   '^https://.+\.zhihu\.com',
