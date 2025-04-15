@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { data as news_posts } from '../.vitepress/theme/news.data.ts'
+import { with_anchor } from '../.vitepress/theme/util.ts'
+</script>
+
 # 更新说明
 
 <!-- https://github.com/BITNP/BIThesis/releases/tag/ -->
@@ -12,3 +17,12 @@
 :::
 
 [releases]: https://github.com/BITNP/BIThesis/releases/ 'Releases · BITNP/BIThesis'
+
+<section v-for="p of news_posts" :key="p.url">
+  <h2 :href="p.url">{{ p.period }}</h2>
+  <ul>
+    <li v-for="r of p.releases" :key="r">
+      <a :href="with_anchor(p.url, r)">{{ r }}</a>
+    </li>
+  </ul>
+</section>
