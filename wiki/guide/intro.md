@@ -3,7 +3,7 @@
 北京理工大学非官方 LaTeX 模板集合，包含本科、研究生毕业设计模板，本科全英文专业模板，外文翻译模板以及更多。🎉
 
 :::tip
-本文档重点是帮助同学快速上手使用模板，更多相关文档及使用细节可参考 [release 中的手册](https://github.com/BITNP/BIThesis/releases/latest/download/bithesis.pdf)。
+本文档重点是帮助同学快速上手使用模板，更多相关文档及使用细节可参考[[texdoc:bithesis]]。
 :::
 
 ## What's BIThesis?

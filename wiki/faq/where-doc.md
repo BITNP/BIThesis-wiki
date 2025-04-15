@@ -10,7 +10,7 @@ tag:
 
 [[texdoc:bithesis]]正常在[最初下载的模板压缩包](../guide/downloading-using-templates.md)里就有，与`main.tex`并排。
 
-如果找不到了，可重新[从 release 下载](https://github.com/BITNP/BIThesis/releases/latest/download/bithesis.pdf)。
+如果找不到了，可重新[从 CTAN 下载](http://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis.pdf)。
 
 ## 一般宏包
 

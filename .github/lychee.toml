@@ -10,7 +10,7 @@ exclude = [
   '^file://.*/\.vitepress/dist/assets/.+\.(css|js|woff2)',
 
   # 经常被屏蔽或访问不到
-  '^https://(grd|jwb|mirrors|cs)\.bit\.edu\.cn',
+  '^https://(grd|jwb|mirrors|cs|mirror)\.bit\.edu\.cn',
   '^https://tex\.stackexchange\.com',
   '^https://www\.tablesgenerator\.com',
   '^https://.+\.zhihu\.com',
