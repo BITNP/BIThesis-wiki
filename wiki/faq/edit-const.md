@@ -27,7 +27,7 @@ tag:
    \end{conclusion}
    ```
 
-3. 不常见修改需求：编辑`bithesis.cls`
+2. 不常见修改需求：编辑`bithesis.cls`
 
    编辑`bithesis.cls`，替换字符串。
 
