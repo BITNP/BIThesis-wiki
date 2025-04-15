@@ -41,6 +41,8 @@ BIThesis 会不时更新，主要是满足学校、同学新的细节要求，�
 2. 替换原有`*.cls`文件
 3. 重新编译
 
+更新说明请移步 [GitHub Releases][latest-release] 或[本站备份](../news/index.md)。
+
 [mirror]: https://mirror.bit.edu.cn/github-release/BITNP/BIThesis/LatestRelease/ '北京理工大学开源镜像站 - BIThesis镜像'
 [releases]: https://github.com/BITNP/BIThesis/releases/ 'Releases · BITNP/BIThesis'
 [latest-release]: https://github.com/BITNP/BIThesis/releases/latest 'Latest Release · BITNP/BIThesis'

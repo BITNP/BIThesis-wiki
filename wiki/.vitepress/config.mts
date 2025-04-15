@@ -78,6 +78,21 @@ export default defineConfig({
           items: [{ text: 'Thanks', link: '/guide/acknowledgements' }],
         },
       ],
+      '/news': [
+        {
+          text: '更新说明',
+          items: [
+            { link: '/news/', text: '目录' },
+            // 以下需每年更新
+            { link: '/news/2025', text: '2024年11月至 +∞' },
+            { link: '/news/2024', text: '2023年11月至2024年10月' },
+            { link: '/news/2023', text: '2022年11月至2023年10月' },
+            { link: '/news/2022', text: '2021年11月至2022年10月' },
+            { link: '/news/2021', text: '2020年11月至2021年10月' },
+            { link: '/news/2020', text: '−∞ 至2020年10月' },
+          ],
+        },
+      ],
       '/video': [
         {
           text: '视频介绍',
@@ -166,6 +181,12 @@ export default defineConfig({
       const { prev, next } = generate_prev_next_links(page)
       page.frontmatter.prev ??= prev
       page.frontmatter.next ??= next
+    }
+
+    // Set outline level for `/news/*`
+    // https://vitepress.dev/reference/default-theme-config#outline
+    if (page.relativePath.startsWith('news/')) {
+      page.frontmatter.outline = { level: 2 }
     }
   },
 })
