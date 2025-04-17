@@ -8,7 +8,7 @@ tag:
 
 <!-- https://github.com/BITNP/BIThesis/discussions/580 -->
 
-1. 常见修改需求：用`\BITSetup{…}`设置
+1. 常见修改需求：用选项设置
 
    搜索[[texdoc:bithesis]]，找到相关设置，然后编辑`main.tex`，设置`\BITSetup{…}`，例如：
 
@@ -17,6 +17,14 @@ tag:
      const/info/major = {专业名称},
      style/headline = {本科生课程报告},
    }
+   ```
+
+   从 v3.8.4 开始，有些局部常量支持在局部设置：
+
+   ```latex
+   \begin{conclusion}[title = 结论与展望]
+     ……
+   \end{conclusion}
    ```
 
 2. 不常见修改需求：编辑`bithesis.cls`
