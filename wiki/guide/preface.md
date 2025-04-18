@@ -71,7 +71,7 @@ BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制�
 [lab-report]: https://cn.overleaf.com/docs?engine=xelatex&snip_uri=https://github.com/BITNP/BIThesis/releases/latest/download/lab-report.zip
 [graduate-thesis]: https://cn.overleaf.com/docs?engine=xelatex&snip_uri=https://github.com/BITNP/BIThesis/releases/latest/download/graduate-thesis.zip
 [open-in-overleaf]: https://img.shields.io/badge/open%20in-Overleaf-46a247?logo=overleaf&logoColor=white&labelColor=2b2b2b
-[undergraduate-handbook]: https://github.com/BITNP/BIThesis/releases/latest/download/undergraduate-handbook.pdf
-[graduate-handbook]: https://github.com/BITNP/BIThesis/releases/latest/download/graduate-handbook.pdf
+[undergraduate-handbook]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis-handbook-undergraduate.pdf
+[graduate-handbook]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis-handbook-graduate.pdf
 
 [^1]: [研究生学位论文模版；北京理工大学研究生院；2025](https://grd.bit.edu.cn/xwgz/xwgz2/wjxz_xwgz/b119746.htm)
