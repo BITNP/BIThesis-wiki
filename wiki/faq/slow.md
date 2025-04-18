@@ -37,6 +37,18 @@ tag: meta
 
   另外据说在 Windows 上安装 WSL（Windows Subsystem for Linux），在 WSL 里面编译 LaTeX 都比直接在 Windows 上编译快。
 
+  ::: details 典型效果：xelatex 快两倍，biber 快三倍
+
+  用空的`undergraduate-thesis`测试，结果如下。
+
+  | 操作系统 |  单次xelatex用时  |   单次biber用时   |
+  | :------: | :---------------: | :---------------: |
+  | Windows  | 6.518 s ± 0.882 s | 4.421 s ± 1.219 s |
+  |  Ubuntu  | 3.268 s ± 0.257 s | 1.437 s ± 0.155 s |
+  | 改善倍数 |     2.0 ± 0.3     |     3.1 ± 0.9     |
+
+  :::
+
 ## 禁用PDF压缩
 
 每次 xelatex 编译结尾会调用 dvipdfmx 生成 PDF。关闭 dvipdfmx 的压缩PDF功能可以加快编译，具体有如下两种方法。
