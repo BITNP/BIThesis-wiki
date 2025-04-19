@@ -46,5 +46,5 @@ BIThesis 会不时更新，主要是满足学校、同学新的细节要求，�
 [mirror]: https://mirror.bit.edu.cn/github-release/BITNP/BIThesis/LatestRelease/ '北京理工大学开源镜像站 - BIThesis镜像'
 [releases]: https://github.com/BITNP/BIThesis/releases/ 'Releases · BITNP/BIThesis'
 [latest-release]: https://github.com/BITNP/BIThesis/releases/latest 'Latest Release · BITNP/BIThesis'
-[undergraduate-handbook]: https://github.com/BITNP/BIThesis/releases/latest/download/undergraduate-handbook.pdf
-[graduate-handbook]: https://github.com/BITNP/BIThesis/releases/latest/download/graduate-handbook.pdf
+[undergraduate-handbook]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis-handbook-undergraduate.pdf
+[graduate-handbook]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis-handbook-graduate.pdf
