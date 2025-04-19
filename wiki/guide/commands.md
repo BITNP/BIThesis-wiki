@@ -2,7 +2,7 @@
 
 如果您使用终端，可用以下命令补充图形界面缺失的功能。
 
-## 清除缓存
+## 清除缓存 {#latexmk-c}
 
 编译 LaTeX 时除了生成 PDF，还可能生成`*.aux`等辅助文件和日志。
 
@@ -58,7 +58,7 @@ Subcounts:
 
 更多细节请查阅[[texdoc:TeXcount]]或 [tldr 太长不看版](https://tldr.inbrowser.app/pages/common/texcount)。
 
-## 查找帮助文档
+## 查找帮助文档 {#texdoc}
 
 用 [texdoc](https://tug.org/texdoc/) 可按关键词查找、打开各种帮助文档。
 
@@ -73,3 +73,36 @@ Subcounts:
 - `texdoc lshort-zh-cn`
 
   👆打开指定参考资料，这里会弹出《[[texdoc:lshort-zh-cn|一份（不太）简短的 LaTeX2e 介绍]]》
+
+## 补充安装缺失的包 {#tlmgr}
+
+可使用 tlmgr（TeX Live package manager）。
+
+```shell
+# 安装某个包
+$ tlmgr install minted
+…
+
+# 升级所有包
+$ tlmgr update --all
+…
+
+# 按正则表达式搜索文件，确定某个文件由哪个包提供
+# 其中 --global 代表搜索整个发行版，无论是否安装过
+$ tlmgr search --global --file 'bit.+\.cls'
+tlmgr.pl: package repository https://mirrors.cernet.edu.cn/CTAN/systems/texlive/tlnet (verified)
+bithesis:
+        texmf-dist/tex/latex/bithesis/bithesis.cls
+        texmf-dist/tex/latex/bithesis/bitbeamer.cls
+        texmf-dist/tex/latex/bithesis/bitreport.cls
+fbithesis:
+        texmf-dist/tex/latex/fbithesis/fbithesis.cls
+
+# 同上，但要求完全匹配文件名开头
+$ tlmgr search --global --file '/times.sty'
+tlmgr.pl: package repository https://mirrors.cernet.edu.cn/CTAN/systems/texlive/tlnet (verified)
+psnfss:
+        texmf-dist/tex/latex/psnfss/times.sty
+```
+
+更多细节请查阅[[texdoc:tlmgr]]或 [tldr 太长不看版](https://tldr.inbrowser.app/pages/common/tlmgr)。
