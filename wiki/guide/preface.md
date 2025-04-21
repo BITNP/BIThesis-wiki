@@ -59,6 +59,12 @@ BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制�
 
 无论如何，BIThesis 的教程参考都几乎涵盖了全部使用 BIThesis 所需的编译环境和基础知识。请大家放心食用。
 
+如果遇到问题，你可以——
+
+- 搜索本站 [🥑 疑难杂症](../faq/)（页面上方也有搜索栏）
+- 查询互联网及人工智能，例如 [🤖 我校智能体广场](https://agent.bit.edu.cn/product/llm/chat/cvvkvkg3a82c738ur3q0)
+- 询问同学，可加入 [🐧 QQ 群：737548118](https://jq.qq.com/?_wv=1027&k=KYDrmS5z)
+
 ### Q：我应该选择 LaTeX 还是 Word？
 
 网上已经有大量文章进行讨论：比如我写的[这篇](https://blog.fkynjyq.com/should-i-choose-between-bithesis-or-word)。

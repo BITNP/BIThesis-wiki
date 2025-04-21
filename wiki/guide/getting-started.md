@@ -7,6 +7,12 @@
 - 开源免费的 LaTeX 发行版（LaTeX 编译器 + 宏包）
 - 以及一个得心应手的 LaTeX 编辑器
 
+::: tip ☁ 也可用在线平台
+也可不在本地准备环境，换用浏览器在线操作。请参考《**快速使用指南**》（[本科][undergraduate-handbook]／[硕博][graduate-handbook]）开头。
+:::
+[undergraduate-handbook]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis-handbook-undergraduate.pdf#section1.2
+[graduate-handbook]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis-handbook-graduate.pdf#section1.2
+
 我们在 Windows、macOS 与 Linux 环境中均可以使用 LaTeX 进行文档撰写。按照操作系统的不同，我们分别进行介绍。
 
 ## 下载合适的 LaTeX 发行版
@@ -33,7 +39,7 @@
 
   参考 [Quick install](https://www.tug.org/texlive/quickinstall.html)，下载 [`install-tl-unx.tar.gz`](https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz) 并解压，运行 `install-tl`，它会在线下载所需文件并安装。
 
-  ::: warning 💀 谨慎使用系统包管理器安装
+  ::: details 💀 谨慎使用系统包管理器安装 { style="border-color: var(--vp-custom-block-warning-border); color: var(--vp-custom-block-warning-text); background-color: var(--vp-custom-block-warning-bg);" }
   非滚动发行的发行版（如 Ubuntu 和 Debian 等）的系统包管理器（如 apt）提供的 TeX Live [一般较旧](https://repology.org/project/texlive/versions)（Homebrew 除外），且无法选择安装方案，通常很难使用。
 
   如果坚持使用系统包管理器安装 TeX Live，那以后切勿随意安装、更新或移除宏包。由系统包管理器管理的软件包不应被其他包管理器同时管理，所以采用系统包管理器安装的 TeX Live 不应再使用 tlmgr 管理 TeX 宏包。
@@ -73,7 +79,7 @@
 
 ### 精简安装内容
 
-Windows 和 Linux 的在线安装程序`install-tl*`默认下载安装“完整”发行版，一般 3 GB 左右，需要一两小时。若不介意，一路默认，放着等待，最后[确认安装](#确认安装)即可。
+Windows 和 Linux 的在线安装程序`install-tl*`默认下载安装“完整”发行版，一般 3 GB 左右，需要一两小时；而 macOS 的“完整”安装包也有 6 GB。若不介意，一路默认，放着等待，最后[确认安装](#确认安装)即可。
 
 如果你介意，可按以下精简安装内容（Windows 六七百 MB，Linux 四五百 MB），保证 BIThesis 基本使用，日后有需要再补充。
 
@@ -188,6 +194,14 @@ Windows 和 Linux 的在线安装程序`install-tl*`默认下载安装“完整�
    sudo apt install ttf-mscorefonts-installer
    # 然后按照提示同意用户协议
    ```
+
+:::
+
+::: details 精简安装内容——macOS 提示
+因缺硬件，以下尚未实际测试。欢迎利用页面下方按钮「帮助我们改善」！
+
+1. 前往 [More Packages - MacTeX](https://www.tug.org/mactex/beginners.html)，下载[`BasicTeX.pkg`](https://mirror.ctan.org/systems/mac/mactex/BasicTeX.pkg)（一两百 MB）并运行。这会安装基础设施和部分宏包。
+2. 转到以上「🔧 命令行界面（以 Linux 为例）→ 3. 安装宏包」，继续操作。
 
 :::
 
