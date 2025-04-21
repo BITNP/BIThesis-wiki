@@ -14,7 +14,7 @@ tag:
 
 ## 一般宏包
 
-- 终端：[使用 texdoc 查找帮助文档](../guide/commands.md#查找帮助文档)。
+- 终端：[使用 texdoc 查找帮助文档](../guide/commands.md#texdoc)。
 - 浏览器
   - 使用 [texdoc 在线版](https://texdoc.org)搜索宏包名称，例如[[texdoc:hyperref]]。
   - 前往 [CTAN: Comprehensive TeX Archive Network](https://www.ctan.org/)，搜索宏包名称，打开相应页面（例如[[pkg:hyperref]]），再找 Documentation/Manual 链接。
