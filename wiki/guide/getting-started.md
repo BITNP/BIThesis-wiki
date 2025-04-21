@@ -11,7 +11,7 @@
 
 ## 下载合适的 LaTeX 发行版
 
-:::details 🔼 要求 TeX Live 至少 2021，推荐使用最新版 TeX Live （单击展开详情）
+:::details 🔼 要求 TeX Live 至少 2021，请尽量使用最新版（单击展开详情）
 
 为满足我校要求，BIThesis 实现[[texdoc:biblatex-gb7714-2015|参考文献著录]]、[[texdoc:ctex|章节层次]]等细节时，使用了新版特性，不支持早于 2021 的 TeX Live。
 
@@ -34,7 +34,9 @@
   参考 [Quick install](https://www.tug.org/texlive/quickinstall.html)，下载 [`install-tl-unx.tar.gz`](https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz) 并解压，运行 `install-tl`，它会在线下载所需文件并安装。
 
   ::: warning 💀 谨慎使用系统包管理器安装
-  非滚动发行的发行版（如Ubuntu和Debian等）的系统包管理器（如apt）提供的 TeX Live [一般较旧](https://repology.org/project/texlive/versions)（Homebrew 除外），且无法选择安装策略，通常很难使用。如果仍希望使用系统包管理器安装 TeX Live ，请注意，由系统包管理器管理的软件包不应被其他包管理器同时管理，这意味着采用系统包管理器安装的 TeX Live 不应使用 `tlmgr` 更新或安装 TeX 宏包，这意味着您将不能按照想法随意的安装和更新 TeX 宏包。
+  非滚动发行的发行版（如 Ubuntu 和 Debian 等）的系统包管理器（如 apt）提供的 TeX Live [一般较旧](https://repology.org/project/texlive/versions)（Homebrew 除外），且无法选择安装方案，通常很难使用。
+
+  如果坚持使用系统包管理器安装 TeX Live，那以后切勿随意安装、更新或移除宏包。由系统包管理器管理的软件包不应被其他包管理器同时管理，所以采用系统包管理器安装的 TeX Live 不应再使用 tlmgr 管理 TeX 宏包。
   :::
 
 - **macOS**
