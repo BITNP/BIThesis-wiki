@@ -177,8 +177,11 @@ Windows 和 Linux 的在线安装程序`install-tl*`默认下载安装“完整�
 
    ```shell
    curl -LO https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages
+   tlmgr update --self
    tlmgr install $(sed -E 's/#.*//' ./tl_packages)
    ```
+
+   <!-- 如果没有`tlmgr update --self`，`tlmgr install`可能会提示升级自身，并放弃安装宏包 -->
 
    正常等待四五分钟即完成安装。
 
@@ -193,11 +196,31 @@ Windows 和 Linux 的在线安装程序`install-tl*`默认下载安装“完整�
 
 :::
 
-::: details 精简安装内容——macOS 提示
-因缺硬件，以下尚未实际测试。欢迎利用页面下方按钮「帮助我们改善」！
+::: details 精简安装内容——🤠 MacTeX（仅限 macOS）
 
-1. 前往 [More Packages - MacTeX](https://www.tug.org/mactex/beginners.html)，下载[`BasicTeX.pkg`](https://mirror.ctan.org/systems/mac/mactex/BasicTeX.pkg)（一两百 MB）并运行。这会安装基础设施和部分宏包。
-2. 转到以上「🔧 命令行界面（以 Linux 为例）→ 3. 安装宏包」，继续操作。
+1. **下载并运行安装程序**
+
+   前往 [More Packages - MacTeX](https://www.tug.org/mactex/beginners.html)，下载[`BasicTeX.pkg`](https://mirror.ctan.org/systems/mac/mactex/BasicTeX.pkg)（一两百 MB）并运行，这会安装基础设施和基本宏包。
+
+   <!-- 估计 https://formulae.brew.sh/cask/basictex 也行，但未实际验证 tlmgr 可用，故暂时不写 -->
+
+2. **安装宏包**
+
+   下载 [BIThesis 所需宏包列表](https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages)，然后用 tlmgr（TeX Live package manager）安装。
+
+   ```shell
+   curl -LO https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages
+   sudo tlmgr update --self
+   sudo tlmgr install $(sed -E 's/#.*//' ./tl_packages)
+   ```
+
+   <!--
+     与 Linux 相比，这里加了 sudo，因为默认安装于`/usr/local/`。
+     运行`BasicTeX.pkg`时可改安装位置，但 macOS 通常不涉及分区或多用户，一般都不动；需要动的人应该也知道自己在做什么。
+     因此不必额外说明。
+   -->
+
+   <!-- 确定 macOS 附带了 Times New Roman，无需单独装 -->
 
 :::
 
