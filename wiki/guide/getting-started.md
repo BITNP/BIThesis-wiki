@@ -51,14 +51,10 @@
 
   ::: details 🍺 也可使用 Homebrew
 
-  使用 Homebrew 包管理的同学，也可以通过 Homebrew Cask 直接安装 MacTeX：
+  使用 Homebrew 包管理的同学，也可以[通过 Homebrew Cask 直接安装 MacTeX](https://formulae.brew.sh/cask/mactex)：
 
   ```bash
-  # 加载 Homebrew Cask
-  brew tap caskroom/cask
-
-  # 利用 Cask 安装 MacTeX
-  brew cask install mactex
+  brew install --cask mactex
   ```
 
   :::
