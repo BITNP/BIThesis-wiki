@@ -1,7 +1,7 @@
 ---
 tag:
-  - bithesis
   - pub
+  - bithesis
 ---
 
 # 成果清单怎么绕过`pub.bib`直接记录项目？（例如获奖）
