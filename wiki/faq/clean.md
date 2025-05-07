@@ -8,6 +8,16 @@ tag: meta
 
 偶尔先前编译有错，缓存了错误的辅助文件，会导致下一次编译异常。这时可清除缓存从最干净的状态重试。当然，清除缓存也能释放硬盘空间，保持文件整洁。
 
+::: details “编译异常”的可能现象
+
+- 之前加了错误代码导致编译失败，现已撤销，但仍无法编译生成 PDF。
+
+- 更换了编译器或文档类，编译失败。
+
+- [成果清单编号顺序错乱](./pub-disorder.md)
+
+:::
+
 ::: tip 另法
 如果您使用终端，也可直接[运行`latexmk -c`](../guide/commands.md#latexmk-c) 删除。
 :::
@@ -35,6 +45,20 @@ tag: meta
 ![](../assets/clean-TeXstudio-1.png)
 
 ![](../assets/clean-TeXstudio-2.png)
+
+## 使用在线平台
+
+### Overleaf
+
+重新编译 → 从头开始重新编译。
+
+![](../assets/clean-overleaf.png)
+
+### TeXPage
+
+日志 →（最下面）原始日志 → 清空编译缓存，清除缓存。
+
+![](../assets/clean-texpage.png)
 
 ## 手动删除
 

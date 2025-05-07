@@ -1,14 +1,31 @@
 ---
 tag:
-  - package
   - font
+  - package
 ---
 
 # 如何修改数学公式的字体？
 
+## BIThesis
+
+请编辑`main.tex`，用`\BITSetup`设置`style/mathFont`选项，例如：
+
+```latex {4}
+\BITSetup{
+  …,
+  style = {
+    mathFont = termes,
+  },
+}
+```
+
+这里`terms`指 TeX Gyre Termes Math 字体，它相当接近 Times New Roman。更多选择请参考[[texdoc:bithesis]]。
+
+## 一般 LaTeX 文档
+
 <!-- https://github.com/BITNP/BIThesis/discussions/583 -->
 
-可以在导言区引入[[pkg:unicode-math]]，并使用 `\setmathfont{XITS Math}` 修改数学环境下字体：
+可以在导言区引入[[pkg:unicode-math]]，并使用 `\setmathfont{…}` 修改数学环境下字体，例如：
 
 ```latex
 \usepackage{unicode-math}
