@@ -31,7 +31,7 @@ tag:
 - [[pkg:bithesis]]示例
 
   - 硕博模板
-  
+
     ```latex
     \titlecontents{subsection}[6\ccwd]{\songti \zihao{-4}}
       {\thecontentslabel\hspace{\ccwd}}{}
