@@ -66,6 +66,7 @@ export default defineConfig({
         {
           text: '常见问题',
           items: [
+            { text: '询问人工智能', link: '/guide/ask-computer' },
             { text: '将 LaTeX 转换为 Word', link: '/guide/converting-to-word' },
             { text: 'LaTeX 学习与使用资源', link: '/guide/resources' },
             { text: '常用命令', link: '/guide/commands' },
