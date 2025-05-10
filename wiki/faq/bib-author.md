@@ -28,4 +28,4 @@ tag:
 % `author+an = {2:myself="\Author[][][共同二作]"}`
 ```
 
-![bithesis.pdf](https://github.com/user-attachments/assets/c81bc83e-dd91-45de-b575-2f7f0735e29c)
+相关问题：[成果清单`pub.bib`怎么标`author+an`](./pub-author-an.md)。

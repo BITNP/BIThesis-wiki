@@ -1,3 +1,5 @@
+<!-- Override `Layout` with a wrapper component that injects the slots -->
+
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
