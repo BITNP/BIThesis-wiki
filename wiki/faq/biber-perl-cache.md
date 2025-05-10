@@ -29,12 +29,30 @@ tag:
 
 **背景原因**：biber 是个 perl 程序，perl 缓存在`$env:TEMP`里，`$env:TEMP`默认在用户目录下。
 
-**解决方法**：
+**解决方法**：（任选其一）
 
-1. 建议修改用户名，或者换其它设备或在线平台。
+- 给 biber 加`-winunicode`选项，修改解码方式。
 
-2. 如果做不到，可以考虑每次使用时在 PowerShell 里设置 `$env:TEMP`到一个纯 ASCII 路径，然后从 shell 里启动 TeXstudio 等编辑器或手动用 latexmk 编译。
+  ::: details TeXstudio 设置方法
 
-   ::: warning 谨慎操作
-   如果您头一次听说 shell，建议寻求有经验者帮助。
-   :::
+  （顶栏）选项 → 设置 TeXstudio → 命令 → Biber，从`biber.exe %`改成`biber.exe -winunicode %`。
+
+  ![](../assets/biber-winunicode.png)
+
+  :::
+
+- 修改用户名（记得先备份），或者换其它设备或在线平台。
+
+- 每次使用时在 PowerShell 里设置 `$env:TEMP`到一个纯 ASCII 路径，然后从 shell 里启动 TeXstudio 等编辑器或手动用 latexmk 编译。
+
+  ::: warning 谨慎操作
+  如果您头一次听说 shell，建议寻求有经验者帮助。
+  :::
+
+::: tip 本问答整理于2025年5月
+
+此问题[从 Windows 10 1803 开始出现](https://github.com/plk/biber/issues/369)，以上解决方法针对 biber 2.20（2024年3月发布）测试过。
+
+[2024年10月 biber 改进了解码方式](https://github.com/plk/biber/commit/c8017572331ac55e6ab74553b291a57b1c60efd6)，可能会修复这个问题；但目前尚未发布。
+
+:::
