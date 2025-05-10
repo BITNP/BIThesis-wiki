@@ -1,9 +1,10 @@
+import { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import Layout from './Layout.vue'
+import { Layout, enhanceApp } from '../naive-ui-adapter/theme'
 import './custom.css'
 
 export default {
   extends: DefaultTheme,
-  // override with a wrapper component that injects the slots
-  Layout: Layout,
-}
+  Layout,
+  enhanceApp,
+} satisfies Theme
