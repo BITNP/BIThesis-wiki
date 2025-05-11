@@ -50,28 +50,29 @@ defineExpose({ code })
 <template>
   <n-form label-placement="left" label-width="auto">
     <n-form-item label="第几作者">
-      <n-input-number v-model:value="nth" :min="1" placeholder="默认为 1" clearable :autofocus="true" />
-    </n-form-item>
-    <n-form-item label="普通模式下">
-      <n-input v-model:value="normal_override" type="text" placeholder="默认输出作者姓名，一般不用修改" clearable />
-    </n-form-item>
-    <n-form-item label="盲审模式下">
-      <n-input
-        v-model:value="blind_override"
-        type="text"
-        placeholder="默认输出「第n作者」，可改为“第一发明人”“共同二作”等"
+      <n-input-number
+        v-model:value="nth"
+        :min="1"
+        placeholder="默认为 1"
         clearable
+        :autofocus="true"
+        :input-props="{ type: 'number' }"
       />
     </n-form-item>
-    <n-form-item label="语言">
+    <n-form-item label="普通模式下" feedback="默认输出作者姓名。" style="margin-bottom: 1em">
+      <n-input v-model:value="normal_override" type="text" placeholder="（一般不用修改）" clearable />
+    </n-form-item>
+    <n-form-item label="盲审模式下" feedback="默认输出「第n作者」。" style="margin-bottom: 1em">
+      <n-input v-model:value="blind_override" type="text" placeholder="第一发明人、共同二作……" clearable />
+    </n-form-item>
+    <n-form-item label="语言" feedback="影响「第n作者」的语言。">
       <n-radio-group v-model:value="language">
         <n-radio-button value="zh">中文</n-radio-button>
         <n-radio-button value="en">English</n-radio-button>
       </n-radio-group>
-      <span style="color: var(--vp-c-text-3)">（影响盲审模式默认值「第n作者」的语言）</span>
     </n-form-item>
   </n-form>
-  <h3 style="margin-top: 0; margin-bottom: 0.5em">效果</h3>
+  <h3 style="margin-top: 0.5em">效果</h3>
   <ul>
     <li>
       普通模式下：<code v-if="normal_out !== null">{{ normal_out }}</code
