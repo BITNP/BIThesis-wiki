@@ -1,8 +1,9 @@
 import assert from 'node:assert'
 
-import { defineConfig, type DefaultTheme } from 'vitepress'
 import * as footnote from 'markdown-it-footnote'
+import { defineConfig, type DefaultTheme } from 'vitepress'
 
+import { generate_sitemap_page } from './sitemap_page'
 import { vite_ssr, postRender, transformHtml } from './naive-ui-adapter/config'
 import { generate_index_tex, generate_prev_next_links } from './theme/faq_data'
 import LinkRender from './theme/link_render'
@@ -164,7 +165,9 @@ export default defineConfig({
       ]
     }
   },
-  buildEnd: generate_index_tex,
+  async buildEnd(site) {
+    await Promise.all([generate_index_tex(site), generate_sitemap_page(site)])
+  },
   transformPageData(page, context) {
     // Add pre/next links to `/faq/*`
     // https://vitepress.dev/reference/default-theme-prev-next-links
