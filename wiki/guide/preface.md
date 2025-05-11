@@ -61,9 +61,9 @@ BIThesis 是针对北京理工大学本科以及研究生同学毕业论文制�
 
 如果遇到问题，你可以——
 
-- 搜索本站 [🥑 疑难杂症](../faq/)（页面上方也有搜索栏）
-- 查询互联网及人工智能，例如 [🤖 我校智能体广场](https://agent.bit.edu.cn/product/llm/chat/d05ee4rha6ps7396rueg)
-- 询问同学，可加入 [🐧 QQ 群：737548118](https://jq.qq.com/?_wv=1027&k=KYDrmS5z)
+1. 搜索本站 [🥑 疑难杂症](../faq/)（搜索栏在页面上方）
+2. 查询互联网及 [🤖 人工智能](./ask-computer.md)
+3. 询问同学，可加入 [🐧 QQ 群：737548118](https://jq.qq.com/?_wv=1027&k=KYDrmS5z)
 
 ### Q：我应该选择 LaTeX 还是 Word？
 
