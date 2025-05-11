@@ -41,7 +41,7 @@ tag:
    {school} {学\qquad 院} {School},
 
    % 还有更复杂的空格——本科模板为`\quad`，而硕博模板不空格
-   {conclusion} {结\label_space: 论} {Conclusions},
+   {figure} {插\__bithesis_label_space: 图} {Illustrations},
    ```
 
    ::: tip 欢迎反馈

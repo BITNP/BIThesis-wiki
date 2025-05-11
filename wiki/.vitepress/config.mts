@@ -4,6 +4,7 @@ import * as footnote from 'markdown-it-footnote'
 import { defineConfig, type DefaultTheme } from 'vitepress'
 
 import { generate_sitemap_page } from './sitemap_page'
+import { vite_ssr, postRender, transformHtml } from './naive-ui-adapter/config'
 import { generate_index_tex, generate_prev_next_links } from './theme/faq_data'
 import LinkRender from './theme/link_render'
 
@@ -192,4 +193,8 @@ export default defineConfig({
       page.frontmatter.outline = { level: 2 }
     }
   },
+  // Naive UI adapter
+  vite: { ssr: vite_ssr },
+  postRender,
+  transformHtml,
 })
