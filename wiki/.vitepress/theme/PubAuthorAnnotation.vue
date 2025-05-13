@@ -49,7 +49,7 @@ defineExpose({ code })
 
 <template>
   <n-form label-placement="left" label-width="auto">
-    <n-form-item label="第几作者">
+    <n-form-item label="第几作者" feedback="你在 author 字段中的位置，从 1 开始数" style="margin-bottom: 1em">
       <n-input-number
         v-model:value="nth"
         :min="1"
