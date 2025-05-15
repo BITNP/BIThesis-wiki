@@ -11,7 +11,7 @@ tag:
 硕博模板封面中，连接号（短横线、一字线等）在横排标题中要水平，在竖排标题中要竖直。
 
 ::: details 效果截图
-![图片](https://github.com/BITNP/BIThesis/assets/73375426/84a95afa-6a0c-4831-a03d-9c4f8e9cac5f)
+![吐鲁番–哈密盆地](../assets/cover-dash.png)
 :::
 
 相关链接：

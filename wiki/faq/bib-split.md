@@ -11,8 +11,8 @@ tag:
 文章较长时，可能想在每一章之后添加参考文献，并不统一甩到最后。
 
 ::: details 效果截图
-![目录](https://github.com/BITNP/BIThesis/assets/73375426/d9f03550-2324-49b9-82f2-3311493ea1d4)
-![内页](https://github.com/BITNP/BIThesis/assets/73375426/cfe3ebb3-c128-4964-ad49-d9c1d9d479b1)
+![目录](../assets/bib-split-outline.png)
+![内页](../assets/bib-split-chapter.jpg)
 :::
 
 [[pkg:biblatex]]提供了`refsection=chapter`选项自动实现，但[[pkg:bithesis]]间接使用了[[pkg:titletoc]]，会冲突，无效。于是暂时只能手动实现。

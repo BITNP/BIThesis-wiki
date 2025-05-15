@@ -12,19 +12,19 @@ tag: bithesis
 计算机学院要求本科毕业设计必须有“北京理工大学”水印，添加方法如下。
 
 ::: details 效果截图
-![image](https://github.com/BITNP/BIThesis/assets/7344146/d68935bd-e9e2-462c-9e4a-2bb4d2126b21)
+![preview](../assets/watermark-preview.png)
 :::
 
 1. **下载水印底图`background.pdf`，保存到`images/`目录**
 
-   知网毕设系统会导出 Word 和 PDF，二者水印不一样。可任选一种下载：[Word 效果底图](https://github.com/BITNP/BIThesis/files/11583990/background.pdf)、[PDF 效果底图](https://github.com/user-attachments/files/15753065/background.pdf)。
+   知网毕设系统会导出 Word 和 PDF，二者水印不一样。可任选一种下载：[Word 效果底图](/assets/watermark/background-word.pdf)、[PDF 效果底图](/assets/watermark/background-pdf.pdf)。
 
    ::: details 两种底图的区别
 
    - 左：Word效果——编辑系统导出的 Word，再导出 PDF 得到。
    - 右：PDF效果——直接编辑系统导出的 PDF 得到。
 
-   ![图片](https://github.com/BITNP/BIThesis/assets/73375426/0ce5f4e5-99c1-4154-ab35-e38eeefa369d)
+   ![diffpdf](../assets/watermark-diffpdf.png)
 
    :::
 
