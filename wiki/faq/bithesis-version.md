@@ -20,3 +20,7 @@ Document Class: bithesis 2025-04-18 v3.8.4 BIT Thesis Templates
 Document Class: ctexbook 2022/07/14 v2.5.10 Chinese adapter for class book (CTEX)
 Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
 ```
+
+::: tip 🔼 如何升级？
+如欲升级，请参考 [📁 下载与使用模板](../guide/downloading-using-templates.md#日后更新升级)。
+:::
