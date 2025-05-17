@@ -9,7 +9,7 @@ tag: package
 使用[[pkg:longtable]]制作跨页三线表（续表）。
 
 ::: details 效果截图
-![图片](https://github.com/user-attachments/assets/ca458a16-d568-4cf8-88e9-ee5c2adcc5cd)
+![](../assets/longtable.png)
 :::
 
 ```latex

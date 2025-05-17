@@ -10,7 +10,7 @@ tag: text
 
 希望控制英文摘要中的断字，想下图左→右。
 
-![](https://github.com/BITNP/BIThesis/assets/73375426/8ddaeafe-e0be-48cc-9952-d9466df972aa)
+![](../assets/hyphen-diffpdf.jpg)
 
 :::
 
@@ -23,4 +23,4 @@ tag: text
 
 以上两种方法都能让引擎在 ab 交界处插入连字符，从而正常换行。
 
-![](https://github.com/BITNP/BIThesis/assets/73375426/774281e2-0f33-4c39-b03c-d2036b3d0764)
+![](../assets/hyphen-tex.png)

@@ -10,9 +10,8 @@ tag: page
 
 ::: details 情况截图
 
-![截屏2025-02-18 13 03 00](https://github.com/user-attachments/assets/4213c251-d8f5-473f-86a9-d1503f7a8066)
-![截屏2025-02-18 13 03 15](https://github.com/user-attachments/assets/b3bb59d1-79fd-456d-adc8-85aa2556b842)
-
+![截屏2025-02-18 13 03 00](../assets/float-page-table.png)
+![截屏2025-02-18 13 03 15](../assets/float-page-figure.png)
 :::
 
 目前能想到这些方法：

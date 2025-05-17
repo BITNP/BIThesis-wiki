@@ -42,7 +42,7 @@ tag: biblatex-gb7714-2015
 }
 ```
 
-![image](https://github.com/BITNP/BIThesis/assets/28673129/fda92b9d-eb61-4d60-9fe9-732b022f58be)
+> Dwarkadas S, Hardavellas N, Kontothanassis L, et al. Cashmere-VLM: Remote Memory Paging for Software Distributed Shared Memory[C]. Proceedings 13th International Parallel Processing Symposium and 10th Symposium on Parallel and Distributed Processing. IPPS/SPDP 1999. 1999: 153-159.
 
 ## 去除`//`，同时移动`[C]`
 
