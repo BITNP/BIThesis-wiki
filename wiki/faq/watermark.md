@@ -15,7 +15,7 @@ tag: bithesis
 ![preview](../assets/watermark-preview.png)
 :::
 
-1. **下载水印底图`background.pdf`，保存到`images/`目录**
+1. **下载水印底图`background.pdf`，保存到`images/`目录，并重命名为`background.pdf`**
 
    知网毕设系统会导出 Word 和 PDF，二者水印不一样。可任选一种下载：[Word 效果底图](/assets/watermark/background-word.pdf)、[PDF 效果底图](/assets/watermark/background-pdf.pdf)。
 
