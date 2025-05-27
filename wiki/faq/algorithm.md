@@ -42,6 +42,28 @@ tlmgr install algorithm2e endfloat ifoddpage tocbibind
 [[pkg:algorithms]]2009年后就未再更新，有些小问题，我们不推荐使用（除非您已有现成代码）。例如，`algorithm`环境按`H`与`h/t/b/p`方式浮动时，算法内部的行距不同；再比如`\IF`等命令设计得不好，LaTeX 源代码难以自动缩进。
 :::
 
+::: tip 📏 微调下边线宽度
+
+`algorithm`环境默认采用[[pkg:float]]提供的`ruled`样式，这种样式会在算法内容上下画边线。
+
+然而下边线默认会比上边线细，有部分盲评专家建议改粗。如果你想改粗，请在`\usepackage{algorithmic}`之后加上以下代码。
+
+```latex
+\makeatletter
+\patchcmd{\fs@ruled}
+ {\def\@fs@post{\kern2pt\hrule\relax}}
+ {\def\@fs@post{\kern2pt\hrule height 0pt depth .8pt\relax}}
+ {}{}
+\makeatother
+```
+
+参考：
+
+- [Tune rule height in ruled float - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/a/248941/266758)
+- [`float.dtx`中的`\newcommand\fs@ruled{…}`](https://mirrors.ctan.org/macros/latex/contrib/float/float.dtx)
+
+:::
+
 ## 使用模板提供的 `algo` 环境
 
 这是模板“预定义的数学环境”之一，不额外依赖宏包，但功能有限，基本只支持编号。
