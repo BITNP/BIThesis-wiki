@@ -66,7 +66,19 @@ fc-cache -fv
 
 在系统中安装中易字库，通常双击字体文件即可。
 
-中易字库包括 SimSun、SimHei、KaiTi（注意并非 SimKai）、FangSong 等。然而由于版权和历史原因，它不太有正经下载渠道；建议找个 Windows 系统，从`C:/Windows/Fonts/`拷贝`sim{sun,hei,kai,fang}*.{ttf,ttc}`。
+中易字库包括 SimSun、SimHei、KaiTi、FangSong 等。然而由于版权和历史原因，它不太有正经下载渠道……
+
+- 若是 **macOS 且安装了 Word**，可切换到以下目录，找到`Simsun.ttc`、`SimHei.ttf`、`Kaiti.ttf`（注意并非 SimKai）、`Fangsong.ttf`，双击安装。
+
+   <!-- https://github.com/BITNP/BIThesis-wiki/issues/527 -->
+
+  ```log
+  /Applications/Microsoft Word.app/Contents/Resources/DFonts/
+  ```
+
+  然后打开“字体册”，确认有新安装的字体。
+
+- 若是**其它情况**，建议找个 Windows 系统，从`C:/Windows/Fonts/`拷贝`sim{sun,hei,kai,fang}*.{ttf,ttc}`，双击安装。
 
 ### [Overleaf](https://www.overleaf.com/) 等在线平台（难度：🤨😥😖）{#overleaf}
 
