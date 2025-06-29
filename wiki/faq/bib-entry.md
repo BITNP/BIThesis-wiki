@@ -188,6 +188,21 @@ tag:
 
 :::
 
+::: tip quirks 模式
+
+以上`@patent`默认按国标格式；而目前北理工官方示例的专利格式如下。
+
+- 姜锡洲. 一种温热外敷药制备方案[P], 881056078, 1983-08-12.
+
+考虑到二者差异不大，并且[本科教务部反馈不一致处以国标为准](https://github.com/BITNP/BIThesis/discussions/401)，模板默认按国标处理。若需按学校示例，请编辑`main.tex`，设置`quirks=true`：
+
+```latex
+\documentclass[…]{bithesis} % [!code --]
+\documentclass[…, quirks=true]{bithesis} % [!code ++]
+```
+
+:::
+
 ## 国际、国家标准
 
 主要责任人. 题名: 其他题名信息[S]. 出版地: 出版者, 出版年: 引文页码.
