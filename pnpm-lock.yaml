@@ -34,7 +34,7 @@ importers:
         version: 0.47.0(eslint@9.30.1)(typescript@5.8.3)
       eslint-plugin-vue:
         specifier: ^10.0.0
-        version: 10.2.0(eslint@9.30.1)(vue-eslint-parser@10.1.1(eslint@9.30.1))
+        version: 10.3.0(@typescript-eslint/parser@8.29.0(eslint@9.30.1)(typescript@5.8.3))(eslint@9.30.1)(vue-eslint-parser@10.1.1(eslint@9.30.1))
       gray-matter:
         specifier: ^4.0.3
         version: 4.0.3
@@ -961,12 +961,16 @@ packages:
     peerDependencies:
       eslint: '>=9.25.0'
 
-  eslint-plugin-vue@10.2.0:
-    resolution: {integrity: sha512-tl9s+KN3z0hN2b8fV2xSs5ytGl7Esk1oSCxULLwFcdaElhZ8btYYZFrWxvh4En+czrSDtuLCeCOGa8HhEZuBdQ==}
+  eslint-plugin-vue@10.3.0:
+    resolution: {integrity: sha512-A0u9snqjCfYaPnqqOaH6MBLVWDUIN4trXn8J3x67uDcXvR7X6Ut8p16N+nYhMCQ9Y7edg2BIRGzfyZsY0IdqoQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
+      '@typescript-eslint/parser': ^7.0.0 || ^8.0.0
       eslint: ^8.57.0 || ^9.0.0
       vue-eslint-parser: ^10.0.0
+    peerDependenciesMeta:
+      '@typescript-eslint/parser':
+        optional: true
 
   eslint-scope@8.4.0:
     resolution: {integrity: sha512-sNXOfKCn74rt8RICKMvJS7XKV/Xk9kA7DyJr8mJik3S7Cwgy3qlkkmyS2uQB3jiJg6VNdZd/pDBJu0nvG2NlTg==}
@@ -1369,11 +1373,6 @@ packages:
 
   seemly@0.3.10:
     resolution: {integrity: sha512-2+SMxtG1PcsL0uyhkumlOU6Qo9TAQ/WyH7tthnPIOQB05/12jz9naq6GZ6iZ6ApVsO3rr2gsnTf3++OV63kE1Q==}
-
-  semver@7.7.1:
-    resolution: {integrity: sha512-hlq8tAfn0m/61p4BVRcPzIGr6LKiMwo4VM6dGi6pt4qcRkmNzTcWq6eCEjEh+qXjkMDvPlOFFSGwQjoEa6gyMA==}
-    engines: {node: '>=10'}
-    hasBin: true
 
   semver@7.7.2:
     resolution: {integrity: sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==}
@@ -2139,7 +2138,7 @@ snapshots:
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.7.1
+      semver: 7.7.2
       ts-api-utils: 2.1.0(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
@@ -2478,7 +2477,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-vue@10.2.0(eslint@9.30.1)(vue-eslint-parser@10.1.1(eslint@9.30.1)):
+  eslint-plugin-vue@10.3.0(@typescript-eslint/parser@8.29.0(eslint@9.30.1)(typescript@5.8.3))(eslint@9.30.1)(vue-eslint-parser@10.1.1(eslint@9.30.1)):
     dependencies:
       '@eslint-community/eslint-utils': 4.7.0(eslint@9.30.1)
       eslint: 9.30.1
@@ -2488,6 +2487,8 @@ snapshots:
       semver: 7.7.2
       vue-eslint-parser: 10.1.1(eslint@9.30.1)
       xml-name-validator: 4.0.0
+    optionalDependencies:
+      '@typescript-eslint/parser': 8.29.0(eslint@9.30.1)(typescript@5.8.3)
 
   eslint-scope@8.4.0:
     dependencies:
@@ -2930,8 +2931,6 @@ snapshots:
       kind-of: 6.0.3
 
   seemly@0.3.10: {}
-
-  semver@7.7.1: {}
 
   semver@7.7.2: {}
 
