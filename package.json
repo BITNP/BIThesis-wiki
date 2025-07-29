@@ -15,7 +15,6 @@
     "@typescript-eslint/parser": "^8.38.0",
     "eslint": "^9.32.0",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-config-xo": "^0.47.0",
     "eslint-plugin-vue": "^10.3.0",
     "gray-matter": "^4.0.3",
     "markdown-it-footnote": "^4.0.0",
