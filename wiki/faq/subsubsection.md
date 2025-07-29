@@ -29,7 +29,6 @@ tag:
   ```
 
 - [[pkg:bithesis]]示例
-
   - 硕博模板
 
     ```latex

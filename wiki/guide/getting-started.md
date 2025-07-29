@@ -88,7 +88,6 @@ Windows 和 Linux 的在线安装程序`install-tl*`默认下载安装“完整�
    ![TeX Live 安装程序](../assets/install-tl/basic.png) { style="max-width: 20em; margin: auto;" }
 
 2. **安装基础设施**
-
    - 修改「目录 → TEXDIR 安装根目录」为任意无需管理员权限的目录
    - 修改「选择 → 方案」为「最小配置（仅限普通配置）」
    - 取消勾选「选项 → 安装字体/宏包文档、源码目录树」

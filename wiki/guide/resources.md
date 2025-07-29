@@ -7,14 +7,12 @@
 之后若需特定功能，可再前往 [Overleaf 官方文档](https://www.overleaf.com/learn)专门阅读。下面这些你可能会首先关注。
 
 - 结构与格式
-
   - [设定章节（Sections and chapters）](https://www.overleaf.com/learn/latex/Sections_and_chapters)
   - [段落格式（Paragraphs and new lines）](https://www.overleaf.com/learn/latex/Paragraphs_and_new_lines)
   - [粗体、斜体与下划线（Bold, italics and underlining）](https://www.overleaf.com/learn/latex/Bold,_italics_and_underlining)
   - [有序列表、无序列表（Lists）](https://www.overleaf.com/learn/latex/Lists)
 
 - 插入
-
   - [图片（Inserting Images）](https://www.overleaf.com/learn/latex/Inserting_Images)
 
   - [表格（Tables）](https://www.overleaf.com/learn/latex/Tables)
@@ -38,7 +36,6 @@
 如欲进一步了解，可尝试搜索或阅读以下资料。
 
 1. 手册《[**一份（不太）简短的 LaTeX2e 介绍**——或 111 分钟了解 LaTeX2e](https://mirrors.ctan.org/info/lshort/chinese/lshort-zh-cn.pdf '通常你也可在终端运行“texdoc lshort-zh-cn”获取')》
-
    - [[texdoc:lshort|`lshort`]]中文版，考虑了中文的特殊之处。
 
    - 有许多小技巧。

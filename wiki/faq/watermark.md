@@ -20,7 +20,6 @@ tag: bithesis
    知网毕设系统会导出 Word 和 PDF，二者水印不一样。可任选一种下载：[Word 效果底图](/assets/watermark/background-word.pdf)、[PDF 效果底图](/assets/watermark/background-pdf.pdf)。
 
    ::: details 两种底图的区别
-
    - 左：Word效果——编辑系统导出的 Word，再导出 PDF 得到。
    - 右：PDF效果——直接编辑系统导出的 PDF 得到。
 

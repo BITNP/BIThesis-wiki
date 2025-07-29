@@ -64,7 +64,6 @@ const generated = useTemplateRef('generated')
 #### 详细解释
 
 - **普通模式**
-
   - 默认输出作者姓名。
 
     （作者姓名由用户在`info/author`中配置。）
@@ -72,7 +71,6 @@ const generated = useTemplateRef('generated')
   - 如果指定了覆盖普通模式下内容，则输出该覆盖内容。
 
 - **盲审模式**
-
   - 默认输出「第n作者」。
 
     （具体情况：`\Author`输出中文，如`第一作者`；`\AuthorEn`输出英文，如`First Author`。）
