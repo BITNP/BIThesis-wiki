@@ -16,7 +16,7 @@ tag:
 
 相关链接：
 
-- [GB/T 15834—2011《标点符号用法》](http://www.moe.gov.cn/jyb_sjzl/ziliao/A19/201001/W020190128580990138234.pdf)
+- [GB/T 15834—2011《标点符号用法》](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=22EA6D162E4110E752259661E1A0D0A8)
 
 ## 暂时解决办法
 
