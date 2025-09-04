@@ -34,6 +34,8 @@ BIThesis 中的模板编译方式大同小异，我们都会使用 `xelatex`、`
 latexmk
 ```
 
+编译 LaTeX 文档原本需要多步，但 latexmk 会自动按当前情况调用相关工具，既保证文档编译完全，又尽量跳过已完成步骤。因此，仅调用一次 latexmk 即可。
+
 #### 使用 `xelatex` 编译
 
 如果你使用 `xelatex` 编译项目，那么你需要按照下面的顺序依次调用 `xelatex` 与 `biber` 命令行工具：
@@ -55,32 +57,61 @@ xelatex --interaction=nonstopmode main
 
 ### 使用 VS Code 撰写与编译 LaTeX 模板
 
-> 首先请在 VS Code 的扩展商店中安装 [LaTeX Workshop 插件](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)。
+:::warning 务必修改设置
+LaTeX Workshop 默认设置无法编译大部分中文 LaTeX 文档，包括 BIThesis。
 
-VS Code 的设置项目可以通过打开 UI 设置界面（快捷键 `ctrl/cmd + ,` ），之后点击右上角 <img src="../assets/codicon-go-to-file.svg" alt="Open Settings (JSON)" title="Open Settings (JSON)" class="icon"> 按钮即可打开相应的 JSON 格式配置文件，我们在这里即可定义 LaTeX 编译工具。其中：
-
-- “编译**工具**”是在 `"latex-workshop.latex.tools": [ ... ]` 处进行定义，即我们在这里定义每次调用工具 `latexmk` 或 `xelatex` 时所执行的命令
-- “编译工具**链**”是在 `"latex-workshop.latex.recipes": [ ... ]` 处进行定义，即我们在这里定义编译整个文档的工具链。对我们的模板使用 `xelatex` 的编译方式来说，就是定义 `xelatex -> biber -> xelatex -> xelatex`「四步走」的串联过程
-
-:::warning
-LaTeX Workshop 的默认配置无法对我们的项目进行编译。
-所以请仔细阅读下文并替换相应配置（尽量不要在不清楚参数作用的情况下自行修改参数）。
-
-一份整合了以下两种方式的配置文件可以[可供参考](https://gist.github.com/fky2015/76c8d2b358264f0cfaf80b8dcf68b3f4)。
+请务必按以下修改设置。
 :::
 
-#### 在 VS Code 中使用 `latexmk` 编译
+<!-- prettier-ignore-start -->
+<!-- 以下 vscode:// 链接的 target="_self" 会被 prettier 错误转义，不可自动格式化 -->
 
-:::tip
-更推荐使用此种方法。因为 `latexmk` 会自动检测编译时需要使用 LaTeX 的次数。（比如，当你尝试重复编译一个文档时，`latexmk` 会跳过所有已完成的步骤。）
+1. 安装 [LaTeX Workshop 插件](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)。
+
+2. 将设置[`latex-workshop.latex.recipe.default`](vscode://settings/latex-workshop.latex.recipe.default){ target="_self" }从默认的`first`改为`latexmk (xelatex)`。
+
+   ![将 latex-workshop.latex.recipe.default 设置为 latexmk (xelatex)](../assets/vs-code-config.png)
+
+<!-- prettier-ignore-end -->
+
+以后编译文档时，请打开`main.tex`所在文件夹（工作区），按默认方式“构建 LaTeX 项目”（快捷键：<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>），或者选择“配方: latexmk (xelatex)”；选择其它配方通常无法编译。
+
+<figure>
+  <img alt="选“构建 LaTeX 项目”或“配方: latexmk (xelatex)”" src="../assets/vs-code-compile.png" style="width: 35%; margin-inline: auto;">
+</figure>
+
+:::: details 报错 Failed to resolve: latexmk (xelatex)？ { style="border-color: var(--vp-custom-block-tip-border); color: var(--vp-custom-block-tip-text); background-color: var(--vp-custom-block-tip-bg);" }
+
+> [Builder] Failed to resolve build recipe: latexmk (xelatex).
+
+如果打开`main.tex`编译时 LaTeX Workshop 报告以上错误，说明你之前修改过设置，覆盖了插件内置的`latexmk (xelatex)`配方。
+
+受影响的设置有两项：
+
+- “编译**配方**” `"latex-workshop.latex.recipes": […]`——定义编译整个文档的工具链，例如`xelatex → biber → xelatex → xelatex`四步串联。
+- “编译**工具**” `"latex-workshop.latex.tools": […]`——定义每次调用工具 `latexmk` 或 `xelatex` 时所执行的命令
+
+::: details 这些设置在哪里？
+在 VS Code 中打开 UI 设置界面（快捷键：`ctrl/cmd + ,` ），单击右上角 <img src="../assets/codicon-go-to-file.svg" alt="Open Settings (JSON)" title="Open Settings (JSON)" class="icon"> 按钮打开 JSON 格式设置`settings.json`，搜索（快捷键：`ctrl/cmd + F`）`latex-workshop.latex`。
 :::
 
-这种方法我们只需要使用 `latexmk` 这一个命令行工具。我们在 VS Code 的设置中添加如下的内容定义这一工具：
+你可以把之前的设置注释掉（快捷键：<kbd>Ctrl</kbd>+<kbd>/</kbd>），或者自行复刻 LaTeX Workshop 的默认配方。
+
+::: details 复刻默认配方
+参考 LaTeX Workshop 代码仓库`package.json`中[配方](https://github.com/James-Yu/LaTeX-Workshop/blob/62dc3c812554e6fddd88c27eaf06df7d68716d9e/package.json#L998-L1003)、[工具](https://github.com/James-Yu/LaTeX-Workshop/blob/62dc3c812554e6fddd88c27eaf06df7d68716d9e/package.json#L1104-L1116)的默认值，在自己的`settings.json`中补充以下内容。
 
 ```json
+"latex-workshop.latex.recipes": [
+  {
+    "name": "latexmk (xelatex)",
+    "tools": [
+      "xelatexmk"
+    ]
+  },
+],
 "latex-workshop.latex.tools": [
   {
-    "name": "latexmk",
+    "name": "xelatexmk",
     "command": "latexmk",
     "args": [
       "-synctex=1",
@@ -88,81 +119,50 @@ LaTeX Workshop 的默认配置无法对我们的项目进行编译。
       "-file-line-error",
       "-xelatex",
       "-outdir=%OUTDIR%",
-      "-cd",
       "%DOC%"
     ],
     "env": {}
   },
-]
+],
 ```
 
-之后我们再填入下面的内容定义整个工具链（只有一个 `latexmk`）：
+:::
 
-```json
-"latex-workshop.latex.recipes": [
-  {
-    "name": "latexmk",
-    "tools": [
-      "latexmk"
-    ]
-  },
-]
-```
+::::
 
-#### 在 VS Code 中使用 `xelatex` 编译
+:::: details 还有特殊需要？
 
-这种方法需要调用的工具有：`xelatex` 和 `biber`。我们在 VS Code 的设置中加入如下内容定义这两个工具：
+<!-- prettier-ignore-start -->
+<!-- 以下 vscode:// 链接的 target="_self" 会被 prettier 错误转义，不可自动格式化 -->
 
-```json
-"latex-workshop.latex.tools": [
-  {
-    "name": "xelatex",
-    "command": "xelatex",
-    "args": [
-      "-synctex=1",
-      "-interaction=nonstopmode",
-      "-file-line-error",
-      "-pdf",
-      "-outdir=%OUTDIR%",
-      "-cd",
-      "%DOC%"
-    ],
-    "env": {}
-  },
-  {
-    "name": "biber",
-    "command": "biber",
-    "args": [
-        "%DOCFILE%"
-    ],
-    "env": {}
-  }
-]
-```
+- **不想频繁擦写硬盘？**
 
-用这一方法编译整个文档的工具链串联方法是 `xelatex -> biber -> xelatex -> xelatex` 四步走。我们在 VS Code 的设置中加入如下内容定义这个工具链：
+  将[`latex-workshop.latex.autoBuild.run`](vscode://settings/latex-workshop.latex.autoBuild.run){ target="_self" }从默认的`onFileChange`改为`never`，然后按<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>编译。
 
-```json
-"latex-workshop.latex.recipes": [
-  {
-    "name": "xelatex -> biber -> xelatex * 2",
-    "tools": [
-      "xelatex",
-      "biber",
-      "xelatex",
-      "xelatex"
-    ]
-  }
-]
-```
+- **想用 [SumatraPDF](https://www.sumatrapdfreader.org) 替代 VS Code 查看 PDF？**
 
-#### 调用相应的编译 recipe
+  参考 [forward inverse search - VS Code & SumatraPDF InverseSearch Problem - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/a/697462)。
 
-最后，我们使用快捷键 `ctrl/cmd + shift + P` 打开命令执行栏，并搜索「LaTeX Workshop: Build with recipe」，并选择你所用的 recipe（即上面配置的工具**链**），即可编译整个 LaTeX 项目。
+- **同时要编译其它不支持 xelatex 的 LaTeX 文档？**
 
-![select a recipe](https://i.loli.net/2020/03/09/2c1uEYlUFjRxJ9w.png)
+  设置`latex-workshop.latex.recipe.default`为`latexmk (xelatex)`时，从“用户”改为“工作区”。
 
-不论用上面介绍的`latexmk`还是`xelatex -> biber -> xelatex * 2`，都可以正确编译 BIThesis 的模板。
+  如果这些 LaTeX 文档不幸都在同一工作区，还可按文件设置。
+
+  ::: details 按文件设置（不太推荐）
+
+  有以下三种办法。
+  - 关闭[`latex-workshop.latex.build.forceRecipeUsage`](vscode://settings/latex-workshop.latex.build.forceRecipeUsage){ target="_self" }，让 LaTeX Workshop 识别`main.tex`中的`!TeX`/`!BIB`魔术注释。用这种方法编译他人 LaTeX 项目时会有安全隐患。
+  - 在`main.tex`开头添加魔术注释`% !LW recipe = latexmk (xelatex)`。若报错 Failed to resolve，按上文说明操作。
+  - 设置[`latex-workshop.latex.recipe.default`](vscode://settings/latex-workshop.latex.recipe.default){ target="_self" }为`lastUsed`，然后选择 LaTeX Workshop 内置的配方`latexmk (latexmkrc)`，让插件遵循`main.tex`旁边的`latexmkrc`。若报错 Failed to resolve，按上文说明参考`package.json`类推。
+
+  :::
+
+<!-- prettier-ignore-end -->
+
+其它需求请参考 [Compile · James-Yu/LaTeX-Workshop Wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile)。
+
+::::
 
 ### 使用 TeXstudio 撰写与编译 LaTeX 模板
 
