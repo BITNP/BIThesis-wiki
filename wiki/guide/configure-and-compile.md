@@ -57,14 +57,25 @@ xelatex --interaction=nonstopmode main
 
 > 首先请在 VS Code 的扩展商店中安装 [LaTeX Workshop 插件](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)。
 
+:::tip 🚀 推荐方法：使用魔术注释
+对于 BIThesis 模板，推荐在文档开头添加魔术注释来指定编译方式：
+
+```latex
+% !LW recipe = latexmk (xelatex)
+\documentclass{bithesis}
+```
+
+**注意：使用魔术注释时，请不要同时配置下面的全局设置，两者不能同时使用。**
+:::
+
 VS Code 的设置项目可以通过打开 UI 设置界面（快捷键 `ctrl/cmd + ,` ），之后点击右上角 <img src="../assets/codicon-go-to-file.svg" alt="Open Settings (JSON)" title="Open Settings (JSON)" class="icon"> 按钮即可打开相应的 JSON 格式配置文件，我们在这里即可定义 LaTeX 编译工具。其中：
 
 - “编译**工具**”是在 `"latex-workshop.latex.tools": [ ... ]` 处进行定义，即我们在这里定义每次调用工具 `latexmk` 或 `xelatex` 时所执行的命令
 - “编译工具**链**”是在 `"latex-workshop.latex.recipes": [ ... ]` 处进行定义，即我们在这里定义编译整个文档的工具链。对我们的模板使用 `xelatex` 的编译方式来说，就是定义 `xelatex -> biber -> xelatex -> xelatex`「四步走」的串联过程
 
 :::warning
-LaTeX Workshop 的默认配置无法对我们的项目进行编译。
-所以请仔细阅读下文并替换相应配置（尽量不要在不清楚参数作用的情况下自行修改参数）。
+下面的全局配置会覆盖 LaTeX Workshop 的默认设置，可能影响其他 LaTeX 项目的编译。
+**如果使用了上面的魔术注释方法，请不要添加下面的全局配置，两者不能同时使用。**
 
 一份整合了以下两种方式的配置文件可以[可供参考](https://gist.github.com/fky2015/76c8d2b358264f0cfaf80b8dcf68b3f4)。
 :::
