@@ -10,6 +10,14 @@ tag: meta
 如果只是受限于 [Overleaf 免费编译时长 20 s](https://cn.overleaf.com/user/subscription/choose-your-plan)，可以考虑换用[免费编译 1 min 的国产 TeXPage](https://www.texpage.com/)，或[其它平台](https://github.com/BITNP/BIThesis/discussions/536)，或者[本地编译](../guide/getting-started.md)。
 :::
 
+::: details 在线平台玄学使用技巧
+
+LaTeX 分多步编译，每步之后会缓存文件。超时的那次编译即使没完成，也会留下缓存。此时若**再点一次编译**，LaTeX 会利用先前缓存跳过一些步骤，有时候就不超时了。
+
+此玄学特别适用于增加文献后才超时的文档。
+
+:::
+
 ## 减少编译步骤
 
 - **全量编译 → latexmk**
