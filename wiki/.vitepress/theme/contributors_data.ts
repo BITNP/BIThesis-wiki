@@ -89,7 +89,7 @@ export const contributors: Contributor[] = [
   {
     name: 'everything411',
     homepage: 'https://github.com/everything411',
-    avatar: 'https://freeimghost.net/images/2025/04/13/32010059.jpg',
+    avatar: 'https://freeimghost.com/images/2025/04/13/32010059.jpg',
   },
 ]
 
