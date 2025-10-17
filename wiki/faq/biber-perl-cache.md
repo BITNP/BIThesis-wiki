@@ -48,10 +48,10 @@ tag:
   如果您头一次听说 shell，建议寻求有经验者帮助。
   :::
 
-::: tip 本问答整理于2025年5月
+::: tip 本问答主要整理于2025年5月
 
 此问题[从 Windows 10 1803 开始出现](https://github.com/plk/biber/issues/369)，以上解决方法针对 biber 2.20（2024年3月发布）测试过。
 
-[2024年10月 biber 改进了解码方式](https://github.com/plk/biber/commit/c8017572331ac55e6ab74553b291a57b1c60efd6)，可能会修复这个问题；但目前尚未发布。
+[2024年10月 biber 改进了解码方式](https://github.com/plk/biber/commit/c8017572331ac55e6ab74553b291a57b1c60efd6)，[2025年7月发布的 biber 2.21](https://github.com/plk/biber/releases/tag/v2.21)可能已修复这个问题。
 
 :::
