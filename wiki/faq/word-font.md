@@ -102,7 +102,7 @@ fc-cache -fv
 
    <<< ../assets/word-font-ctex-fontset-windows.def{latex}
 
-   ::: warning 📅 最后检查于2025年4月
+   ::: warning 📅 最后检查于2025年10月
    以上内容修改自[[pkg:ctex]] 2.5.10 2022-07-14 的`ctex-fontset-windows.def`，以后可能需要参考 [CTeX-org/ctex-kit 源代码](https://github.com/CTeX-org/ctex-kit/blob/1ee66c6f130802d3400f893db01fd6a6701ab164/ctex/ctex.dtx#L11065-L11172)更新。
    :::
 

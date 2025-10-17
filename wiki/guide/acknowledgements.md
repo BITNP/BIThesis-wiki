@@ -14,6 +14,16 @@ import Contribution from '../.vitepress/theme/Contribution.vue'
 
 ## Maintainers
 
+### 2025
+
+<Contribution :cells="[
+  ['YDX-2147483647', '💻🚧📆💬📖'], 
+  ['FKY', '💬📖'],
+  ['everything411', '📖'],
+]" />
+
+<!-- TODO -->
+
 ### 2024
 
 <Contribution :cells="[
