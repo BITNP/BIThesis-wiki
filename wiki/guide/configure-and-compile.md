@@ -38,7 +38,7 @@ latexmk
 
 #### 使用 `xelatex` 编译
 
-如果你使用 `xelatex` 编译项目，那么你需要按照下面的顺序依次调用 `xelatex` 与 `biber` 命令行工具：
+如果你使用 `xelatex` 编译项目，那么你需要按照下面四步串联顺序调用 `xelatex` 与 `biber` 命令行工具：
 
 ![xelatex - biber - xelatex * 2](https://i.loli.net/2020/03/09/6x7KHDZtnwAamf4.png)
 
@@ -80,22 +80,23 @@ LaTeX Workshop 默认设置无法编译大部分中文 LaTeX 文档，包括 BIT
   <img alt="选“构建 LaTeX 项目”或“配方: latexmk (xelatex)”" src="../assets/vs-code-compile.png" style="width: 35%; margin-inline: auto;">
 </figure>
 
-:::: details 报错 Failed to resolve: latexmk (xelatex)？ { style="border-color: var(--vp-custom-block-tip-border); color: var(--vp-custom-block-tip-text); background-color: var(--vp-custom-block-tip-bg);" }
+:::: details 报错 Failed to resolve: latexmk (xelatex) 或 Skipping undefined tool xelatexmk？ { style="border-color: var(--vp-custom-block-tip-border); color: var(--vp-custom-block-tip-text); background-color: var(--vp-custom-block-tip-bg);" }
 
-> [Builder] Failed to resolve build recipe: latexmk (xelatex).
+> - [Builder] Failed to resolve build recipe: latexmk (xelatex).
+> - Skipping undefined tool "xelatexmk" in recipe "latexmk (xelatex)."
 
-如果打开`main.tex`编译时 LaTeX Workshop 报告以上错误，说明你之前修改过设置，覆盖了插件内置的`latexmk (xelatex)`配方。
+如果打开`main.tex`编译时 LaTeX Workshop 报告以上错误之一，说明你之前修改过设置，覆盖了插件内置的`latexmk (xelatex)`配方或`xelatexmk`工具。
 
 受影响的设置有两项：
 
-- “编译**配方**” `"latex-workshop.latex.recipes": […]`——定义编译整个文档的工具链，例如`xelatex → biber → xelatex → xelatex`四步串联。
-- “编译**工具**” `"latex-workshop.latex.tools": […]`——定义每次调用工具 `latexmk` 或 `xelatex` 时所执行的命令
+- “编译**配方**” `"latex-workshop.latex.recipes": […]`——定义编译整个文档的工具链。编译 LaTeX 文档[可能需要多步](#使用-xelatex-编译)，工具链是指调用工具的范围和顺序。
+- “编译**工具**” `"latex-workshop.latex.tools": […]`——定义调用每种工具时执行的具体命令，例如传给 `latexmk` 或 `xelatex` 的参数。
 
 ::: details 这些设置在哪里？
 在 VS Code 中打开 UI 设置界面（快捷键：`ctrl/cmd + ,` ），单击右上角 <img src="../assets/codicon-go-to-file.svg" alt="Open Settings (JSON)" title="Open Settings (JSON)" class="icon"> 按钮打开 JSON 格式设置`settings.json`，搜索（快捷键：`ctrl/cmd + F`）`latex-workshop.latex`。
 :::
 
-你可以把之前的设置注释掉（快捷键：<kbd>Ctrl</kbd>+<kbd>/</kbd>），或者自行复刻 LaTeX Workshop 的默认配方。
+你可以把之前的设置注释掉（快捷键：<kbd>Ctrl</kbd>+<kbd>/</kbd>），或者如下自行复刻 LaTeX Workshop 的默认配方。
 
 ::: details 复刻默认配方
 参考 LaTeX Workshop 代码仓库`package.json`中[配方](https://github.com/James-Yu/LaTeX-Workshop/blob/62dc3c812554e6fddd88c27eaf06df7d68716d9e/package.json#L998-L1003)、[工具](https://github.com/James-Yu/LaTeX-Workshop/blob/62dc3c812554e6fddd88c27eaf06df7d68716d9e/package.json#L1104-L1116)的默认值，在自己的`settings.json`中补充以下内容。
@@ -129,6 +130,17 @@ LaTeX Workshop 默认设置无法编译大部分中文 LaTeX 文档，包括 BIT
 :::
 
 ::::
+
+::: details 单击按钮没有反应？
+
+正常来讲，单击编译按钮后，底部状态栏左侧会用🔁提示进度，或者至少弹出报错信息。
+
+<!-- prettier-ignore-start -->
+<!-- 以下 vscode:// 链接的 target="_self" 会被 prettier 错误转义，不可自动格式化 -->
+若完全没有反应，可能是因为屏蔽了报错。请启用[`latex-workshop.message.error.show`](vscode://settings/latex-workshop.message.error.show){ target="_self" }设置重试。
+<!-- prettier-ignore-end -->
+
+:::
 
 :::: details 还有特殊需要？
 
