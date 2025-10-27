@@ -108,7 +108,7 @@ outline:
 - Overleaf 每隔一段时间免费用一次，具体限制没有明写。
 - [TeXPage 免费版 5 次/天](https://www.texpage.com/zh/pricing)。
 
-（截至2025年5月）
+（截至2025年10月）
 
 ## 使用 BIThesis 模板
 

@@ -7,7 +7,10 @@ tag: meta
 <!-- https://github.com/BITNP/BIThesis/discussions/453 -->
 
 ::: tip ⌛ 受限于免费版 Overleaf？
-如果只是受限于 [Overleaf 免费编译时长 20 s](https://cn.overleaf.com/user/subscription/choose-your-plan)，可以考虑换用[免费编译 1 min 的国产 TeXPage](https://www.texpage.com/)，或[其它平台](https://github.com/BITNP/BIThesis/discussions/536)，或者[本地编译](../guide/getting-started.md)。
+如果只是受限于 [Overleaf 免费编译时长 10 s](https://cn.overleaf.com/blog/changes-to-free-compile-timeout#:~:text=timeout%20limit%20to-,10%20seconds,-.%20We%20made)，可以考虑换用[免费编译 30 s](https://www.texpage.com/zh/pricing/) 的国产 [TeXPage](https://www.texpage.com/)，或[其它平台](https://github.com/BITNP/BIThesis/discussions/536)，或者[本地编译](../guide/getting-started.md)。
+
+<!-- 免费编译时长抄录于2025年10月 -->
+
 :::
 
 ::: details 在线平台玄学使用技巧
