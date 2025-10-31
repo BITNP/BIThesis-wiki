@@ -19,7 +19,7 @@ tag: font
 
 <!-- https://github.com/BITNP/BIThesis/blob/7c37def77a9b809af1b4dcee26a04ca393df226e/templates/undergraduate-thesis/chapters/1_chapter1.tex#L67-L76 -->
 
-1. 定义一个包含生僻字的字体`custom-font`，注意要确保你的系统存在[该字体](https://mirrors.cernet.edu.cn/font/GoogleFonts)。
+1. 定义一个包含生僻字的字体`custom-font`，注意要确保你的系统存在[该字体](https://www.ctan.org/tex-archive/fonts/notocjksc)。
 
    ```latex
    \setCJKfamilyfont{custom-font}{Noto Serif CJK SC}
