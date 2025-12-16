@@ -5,7 +5,7 @@ import { with_anchor } from '../.vitepress/theme/util.ts'
 
 # 更新说明
 
-<!-- https://github.com/BITNP/BIThesis/releases/tag/ -->
+<!-- 添加页面时，需要同步更新 config.mts 中的 sidebar 设置 -->
 
 ::: tip 并非详细更新日志
 此处备份 [GitHub Releases][releases] 中人工撰写的说明，主要介绍更新内容，提供升级建议。

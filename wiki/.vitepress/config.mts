@@ -87,7 +87,8 @@ export default defineConfig({
           items: [
             { link: '/news/', text: '目录' },
             // 以下需每年更新
-            { link: '/news/2025', text: '2024年11月至 +∞' },
+            { link: '/news/2026', text: '2025年11月至 +∞' },
+            { link: '/news/2025', text: '2024年11月至2025年10月' },
             { link: '/news/2024', text: '2023年11月至2024年10月' },
             { link: '/news/2023', text: '2022年11月至2023年10月' },
             { link: '/news/2022', text: '2021年11月至2022年10月' },
