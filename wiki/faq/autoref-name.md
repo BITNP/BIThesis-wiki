@@ -12,6 +12,10 @@ tag:
   https://github.com/BITNP/BIThesis/issues/38#issuecomment-631185830
 -->
 
+::: tip 也可换用 cleveref
+如果`\autoref`不能满足需求，可换用[[pkg:cleveref]]的`\cref`，详见[如何使用 cleveref](./cleveref.md)。
+:::
+
 [[pkg:hyperref]]提供的`\autoref`可以在交叉引用时自动带上 figure, table, chapter 等名称。
 
 - `\autoref`是给空格分词的语言准备的，按现在[[pkg:bithesis]]的实现，`\autoref{fig:sth}啊` ⇒ `图 1-1啊`，数字前有空格，数字后没空格。改为`\autoref{fig:sth} 啊`（⇒ `图 1-1 啊`）或再像下面那样定义`\figureautorefname`即可。
@@ -20,11 +24,10 @@ tag:
 
   ```latex
   \usepackage{hyperref}
-  % https://bithesis.bitnp.net/faq/autoref-name.html
   \def\chapterautorefname~#1\null{第~#1~章\null}
   \def\sectionautorefname~#1\null{第~#1~节\null}
   \def\subsectionautorefname~#1\null{第~#1~节\null}
-  % 严格按学校标准：\def\equationautorefname~#1\null{式（#1）\null}
+  % 或者严格按学校标准：\def\equationautorefname~#1\null{式（#1）\null}
   \def\equationautorefname~#1\null{式~(#1)~\null}
   ```
 
