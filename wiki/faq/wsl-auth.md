@@ -2,25 +2,30 @@
 tag: meta
 ---
 
-# WSL 中由于权限问题导致的无法编译情况
+# WSL 中编译报错“Cannot write file”
 
-在 WSL (Windows Subsystem for Linux) 下进行编辑时，若您是直接在 Windows 文件系统下通过 WSL 打开解压后的模板文件，或是将解压后的相应文件直接通过 Windows 文件管理器拷入到 WSL 的原生文件系统时，可能会出现无法编译的报错，此时编译器会输出如下信息：
+在 WSL (Windows Subsystem for Linux) 中，若模板文件是 Windows 经手的，WSL 中的编译器可能缺少相关使用权限，导致以下错误，无法编译。
 
-```text
+```log
 No existing .aux file, so I'll make a simple one, and require run of *latex.
 Cannot write file 'main.aux'
-
 ```
 
-这是由于编译器没有相关的使用权限产生的无法编译问题。解决方案如下：
+Windows 经手具体有这些可能：
 
-## 1. **检查文件存放的位置**
+- 在 Windows 文件系统下通过 WSL 打开解压后的模板文件
+- 将解压得到的文件直接通过 Windows 文件管理器拷入到 WSL 的原生文件系统
+- ……
 
-确保您的文件是保存在 WSL 的原生文件系统中的（如 `/home/用户名/某目录` 下）。
+**解决方案**：依次检查文件的存放位置和读写权限，相应修改。详细操作方法如下。
+
+## 检查文件存放的位置
+
+确保您的文件是保存在 WSL 的原生文件系统中的（如`/home/用户名/某目录`下）。
 
 :::: details 为什么要这么做？
 
-在 WSL 中， Windows 上的硬盘分区都会默认挂载。例如您的 C: 盘会默认挂载到WSL的 `/mnt/c/` 目录下。
+在 WSL 中， Windows 上的硬盘分区都会默认挂载。例如您的`C:`盘会默认挂载到WSL的`/mnt/c/`目录下。
 
 因此，如果你是直接通过 WSL 打开位于 Windows 文件系统上的模板文件，编辑器是可以正常读取相应内容的，但编译器可能因为没有正确的写入权限导致无法进行编译。
 
@@ -28,7 +33,7 @@ Cannot write file 'main.aux'
 
 如果您的文件确实是保存在 Windows 系统上的，请进入 WSL 系统下重新下载模板文件到 WSL 的系统目录下。您也可以直接通过 Windows 文件管理器将文件复制到 WSL 原生文件系统中，并进行下一步操作。
 
-## 2. **检查文件的读写权限**
+## 检查文件的读写权限
 
 当您的文件都是保存在 WSL 原生文件系统中但仍无法编译时，您应当使用如下命令检查权限：
 
