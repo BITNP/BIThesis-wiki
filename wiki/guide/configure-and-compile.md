@@ -189,12 +189,10 @@ TeXstudio 的编译工具大部分已经为我们配置完毕，我们只需要�
 
 你可以使用快捷键 `F5` 一键编译与预览 LaTeX 项目。
 
-## 继续阅读相应的模板使用指南
+## 后续指南
 
-各个模板的使用指南分别位于相应模板的 Releases 文件夹内部。
+至此，您已完成[食用方法](./intro.md#食用方法)的三个步骤，应当可以开始写作了！注意写作需按 LaTeX 语法编辑`*.tex`文件。如您之前未接触过，可参考[先前《快速使用指南》](./intro.md)的第3章与第4章或本站 [👩‍🏫 LaTeX 学习与使用资源](./resources.md)。
 
-你可以在[模板使用手册](https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis.pdf)中找到如何配置参数。
+如果遇到问题，可 [✋ 参考先前指引搜索本站、查询互联网或加群询问同学](./intro.md#help)；不过常见问题应已在模板中做出说明，请查看模板文件夹中的`README.md`和`*.tex`中的示例代码、注释。
 
-也可以在示例代码的注释中找到相应的说明。
-
-如果你觉得有任何内容缺失，欢迎到我们的[代码仓库提出建议](https://github.com/BITNP/BIThesis/issues)。
+如果你觉得缺失任何内容，或有其它意见建议，欢迎[到代码仓库提出](https://github.com/BITNP/BIThesis/issues)。

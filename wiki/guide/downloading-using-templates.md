@@ -3,7 +3,7 @@
 :::warning 📖 初次使用？
 若是初次使用，请先阅读本 Wiki 全部内容或快速使用指南，再开始写作。
 
-- 阅读本 **Wiki**：[从这里开始](./preface.md)。
+- 阅读本 **Wiki**：[从这里开始](./intro.md#食用方法)。
 - **快速使用指南**：[本科][undergraduate-handbook]／[硕博][graduate-handbook]。
 
 :::

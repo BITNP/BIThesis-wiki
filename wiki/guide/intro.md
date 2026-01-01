@@ -1,21 +1,51 @@
-# 简介
+# 教程简介
 
-北京理工大学非官方 LaTeX 模板集合，包含本科、研究生毕业设计模板，本科全英文专业模板，外文翻译模板以及更多。🎉
+## Q：我该如何学习使用 BIThesis？
 
-:::tip
-本文档重点是帮助同学快速上手使用模板，更多相关文档及使用细节可参考[[texdoc:bithesis]]。
+A：有以下**两种选择**。无论哪种，都几乎涵盖了使用 BIThesis 所需的编译环境和基础知识，请大家放心食用。
+
+1. 「**快速使用指南**」（[本科][undergraduate-handbook]／[硕博][graduate-handbook]）
+   - 面向没有太多计算机基础的同学
+   - 附图的 PDF
+
+2. 「**食用方法**」（本站后续页面）
+   - 面向有一定计算机基础的同学
+   - 一系列网页
+   - 详细介绍各种情况的使用方法和注意事项
+
+<aside hidden>
+此外也可直接前往「[系列视频指导](../video/intro.md)」，根据视频的介绍进行学习使用。（录制于 2020 年，与目前的模板使用方式有些许出入；仅供参考）——你好，考古学家！
+</aside>
+
+阅读完毕即可开始写作。到时有需要再进一步参考[详细配置手册`bithesis.pdf`][bithesis-pdf]。
+
+[bithesis-pdf]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis.pdf
+
+:::warning ✋ 遇到问题？{#help}
+
+如果遇到问题，你可以——
+
+1. 搜索本站 [🥑 疑难杂症](../faq/)（搜索栏在页面上方）
+2. 查询互联网及 [🤖 人工智能](./ask-computer.md)
+3. 询问同学，可加入 [🐧 QQ 群：737548118](https://jq.qq.com/?_wv=1027&k=KYDrmS5z)
+
 :::
 
-## What's BIThesis?
+[undergraduate-handbook]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis-handbook-undergraduate.pdf
+[graduate-handbook]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis-handbook-graduate.pdf
 
-(｡･∀･)ﾉﾞ嗨，欢迎来到 BIThesis。这里是北京理工大学本科生和研究生毕业设计论文，以及其他课程报告、实验报告等重要论文、报告的 LaTeX 模板聚集地。如果你厌烦了 Word 格式的不人性化、参考文献的难以管理、公式输入的差劲体验……那么欢迎来尝试用专业的学术稿件排版利器 —— LaTeX 来排版你的论文。专业高端、学界认可、开源免费，LaTeX 是你论文排版的最佳搭档。
+## 食用方法
+
+下图展示了 LaTeX 典型写作环境。编辑**文本文件**（左半图以`.tex`结尾的文件），让编辑器**调用**一些**工具**，生成 PDF（右半图本科毕业设计封面）。
 
 ![Screenshot of Undergraduate Thesis template](../assets/screenshot-undergrad.png)
 
-BIThesis 为各位提供了基于北京理工大学教务部给出的「北京理工大学本科生毕业设计 · 论文模板」的 LaTeX 样版。基于 BIThesis 的 LaTeX 模板，你可以在不必过多在意论文格式的基础上，专注于学术研究、项目实现，从而顺利完成你的项目。
+食用方法相应分为三步：
 
-## 开始阅读文档
+1. [🍌 安装 LaTeX 环境](./getting-started.md)——下载并安装这些**工具**
+2. [📁 下载与使用模板](./downloading-using-templates.md)——下载 BIThesis 提供的**文本文件**
+3. [📃 编辑器配置与模板编译](./configure-and-compile.md)——告知编辑器如何**调用**工具
 
-这里是 BIThesis 的项目 Wiki，提供了 LaTeX 的基本安装方法、LaTeX 项目的使用方法、BIThesis 的编译方法，等等。
+完成三步后，应该就能开始写作了。
 
-在使用 BIThesis 之前，请务必仔细阅读相关章节，只有清晰理解 BIThesis 的各部分内容与功能，我们才能借助 BIThesis 模板撰写优秀的论文。
+不过注意写作需按 LaTeX **语法**编辑文本文件。如您之前未接触过，可参考[上方《快速使用指南》](#q-我该如何学习使用-bithesis)的第3章与第4章或本站 [👩‍🏫 LaTeX 学习与使用资源](./resources.md)。
