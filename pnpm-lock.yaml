@@ -31,7 +31,7 @@ importers:
         version: 10.1.8(eslint@9.39.2)
       eslint-plugin-vue:
         specifier: ^10.3.0
-        version: 10.3.0(@typescript-eslint/parser@8.38.0(eslint@9.39.2)(typescript@5.8.3))(eslint@9.39.2)(vue-eslint-parser@10.1.1(eslint@9.39.2))
+        version: 10.6.2(@typescript-eslint/parser@8.38.0(eslint@9.39.2)(typescript@5.8.3))(eslint@9.39.2)(vue-eslint-parser@10.1.1(eslint@9.39.2))
       gray-matter:
         specifier: ^4.0.3
         version: 4.0.3
@@ -322,12 +322,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
-
-  '@eslint-community/eslint-utils@4.7.0':
-    resolution: {integrity: sha512-dyybb3AcajC7uha6CvhdVRJqaKyn7w2YKqKyAN37NKYgZT36w+iRb0Dymmc5qEJ549c/S31cMMSFd75bteCpCw==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
 
   '@eslint-community/eslint-utils@4.9.1':
     resolution: {integrity: sha512-phrYmNiYppR7znFEdqgfWHXR6NCkZEK7hwWDHZUjit/2/U0r6XvkDl0SYnoM51Hq7FhCGdLDT6zxCCOY1hexsQ==}
@@ -896,14 +890,17 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-plugin-vue@10.3.0:
-    resolution: {integrity: sha512-A0u9snqjCfYaPnqqOaH6MBLVWDUIN4trXn8J3x67uDcXvR7X6Ut8p16N+nYhMCQ9Y7edg2BIRGzfyZsY0IdqoQ==}
+  eslint-plugin-vue@10.6.2:
+    resolution: {integrity: sha512-nA5yUs/B1KmKzvC42fyD0+l9Yd+LtEpVhWRbXuDj0e+ZURcTtyRbMDWUeJmTAh2wC6jC83raS63anNM2YT3NPw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
+      '@stylistic/eslint-plugin': ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
       '@typescript-eslint/parser': ^7.0.0 || ^8.0.0
       eslint: ^8.57.0 || ^9.0.0
       vue-eslint-parser: ^10.0.0
     peerDependenciesMeta:
+      '@stylistic/eslint-plugin':
+        optional: true
       '@typescript-eslint/parser':
         optional: true
 
@@ -1230,8 +1227,8 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
 
-  postcss-selector-parser@6.1.2:
-    resolution: {integrity: sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==}
+  postcss-selector-parser@7.1.1:
+    resolution: {integrity: sha512-orRsuYpJVw8LdAwqqLykBj9ecS5/cRHlI5+nvTo8LcCKmzDmqVORXtOIYEEQuL9D4BxtA1lm5isAqzQZCoQ6Eg==}
     engines: {node: '>=4'}
 
   postcss@8.5.6:
@@ -1297,11 +1294,6 @@ packages:
 
   seemly@0.3.10:
     resolution: {integrity: sha512-2+SMxtG1PcsL0uyhkumlOU6Qo9TAQ/WyH7tthnPIOQB05/12jz9naq6GZ6iZ6ApVsO3rr2gsnTf3++OV63kE1Q==}
-
-  semver@7.7.2:
-    resolution: {integrity: sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==}
-    engines: {node: '>=10'}
-    hasBin: true
 
   semver@7.7.3:
     resolution: {integrity: sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==}
@@ -1732,11 +1724,6 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
-  '@eslint-community/eslint-utils@4.7.0(eslint@9.39.2)':
-    dependencies:
-      eslint: 9.39.2
-      eslint-visitor-keys: 3.4.3
-
   '@eslint-community/eslint-utils@4.9.1(eslint@9.39.2)':
     dependencies:
       eslint: 9.39.2
@@ -2026,7 +2013,7 @@ snapshots:
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.7.2
+      semver: 7.7.3
       ts-api-utils: 2.1.0(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
@@ -2322,14 +2309,14 @@ snapshots:
     dependencies:
       eslint: 9.39.2
 
-  eslint-plugin-vue@10.3.0(@typescript-eslint/parser@8.38.0(eslint@9.39.2)(typescript@5.8.3))(eslint@9.39.2)(vue-eslint-parser@10.1.1(eslint@9.39.2)):
+  eslint-plugin-vue@10.6.2(@typescript-eslint/parser@8.38.0(eslint@9.39.2)(typescript@5.8.3))(eslint@9.39.2)(vue-eslint-parser@10.1.1(eslint@9.39.2)):
     dependencies:
-      '@eslint-community/eslint-utils': 4.7.0(eslint@9.39.2)
+      '@eslint-community/eslint-utils': 4.9.1(eslint@9.39.2)
       eslint: 9.39.2
       natural-compare: 1.4.0
       nth-check: 2.1.1
-      postcss-selector-parser: 6.1.2
-      semver: 7.7.2
+      postcss-selector-parser: 7.1.1
+      semver: 7.7.3
       vue-eslint-parser: 10.1.1(eslint@9.39.2)
       xml-name-validator: 4.0.0
     optionalDependencies:
@@ -2688,7 +2675,7 @@ snapshots:
 
   picomatch@2.3.1: {}
 
-  postcss-selector-parser@6.1.2:
+  postcss-selector-parser@7.1.1:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
@@ -2765,8 +2752,6 @@ snapshots:
       kind-of: 6.0.3
 
   seemly@0.3.10: {}
-
-  semver@7.7.2: {}
 
   semver@7.7.3: {}
 
