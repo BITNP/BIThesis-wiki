@@ -11,7 +11,7 @@ jobs:
     name: Sync to everything411 repo
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           token: ${{ secrets.E411_GITHUB_TOKEN }}
           fetch-depth: 0
