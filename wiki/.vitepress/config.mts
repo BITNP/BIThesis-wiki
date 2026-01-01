@@ -43,8 +43,8 @@ export default defineConfig({
             link: 'https://jq.qq.com/?_wv=1027&k=KYDrmS5z',
           },
           {
-            text: 'Contributing',
-            link: 'https://github.com/BITNP/BIThesis/blob/master/contributing.md',
+            text: '贡献者指南',
+            link: 'https://github.com/BITNP/BIThesis/blob/master/contributing-zh.md',
           },
         ],
       },
@@ -59,8 +59,8 @@ export default defineConfig({
         {
           text: '食用方法',
           items: [
-            { text: '简介', link: '/guide/intro' },
-            { text: '如何开始', link: '/guide/getting-started' },
+            { text: '教程简介', link: '/guide/intro' },
+            { text: '安装环境', link: '/guide/getting-started' },
             { text: '下载模板', link: '/guide/downloading-using-templates' },
             { text: '编辑器配置与模板编译', link: '/guide/configure-and-compile' },
           ],
@@ -115,6 +115,10 @@ export default defineConfig({
     outline: {
       level: [2, 4],
       label: '本页目录',
+    },
+    docFooter: {
+      prev: '上一页',
+      next: '下一页',
     },
     footer: {
       message: 'Released under the <a href="https://www.latex-project.org/lppl/">LaTeX Project Public License</a>.',
