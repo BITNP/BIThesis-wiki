@@ -24,7 +24,7 @@ jobs:
       - run: pnpm install
       - run: pnpm build
       - run: pnpm lint:prettier
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: vitepress-dist
           path: wiki/.vitepress/dist/
@@ -48,7 +48,7 @@ jobs:
             --no-progress
             --config .github/lychee.toml
             .
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v7
         with:
           name: vitepress-dist
           path: wiki/.vitepress/dist/
