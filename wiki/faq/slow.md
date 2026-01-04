@@ -13,13 +13,32 @@ tag: meta
 
 :::
 
-::: details 在线平台玄学使用技巧
+## 在线平台玄学使用技巧
 
-LaTeX 分多步编译，每步之后会缓存文件。超时的那次编译即使没完成，也会留下缓存。此时若**再点一次编译**，LaTeX 会利用先前缓存跳过一些步骤，有时候就不超时了。
+对于在线平台，有些玄学技巧能把时限等效地延长两三倍。其原理在于，在线平台原本计量的可能是 LaTeX 编译所有步骤的总时间，而这些技巧让平台只计量单步的时间。
 
-此玄学特别适用于增加文献后才超时的文档。
+- 即使有一次编译因超时而中断，也会留下缓存。此时若**再点一次编译**，LaTeX 会利用先前缓存跳过一些步骤，有时候就不超时了。
 
-:::
+  此玄学特别适用于增加文献后才超时的文档。
+
+- 编译按钮原本单击一次就会触发完整编译。可**向`latexmkrc`加入以下内容**，让每次单击最多编译一步，通过连续**多次单击按钮**实现完整编译。
+
+  ```perl
+  $go_mode = 3;
+  $max_repeat = 1;
+  $force_mode = 1;
+  ```
+
+  ::: details 解释
+  - `$go_mode = 3`：保留 [Overleaf 服务端既有设置](https://github.com/overleaf/overleaf/blob/0ca1888f76c4a54651f56778c1b7eb733e49ca6c/server-ce/config/latexmkrc#L3)
+  - `$max_repeat = 1`：检测编译无限循环时，限制最多调用一次`*latex`
+  - `$force_mode = 1`：发现 LaTeX 有交叉引用等方面的小问题时，仍继续处理，而不是直接报错
+
+  详见[[texdoc:latexmk]]。
+
+  :::
+
+  来源：[2026年1月3日 · 适用于XDUTS（西安电子科技大学LaTeX套装）的常见示例/代码片段 · note286/xduts · Discussion #40](https://github.com/note286/xduts/discussions/40)
 
 ## 减少编译步骤
 

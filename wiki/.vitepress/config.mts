@@ -122,7 +122,7 @@ export default defineConfig({
     },
     footer: {
       message: 'Released under the <a href="https://www.latex-project.org/lppl/">LaTeX Project Public License</a>.',
-      copyright: 'Copyright © 2020–2025 <a href="https://github.com/BITNP">BITNP</a>',
+      copyright: 'Copyright © 2020–2026 <a href="https://github.com/BITNP">BITNP</a>',
     },
     externalLinkIcon: true,
     search: {
