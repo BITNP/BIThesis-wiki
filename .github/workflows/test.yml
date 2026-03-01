@@ -47,6 +47,7 @@ jobs:
             --verbose
             --no-progress
             --config .github/lychee.toml
+            --root-dir ./wiki/public/
             .
       - uses: actions/download-artifact@v7
         with:
