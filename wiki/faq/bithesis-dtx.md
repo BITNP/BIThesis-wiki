@@ -4,9 +4,9 @@ tag:
   - meta
 ---
 
-# `bithesis.cls`和`bithesis.dtx`是什么关系？
+# `bithesis.cls`和`bithesis*.dtx`是什么关系？
 
-`bithesis.cls`由`bithesis.dtx`转换生成，cls（class）供最终作者使用，dtx（documented tex）在仓库中开发。
+`bithesis.cls`由`bithesis*.dtx`转换生成，cls（class）供最终作者使用，dtx（documented tex）在仓库中开发。
 
 如果你想把某个 pull request 的修改手动复制给自己的`bithesis.cls`，那么基本只需知道：
 
