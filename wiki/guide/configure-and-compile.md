@@ -72,6 +72,8 @@ LaTeX Workshop 默认设置无法编译大部分中文 LaTeX 文档，包括 BIT
 
    ![将 latex-workshop.latex.recipe.default 设置为 latexmk (xelatex)](../assets/vs-code-config.png)
 
+3. 取消勾选[`latex-workshop.latex.build.enableMagicComments`](vscode://settings/latex-workshop.latex.build.enableMagicComments){ target="_self" }，以允许用 latexmk 增量编译。
+
 <!-- prettier-ignore-end -->
 
 以后编译文档时，请打开`main.tex`所在文件夹（工作区），按默认方式“构建 LaTeX 项目”（快捷键：<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>），或者选择“配方: latexmk (xelatex)”；选择其它配方通常无法编译。
@@ -157,16 +159,16 @@ LaTeX Workshop 默认设置无法编译大部分中文 LaTeX 文档，包括 BIT
 
 - **同时要编译其它不支持 xelatex 的 LaTeX 文档？**
 
-  设置`latex-workshop.latex.recipe.default`为`latexmk (xelatex)`时，从“用户”改为“工作区”。
+  修改`latex-workshop.latex.*`设置时，从“用户”改为“工作区”。
 
   如果这些 LaTeX 文档不幸都在同一工作区，还可按文件设置。
 
   ::: details 按文件设置（不太推荐）
 
   有以下三种办法。
-  - 关闭[`latex-workshop.latex.build.forceRecipeUsage`](vscode://settings/latex-workshop.latex.build.forceRecipeUsage){ target="_self" }，让 LaTeX Workshop 识别`main.tex`中的`!TeX`/`!BIB`魔术注释。用这种方法编译他人 LaTeX 项目时会有安全隐患。
-  - 在`main.tex`开头添加魔术注释`% !LW recipe = latexmk (xelatex)`。若报错 Failed to resolve，按上文说明操作。
-  - 设置[`latex-workshop.latex.recipe.default`](vscode://settings/latex-workshop.latex.recipe.default){ target="_self" }为`lastUsed`，然后选择 LaTeX Workshop 内置的配方`latexmk (latexmkrc)`，让插件遵循`main.tex`旁边的`latexmkrc`。若报错 Failed to resolve，按上文说明参考`package.json`类推。
+  - 启用[`latex-workshop.latex.build.enableMagicComments`](vscode://settings/latex-workshop.latex.build.enableMagicComments){ target="_self" }，让 LaTeX Workshop 识别`main.tex`中的`!TeX`/`!BIB`魔术注释。
+  - 同上操作，然后将`main.tex`开头的魔术注释改为`% !LW recipe = latexmk (xelatex)`。若报错 Failed to resolve，按上文说明操作。
+  - 保持`enableMagicComments`关闭，设置[`latex-workshop.latex.recipe.default`](vscode://settings/latex-workshop.latex.recipe.default){ target="_self" }为`lastUsed`，然后选择 LaTeX Workshop 内置的配方`latexmk (latexmkrc)`，让插件遵循`main.tex`旁边的`latexmkrc`。若报错 Failed to resolve，按上文说明参考`package.json`类推。
 
   :::
 
