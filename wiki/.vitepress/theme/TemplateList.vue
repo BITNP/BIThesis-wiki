@@ -22,11 +22,11 @@ import OpenInAll from './OpenInAll.vue'
             <li>按 GB/T 7714—2015 规范编排的书目</li>
             <li>符合研究生学位论文模版的格式要求。</li>
             <li>
-              2025年3月末研究生院开始使用<a
+              2026年3月31日研究生院开始使用<a
                 href="https://grd.bit.edu.cn/xwgz/xwgz2/wjxz_xwgz/b119746.htm"
-                title="研究生学位论文模版；北京理工大学研究生院；2025"
+                title="研究生学位论文模版-2026更新 | 北京理工大学研究生院"
                 >新的研究生学位论文模板</a
-              >，请使用BIThesis v3.8.3或更新的版本。
+              >，请使用BIThesis v3.8.9 或更新的版本。
             </li>
             <li><OpenInAll template="graduate-thesis" /></li>
           </ul>

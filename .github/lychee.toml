@@ -11,6 +11,7 @@ exclude = [
 
   # 经常被屏蔽或访问不到
   '^https://(grd|jwb|mirrors|cs|mirror)\.bit\.edu\.cn',
+  '^https://mirrors\.cernet\.edu\.cn',
   '^https://tex\.stackexchange\.com',
   '^https://www\.tablesgenerator\.com',
   '^https://.+\.zhihu\.com',
