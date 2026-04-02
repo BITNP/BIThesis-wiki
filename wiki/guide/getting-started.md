@@ -6,6 +6,61 @@
 [undergraduate-handbook]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis-handbook-undergraduate.pdf#section1.2
 [graduate-handbook]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis-handbook-graduate.pdf#section1.2
 
+首先，在使用模板之前，你需要在本机安装 LaTeX 环境。一个完整的 LaTeX 环境包括两部分：
+
+- 开源免费的 LaTeX **发行版**（LaTeX 编译器 + 宏包）
+- 以及一个得心应手的 LaTeX **编辑器**
+
+我们在 Windows、macOS 与 Linux 环境中均可以使用 LaTeX 进行文档撰写，该部分主要介绍 LaTeX 的编译环境安装。按照安装方式和操作系统的不同，我们分别进行介绍。
+
+## 安装工作
+
+:::details 🔼 要求 TeX Live 至少 2021，请尽量使用最新版（单击展开详情）
+
+为满足我校要求，BIThesis 实现[[texdoc:biblatex-gb7714-2015|参考文献著录]]、[[texdoc:ctex|章节层次]]等细节时，使用了新版特性，不支持早于 2021 的 TeX Live。
+
+若之前安装过旧版 TeX Live，请按下文安装最新版[^multiple-texlive]，或考虑使用在线平台。
+
+[^multiple-texlive]: 只要自行切换`$PATH`，TeX Live 支持多版本共存，MiKTeX 等其它发行版通常也支持与 TeX Live 共存。
+
+:::
+
+这里的安装教程提供在线安装、离线安装与精简安装三种方式。本教程以安装 TeX Live 2026 为例进行说明，在线安装针对 Windows、Linux 与 macOS 三种平台，离线安装针对 Windows、Linux 与 WSL 三种平台，精简安装针对 Windows、Linux 与 macOS 三种平台。
+
+其中，在线安装、离线安装为全量安装，占用空间较大（约 **8～10GB** ），因此安装前请确保硬盘有足够空间。如果你的硬盘空间不足，请使用精简安装方式（约 **1GB** ）进行安装，或是使用在线平台进行写作。
+
+请根据你选择的安装方式与平台，按下对应的按钮来获得对应的安装教程。
+
+---
+
+<InstallGuide />
+
+<!-- 默认显示在线安装-Windows平台的指南，请根据需要选择其他选项 -->
+
+<!-- ==================== 在线安装内容 ==================== -->
+
+<InstallContent method="online" platform="windows" defaultShow>
+<!-- 在线安装-Windows -->
+
+::::warning ❕ 注意
+在线安装需要从镜像站拉取 TeX Live 相关文件，因此请确保整个安装过程有稳定的网络环境，如果网络环境较差的话，建议采用离线安装方式。
+::::
+
+参考 [Easy install](https://www.tug.org/texlive/windows.html#install)，下载并运行 [`install-tl-windows.exe`](https://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe)，你只需要一路确认即可，它会自动在线下载所需文件并安装。
+
+即完成了在 Windows 上的 TeX Live 在线安装。
+
+</InstallContent>
+
+<InstallContent method="online" platform="linux">
+<!-- 在线安装-Linux -->
+
+::::warning ❕ 注意
+在线安装需要从镜像站拉取 TeX Live 相关文件，因此请确保整个安装过程有稳定的网络环境，如果网络环境较差的话，建议采用离线安装方式。
+::::
+
+参考 [Quick install](https://www.tug.org/texlive/quickinstall.html)，下载 [`install-tl-unx.tar.gz`](https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz) 并解压，运行 `install-tl`，它会在线下载所需文件并安装。
+
 ::: details 💀 谨慎使用系统包管理器安装 { style="border-color: var(--vp-custom-block-danger-border); color: var(--vp-custom-block-danger-text); background-color: var(--vp-custom-block-danger-bg);" }
 
 非滚动发行的发行版（如 Ubuntu 和 Debian 等）的系统包管理器（如 apt）提供的 TeX Live [一般较旧](https://repology.org/project/texlive/versions)（Homebrew 除外），且无法选择安装方案，通常很难使用。
