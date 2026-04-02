@@ -1,318 +1,421 @@
 # 🍌 如何开始——安装 LaTeX 环境
 
-## 准备工作
-
-首先，在使用模板之前，你需要在本机安装 LaTeX 环境。一个完整的 LaTeX 环境包括两部分：
-
-- 开源免费的 LaTeX **发行版**（LaTeX 编译器 + 宏包）
-- 以及一个得心应手的 LaTeX **编辑器**
-
 ::: tip ☁ 也可用在线平台
-也可不在本地准备环境，换用浏览器在线操作。请参考《**快速使用指南**》（[本科][undergraduate-handbook]／[硕博][graduate-handbook]）开头。
+接下来的安装教程主要面向的是本地部署 LaTeX 环境并编写文档的同学，你也可不在本地准备环境，换用浏览器在线操作。请参考《**快速使用指南**》（[本科][undergraduate-handbook]／[硕博][graduate-handbook]）开头。
 :::
 [undergraduate-handbook]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis-handbook-undergraduate.pdf#section1.2
 [graduate-handbook]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis-handbook-graduate.pdf#section1.2
 
-我们在 Windows、macOS 与 Linux 环境中均可以使用 LaTeX 进行文档撰写。按照操作系统的不同，我们分别进行介绍。
+::: details 💀 谨慎使用系统包管理器安装 { style="border-color: var(--vp-custom-block-danger-border); color: var(--vp-custom-block-danger-text); background-color: var(--vp-custom-block-danger-bg);" }
 
-## 下载合适的 LaTeX 发行版
+非滚动发行的发行版（如 Ubuntu 和 Debian 等）的系统包管理器（如 apt）提供的 TeX Live [一般较旧](https://repology.org/project/texlive/versions)（Homebrew 除外），且无法选择安装方案，通常很难使用。
 
-:::details 🔼 要求 TeX Live 至少 2021，请尽量使用最新版（单击展开详情）
-
-为满足我校要求，BIThesis 实现[[texdoc:biblatex-gb7714-2015|参考文献著录]]、[[texdoc:ctex|章节层次]]等细节时，使用了新版特性，不支持早于 2021 的 TeX Live。
-
-若之前安装过旧版 TeX Live，请按下文安装最新版[^multiple-texlive]，或考虑使用在线平台。
-
-[^multiple-texlive]: 只要自行切换`$PATH`，TeX Live 支持多版本共存，MiKTeX 等其它发行版通常也支持与 TeX Live 共存。
-
+如果坚持使用系统包管理器安装 TeX Live，那以后切勿随意安装、更新或移除宏包。由系统包管理器管理的软件包不应被其他包管理器同时管理，所以采用系统包管理器安装的 TeX Live 不应再使用 tlmgr 管理 TeX 宏包。
 :::
 
-官方安装指南位于 [Installing TeX Live over the Internet](https://www.tug.org/texlive/acquire-netinstall.html)。
+我们接下来需要按照安装程序的要求配置环境变量。使用 vi、nano 或其他文本编辑器打开 `~/.bashrc` 文件，在文件末尾添加以下内容：
 
-<!-- 此处应与《快速使用指南》同步更新 -->
+```bash
+export PATH=/usr/local/texlive/2026/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2026/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2026/texmf-dist/doc/info:$INFOPATH
+```
 
-- **Windows**
+保存并关闭文件后，输入以下命令使环境变量生效：
 
-  参考 [Easy install](https://www.tug.org/texlive/windows.html#install)，下载并运行 [`install-tl-windows.exe`](https://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe)，它会在线下载所需文件并安装。
+```bash
+source ~/.bashrc
+```
 
-- **Linux**
+::::warning ❗ 字体问题
 
-  参考 [Quick install](https://www.tug.org/texlive/quickinstall.html)，下载 [`install-tl-unx.tar.gz`](https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz) 并解压，运行 `install-tl`，它会在线下载所需文件并安装。
+需要注意的是，部分 Linux 发行版（如 Debian）可能不会预装微软的 Times New Roman 字体，因此需要补装字体（注意此时需要开启 `contrib` 源），即执行如下命令：
 
-  ::: details 💀 谨慎使用系统包管理器安装 { style="border-color: var(--vp-custom-block-warning-border); color: var(--vp-custom-block-warning-text); background-color: var(--vp-custom-block-warning-bg);" }
-  非滚动发行的发行版（如 Ubuntu 和 Debian 等）的系统包管理器（如 apt）提供的 TeX Live [一般较旧](https://repology.org/project/texlive/versions)（Homebrew 除外），且无法选择安装方案，通常很难使用。
+```bash
+sudo apt install ttf-mscorefonts-installer
+```
 
-  如果坚持使用系统包管理器安装 TeX Live，那以后切勿随意安装、更新或移除宏包。由系统包管理器管理的软件包不应被其他包管理器同时管理，所以采用系统包管理器安装的 TeX Live 不应再使用 tlmgr 管理 TeX 宏包。
-  :::
+按照提示确认用户协议后即可完成安装。
 
-- **macOS**
+在 Linux 上，学校要求使用的中易字库由于版权等历史原因并未预装，因此，BIThesis 会默认使用与相关字体有极小差别的开源字体。当你特别在意这些问题时，请参照 [疑难杂症 - 中文字体如何才能与 Word 模板完全相同？（换用中易字库）](../faq/word-font.md) 进行修正。
+::::
 
-  TeX Live 在 macOS 上包装成了 [MacTeX](https://www.tug.org/mactex/)。MacTeX 以 `pkg` 文件发布。我们进入 [MacTeX 的下载页面](https://www.tug.org/mactex/mactex-download.html)，下载完整安装包 `MacTeX.pkg`（大约 6 GB），然后双击运行安装。
+即完成了在 Linux 上的 TeX Live 在线安装。
 
-  ::: details 🍺 也可使用 Homebrew
+</InstallContent>
 
-  使用 Homebrew 包管理的同学，也可以[通过 Homebrew Cask 直接安装 MacTeX](https://formulae.brew.sh/cask/mactex)：
+<InstallContent method="online" platform="macos">
+<!-- 在线安装-macOS -->
 
-  ```bash
-  brew install --cask mactex
-  ```
+::::warning ❕ 注意
+在线安装需要从镜像站拉取 TeX Live 相关文件，因此请确保整个安装过程有稳定的网络环境，如果网络环境较差的话，建议采用离线安装方式。
+::::
 
-  :::
+TeX Live 在 macOS 上包装成了 [MacTeX](https://www.tug.org/mactex/)。MacTeX 以 `pkg` 文件发布。我们进入 [MacTeX 的下载页面](https://www.tug.org/mactex/mactex-download.html)，下载完整安装包 `MacTeX.pkg`（大约 6 GB），然后双击运行安装。
 
-:::: details 📦 也可离线安装
+使用 Homebrew 包管理的同学，也可以[通过 Homebrew Cask 直接安装 MacTeX](https://formulae.brew.sh/cask/mactex)：
 
-使用北京理工大学校园网的同学也可以直接使用我校官方 TeX Live 镜像进行安装。我校 TeX Live 镜像资源位于 [/CTAN/systems/texlive/Images](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/)，其中我们选择下载 `texlive20xx.iso` 即可。Windows 10 / Windows 11 及以上版本可直接挂载 ISO 镜像（双击即可），其余系统用合适的软件也可。之后在打开的文件夹中点击执行 `install-tl-windows`（Windows）或 `install-tl`（Linux）即可离线安装全部 TeX Live 组件。
+```bash
+brew install --cask mactex
+```
+
+:::: warning ❗ 字体问题
+在 macOS 上，学校要求使用的中易字库由于版权等历史原因并未预装，因此，BIThesis 会默认使用与相关字体有极小差别的开源字体。当你特别在意这些问题时，请参照 [疑难杂症 - 中文字体如何才能与 Word 模板完全相同？（换用中易字库）](../faq/word-font.md) 进行修正。
+::::
+
+即完成了在 macOS 上的 TeX Live 在线安装。
+
+</InstallContent>
+
+<!-- ==================== 离线安装内容 ==================== -->
+
+<InstallContent method="offline" platform="windows">
+<!-- 离线安装-Windows -->
+
+使用北京理工大学校园网的同学可以直接使用我校官方 TeX Live 镜像进行安装。
+
+我校 TeX Live 镜像资源位于 [/CTAN/systems/texlive/Images](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/)，其中我们选择下载 `texlive20xx.iso` 即可。
 
 ::: warning ❗ 请注意
-北理工镜像站仅支持校内访问，因此从非校园网环境访问上面镜像资源将无法打开，对此我们可以选用其他的镜像源。
+北理工镜像站仅支持校内访问，因此从非校园网环境访问上面镜像资源将无法打开，如无法连接校园网则可以选用其他的 [CTAN 镜像源](https://mirrors.ctan.org/systems/texlive/Images/)。
 
 另注：安装过程中注意使用合适的权限。
 :::
 
-![Download TeXLive from CTAN mirror](../assets/download-texlive-mirror.png)
+对于 Windows 10 / Windows 11 及以上版本，可以直接挂载 ISO 镜像（双击即可），其余系统用合适的软件也可。之后在打开的文件夹中点击执行 `install-tl-windows.bat` ，一路点击确认，即可离线安装全部 TeX Live 组件。
 
+即完成了在 Windows 上的 TeX Live 离线安装。
+
+</InstallContent>
+
+<InstallContent method="offline" platform="linux">
+<!-- 离线安装-Linux -->
+
+使用北京理工大学校园网的同学可以直接使用我校官方 TeX Live 镜像进行安装。
+
+我校 TeX Live 镜像资源位于 [/CTAN/systems/texlive/Images](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/)，其中我们选择下载 `texlive20xx.iso` 即可。
+
+::: warning ❗ 请注意
+北理工镜像站仅支持校内访问，因此从非校园网环境访问上面镜像资源将无法打开，如无法连接校园网则可以选用其他的 [CTAN 镜像源](https://mirrors.ctan.org/systems/texlive/Images/)。
+
+另注：安装过程中注意使用合适的权限。
+:::
+
+::: details 💀 谨慎使用系统包管理器安装 { style="border-color: var(--vp-custom-block-danger-border); color: var(--vp-custom-block-danger-text); background-color: var(--vp-custom-block-danger-bg);" }
+
+非滚动发行的发行版（如 Ubuntu 和 Debian 等）的系统包管理器（如 apt）提供的 TeX Live [一般较旧](https://repology.org/project/texlive/versions)（Homebrew 除外），且无法选择安装方案，通常很难使用。
+
+如果坚持使用系统包管理器安装 TeX Live，那以后切勿随意安装、更新或移除宏包。由系统包管理器管理的软件包不应被其他包管理器同时管理，所以采用系统包管理器安装的 TeX Live 不应再使用 tlmgr 管理 TeX 宏包。
+
+:::
+
+首先在系统中挂载 ISO 镜像，使用如下命令：
+
+```bash
+sudo mkdir /mnt/texlive # 创建挂载点
+sudo mount -o loop /path/to/texlive20xx.iso /mnt/texlive # 挂载 ISO 文件
+```
+
+挂载完成后，我们就可以进入挂载目录，运行安装程序来安装 TeX Live 了：
+
+```bash
+cd /mnt/texlive
+sudo ./install-tl
+```
+
+此时进入 TeX Live 安装界面，我们输入 `I` 来开始安装，等待一段时间后（约 15 分钟），安装程序会提示我们安装完成，我们接下来需要按照安装程序的要求配置环境变量。使用 vi、nano 或其他文本编辑器打开 `~/.bashrc` 文件，在文件末尾添加以下内容：
+
+```bash
+export PATH=/usr/local/texlive/2026/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2026/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2026/texmf-dist/doc/info:$INFOPATH
+```
+
+保存并关闭文件后，输入以下命令使环境变量生效：
+
+```bash
+source ~/.bashrc
+```
+
+::::warning ❗ 字体问题
+需要注意的是，部分 Linux 发行版（如 Debian）可能不会预装微软的 Times New Roman 字体，因此需要补装字体（注意此时需要开启 `contrib` 源），即执行如下命令：
+
+```bash
+sudo apt install ttf-mscorefonts-installer
+```
+
+按照提示确认用户协议后即可完成安装。
+
+同时，在 Linux 上，学校要求使用的中易字库由于版权等历史原因并未预装，因此，BIThesis 会默认使用与相关字体有极小差别的开源字体。当你特别在意这些问题时，请参照 [疑难杂症 - 中文字体如何才能与 Word 模板完全相同？（换用中易字库）](../faq/word-font.md) 进行修正。
 ::::
 
-### 精简安装内容
+退出当前目录，卸载 ISO 文件：
 
-Windows 和 Linux 的在线安装程序`install-tl*`默认下载安装“完整”发行版，一般 3 GB 左右，需要一两小时；而 macOS 的“完整”安装包也有 6 GB。若不介意，一路默认，放着等待，最后[确认安装](#确认安装)即可。
+```bash
+cd ~
+sudo umount /mnt/texlive
+```
 
-如果你介意，可按以下精简安装内容（Windows 六七百 MB，Linux 四五百 MB），保证 BIThesis 基本使用，日后有需要再补充。
+即完成在 Linux 上的 TeX Live 离线安装。
 
-::: details 精简安装内容——🎨 图形界面（以 Windows 为例）
+</InstallContent>
 
-1. **下载并启动安装程序**
+<InstallContent method="offline" platform="wsl">
+<!-- 离线安装-WSL -->
 
-   下载并运行[`install-tl-windows.exe`](https://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe)，待弹出下图“TeX Live 安装程序”，单击「高级」。
+使用北京理工大学校园网的同学可以直接使用我校官方 TeX Live 镜像进行安装。
 
-   ![TeX Live 安装程序](../assets/install-tl/basic.png) { style="max-width: 20em; margin: auto;" }
+我校 TeX Live 镜像资源位于 [/CTAN/systems/texlive/Images](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/)，其中我们选择下载 `texlive20xx.iso` 即可。
 
-2. **安装基础设施**
-   - 修改「目录 → TEXDIR 安装根目录」为任意无需管理员权限的目录
-   - 修改「选择 → 方案」为「最小配置（仅限普通配置）」
-   - 取消勾选「选项 → 安装字体/宏包文档、源码目录树」
+::: warning ❗ 请注意
+北理工镜像站仅支持校内访问，因此从非校园网环境访问上面镜像资源将无法打开，如无法连接校园网则可以选用其他的 [CTAN 镜像源](https://mirrors.ctan.org/systems/texlive/Images/)。
 
-   ![只安装基础设施](../assets/install-tl/advanced.png)
-
-   如上图完成修改后，单击「安装」。
-
-   一般等待四五分钟，就会提示 finished，可以「关闭」并「Close」了。
-
-   <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 1em; align-items: center;">
-     <img src="../assets/install-tl/finished.png">
-     <img src="../assets/install-tl/close.png">
-   </div>
-
-3. **安装宏包**
-
-   下载 [BIThesis 所需宏包列表](https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages)，然后打开 PowerShell，用 tlmgr（TeX Live package manager）安装。
-
-   ```powershell
-   curl -LO https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages
-   tlmgr install ((Get-Content ./tl_packages) -replace '\s*#.*', '')
-   ```
-
-   正常等待十分钟左右即完成安装。
-
+另注：安装过程中注意使用合适的权限。
 :::
 
-::: details 精简安装内容——🔧 命令行界面（以 Linux 为例）
+这里使用 WSL 2 配置好 Ubuntu 24.04 的 Linux 子系统，并安装 TeX Live 2026。请将TeX Live ISO 文件下载到 Windows 的某个没有中文路径的目录下（例如本教程中的 `D:\texlive2026.iso`）。
 
-1. **下载并解压安装程序**
+:::: details 💀 确保你已经开启 CPU 虚拟化 { style="border-color: var(--vp-custom-block-danger-border); color: var(--vp-custom-block-danger-text); background-color: var(--vp-custom-block-danger-bg);" }
 
-   ```shell
-   curl -LO https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
-   tar -zxvf install-tl-unx.tar.gz
-   cd install-tl-*  # 目录具体名称包含日期
-   ```
+CPU的虚拟化是开启 WSL 2 的前提条件之一，如果没有开启虚拟化，WSL 2 将无法正常运行。你可以通过任务管理器界面来检查 CPU 虚拟化是否已经开启：
 
-2. **安装基础设施**
+![CPU 虚拟化检查](../assets/install-tl/wsl-vt.png)
 
-   这里将安装目录从默认`/usr/local/texlive/`改为了`~/.texlive/`，因为前者可能需要 sudo。
+如果你的红框处内容为“已启用”，说明你的 CPU 虚拟化已经开启，可以继续安装 WSL 2 和 TeX Live。如果显示为“未启用”，你需要进入 BIOS 设置界面来开启 CPU 虚拟化。不同品牌的电脑进入 BIOS 的方式可能不同，请根据你的电脑品牌和型号搜索相关教程来进入 BIOS 设置界面，找到 CPU 虚拟化选项并启用它。启用后保存设置并重启电脑，然后再次检查 CPU 虚拟化是否已经开启。
+::::
 
-   ```shell
-   mkdir ~/.texlive/
-   ./install-tl --texdir=~/.texlive --scheme=scheme-minimal --no-doc-install --no-src-install
-   ```
+::::danger 🚨 注意你的内存容量
+WSL 2 默认会使用宿主机的全部内存资源，如果你的电脑内存较小（例如 8GB/16GB），可能会导致 WSL 2 占用过多内存资源，影响系统性能。
 
-   <!--
-       运行 install-tl 需要 perl，但一般已预装，就不专门说了。
-       https://www.perl.org/get.html
-   -->
+推荐有 32GB 及以上内存的同学使用 WSL 2 来安装 TeX Live，8GB 内存的同学也可以使用，但建议在安装完成后限制 WSL 2 的内存使用，例如限制为 4GB以避免系统性能问题，或是直接在 Windows 上安装 TeX Live。你可以通过创建或编辑 `.wslconfig` 文件来限制 WSL 2 的内存使用，具体方法请参考 [Microsoft 官方文档](https://docs.microsoft.com/en-us/windows/wsl/wsl-config#configure-global-options-with-wslconfig)。
+::::
 
-   运行`install-tl`时会先暂停，打印安装信息。我们确认无误后，如下输入`I`启动安装。
+首先需要打开 Windows 功能，启用“适用于 Linux 的 Windows 子系统”和“Hyper-V”两个功能，然后按要求重启电脑。具体位置如下图所示：
 
-   ```log
-   Actions:
-    <I> start installation to hard disk
-    <P> save installation profile to 'texlive.profile' and exit
-    <Q> quit
+![启用 WSL 和 Hyper-V](../assets/install-tl/wsl-enable.png)
 
-   Enter command: ✍  输入“I”
-   ```
+接着，打开命令提示符，输入如下代码以强制启用 WSL 2：
 
-   一般等待一两分钟，程序就会结束运行，并如下提示成功安装。（此时就可以删除`install-tl-*`目录及安装程序了。）
+```powershell
+wsl --set-default-version 2
+```
 
-   ```log
-   Welcome to TeX Live!
-   …
-   Add ~/.texlive/texmf-dist/doc/man to MANPATH.
-   Add ~/.texlive/texmf-dist/doc/info to INFOPATH.
-   Most importantly, add ~/.texlive/bin/x86_64-linux
-   to your PATH for current and future sessions.
-   ```
+安装 WSL 2 后，我们需要安装一个 Linux 发行版，推荐使用 Ubuntu。我们可以在 Microsoft Store 中搜索“Ubuntu”，选择一个版本进行安装，或直接选择默认的 Ubuntu 24.04.1 LTS 版本，如下图。安装完成后，打开 Ubuntu 应用程序，按照提示设置用户名和密码。
 
-   然后我们应按以上提示**添加环境变量**。示例配置如下，具体与操作系统和 shell 有关，可上网搜索或问人工智能。
+![安装 Ubuntu](../assets/install-tl/wsl-install.png)
 
-   ```bash
-   export PATH="$HOME/.texlive/bin/x86_64-linux:$PATH"
-   export MANPATH="$HOME/.texlive/texmf-dist/doc/man:$MANPATH"
-   export INFOPATH="$HOME/.texlive/texmf-dist/doc/info:$INFOPATH"
-   ```
+以上即为成功安装 WSL 2 虚拟机，接下来我们需要在 WSL 2 中安装 TeX Live。首先，我们需要将之前下载的 TeX Live ISO 文件挂载到 WSL 2 中。打开 Ubuntu 终端，输入以下命令：
 
-3. **安装宏包**
+```bash
+sudo mkdir /mnt/texlive # 创建挂载点
+sudo mount -o loop /mnt/d/texlive2026.iso /mnt/texlive # 挂载 ISO 文件
+```
 
-   下载 [BIThesis 所需宏包列表](https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages)，然后用 tlmgr（TeX Live package manager）安装。
+挂载完成后，我们就可以进入挂载目录，运行安装程序来安装 TeX Live 了：
 
-   ```shell
-   curl -LO https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages
-   tlmgr update --self
-   tlmgr install $(sed -E 's/#.*//' ./tl_packages)
-   ```
+```bash
+cd /mnt/texlive
+sudo ./install-tl
+```
 
-   <!-- 如果没有`tlmgr update --self`，`tlmgr install`可能会提示升级自身，并放弃安装宏包 -->
+此时进入 TeX Live 安装界面，我们输入 `I` 来开始安装，等待一段时间后（约 15 分钟），安装程序会提示我们安装完成，我们接下来需要按照安装程序的要求配置环境变量。使用 vi、nano 或其他文本编辑器打开 `~/.bashrc` 文件，在文件末尾添加以下内容：
 
-   正常等待四五分钟即完成安装。
+```bash
+export PATH=/usr/local/texlive/2026/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2026/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2026/texmf-dist/doc/info:$INFOPATH
+```
 
-4. **安装 Times New Roman 字体**（可与上一步同时进行）
+保存并关闭文件后，输入以下命令使环境变量生效：
 
-   微软字体免费但有限制，Linux 发行版可能没有预装，需要补装。
+```bash
+source ~/.bashrc
+```
 
-   ```shell
-   sudo apt install ttf-mscorefonts-installer
-   # 然后按照提示同意用户协议
-   ```
+接下来，我们需要将 Windows 下的字体共享给 WSL 2。首先，在 Windows 中找到字体文件夹，通常位于 `C:\Windows\Fonts`，然后在 Ubuntu 终端中创建一个软链接，并刷新字体缓存即可。具体命令如下：
 
+```bash
+sudo ln -s /mnt/c/Windows/Fonts /usr/share/fonts/win-
+fc-cache -fv
+```
+
+退出当前目录，卸载 ISO 文件：
+
+```bash
+cd ~
+sudo umount /mnt/texlive
+```
+
+即完成了在 WSL 2 中 TeX Live 的完整安装。
+
+</InstallContent>
+
+<!-- ==================== 精简安装内容 ==================== -->
+
+<InstallContent method="minimal" platform="windows">
+<!-- 精简安装-Windows -->
+
+精简安装会只安装 BIThesis 必要的宏包，因此占用空间会大幅缩小，仅需 **1GB** 左右的磁盘容量。
+
+::: warning ❗ 注意
+由于精简安装过程仅会安装 BIThesis 使用的宏包，因此如果你需要使用其他的 LaTeX 模板包，你需要参照后文的 [**补装宏包**](./getting-started.md#补装宏包) 部分，针对你使用的新模板进行安装。
 :::
 
-::: details 精简安装内容——🤠 MacTeX（仅限 macOS）
+如在线安装过程，只是在安装过程中需要修改相关参数，具体步骤如下：
 
-1. **下载并运行安装程序**
+弹出 "TeX Live 安装程序"时，单击 `高级` 按钮。
 
-   前往 [More Packages - MacTeX](https://www.tug.org/mactex/beginners.html)，下载[`BasicTeX.pkg`](https://mirror.ctan.org/systems/mac/mactex/BasicTeX.pkg)（一两百 MB）并运行，这会安装基础设施和基本宏包。
+修改界面内选项如下图：
 
-   <!-- 估计 https://formulae.brew.sh/cask/basictex 也行，但未实际验证 tlmgr 可用，故暂时不写 -->
+![Windows 精简安装高级选项](../assets/install-tl/windows-basic.png)
 
-2. **安装宏包**
+下载 [BIThesis 所需宏包列表](https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages)，然后打开 PowerShell，用 tlmgr（TeX Live package manager）安装。
 
-   下载 [BIThesis 所需宏包列表](https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages)，然后用 tlmgr（TeX Live package manager）安装。
+```powershell
+curl -LO https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages
+# 下载 BIThesis 宏包列表（命令行）
+# 需注意在 PowerShell 中 curl 是 Invoke-WebRequest 的别名
+# 因此在 PowerShell 中使用 curl 实际上是调用 Invoke-WebRequest，需按下面写法来
+Invoke-WebRequest -Uri "https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages" -OutFile "tl_packages"
+# 下载 BIThesis 宏包列表（PowerShell）
 
-   ```shell
-   curl -LO https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages
-   sudo tlmgr update --self
-   sudo tlmgr install $(sed -E 's/#.*//' ./tl_packages)
-   ```
+tlmgr update --self # 更新 tlmgr 自身（TeX Live 中的 tlmgr 版本较旧，更新后才能安装新版宏包）
+tlmgr install ((Get-Content ./tl_packages) -replace '\s*#.*', '') # 安装 BIThesis 所需宏包
+```
 
-   <!--
-     与 Linux 相比，这里加了 sudo，因为默认安装于`/usr/local/`。
-     运行`BasicTeX.pkg`时可改安装位置，但 macOS 通常不涉及分区或多用户，一般都不动；需要动的人应该也知道自己在做什么。
-     因此不必额外说明。
-   -->
+<!--
+  ============================================
+  待编辑：Windows 精简安装的详细步骤
+  ============================================
+-->
 
-   <!-- 确定 macOS 附带了 Times New Roman，无需单独装 -->
+即完成了在 Windows 上的 TeX Live 精简安装。
 
+</InstallContent>
+
+<InstallContent method="minimal" platform="linux">
+<!-- 精简安装-Linux -->
+
+精简安装会只安装 BIThesis 必要的宏包，因此占用空间会大幅缩小，仅需 **1GB** 左右的磁盘容量。
+
+::: warning ❗ 注意
+由于精简安装过程仅会安装 BIThesis 使用的宏包，因此如果你需要使用其他的 LaTeX 模板包，你需要参照后文的 [**补装宏包**](./getting-started.md#补装宏包) 部分，针对你使用的新模板进行安装。
 :::
 
-:::: tip 日后补充安装
+下载 [`install-tl-unx.tar.gz`](https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz) 并解压，使用如下命令运行 `install-tl`，并按 `I` 安装。（这里将安装目录从默认`/usr/local/texlive/`改为了`~/.texlive/`，因为前者可能需要 sudo）：
 
-::: details 📦 补充宏包
+```bash
+mkdir ~/.texlive/
+./install-tl --texdir=~/.texlive --scheme=scheme-minimal --no-doc-install --no-src-install
+```
 
-若用别的宏包时遇到 File not found 错误，可按需[使用 tlmgr 补装](./commands.md#tlmgr)，例如：
+我们接下来需要按照安装程序的要求配置环境变量。使用 vi、nano 或其他文本编辑器打开 `~/.bashrc` 文件，在文件末尾添加以下内容：
+
+```bash
+export PATH=~/.texlive/2026/bin/x86_64-linux:$PATH
+export MANPATH=~/.texlive/2026/texmf-dist/doc/man:$MANPATH
+export INFOPATH=~/.texlive/2026/texmf-dist/doc/info:$INFOPATH
+```
+
+保存并关闭文件后，输入以下命令使环境变量生效：
+
+```bash
+source ~/.bashrc
+```
+
+这样就会得到一个只有基础宏包的 LaTeX 编译环境，接下来下载 [BIThesis 所需宏包列表](https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages)，然后用 tlmgr（TeX Live package manager）安装，具体命令如下：
+
+```bash
+curl -LO https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages
+# 下载 BIThesis 宏包列表
+tlmgr update --self # 更新 tlmgr 自身（TeX Live 中的 tlmgr 版本较旧，更新后才能安装新版宏包）
+tlmgr install $(sed -E 's/#.*//' ./tl_packages) # 安装 BIThesis 所需宏包
+```
+
+::::warning ❗ 字体问题
+需要注意的是，部分 Linux 发行版（如 Debian）可能不会预装微软的 Times New Roman 字体，因此需要补装字体（注意此时需要开启 `contrib` 源），即执行如下命令：
+
+```bash
+sudo apt install ttf-mscorefonts-installer
+```
+
+按照提示确认用户协议后即可完成安装。
+
+同时，在 Linux 上，学校要求使用的中易字库由于版权等历史原因并未预装，因此，BIThesis 会默认使用与相关字体有极小差别的开源字体。当你特别在意这些问题时，请参照 [疑难杂症 - 中文字体如何才能与 Word 模板完全相同？（换用中易字库）](../faq/word-font.md) 进行修正。
+::::
+
+即完成了在 Linux 上的 TeX Live 精简安装。
+
+</InstallContent>
+
+<InstallContent method="minimal" platform="macos">
+<!-- 精简安装-macOS -->
+
+精简安装会只安装 BIThesis 必要的宏包，因此占用空间会大幅缩小，仅需 **1GB** 左右的磁盘容量。
+
+::: warning ❗ 注意
+由于精简安装过程仅会安装 BIThesis 使用的宏包，因此如果你需要使用其他的 LaTeX 模板包，你需要参照后文的 [**补装宏包**](./getting-started.md#补装宏包) 部分，针对你使用的新模板进行安装。
+:::
+
+前往 [More Packages - MacTeX](https://www.tug.org/mactex/beginners.html)，下载[`BasicTeX.pkg`](https://mirror.ctan.org/systems/mac/mactex/BasicTeX.pkg)（一两百 MB）并运行，这会安装基础设施和基本宏包。
+
+下载 [BIThesis 所需宏包列表](https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages)，然后用 tlmgr（TeX Live package manager）安装。
 
 ```shell
+curl -LO https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages
+# 下载 BIThesis 宏包列表
+sudo tlmgr update --self # 更新 tlmgr 自身（BasicTeX 中的 tlmgr 版本较旧，更新后才能安装新版宏包）
+sudo tlmgr install $(sed -E 's/#.*//' ./tl_packages) # 安装 BIThesis 所需宏包
+```
+
+:::: warning ❗ 字体问题
+在 macOS 上，学校要求使用的中易字库由于版权等历史原因并未预装，因此，BIThesis 会默认使用与相关字体有极小差别的开源字体。当你特别在意这些问题时，请参照 [疑难杂症 - 中文字体如何才能与 Word 模板完全相同？（换用中易字库）](../faq/word-font.md) 进行修正。
+::::
+
+即完成了在 macOS 上的 TeX Live 精简安装。
+
+</InstallContent>
+
+## 确认安装
+
+为了保证我们 LaTeX 发行版的安装没有问题，我们需要验证一下 LaTeX 编译工具的安装情况，主要验证 `latexmk` 、`xelatex` LaTeX 编译器与 `biber` 参考文献编译器的安装情况。我们打开终端（Windows 打开 PowerShell、macOS 打开 Terminal、Linux 打开你所使用的终端模拟器），在其中输入下面的命令：
+
+```bash
+latexmk --version # 验证 latexmk 的安装
+xelatex --version # 验证 xelatex 的安装
+biber --version #验证 biber 的安装
+```
+
+![验证安装](../assets/install-tl/install-finish.png)
+
+出现类似的输出，说明我们编译器安装应该是没有问题的。
+
+准备就绪后，我们还需要选择一个趁手的编辑器，请转到 [📁 编辑器配置](./configure-ide.md) 页面进行进一步的操作。
+
+## 补装宏包
+
+当你需要使用到其他宏包时，或者编译时遇到 File not found 错误，可按需[使用 tlmgr 补装](./commands.md#tlmgr)，例如：
+
+```bash
 $ latexmk
 …
 ! LaTeX Error: File `upquote.sty' not found.
 Type X to quit …
-👆 发现缺失 upquote.sty，先输入“X”中止编译
+👆 发现缺失 upquote.sty，先输入"X"中止编译
 
 👇 然后补装 https://ctan.org/pkg/upquote
 $ tlmgr install upquote
 …
 ```
 
-:::
-
-::: details 📖 补充本地宏包手册
-
-以上“精简”了本地宏包手册，一般用 [texdoc 在线版](https://texdoc.org) 替代即可。
+当然，如果你是按照上文的精简安装方式安装的 TeX Live，你的本地就会没有任何手册文档的，应当使用 [texdoc 在线版](https://texdoc.org) 替代。
 
 若希望在 TeX Live 安装目录保存宏包手册，可指定`--with-doc`，例如：
 
-```shell
+```bash
 # 新装宏包并保存文档（若已装过，会放弃并提示 package already present）
 tlmgr install --with-doc minted algorithm2e …
 
 # 重装已有宏包，并补充文档
 tlmgr install --reinstall --with-doc --no-depends ctex biblatex-gb7714-2015 …
 ```
-
-::::
-
-### 确认安装
-
-为了保证我们 LaTeX 发行版的安装没有问题，我们需要验证一下 LaTeX 编译工具的安装情况。我们打开终端（Windows 打开 PowerShell、macOS 打开 Terminal、Linux 打开你所使用的终端模拟器），在其中输入下面的命令：
-
-- 验证 `latexmk`、`xelatex` LaTeX 编译器的安装情况：
-
-  ```bash
-  # 验证 latexmk 的安装
-  latexmk --version
-  # 验证 xelatex 的安装
-  xelatex --version
-  ```
-
-  ![Verify installation of latexmk and xelatex](../assets/output-xelatex-latexmk.png)
-
-- 验证 `biber` 参考文献编译器的安装情况：
-
-  ```bash
-  biber --version
-  ```
-
-  ![Verify installation of biber](../assets/output-biber.png)
-
-出现类似的输出，说明我们编译器安装应该是没有问题的。
-
-## 挑选合适的 LaTeX 编辑器
-
-理论上来说，任何一个「文本编辑器」均可以用来撰写 LaTeX 文档，但是一个得心应手的 LaTeX 编辑器一定会让我们撰写论文的效率大增。
-
-### 使用 VS Code 配合 LaTeX Workshop 插件编辑 LaTeX 文档
-
-VS Code 是微软开发的基于 Electron 跨平台技术的新晋代码编辑器，开源免费、拓展性强、功能强大，是当代开发者的首选。用 VS Code 配合 LaTeX Workshop 插件我们可以打造一个强大的 LaTeX 编辑器。
-
-![Writing with VS Code](../assets/writing-with-vscode.png)
-
-- 安装 VS Code 编辑器：[Visual Studio Code - Code editing. Redefined.](https://code.visualstudio.com/)
-- 安装插件：
-  - 安装 LaTeX Workshop 插件：[Visual Studio Code LaTeX Workshop Extension](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
-    - 提供基本的浏览、编辑、自动补全、自动格式化 LaTeX 文档的功能
-    - 提供在 VS Code 内直接预览 LaTeX 文档编译得到的 PDF 的功能
-    - 提供编译工具链、自定义编译方法等功能
-    - 提供 SyncTeX 双向定位功能（LaTeX 源码 <-> PDF）
-  - （可选）安装 LaTeX Utilities 插件：[Visual Studio Code LaTeX Utilities](https://marketplace.visualstudio.com/items?itemName=tecosaur.latex-utilities)
-    - 提供实时 LaTeX 文档字数统计的功能
-    - 提供与参考文献管理工具 Zotero 连接的功能
-
-使用 VS Code 作为 LaTeX 编辑器时，我们需要特别配置编译工具 `tools` 与编译工具链 `recipes`。对于包含有目录、参考文献、图片与表格引用的 LaTeX 文档，我们往往需要使用多个编译工具串联编译。[具体的 VS Code 编译方法会在后文介绍](./configure-and-compile.md#使用-vs-code-撰写与编译-latex-模板)，请继续阅读。
-
-### 使用 TeXstudio 编辑 LaTeX 文档
-
-TeXstudio 是老牌 LaTeX 编辑器，使用跨平台技术 Qt 编写而成。虽然界面相对老旧，但是依旧可靠。我们可以访问 [TeXstudio 官网](https://www.texstudio.org/)或[校园网联合镜像站相应页面](https://mirrors.cernet.edu.cn/github-release/texstudio-org/texstudio/LatestRelease/)，下载安装各个系统版本的 TeXstudio。
-
-![TeXstudio](https://i.loli.net/2020/03/01/sqX4DGJrphRyxaz.png)
-
-默认情况下 TeXstudio 的编译工具链均已经配置完毕，基本开箱即用。对于如何用 TeXstudio 编译本模板，请继续阅读。
-
-准备就绪后，我们就可以开始使用 BIThesis 提供的模板进行 LaTeX 文档的撰写啦！请继续阅读：[📃 下载与使用模板](./downloading-using-templates.md)。

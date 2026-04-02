@@ -32,6 +32,24 @@ import TemplateList from '../.vitepress/theme/TemplateList.vue'
 
 <TemplateList/>
 
+### Q: 我能在哪些平台使用 BIThesis 模板?
+
+**A：BIThesis 支持跨平台写作。**
+
+BIThesis 是基于 LaTeX 的模板，支持 Windows/Linux/macOS 本地写作，也支持使用 Overleaf/TeXPage 等在线平台进行在线写作，一份相同的 LaTeX 代码在所有平台上编译得到的 PDF 几乎没有差别。下面关于各个平台的介绍有助于你选择写作的平台。
+
+- 本地平台：前期配置麻烦，Linux/macOS 还存在[字体问题](../faq/word-font.md)需要解决
+  - Windows: 性能较低，上手简单，不存在任何兼容性问题，该版本编译出的 PDF 可视为标准版本，是最稳妥的选择；
+  - WSL(Windows Subsystem for Linux)：性能接近 Linux/macOS，高于 Windows 原生，对不熟悉 Linux 的人有一定门槛，属于比较平衡的选择；
+  - Linux/macOS：性能最高的平台，但存在字体问题需要解决，适合有一定 LaTeX 使用经验、追求高性能的用户。
+
+- 在线平台：开箱即用，但存在编译时长限制，无法编译较大的文档
+  - Overleaf: 国外在线平台，对中文支持有限，需自行解决中文[字体问题](../faq/word-font.md)，目前不推荐使用该平台进行中文论文的撰写；
+  - TexPage: 国内在线平台，中文支持完善，与本地平台的区别是有编译时长限制。
+
+如果你需要本地写作，你需要参考后续教程来完成安装配置等前置工作，再下载模板，开始写作。
+
+如果你需要在线写作，点击上方模板表格中的 `open in TeXPage`、`open in Overleaf` 按钮，在对应的在线平台中直接打开相应模板。
 ### Q：我应该选择 LaTeX 还是 Word？
 
 如果你使用 Word 足够久，大约会遭遇种种魔幻现实主义事件：「同一份 Word 文档，在不同地方打开就变得不同」「写几个字，撤销，整段格式突然崩坏」「页码在 Word 中显示正常，导出 PDF 却变成“P A G E”」……LaTeX 适用于学术论文排版，使用者能将关注点更多放在内容质量，减少繁琐的格式调整。此外，LaTeX 在参考文献管理、公式输入方面也有更专业的设计。欢迎来尝试 LaTeX 来排版你的论文，专业高端、学界认可、开源免费。
@@ -41,3 +59,13 @@ import TemplateList from '../.vitepress/theme/TemplateList.vue'
 ### Q：我该如何使用 BIThesis？
 
 请单击页面下方“下一页”，继续阅读[教程简介](./intro.md)。
+
+### Q： 我能修改 BIThesis 使得它能够满足以毕业设计为模板修改而来的课程报告或者其他文档吗？
+
+**A：当然可以！**
+
+如果你是学生，请参照 [详细配置手册`bithesis.pdf`][bithesis-pdf] 来对模板的一些细节进行修改。
+
+如果你是老师，你希望 BIThesis 开发组能够为你的模板提供相应的技术支持，请使用邮件联系我们，开发组会提供全力支持。
+
+[bithesis-pdf]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis.pdf
