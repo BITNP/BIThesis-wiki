@@ -235,8 +235,9 @@ source ~/.bashrc
 接下来，我们需要将 Windows 下的字体共享给 WSL 2。首先，在 Windows 中找到字体文件夹，通常位于 `C:\Windows\Fonts`，然后在 Ubuntu 终端中创建一个软链接，并刷新字体缓存即可。具体命令如下：
 
 ```bash
-sudo ln -s /mnt/c/Windows/Fonts /usr/share/fonts/win-
-fc-cache -fv
+sudo mkdir -p /usr/share/fonts/windows
+sudo ln -s /mnt/c/Windows/Fonts /usr/share/fonts/windows
+sudo fc-cache -fv
 ```
 
 退出当前目录，卸载 ISO 文件：

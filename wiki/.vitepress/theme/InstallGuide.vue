@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { NRadioGroup, NRadioButton, NCard } from 'naive-ui'
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 
 const installMethod = ref<string>('online')
 const platform = ref<string>('windows')
@@ -27,6 +27,14 @@ const platformOptions = computed<PlatformOption[]>(() => {
   return options
 })
 
+const ensureValidPlatform = () => {
+  const validPlatforms = platformOptions.value.map((option) => option.value)
+
+  if (!validPlatforms.includes(platform.value)) {
+    platform.value = validPlatforms[0] ?? 'windows'
+  }
+}
+
 const emitState = () => {
   // 发布全局事件
   document.dispatchEvent(
@@ -39,8 +47,14 @@ const emitState = () => {
   )
 }
 
+watch(installMethod, () => {
+  ensureValidPlatform()
+  emitState()
+})
+
 // 组件挂载后立即发布初始状态
 onMounted(() => {
+  ensureValidPlatform()
   emitState()
 })
 </script>
@@ -50,7 +64,7 @@ onMounted(() => {
     <div class="install-selector">
       <div class="selector-group">
         <div class="selector-label"><strong>安装方式：</strong></div>
-        <n-radio-group v-model:value="installMethod" @update:value="emitState">
+        <n-radio-group v-model:value="installMethod">
           <n-radio-button value="online">在线安装</n-radio-button>
           <n-radio-button value="offline">离线安装</n-radio-button>
           <n-radio-button value="minimal">精简安装</n-radio-button>

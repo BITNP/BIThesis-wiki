@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onBeforeUnmount, onMounted } from 'vue'
 
 const props = defineProps<{
   method?: string
@@ -11,20 +11,20 @@ const currentMethod = ref<string | null>(null)
 const currentPlatform = ref<string | null>(null)
 const shouldShow = ref(!!props.defaultShow)
 
+const handleStateUpdate = (event: Event) => {
+  const customEvent = event as CustomEvent<{ method?: string; platform?: string }>
+  currentMethod.value = customEvent.detail.method ?? null
+  currentPlatform.value = customEvent.detail.platform ?? null
+  updateVisibility()
+}
+
 // 监听来自 InstallGuide 的状态更新
 onMounted(() => {
-  const handleStateUpdate = (event: CustomEvent) => {
-    currentMethod.value = event.detail.method
-    currentPlatform.value = event.detail.platform
-    updateVisibility()
-  }
-
   document.addEventListener('install-guide-state', handleStateUpdate)
+})
 
-  // 清理函数
-  return () => {
-    document.removeEventListener('install-guide-state', handleStateUpdate)
-  }
+onBeforeUnmount(() => {
+  document.removeEventListener('install-guide-state', handleStateUpdate)
 })
 
 const updateVisibility = () => {
