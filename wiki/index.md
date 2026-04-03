@@ -14,7 +14,7 @@ hero:
       link: /guide/preface
     - theme: alt
       text: 下载模板 📁
-      link: /guide/downloading-using-templates
+      link: /guide/using-templates
     - theme: alt
       text: 疑难杂症 🥑
       link: /faq/
