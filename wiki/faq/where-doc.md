@@ -8,7 +8,7 @@ tag:
 
 ## BIThesis
 
-[[texdoc:bithesis]]正常在[最初下载的模板压缩包](../guide/using-templates.md)里就有，与`main.tex`并排。
+[[texdoc:bithesis]]正常在[最初下载的模板压缩包](../guide/downloading-using-templates.md)里就有，与`main.tex`并排。
 
 如果找不到了，可重新[从 CTAN 下载](https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis.pdf)。
 

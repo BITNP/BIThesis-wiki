@@ -8,7 +8,7 @@ import { with_anchor } from '../.vitepress/theme/util.ts'
 <!-- 添加页面时，需要同步更新 config.mts 中的 sidebar 设置 -->
 
 ::: tip 并非详细更新日志
-此处备份 [GitHub Releases][releases] 中人工撰写的说明，主要介绍更新内容，提供[一般性升级](../guide/using-templates.md#日后更新升级)以外的建议。
+此处备份 [GitHub Releases][releases] 中人工撰写的说明，主要介绍更新内容，提供[一般性升级](../guide/downloading-using-templates.md#日后更新升级)以外的建议。
 
 详细更新日志请移步[`CHANGELOG.md`](https://github.com/BITNP/BIThesis/blob/main/CHANGELOG.md)。
 

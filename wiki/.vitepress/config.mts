@@ -1,6 +1,6 @@
 import assert from 'node:assert'
 
-import * as footnote from 'markdown-it-footnote'
+import footnote from 'markdown-it-footnote'
 import { defineConfig, type DefaultTheme } from 'vitepress'
 
 import { generate_sitemap_page } from './sitemap_page'
@@ -34,7 +34,7 @@ export default defineConfig({
       { text: '文档指南', link: '/guide/preface' },
       { text: '疑难杂症', link: '/faq/' },
       { text: '在线模板', link: '/guide/preface#q-bithesis-都包含哪些模板' },
-      { text: '模板下载', link: '/guide/using-templates' },
+      { text: '模板下载', link: '/guide/downloading-using-templates' },
       {
         text: '加入讨论',
         items: [
@@ -60,9 +60,9 @@ export default defineConfig({
           text: '食用方法',
           items: [
             { text: '教程简介', link: '/guide/intro' },
-            { text: '环境安装', link: '/guide/getting-started' },
-            { text: '编辑器配置', link: '/guide/configure-ide' },
-            { text: '模板下载使用', link: '/guide/using-templates' },
+            { text: '下载或使用模板', link: '/guide/downloading-using-templates' },
+            { text: '安装 LaTeX 环境', link: '/guide/getting-started' },
+            { text: '配置编辑器', link: '/guide/configure-and-compile' },
           ],
         },
         {
@@ -142,7 +142,7 @@ export default defineConfig({
   },
   markdown: {
     config: (md) => {
-      md.use(footnote.default ?? footnote).use(LinkRender)
+      md.use(footnote).use(LinkRender)
     },
     anchor: {
       getTokensText: (tokens) =>

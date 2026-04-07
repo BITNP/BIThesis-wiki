@@ -22,7 +22,7 @@ Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
 ```
 
 ::: tip 🔼 如何升级？
-如欲升级，请参考 [📁 下载与使用模板](../guide/using-templates.md#日后更新升级)。
+如欲升级，请参考 [📁 下载与使用模板](../guide/downloading-using-templates.md#日后更新升级)。
 :::
 
 ## 找不到类似内容？
@@ -37,4 +37,4 @@ Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
 
 [^present]: 2025年10月。
 
-若是新建文档，可参考 [📁 下载与使用模板](../guide/using-templates.md)重新创建。
+若是新建文档，可参考 [📁 下载与使用模板](../guide/downloading-using-templates.md)重新创建。
