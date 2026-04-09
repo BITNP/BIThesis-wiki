@@ -1,6 +1,6 @@
 import assert from 'node:assert'
 
-import * as footnote from 'markdown-it-footnote'
+import footnote from 'markdown-it-footnote'
 import { defineConfig, type DefaultTheme } from 'vitepress'
 
 import { generate_sitemap_page } from './sitemap_page'
@@ -142,7 +142,7 @@ export default defineConfig({
   },
   markdown: {
     config: (md) => {
-      md.use(footnote.default ?? footnote).use(LinkRender)
+      md.use(footnote).use(LinkRender)
     },
     anchor: {
       getTokensText: (tokens) =>
