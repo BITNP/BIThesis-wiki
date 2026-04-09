@@ -8,7 +8,7 @@ tag:
 # 参考文献空白，BibTeX 报错`I found no \citation commands`（如何换用 biber？）
 
 ::: tip 应当无此问题
-如果您按照 [📃 编辑器配置与模板编译](../guide/configure-and-compile.md)使用 latexmk、VS Code、TeXstudio 或在线平台，并且没有删除`main.tex`中的魔术注释`% !BIB program = biber`，应当无此问题。
+如果您按照 [📃 编辑器配置](../guide/configure-and-compile.md)使用 latexmk、VS Code、TeXstudio 或在线平台，并且没有删除`main.tex`中的魔术注释`% !BIB program = biber`，应当无此问题。
 
 <!-- 已知需专门设置的编辑器：Texmaker -->
 
