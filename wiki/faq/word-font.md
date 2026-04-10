@@ -42,7 +42,7 @@ tag: font
 
 ## 准备字体文件
 
-各平台最简方法不同，以下由易到难介绍。（📥表示需在本地[下载 LaTeX 发行版](../guide/getting-started.md)）
+各平台最简方法不同，以下由易到难介绍。（📥表示需在本地[下载 LaTeX 发行版](../guide/latex-env.md)）
 
 ### [TeXPage](https://www.texpage.com) 等国产在线平台（难度：😀）{#texpage}
 
