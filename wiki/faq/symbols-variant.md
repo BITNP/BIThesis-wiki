@@ -39,6 +39,8 @@ tag: bithesis
 \clearpage
 ```
 
+注意`tabular`环境无法跨页。如果缩略词非常多，用`tabular`会向下溢出页面，建议换用[支持跨页的`longtable`环境](./longtable.md)，或者改变展示方式（例如放弃表格，改像词典那样分多栏行文，减少全称长短不一造成的空白）。
+
 顺便，如需表格生成器，可参考 [LaTeX 学习与使用资源](../guide/resources.md#基础)。
 
 ::: tip 欢迎反馈
