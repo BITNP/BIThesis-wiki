@@ -61,7 +61,7 @@ watch(installPlatform, (platform) => {
 - WSL 的全量安装使用 WSL 2 + ISO 镜像安装
 - Windows、Linux 与 macOS 提供精简安装，WSL 暂不提供精简安装
 
-其中，全量安装占用空间较大（约 **8～10GB** ），因此安装前请确保硬盘有足够空间。如果你的硬盘空间不足，请使用精简安装方式（约 1GB ）进行安装，或是使用在线平台进行写作。
+其中，全量安装占用空间较大（约 **8～10GB** ），因此安装前请确保硬盘有足够空间（建议预留 20GB 以上硬盘空间）。如果你的硬盘空间不足，请使用精简安装方式（约 1GB ）进行安装，或是使用在线平台进行写作。
 
 请先选择安装平台，再选择安装方式，以查看对应的安装教程。
 
@@ -127,6 +127,14 @@ watch(installPlatform, (platform) => {
 <template v-if="installPlatform === 'linux' && installMethod === 'full'">
 <!-- 全量安装-Linux -->
 
+::: details 💀 谨慎使用系统包管理器安装 { style="border-color: var(--vp-custom-block-warning-border); color: var(--vp-custom-block-warning-text); background-color: var(--vp-custom-block-warning-bg);" }
+
+非滚动发行的发行版（如 Ubuntu 和 Debian 等）的系统包管理器（如 apt）提供的 TeX Live [一般较旧](https://repology.org/project/texlive/versions)（Homebrew 除外），且无法选择安装方案，通常很难使用。
+
+如果坚持使用系统包管理器安装 TeX Live，那以后切勿随意安装、更新或移除宏包。由系统包管理器管理的软件包不应被其他包管理器同时管理，所以采用系统包管理器安装的 TeX Live 不应再使用 tlmgr 管理 TeX 宏包。
+
+:::
+
 使用北京理工大学校园网的同学可以直接使用我校官方 TeX Live 镜像进行安装。
 
 我校 TeX Live 镜像资源位于 [/CTAN/systems/texlive/Images](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/)，其中我们选择下载 `texlive20xx.iso` 即可。
@@ -138,14 +146,6 @@ watch(installPlatform, (platform) => {
 :::
 
 ![Download TeXLive from CTAN mirror](../assets/download-texlive-mirror.png)
-
-::: details 💀 谨慎使用系统包管理器安装 { style="border-color: var(--vp-custom-block-warning-border); color: var(--vp-custom-block-warning-text); background-color: var(--vp-custom-block-warning-bg);" }
-
-非滚动发行的发行版（如 Ubuntu 和 Debian 等）的系统包管理器（如 apt）提供的 TeX Live [一般较旧](https://repology.org/project/texlive/versions)（Homebrew 除外），且无法选择安装方案，通常很难使用。
-
-如果坚持使用系统包管理器安装 TeX Live，那以后切勿随意安装、更新或移除宏包。由系统包管理器管理的软件包不应被其他包管理器同时管理，所以采用系统包管理器安装的 TeX Live 不应再使用 tlmgr 管理 TeX 宏包。
-
-:::
 
 首先在系统中挂载 ISO 镜像，使用如下命令：
 
@@ -312,12 +312,12 @@ sudo umount /mnt/texlive
 下载 [BIThesis 所需宏包列表](https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages)，然后打开 PowerShell，用 tlmgr（TeX Live package manager）安装。
 
 ```powershell
-curl -LO https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages
 # 下载 BIThesis 宏包列表（命令行）
+curl -LO https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages
 # 需注意在 PowerShell 中 curl 是 Invoke-WebRequest 的别名
 # 因此在 PowerShell 中使用 curl 实际上是调用 Invoke-WebRequest，需按下面写法来
-Invoke-WebRequest -Uri "https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages" -OutFile "tl_packages"
 # 下载 BIThesis 宏包列表（PowerShell）
+Invoke-WebRequest -Uri "https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages" -OutFile "tl_packages"
 
 tlmgr update --self # 更新 tlmgr 自身（TeX Live 中的 tlmgr 版本较旧，更新后才能安装新版宏包）
 tlmgr install ((Get-Content ./tl_packages) -replace '\s*#.*', '') # 安装 BIThesis 所需宏包
@@ -332,7 +332,7 @@ tlmgr install ((Get-Content ./tl_packages) -replace '\s*#.*', '') # 安装 BIThe
 精简安装会只安装 BIThesis 必要的宏包，因此占用空间会大幅缩小，仅需 **1GB** 左右的磁盘容量。
 
 ::: warning ❗ 注意
-由于精简安装过程仅会安装 BIThesis 使用的宏包，因此如果你需要使用其他的 LaTeX 模板包，你需要参照的 [日后补充安装](./getting-started.md#日后补充安装) 部分，针对你使用的新模板进行安装。
+由于精简安装过程仅会安装 BIThesis 使用的宏包，因此如果你需要使用其他的 LaTeX 模板包，你需要参照后文的 [日后补充安装](./getting-started.md#日后补充安装) 部分，针对你使用的新模板进行安装。
 :::
 
 下载 [`install-tl-unx.tar.gz`](https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz) 并解压，使用如下命令运行 `install-tl`，并按 `I` 安装。（这里将安装目录从默认`/usr/local/texlive/`改为了`~/.texlive/`，因为前者可能需要 sudo）：

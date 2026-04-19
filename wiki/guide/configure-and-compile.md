@@ -27,7 +27,7 @@ BIThesis 中的模板编译方式大同小异，我们都会使用 `xelatex`、`
 
 ## 徒手编译
 
-> 这里提到的徒手编译仅需读者了解即可，用以帮助理解 LaTeX 的编译过程，同时推荐该方式作为其余方式遇到问题时的调试手段。
+> 这里提到的徒手编译仅需读者了解即可，目的是帮助理解 LaTeX 的编译过程，同时推荐该方式作为其余方式遇到问题时的调试手段。
 
 当然，你完全可以不借助任何编辑器，直接使用「命令行」编译 LaTeX 文档。
 
@@ -216,13 +216,15 @@ LaTeX Workshop 默认设置无法编译大部分中文 LaTeX 文档，包括 BIT
 
 TeXstudio 的编译工具大部分已经为我们配置完毕，我们只需要在 TeXstudio 的设置中定义编译所用的编译器即可。
 
-对于 Windows 和 macOS，我们可以访问 [TeXstudio 官网](https://www.texstudio.org/)或[校园网联合镜像站相应页面](https://mirrors.cernet.edu.cn/github-release/texstudio-org/texstudio/LatestRelease/)，下载安装对应系统的 TeXstudio。在 TeXstudio 中点击「选项 » 设置 TeXstudio」，在打开的窗口中选择「构建」，并在元命令里面将「默认编译器」设置为 `xelatex`，将默认文献工具设置为 `biber` 即可。
+对于 Windows 和 macOS，我们可以访问 [TeXstudio 官网](https://www.texstudio.org/)或[校园网联合镜像站相应页面](https://mirrors.cernet.edu.cn/github-release/texstudio-org/texstudio/LatestRelease/)，下载安装对应系统的 TeXstudio。
 
 对于 Linux 用户，按照 [TeXstudio 官网](https://www.texstudio.org/)指示，可以直接使用系统的包管理器安装 TeXstudio，例如在 Ubuntu/Debian 上可以使用如下命令：
 
 ```bash
 sudo apt install texstudio
 ```
+
+下载安装完成后，在 TeXstudio 中点击「选项 » 设置 TeXstudio」，在打开的窗口中选择「构建」，并在元命令里面将「默认编译器」设置为 `xelatex`，将默认文献工具设置为 `biber` 即可。
 
 :::warning 注意
 尽管我们提供了 `latexmk` 编译支持，但是在 TeXstudio 中如果将「默认编译器」设置为 `latexmk`，会出现无法编译的问题。因此建议使用 `xelatex` 选项。
@@ -232,14 +234,14 @@ sudo apt install texstudio
 
 你可以使用快捷键 <kbd>F5</kbd> 一键编译与预览 LaTeX 项目。
 
-::::details 使用 Linux TeXstudio 的注意事项
-由于 Linux 版本的 TeXstudio 默认使用系统包管理器管理的 TeX Live 安装（一般指向 `/usr/bin`），而我们是使用的是单独安装的 TeX Live，因此需要在 TeXstudio 的设置中将命令的路径修改为已安装 TeX Live 中的 `xelatex` 和 `biber` 的路径，否则会出现无法编译的问题。
+::::details Linux 下 TeXstudio 出现报错，无法编译？
+这是由于 TeXstudio 没有正确识别到我们安装的 TeX Live 编译引擎路径导致的。我们需要在 TeXstudio 的设置中手动指定 TeX Live 的路径。
 
-打开选项-设置 TeXstudio-命令选项卡，按右侧的「选择程序」按钮，根据你实际安装的 TeX Live 版本和路径进行修改。例如，如果你安装的 TeX Live 版本是 2026，并且安装在 `/usr/local/texlive/2026`，那么你需要将相关命令的路径修改为如下图所示：
+点击「选项 » 设置 TeXstudio」选项卡，按下图顺序，首先选择左下角的「显示高级设置」（需要在弹出窗口中点击「确定」），然后点击「构建」选项卡，并在下方的「构建选项」中，找到“命令（$PATH）”项，填入安装的 TeX Live 路径（图片中是以本教程为例的`/usr/local/texlive/2026/bin/x86_64-linux`）。
 
 ![TeXstudio Linux 设置](../assets/linux-texstudio-setup.png)
 
-修改完成后，点击「确定」保存设置即可，这样 TeXstudio 就可以使用我们安装的 TeX Live 进行编译了。
+修改完成后，点击「确定」保存设置，重启 TeXstudio，这样 TeXstudio 就可以使用我们安装的 TeX Live 进行编译了。
 ::::
 
 ## 编译示例模板
