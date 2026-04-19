@@ -98,7 +98,7 @@ watch(installPlatform, (platform) => {
 
 使用北京理工大学校园网的同学可以直接使用我校官方 TeX Live 镜像进行安装。
 
-我校 TeX Live 镜像资源位于 [/CTAN/systems/texlive/Images](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/)，其中我们选择下载 `texlive20xx.iso` 即可。
+可从镜像站下载`texlive.iso`：[北理校内镜像站](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/texlive.iso)／[CERNET 联合镜像站](https://mirrors.cernet.edu.cn/CTAN/systems/texlive/Images/texlive.iso)
 
 ::: warning ❗ 请注意
 北理工镜像站仅支持校内访问，因此从非校园网环境访问上面镜像资源将无法打开，如无法连接校园网则可以选用其他的 [CTAN 镜像源](https://mirrors.ctan.org/systems/texlive/Images/)。
