@@ -78,7 +78,7 @@ export const contributors: Contributor[] = [
   },
   {
     name: 'DeltaHao',
-    homepage: 'https://github.com/DeltaHao',
+    homepage: 'https://github.com/leonzlhao', // 原用户名是 DeltaHao
     avatar: 'https://i.loli.net/2021/01/14/s9RAkaCFWpoBLub.png',
   },
   {
