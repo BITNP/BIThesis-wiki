@@ -1,8 +1,14 @@
 # 📃 编辑器配置与模板编译
 
-## 编译模板
+与 Word 不同的是，LaTeX 模板需要我们用合适的工具进行编译，才能生成最终 PDF 文件。我们接下来先介绍 BIThesis 中的模板编译方法，再介绍如何在编辑器中进行配置。
 
-与 Word 不同的是，LaTeX 模板需要我们用合适的工具进行编译，才能生成最终 PDF 文件。我们接下来介绍 BIThesis 中的模板在各个编辑器中的编译方法。
+如果你需要调试整个文档，或者采用 vim 等纯文本编辑器，你需要使用徒手编译的方式。
+
+如果你追求开箱即用，你应该选择 TeXstudio 作为编辑器。
+
+如果你使用 VS Code 作为编辑器，你需要安装 `LaTeX Workshop` 与 `LaTex Utilities` 两个插件用以辅助你编译生成最终 PDF 文件。
+
+## 编译方式
 
 BIThesis 中的模板编译方式大同小异，我们都会使用 `xelatex`、`biber` 以及 `latexmk` 等工具来编译它们。编译 BIThesis 有两种方法：
 
@@ -13,19 +19,19 @@ BIThesis 中的模板编译方式大同小异，我们都会使用 `xelatex`、`
 
 在这里，我挑选了三种常见的 LaTeX 编写环境：
 
-- [直接使用「命令行」徒手编写编译](#徒手编译)
-- [使用 VS Code 配合 LaTeX Workshop 编写与编译](#使用-vs-code-撰写与编译-latex-模板)
-- [使用 TeXstudio 编写与编译](#使用-texstudio-撰写与编译-latex-模板)
+- [徒手编译：直接在命令行中使用 `xelatex`、`biber` 或 `latexmk` 等工具编译 LaTeX 文档](#徒手编译)；
+- [VS Code 配合 LaTeX 相关插件：使用 VS Code 编辑器配合 `LaTeX Workshop` 等插件](#配置-vs-code)；
+- [TeXstudio：使用 TeXstudio 编辑器直接编写](#安装并配置-texstudio)。
 
 我会依次介绍在这三种环境下 LaTeX 编译器配置方法。
 
-### 徒手编译
+## 徒手编译
 
-> 这里推荐作为其余方式遇到问题时的调试手段。
+> 这里提到的徒手编译仅需读者了解即可，目的是帮助理解 LaTeX 的编译过程，同时推荐该方式作为其余方式遇到问题时的调试手段。
 
 当然，你完全可以不借助任何编辑器，直接使用「命令行」编译 LaTeX 文档。
 
-#### 使用 `latexmk` 编译
+### 使用 `latexmk` 编译
 
 如果你使用 `latexmk` 编译模板，那么你只需要使用如下的命令即可编译主文件为 `main.tex` 的 LaTeX 项目：
 
@@ -36,7 +42,7 @@ latexmk
 
 编译 LaTeX 文档原本需要多步，但 latexmk 会自动按当前情况调用相关工具，既保证文档编译完全，又尽量跳过已完成步骤。因此，仅调用一次 latexmk 即可。
 
-#### 使用 `xelatex` 编译
+### 使用 `xelatex` 编译
 
 如果你使用 `xelatex` 编译项目，那么你需要按照下面四步串联顺序调用 `xelatex` 与 `biber` 命令行工具：
 
@@ -55,7 +61,20 @@ xelatex -no-pdf --interaction=nonstopmode main
 xelatex --interaction=nonstopmode main
 ```
 
-### 使用 VS Code 撰写与编译 LaTeX 模板
+## 配置 VS Code
+
+该方法适用于所有平台，尤其推荐使用 WSL 方案的同学采用。
+
+请首先到 VS Code 官网下载安装 VS Code 编辑器，安装完成后打开 VS Code，进入插件市场（快捷键：<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd>），搜索并安装 LaTeX Workshop 与 LaTeX Utilities 两个插件。这两个插件的具体功能在下面列出：
+
+- LaTeX Workshop 插件：[Visual Studio Code LaTeX Workshop Extension](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+  - 提供基本的浏览、编辑、自动补全、自动格式化 LaTeX 文档的功能
+  - 提供在 VS Code 内直接预览 LaTeX 文档编译得到的 PDF 的功能
+  - 提供编译工具链、自定义编译方法等功能
+  - 提供 SyncTeX 双向定位功能（LaTeX 源码 <-> PDF）
+- （可选）LaTeX Utilities 插件：[Visual Studio Code LaTeX Utilities](https://marketplace.visualstudio.com/items?itemName=tecosaur.latex-utilities)
+  - 提供实时 LaTeX 文档字数统计的功能
+  - 提供与参考文献管理工具 Zotero 连接的功能
 
 :::warning 务必修改设置
 LaTeX Workshop 默认设置无法编译大部分中文 LaTeX 文档，包括 BIThesis。
@@ -66,13 +85,11 @@ LaTeX Workshop 默认设置无法编译大部分中文 LaTeX 文档，包括 BIT
 <!-- prettier-ignore-start -->
 <!-- 以下 vscode:// 链接的 target="_self" 会被 prettier 错误转义，不可自动格式化 -->
 
-1. 安装 [LaTeX Workshop 插件](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)。
-
-2. 将设置[`latex-workshop.latex.recipe.default`](vscode://settings/latex-workshop.latex.recipe.default){ target="_self" }从默认的`first`改为`latexmk (xelatex)`。
+1. 将设置[`latex-workshop.latex.recipe.default`](vscode://settings/latex-workshop.latex.recipe.default){ target="_self" }从默认的`first`改为`latexmk (xelatex)`。
 
    ![将 latex-workshop.latex.recipe.default 设置为 latexmk (xelatex)](../assets/vs-code-config.png)
 
-3. 取消勾选[`latex-workshop.latex.build.enableMagicComments`](vscode://settings/latex-workshop.latex.build.enableMagicComments){ target="_self" }，以允许用 latexmk 增量编译。
+2. 取消勾选[`latex-workshop.latex.build.enableMagicComments`](vscode://settings/latex-workshop.latex.build.enableMagicComments){ target="_self" }，以允许用 latexmk 增量编译。
 
 <!-- prettier-ignore-end -->
 
@@ -171,6 +188,21 @@ LaTeX Workshop 默认设置无法编译大部分中文 LaTeX 文档，包括 BIT
   - 保持`enableMagicComments`关闭，设置[`latex-workshop.latex.recipe.default`](vscode://settings/latex-workshop.latex.recipe.default){ target="_self" }为`lastUsed`，然后选择 LaTeX Workshop 内置的配方`latexmk (latexmkrc)`，让插件遵循`main.tex`旁边的`latexmkrc`。若报错 Failed to resolve，按上文说明参考`package.json`类推。
 
   :::
+- **VS Code 编辑器中的一段太长了，我要折行（自动换行）？**
+  
+  启用[`editor.wordWrap`](vscode://settings/editor.wordWrap){ target="_self" }设置，或是使用快捷键 <kbd>Alt</kbd>+<kbd>Z</kbd> 打开/关闭折行（自动换行）。
+
+  ::: details 只想在 LaTeX 文件中折行（自动换行）？
+
+  在`settings.json`中添加以下内容：
+
+  ```json
+  "[latex]": {
+    "editor.wordWrap": "on"
+  },
+  ```
+
+  :::
 
 <!-- prettier-ignore-end -->
 
@@ -178,18 +210,53 @@ LaTeX Workshop 默认设置无法编译大部分中文 LaTeX 文档，包括 BIT
 
 ::::
 
-### 使用 TeXstudio 撰写与编译 LaTeX 模板
+## 安装并配置 TeXstudio
 
-TeXstudio 的编译工具大部分已经为我们配置完毕，我们只需要在 TeXstudio 的设置中定义编译所用的编译器即可。在 TeXstudio 中点击「选项 » 设置 TeXstudio」，在打开的窗口中选择「构建」，并在元命令里面将「默认编译器」设置为 `xelatex`，将默认文献工具设置为 `biber` 即可。
+该方法无法适用于 WSL 方案的同学，因为 TeXstudio 无法在 WSL 中运行。
 
-:::warning
-尽管我们提供了 `latexmk` 编译支持，但是在 TeXstudio 中如果将「默认编译器」设置为 `latexmk`，
-会出现无法编译的问题。因此建议使用 `xelatex` 选项。
+TeXstudio 的编译工具大部分已经为我们配置完毕，我们只需要在 TeXstudio 的设置中定义编译所用的编译器即可。
+
+对于 Windows 和 macOS，我们可以访问 [TeXstudio 官网](https://www.texstudio.org/)或[校园网联合镜像站相应页面](https://mirrors.cernet.edu.cn/github-release/texstudio-org/texstudio/LatestRelease/)，下载安装对应系统的 TeXstudio。
+
+对于 Linux 用户，按照 [TeXstudio 官网](https://www.texstudio.org/)指示，可以直接使用系统的包管理器安装 TeXstudio，例如在 Ubuntu/Debian 上可以使用如下命令：
+
+```bash
+sudo apt install texstudio
+```
+
+下载安装完成后，在 TeXstudio 中点击「选项 » 设置 TeXstudio」，在打开的窗口中选择「构建」，并在元命令里面将「默认编译器」设置为 `xelatex`，将默认文献工具设置为 `biber` 即可。
+
+:::warning 注意
+尽管我们提供了 `latexmk` 编译支持，但是在 TeXstudio 中如果将「默认编译器」设置为 `latexmk`，会出现无法编译的问题。因此建议使用 `xelatex` 选项。
 :::
 
 ![texstudio selecting compilers](https://i.loli.net/2020/03/09/qYbDPjw6moLUIS3.png)
 
-你可以使用快捷键 `F5` 一键编译与预览 LaTeX 项目。
+你可以使用快捷键 <kbd>F5</kbd> 一键编译与预览 LaTeX 项目。
+
+::::details Linux 下 TeXstudio 出现报错，无法编译？
+这是由于 TeXstudio 没有正确识别到我们安装的 TeX Live 编译引擎路径导致的。我们需要在 TeXstudio 的设置中手动指定 TeX Live 的路径。
+
+点击「选项 » 设置 TeXstudio」选项卡，按下图顺序，首先选择左下角的「显示高级设置」（需要在弹出窗口中点击「确定」），然后点击「构建」选项卡，并在下方的「构建选项」中，找到“命令（$PATH）”项，填入安装的 TeX Live 路径（图片中是以本教程为例的`/usr/local/texlive/2026/bin/x86_64-linux`）。
+
+![TeXstudio Linux 设置](../assets/linux-texstudio-setup.png)
+
+修改完成后，点击「确定」保存设置，重启 TeXstudio，这样 TeXstudio 就可以使用我们安装的 TeX Live 进行编译了。
+::::
+
+## 编译示例模板
+
+如果你已经按照上述方法配置好了编译器，那么你就可以尝试编译 BIThesis 模板中的示例文档了。
+
+如果你使用的是徒手编译，那么你可以在命令行中进入模板文件夹，使用上述方法编译 `main.tex` 文件，若能够得到示例 PDF 文件，则说明配置成功。
+
+如果你使用的是 VS Code，请使用 VS Code 打开模板文件夹，按下 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>，若能够得到示例 PDF 文件，则说明配置成功。
+
+如果你使用的是 TeXstudio，请使用 TeXstudio 打开模板文件夹中的 `main.tex` 文件，软件会自动识别整个项目并使用我们配置的编译器进行编译，按下 <kbd>F5</kbd>，若能够得到示例 PDF 文件，则说明配置成功。
+
+如果你未能成功编译示例文档，请检查上述步骤是否正确完成，或参考[常见问题](../faq/index.md)寻找解决方案，若仍有问题，可[加入交流群](https://jq.qq.com/?_wv=1027&k=KYDrmS5z)提供你的报错信息以寻求帮助。
+
+需要注意的是，如果你是使用 WSL 方案安装的 TeX Live，那么你需要确保模板文件夹被正确放置在 WSL 的 Linux 子文件系统中，不要在 Windows 文件系统中直接操作，否则可能会导致编译性能大幅下降甚至编译失败。
 
 ## 后续指南
 

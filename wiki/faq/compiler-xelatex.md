@@ -8,9 +8,9 @@ tag:
 
 很可能是编译器设置成了 pdfLaTeX。该编译器几乎不支持汉字，请换成[[pkg:bithesis]]支持的 XeLaTeX。
 
-- 本地平台——请参考 [📃 编辑器配置与模板编译](../guide/configure-and-compile.md)
+- 本地平台——请参考 [📃 编辑器配置](../guide/configure-and-compile.md)
   - **徒手`latexmk`和 TeXstudio**——默认识别`! TeX`魔术注释和`latexmkrc`，正常没有问题。
-  - **VS Code**——必须专门设置，详见[使用 VS Code 配合 LaTeX Workshop 编写与编译](../guide/configure-and-compile.md#使用-vs-code-撰写与编译-latex-模板)。
+  - **VS Code**——必须专门设置，详见[使用 VS Code 撰写与编译 LaTeX 模板](../guide/configure-and-compile.md#使用-vs-code-撰写与编译-latex-模板)。
 
 - 在线平台
   - [**Overleaf**](https://www.overleaf.com)——左上角 Menu/菜单 → Settings/设置 → Compiler/编译器，改为 XeLaTeX。
