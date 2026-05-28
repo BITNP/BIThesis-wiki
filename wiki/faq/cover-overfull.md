@@ -10,7 +10,7 @@ tag:
 
 本科模板的封面、硕博模板中英文题名页会填写个人信息。如果某项内容太长，在一行写不下，模板会生成异常结果并抛出警告。
 
-例如下图，Degree Applied: Doctor of Materials and Chemical Engineering 这项太长，导致行溢出。
+例如下图，Doctor of Materials and Chemical Engineering 这项太长，导致行溢出。
 
 ::: details 异常结果截图
 ![封面项目行溢出](../assets/cover-overfull-bad.png)
@@ -36,8 +36,10 @@ degreeEn = {Doctor of Materials and Chemical Engineering}, % [!code --]
 degreeEn = {Doctor of Materials \\ and Chemical Engineering}, % [!code ++]
 ```
 
+如果修改完仍然溢出，请检查其它项目，例如 School or Department。任一项过长都会导致溢出，「不溢出」的充要条件是「第一列最长者的宽度 + 第二列最长者的宽度 + 两列间距 ≤ 版心宽度」。
+
 ::: details 修改结果截图
 ![封面项目不再溢出](../assets/cover-overfull-good.png)
 :::
 
-目前模板不会帮你自动换行，否则封面这些信息容易弄出歧义；还是人工换行比较保险。
+（目前模板不会帮你自动换行，否则封面这些信息容易弄出歧义；还是人工换行比较保险。）
