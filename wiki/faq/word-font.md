@@ -44,7 +44,7 @@ tag: font
 
 各平台最简方法不同，以下由易到难介绍。（📥表示需在本地[下载 LaTeX 发行版](../guide/getting-started.md)）
 
-### [TeXPage](https://www.texpage.com) 等国产在线平台（难度：😀）{#texpage}
+### [TeXPage](https://www.texpage.com)、[中国科技云（latex.cstcloud.cn）](https://latex.cstcloud.cn/)等国产在线平台（难度：😀）{#texpage}
 
 已预装中易字库，如上强制 LaTeX 使用即可，无此问题。
 
