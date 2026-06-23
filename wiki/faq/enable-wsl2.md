@@ -6,6 +6,16 @@ tag: meta
 
 WSL（Windows Subsystem for Linux）是 Windows 10 和 Windows 11 中的一个功能，允许用户在 Windows 上运行 Linux 环境。WSL 2 是 WSL 的第二个版本，提供了更好的性能和兼容性，适合用于安装和运行 TeX Live 等 Linux 软件。
 
+:::tip 💡 更简单的方式：一键安装
+在较新的 Windows 10（版本 2004 及以上）与 Windows 11 上，可以以管理员身份打开 PowerShell 或命令提示符，运行下列命令一步完成 WSL 2 与默认 Ubuntu 发行版的安装（安装完成后按提示重启电脑即可）：
+
+```powershell
+wsl --install
+```
+
+若该命令执行失败（例如系统版本较旧、或 Windows 功能启用异常），再按下方步骤手动启用。
+:::
+
 :::: details 💀 确保你已经开启 CPU 虚拟化 { style="border-color: var(--vp-custom-block-warning-border); color: var(--vp-custom-block-warning-text); background-color: var(--vp-custom-block-warning-bg);" }
 
 CPU的虚拟化是开启 WSL 2 的前提条件之一，如果没有开启虚拟化，WSL 2 将无法正常运行。你可以通过任务管理器界面来检查 CPU 虚拟化是否已经开启：

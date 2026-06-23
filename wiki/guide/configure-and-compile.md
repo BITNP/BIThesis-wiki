@@ -1,4 +1,4 @@
-# 📃 编辑器配置与模板编译
+# 📃 配置编辑器
 
 与 Word 不同的是，LaTeX 模板需要我们用合适的工具进行编译，才能生成最终 PDF 文件。我们接下来先介绍 BIThesis 中的模板编译方法，再介绍如何在编辑器中进行配置。
 
@@ -6,7 +6,7 @@
 
 如果你追求开箱即用，你应该选择 TeXstudio 作为编辑器。
 
-如果你使用 VS Code 作为编辑器，你需要安装 `LaTeX Workshop` 与 `LaTex Utilities` 两个插件用以辅助你编译生成最终 PDF 文件。
+如果你使用 VS Code 作为编辑器，你需要安装 `LaTeX Workshop`（必需）与 `LaTeX Utilities`（可选）两个插件用以辅助你编译生成最终 PDF 文件。
 
 ## 编译方式
 
@@ -212,7 +212,7 @@ LaTeX Workshop 默认设置无法编译大部分中文 LaTeX 文档，包括 BIT
 
 ## 安装并配置 TeXstudio
 
-该方法无法适用于 WSL 方案的同学，因为 TeXstudio 无法在 WSL 中运行。
+该方法不推荐 WSL 方案的同学使用：TeXstudio 在 WSL 中需借助 WSLg 才能运行图形界面，兼容性不佳；WSL 用户建议改用 [VS Code](#配置-vs-code)。
 
 TeXstudio 的编译工具大部分已经为我们配置完毕，我们只需要在 TeXstudio 的设置中定义编译所用的编译器即可。
 

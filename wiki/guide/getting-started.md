@@ -54,7 +54,7 @@ watch(installPlatform, (platform) => {
 
 :::
 
-这里的安装教程提供全量安装与精简安装两种方式。本教程以安装 TeX Live 2026 为例进行说明：
+这里的安装教程提供全量安装与精简安装两种方式。本教程以安装 TeX Live 2026 为例进行说明（若安装其它年份的版本，请将下文命令与路径中的 `2026` 相应替换）：
 
 - Windows 与 Linux 的全量安装使用 TeX Live ISO 镜像安装或在线安装
 - macOS 的全量安装使用 MacTeX 安装
@@ -96,17 +96,7 @@ watch(installPlatform, (platform) => {
 <template v-if="installPlatform === 'windows' && installMethod === 'full'">
 <!-- 全量安装-Windows -->
 
-使用北京理工大学校园网的同学可以直接使用我校官方 TeX Live 镜像进行安装。
-
-可从镜像站下载`texlive.iso`：[北理校内镜像站](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/texlive.iso)／[CERNET 联合镜像站](https://mirrors.cernet.edu.cn/CTAN/systems/texlive/Images/texlive.iso)
-
-::: warning ❗ 请注意
-北理工镜像站仅支持校内访问，因此从非校园网环境访问上面镜像资源将无法打开，如无法连接校园网则可以选用其他的 [CTAN 镜像源](https://mirrors.ctan.org/systems/texlive/Images/)。
-
-另注：安装过程中注意使用合适的权限。
-:::
-
-![Download TeXLive from CTAN mirror](../assets/download-texlive-mirror.png)
+使用北京理工大学校园网的同学可以直接使用我校官方 TeX Live 镜像进行安装，外网则可使用 CERNET 联合镜像站的 TeX Live 镜像进行安装。点击后面的链接即可从镜像站下载`texlive.iso`：[北理校内镜像站（校园网）](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/texlive.iso)／[CERNET 联合镜像站（外网）](https://mirrors.cernet.edu.cn/CTAN/systems/texlive/Images/texlive.iso)。需注意，在安装过程中请使用合适的权限，必要时请以管理员身份运行安装程序。
 
 对于 Windows 10 / Windows 11 及以上版本，可以直接挂载 ISO 镜像（双击即可），其余系统用合适的软件也可。之后在打开的文件夹中点击执行 `install-tl-windows.bat` ，一路点击确认，即可离线安装全部 TeX Live 组件。
 
@@ -135,17 +125,7 @@ watch(installPlatform, (platform) => {
 
 :::
 
-使用北京理工大学校园网的同学可以直接使用我校官方 TeX Live 镜像进行安装。
-
-我校 TeX Live 镜像资源位于 [/CTAN/systems/texlive/Images](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/)，其中我们选择下载 `texlive20xx.iso` 即可。
-
-::: warning ❗ 请注意
-北理工镜像站仅支持校内访问，因此从非校园网环境访问上面镜像资源将无法打开，如无法连接校园网则可以选用其他的 [CTAN 镜像源](https://mirrors.ctan.org/systems/texlive/Images/)。
-
-另注：安装过程中注意使用合适的权限。
-:::
-
-![Download TeXLive from CTAN mirror](../assets/download-texlive-mirror.png)
+使用北京理工大学校园网的同学可以直接使用我校官方 TeX Live 镜像进行安装，外网则可使用 CERNET 联合镜像站的 TeX Live 镜像进行安装。点击后面的链接即可从镜像站下载`texlive.iso`：[北理校内镜像站（校园网）](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/texlive.iso)／[CERNET 联合镜像站（外网）](https://mirrors.cernet.edu.cn/CTAN/systems/texlive/Images/texlive.iso)。需注意，在安装过程中请使用合适的权限，必要时请以管理员身份运行安装程序。
 
 首先在系统中挂载 ISO 镜像，使用如下命令：
 
@@ -222,28 +202,18 @@ brew install --cask mactex
 <template v-if="installPlatform === 'wsl' && installMethod === 'full'">
 <!-- 全量安装-WSL -->
 
-使用北京理工大学校园网的同学可以直接使用我校官方 TeX Live 镜像进行安装。
-
-我校 TeX Live 镜像资源位于 [/CTAN/systems/texlive/Images](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/)，其中我们选择下载 `texlive20xx.iso` 即可。
-
-::: warning ❗ 请注意
-北理工镜像站仅支持校内访问，因此从非校园网环境访问上面镜像资源将无法打开，如无法连接校园网则可以选用其他的 [CTAN 镜像源](https://mirrors.ctan.org/systems/texlive/Images/)。
-
-另注：安装过程中注意使用合适的权限。
-:::
-
-![Download TeXLive from CTAN mirror](../assets/download-texlive-mirror.png)
+使用北京理工大学校园网的同学可以直接使用我校官方 TeX Live 镜像进行安装，外网则可使用 CERNET 联合镜像站的 TeX Live 镜像进行安装。点击后面的链接即可从镜像站下载`texlive.iso`：[北理校内镜像站（校园网）](https://mirrors.bit.edu.cn/CTAN/systems/texlive/Images/texlive.iso)／[CERNET 联合镜像站（外网）](https://mirrors.cernet.edu.cn/CTAN/systems/texlive/Images/texlive.iso)。需注意，在安装过程中请使用合适的权限，必要时请以管理员身份运行安装程序。
 
 如果你不知道 WSL，或是不知道如何安装 WSL，可以先参考[WSL 是什么？如何启用 WSL 2？](../faq/enable-wsl2.md)来了解一下。
 
 请将TeX Live ISO 文件下载到 Windows 的某个没有中文路径的目录下（例如本教程中的 `D:\texlive2026.iso`）。
 
 ::::danger 🚨 注意你的内存与硬盘容量
-WSL 2 默认会使用宿主机的全部内存资源，如果你的电脑内存较小（例如 8GB/16GB），可能会导致 WSL 2 占用过多内存资源，影响系统性能。
+WSL 2 默认会按宿主机内存动态占用较大比例，如果你的电脑内存不大（例如 **16GB 及以下**），WSL 2 可能占用过多内存，导致宿主机系统卡顿；内存充裕（如 32GB 及以上）则一般无须额外配置。
 
-同时，WSL 2 的虚拟磁盘默认会占用宿主机的全部硬盘空间（默认在C盘），在安装完 TeX Live 后虚拟磁盘会占用大约 20GB 的硬盘空间，如果你的电脑硬盘空间较小，可能会导致 WSL 2 占用过多硬盘空间，影响系统性能。
+同时，WSL 2 的虚拟磁盘默认会随使用不断膨胀（默认存放在 C 盘），安装完 TeX Live 后虚拟磁盘大约会占用 20GB 硬盘空间，若系统盘空间紧张，可能会影响系统性能。
 
-推荐有 32GB 及以上内存、30GB 及以上硬盘空间的同学使用 WSL 2 来安装 TeX Live。8GB 内存的同学也可以使用，但建议在安装完成后限制 WSL 2 的内存使用，例如限制为 4GB以避免系统性能问题，或是直接在 Windows 上安装 TeX Live。你可以通过创建或编辑 `.wslconfig` 文件来限制 WSL 2 的内存使用，具体方法请参考 [Microsoft 官方文档](https://docs.microsoft.com/en-us/windows/wsl/wsl-config#configure-global-options-with-wslconfig)。
+建议内存 16GB 及以下的同学，在安装完成后通过创建或编辑 `.wslconfig` 文件限制 WSL 2 的内存（例如限制为 6～8GB），具体方法请参考 [Microsoft 官方文档](https://docs.microsoft.com/en-us/windows/wsl/wsl-config#configure-global-options-with-wslconfig)；若不愿折腾，也可以直接在 Windows 上安装 TeX Live。
 ::::
 
 首先，我们需要将之前下载的 TeX Live ISO 文件挂载到 WSL 2 中。打开 Ubuntu 终端，输入以下命令：
@@ -307,13 +277,14 @@ sudo umount /mnt/texlive
 
 修改界面内选项如下图：
 
-![Windows 精简安装高级选项](../assets/install-tl/windows-basic.png)
+![Windows 精简安装高级选项](../assets/install-tl/advanced.png)
 
 下载 [BIThesis 所需宏包列表](https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages)，然后打开 PowerShell，用 tlmgr（TeX Live package manager）安装。
 
 ```powershell
 # 下载 BIThesis 宏包列表（命令行）
 curl -LO https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packages
+
 # 需注意在 PowerShell 中 curl 是 Invoke-WebRequest 的别名
 # 因此在 PowerShell 中使用 curl 实际上是调用 Invoke-WebRequest，需按下面写法来
 # 下载 BIThesis 宏包列表（PowerShell）
@@ -461,7 +432,7 @@ biber --version #验证 biber 的安装
 
 出现类似的输出，说明我们编译器安装应该是没有问题的。
 
-准备就绪后，我们还需要选择一个趁手的编辑器，请转到 [📁 编辑器配置](./configure-and-compile.md) 页面进行进一步的操作。
+准备就绪后，我们还需要选择一个趁手的编辑器，请转到 [📃 配置编辑器](./configure-and-compile.md) 页面进行进一步的操作。
 
 <style scoped>
 .install-selector {

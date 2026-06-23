@@ -10,7 +10,7 @@ tag:
 
 - 本地平台——请参考 [📃 编辑器配置](../guide/configure-and-compile.md)
   - **徒手`latexmk`和 TeXstudio**——默认识别`! TeX`魔术注释和`latexmkrc`，正常没有问题。
-  - **VS Code**——必须专门设置，详见[使用 VS Code 撰写与编译 LaTeX 模板](../guide/configure-and-compile.md#使用-vs-code-撰写与编译-latex-模板)。
+  - **VS Code**——必须专门设置，详见[配置 VS Code](../guide/configure-and-compile.md#配置-vs-code)。
 
 - 在线平台
   - [**Overleaf**](https://www.overleaf.com)——左上角 Menu/菜单 → Settings/设置 → Compiler/编译器，改为 XeLaTeX。
