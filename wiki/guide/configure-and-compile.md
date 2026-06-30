@@ -6,7 +6,7 @@
 
 如果你追求开箱即用，你应该选择 TeXstudio 作为编辑器。
 
-如果你使用 VS Code 作为编辑器，你需要安装 `LaTeX Workshop`（必需）与 `LaTeX Utilities`（可选）两个插件用以辅助你编译生成最终 PDF 文件。
+如果你使用 VS Code 作为编辑器，你需要安装 LaTeX Workshop（必需）与 LaTeX Utilities（可选）两个插件用以辅助你编译生成最终 PDF 文件。
 
 ## 编译方式
 
@@ -20,7 +20,7 @@ BIThesis 中的模板编译方式大同小异，我们都会使用 `xelatex`、`
 在这里，我挑选了三种常见的 LaTeX 编写环境：
 
 - [徒手编译：直接在命令行中使用 `xelatex`、`biber` 或 `latexmk` 等工具编译 LaTeX 文档](#徒手编译)；
-- [VS Code 配合 LaTeX 相关插件：使用 VS Code 编辑器配合 `LaTeX Workshop` 等插件](#配置-vs-code)；
+- [VS Code 配合 LaTeX 相关插件：使用 VS Code 编辑器配合 LaTeX Workshop 等插件](#配置-vs-code)；
 - [TeXstudio：使用 TeXstudio 编辑器直接编写](#安装并配置-texstudio)。
 
 我会依次介绍在这三种环境下 LaTeX 编译器配置方法。
@@ -65,6 +65,11 @@ xelatex --interaction=nonstopmode main
 
 该方法适用于所有平台，尤其推荐使用 WSL 方案的同学采用。
 
+<!--
+TODO: 也许应该默认跨平台，有平台不能用才需要专门说？
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3033264745
+-->
+
 请首先到 VS Code 官网下载安装 VS Code 编辑器，安装完成后打开 VS Code，进入插件市场（快捷键：<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd>），搜索并安装 LaTeX Workshop 与 LaTeX Utilities 两个插件。这两个插件的具体功能在下面列出：
 
 - LaTeX Workshop 插件：[Visual Studio Code LaTeX Workshop Extension](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
@@ -75,6 +80,19 @@ xelatex --interaction=nonstopmode main
 - （可选）LaTeX Utilities 插件：[Visual Studio Code LaTeX Utilities](https://marketplace.visualstudio.com/items?itemName=tecosaur.latex-utilities)
   - 提供实时 LaTeX 文档字数统计的功能
   - 提供与参考文献管理工具 Zotero 连接的功能
+
+<!--
+TODO: 也许没必要专门介绍插件的功能，给个链接就好？
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3033262049
+
+理由：
+
+- 这些都是基础功能，TeXstudio 之类的也基本都有，不需要专门介绍。
+- 未来插件更新时，没有条件同步更新这里的功能列表。
+
+2026年4月5日更新：
+原来这段是从「安装环境」挪过来的。当时的设计是先大概让读者看看 VS Code 和 TeXstudio 什么样，自己选一种，然后之后再将具体配置及使用方法。
+-->
 
 :::warning 务必修改设置
 LaTeX Workshop 默认设置无法编译大部分中文 LaTeX 文档，包括 BIThesis。
@@ -206,6 +224,25 @@ LaTeX Workshop 默认设置无法编译大部分中文 LaTeX 文档，包括 BIT
 
 <!-- prettier-ignore-end -->
 
+<!--
+TODO: 折行、断行、换行
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3033253333
+
+点赞，之前确实忽略了这个问题。
+
+建议把「换行」改为「折行」，更准确，也增加快捷键记忆点（折的音序是Z）。
+
+IDDFS3 个月前
+要不标成“折行（自动换行）”？似乎更通行的表达是“自动换行”？
+
+YDX-21474836473 个月前
+我认为需要避免以下两点歧义，但具体怎么说我也没太想好……
+
+这里只涉及源代码如何显示，不涉及最终编译PDF效果
+折行（换行）的意思是把两个\n之间的代码显示成多行，而不是 formatter 那种自动向*.tex插入\n
+（虽然即使插入\n，ctex 处理后编译效果也相同。）
+-->
+
 其它需求请参考 [Compile · James-Yu/LaTeX-Workshop Wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile)。
 
 ::::
@@ -214,11 +251,28 @@ LaTeX Workshop 默认设置无法编译大部分中文 LaTeX 文档，包括 BIT
 
 该方法不推荐 WSL 方案的同学使用：TeXstudio 在 WSL 中需借助 WSLg 才能运行图形界面，兼容性不佳；WSL 用户建议改用 [VS Code](#配置-vs-code)。
 
+<!--
+TODO: 我有些疑问……
+在 WSL2 安装 TeX Live，能否用 Windows 主系统的 TeXstudio？
+TeXstudio 无法在 WSL 运行，是暂时不兼容，还是开发者不打算兼容？
+
+everything4113 个月前
+很难。wsl与windows不使用同一个文件系统树，windows程序可能会调用类似xelatex C:\Users\everything411\Documents\test.tex的命令，显然wsl2程序无法理解这个路径。
+使用wslg应当可以支持（我没有测试），但是wslg我认为并不是个好的解决方案，相对来说不稳定，容易卡死，不适合论文写作这一严肃场合。wsl中调用显卡几乎只有cuda是稳定的，而3d渲染时好时坏。
+
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3033246991
+-->
+
 TeXstudio 的编译工具大部分已经为我们配置完毕，我们只需要在 TeXstudio 的设置中定义编译所用的编译器即可。
 
 对于 Windows 和 macOS，我们可以访问 [TeXstudio 官网](https://www.texstudio.org/)或[校园网联合镜像站相应页面](https://mirrors.cernet.edu.cn/github-release/texstudio-org/texstudio/LatestRelease/)，下载安装对应系统的 TeXstudio。
 
 对于 Linux 用户，按照 [TeXstudio 官网](https://www.texstudio.org/)指示，可以直接使用系统的包管理器安装 TeXstudio，例如在 Ubuntu/Debian 上可以使用如下命令：
+
+<!--
+TODO: 是不是再把 Linux 安装介绍往下挪挪？现在这个位置，前一段用文字介绍 Windows、macOS的设置方法，后一段用图片展示前一段的文字介绍……
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3036440307
+-->
 
 ```bash
 sudo apt install texstudio
@@ -242,9 +296,58 @@ sudo apt install texstudio
 ![TeXstudio Linux 设置](../assets/linux-texstudio-setup.png)
 
 修改完成后，点击「确定」保存设置，重启 TeXstudio，这样 TeXstudio 就可以使用我们安装的 TeX Live 进行编译了。
+
+<!--
+TODO: 这应该是 shell rc 不影响全局环境变量所致，也许有更好的解决办法
+
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3036445505
+
+「调用系统默认的 TeX Live 安装」和「单独的 TeX Live 安装」的意思是以下这样吗？
+- TeXstudio采用默认设置时，如果发现没装 TeX Live，会自动调用apt安装。
+- 用install-tl安装的 TeX Live 不会加入$PATH，所以 TeXstudio 默认检测不到。
+感觉好离谱啊，是不是我理解错了……
+
+everything4113 个月前
+image
+texstudio默认调用PATH中的latex命令
+
+❤️
+1
+IDDFS3 个月前
+这个我实际测试过，不改成我附的那张图里路径的话是用不了的，很神奇，我也是一点点试出来的
+image
+可能我这里表述的确实有点混乱了容易造成误解，我回头再想想怎么描述比较好
+
+❤️
+1
+YDX-21474836472 个月前
+我这儿的测试结果：
+
+1. 用install-tl在线安装 TeX Live，只将环境变量设置到 shell rc。
+2. 从 https://mirrors.cernet.edu.cn/github-release/texstudio-org/texstudio/LatestRelease/texstudio-4.9.3-x86_64.AppImage 安装 TeXstudio（因为不想用 sudo apt）。
+3. 双击 TeXstudio AppImage，提示未检测到 LaTeX 环境。关闭 TeXstudio。
+4. 从 shell 启动 TeXstudio AppImage，无提示。打开main.tex，单击编译按钮，提示main.tex想使用txs:///biber。单击 Yes，稍等片刻，成功编译。
+
+所以问题大概在于双击启动 AppImage 并不会管 shell rc 设置的环境变量？
+我很少带 GUI 桌面用 Linux，并不清楚怎么解决；不过应该能解决，人工智能提供了若干办法（目前我还没试）。
+
+https://mirrors.tuna.tsinghua.edu.cn/CTAN/info/install-latex-guide-zh-cn/install-latex-guide-zh-cn.pdf#subsection.5.2.3
+
+image
+-->
+
 ::::
 
 ## 编译示例模板
+
+<!--
+TODO: 这一段是不是融进上面配置部分比较好？
+
+- 这一段必须做，但这样行文太容易漏掉了——假设读者选 VS Code，那么配置部分和这里隔了一大段 TeXstudio；如果真读到这里了，那具体操作还混在其它方式之中。
+- 上面配置部分已经介绍了如何编译，这里没必要重复。
+
+根据以上两点，我认为这里不适合单独写一段「编译示例模板」。
+-->
 
 如果你已经按照上述方法配置好了编译器，那么你就可以尝试编译 BIThesis 模板中的示例文档了。
 
@@ -257,6 +360,13 @@ sudo apt install texstudio
 如果你未能成功编译示例文档，请检查上述步骤是否正确完成，或参考[常见问题](../faq/index.md)寻找解决方案，若仍有问题，可[加入交流群](https://jq.qq.com/?_wv=1027&k=KYDrmS5z)提供你的报错信息以寻求帮助。
 
 需要注意的是，如果你是使用 WSL 方案安装的 TeX Live，那么你需要确保模板文件夹被正确放置在 WSL 的 Linux 子文件系统中，不要在 Windows 文件系统中直接操作，否则可能会导致编译性能大幅下降甚至编译失败。
+
+<!--
+TODO: 以上 WSL 这段可能放到「安装环境」好些，因为选择平台时可能要参考。
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3032956332
+
+假设某 WSL2 用户把 MATLAB 安装到了 Windows 主系统，同时想将 MATLAB 导出的图象插入进 LaTeX 文档并保持更新，那么将 LaTeX 安装到 Windows 主系统更方便。
+-->
 
 ## 后续指南
 

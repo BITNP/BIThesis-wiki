@@ -1,5 +1,41 @@
 # 🍌 安装 LaTeX 环境
 
+<!--
+TODO!: Vue 组件不兼容搜索
+
+通过页面上方搜索栏能搜到 Vue 组件当前隐藏的内容，但单击搜索结果并不会切换组件到显示该内容的状态。
+而且由于 Vue 组件未细分章节，单击搜索结果的跳转很不精确，跳转完可能都看不到那个 Vue 组件。
+
+例如访问网站首页，搜索 cask，会发现返回两条结果，第一条是过时视频教程，第二条是下面「macOS 全量安装」说的 homebrew cask。
+若单击第二条，会发现跳转到此页「安装工作」，但下面显示「Windows 全量安装」，直接看不到 cask 相关内容。
+
+我认为这个问题挺严重的。要不把每个 InstallPlatform 拆成单独的普通页面，存成 ./install-texlive/{installPlatform}.md 四个文件，每个文件包含 #full、#minimal 两节，然后把以下 Vue 组件改成链接跳转器？
+这样修改还方便对比不同 InstallPlatform 的内容，因为直接 diff a.md b.md 就行。
+
+如果采用这种方案，那么还可以扩展 .vitepress/config.mts 的 transformPageData，把这四页下方的「上一页」设成此页，而「下一页」设成目前此页下方的「下一页」。
+-->
+
+<!--
+TODO: 唔，我有点儿倾向于只给操作系统（Windows/macOS/Linux/WSL）加切换器，而安装方式（在线全量/在线精简/离线）仍用原来的形式。
+
+- 各个操作系统基本平等（WSL除外）。读者看到这里，正常会直接选自己的操作系统，而不会思考应该安装哪种操作系统，也不会比较哪个操作系统安装更简单（吐槽除外）。
+
+- 各种安装方式并不平等。大部分同学选全量安装最简单，硬盘或网络受限的同学才需要考虑精简安装。
+
+  ~~至于离线安装，你好像是我知道的第一个这么装的人……~~
+  经过QQ私聊联系，原来是考虑到新装WSL2需要下载操作系统镜像，已经很大了，就没必要再精简安装；然后 WSL2 + install-tl 在线安装只是因网上缺少教程而没测试，理论上也能用。
+
+- 「在线安装」这个概念本身读者未必熟悉。如果主要推荐其中一种，就不需要那么明显地提「在线安装」了，更不容易让读者困惑。
+
+- macOS上的推荐安装方法可能不算在线安装。若把安装方式加进切换器，可能会导致不同操作系统推荐选的按钮不同。
+
+   macOS上推荐用`MacTeX.pkg`安装。这个文件并不是`install-tl`那样的下载脚本，而包含了CTAN上各种包，内容更接近离线安装的`texlive*.iso`。
+
+如果接受以上几点，那么应该重点介绍各操作系统如何全量安装，而弱化其它方法。
+
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3033081323
+-->
+
 <script setup lang="ts">
 import { NCard, NRadioButton, NRadioGroup } from 'naive-ui'
 import { computed, ref, watch } from 'vue'
@@ -60,8 +96,29 @@ watch(installPlatform, (platform) => {
 - macOS 的全量安装使用 MacTeX 安装
 - WSL 的全量安装使用 WSL 2 + ISO 镜像安装
 - Windows、Linux 与 macOS 提供精简安装，WSL 暂不提供精简安装
+<!-- 
+TODO: 上面出现了「在线安装」
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3036347615
 
-其中，全量安装占用空间较大（约 **8～10GB** ），因此安装前请确保硬盘有足够空间（建议预留 20GB 以上硬盘空间）。如果你的硬盘空间不足，请使用精简安装方式（约 1GB ）进行安装，或是使用在线平台进行写作。
+读者未必熟悉“在线安装”这一概念。与旧版相比，新版提及“在线安装”更靠前、更明显了，也许会让读者更困惑。可能需要再斟酌一下“在线安装”这个词，或者想办法弱化。
+
+其实我倾向于主要推荐在线安装，不把安装方式放进`<InstallGuide>`，这样就不用专门说“在线安装”这个词了。（参考[前面的评论](https://github.com/BITNP/BIThesis-wiki/pull/601/changes#r3033081323)）
+
+everything4113 个月前
+我认为应当仍然推荐使用texlive iso来安装，会快很多的。在线安装还要到里面手动选镜像，自动选择不一定会选择到比较好的位置，比如我遇到过好几次自动选择到了hit镜像，在咱们这边访问延迟还是相当大的，考虑到之前我的评论中握手相关问题，会大大增加所需时间。
+
+👀
+1
+YDX-21474836473 个月前
+自动选择不一定会选择到比较好的位置，比如我遇到过好几次自动选择到了hit镜像
+
+我也遇到过自动选到北京以外，不过好像影响不大？
+
+everything4113 个月前
+我估计如果内网/同区域校园网的overhead应该在10%-20%，还好，如果选到hit可能会慢两倍，尤其是windows上本身性能就比较差，考虑更容易触发tcp慢启动机制，性能损失会比较大
+-->
+
+其中，**全量安装占用空间较大**（8～10GB），因此安装前请确保硬盘有足够空间（建议预留 20GB 以上硬盘空间）。如果你的硬盘空间不足，请使用精简安装方式（约 1GB）进行安装，或是使用在线平台进行写作。
 
 请先选择安装平台，再选择安装方式，以查看对应的安装教程。
 
@@ -252,15 +309,23 @@ sudo ln -s /mnt/c/Windows/Fonts /usr/share/fonts/windows
 sudo fc-cache -fv
 ```
 
-退出当前目录，卸载 ISO 文件，解除镜像在 WSL 中的挂载：
+退出当前目录解除占用，卸载 ISO 文件，解除镜像在 WSL 中的挂载：
 
 ```bash
-cd ~
+cd  # 退回主目录
 sudo umount /mnt/texlive
 ```
 
 即完成了在 WSL 2 中 TeX Live 的全量安装。
 </template>
+
+<!--
+TODO: 我觉得各平台精简安装这几段新版明显不如旧版啊。旧版有截图，有明确分步，还提示了耗时步骤大概要等多久；新版基本都没有，是没写全吗？
+
+（要是已经写全了，我再提具体建议。）
+
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3036419745
+-->
 
 <template v-if="installPlatform === 'windows' && installMethod === 'minimal'">
 <!-- 精简安装-Windows -->
@@ -302,6 +367,13 @@ tlmgr install ((Get-Content ./tl_packages) -replace '\s*#.*', '') # 安装 BIThe
 
 精简安装会只安装 BIThesis 必要的宏包，因此占用空间会大幅缩小，仅需 **1GB** 左右的磁盘容量。
 
+<!--
+TODO: 原来写「Windows 六七百 MB，Linux 四五百 MB」，现在全平台都写「1GB」，是新测试过吗？
+另外，建议删去「大幅缩小」。我觉得 1 GB 还是很大，就别比了……
+
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3036390802
+-->
+
 ::: warning ❗ 注意
 由于精简安装过程仅会安装 BIThesis 使用的宏包，因此如果你需要使用其他的 LaTeX 模板包，你需要参照后文的 [日后补充安装](./getting-started.md#日后补充安装) 部分，针对你使用的新模板进行安装。
 :::
@@ -320,6 +392,11 @@ export PATH=~/.texlive/2026/bin/x86_64-linux:$PATH
 export MANPATH=~/.texlive/2026/texmf-dist/doc/man:$MANPATH
 export INFOPATH=~/.texlive/2026/texmf-dist/doc/info:$INFOPATH
 ```
+
+<!--
+TODO: 我记得install-tl会提示设置这些变量，而且变量具体值取决于安装过程中输入的具体信息，那是不是像旧版那样给个例子，然后说「按以上提示添加环境变量」比较好？
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3036359748
+-->
 
 保存并关闭文件后，输入以下命令使环境变量生效：
 
@@ -370,6 +447,21 @@ curl -LO https://github.com/BITNP/BIThesis/raw/refs/heads/main/.github/tl_packag
 sudo tlmgr update --self # 更新 tlmgr 自身（BasicTeX 中的 tlmgr 版本较旧，更新后才能安装新版宏包）
 sudo tlmgr install $(sed -E 's/#.*//' ./tl_packages) # 安装 BIThesis 所需宏包
 ```
+
+<!--
+TODO: 这里原来有段注释，是之前找人测试时收集到的反馈。
+现在是刻意删除了，还是这段注释有误或过时？
+
+>  与 Linux 相比，这里加了 sudo，因为默认安装于`/usr/local/`。
+>  运行`BasicTeX.pkg`时可改安装位置，但 macOS 通常不涉及分区或多用户，一般都不动；需要动的人应该也知道自己在做什么。
+>  因此不必额外说明。
+
+IDDFS3 个月前
+这段应该是被误伤了
+我在写新的时候也想着找个人借台mac验证一下，但是我没有借到，看节后有没有机会去拿到吧
+
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3036386411
+-->
 
 :::: warning ❗ 字体问题
 在 macOS 上，学校要求使用的中易字库由于版权等历史原因并未预装，因此，BIThesis 会默认使用与相关字体有极小差别的开源字体。当你特别在意这些问题时，请参照 [疑难杂症 - 中文字体如何才能与 Word 模板完全相同？（换用中易字库）](../faq/word-font.md) 进行修正。
@@ -430,6 +522,11 @@ biber --version #验证 biber 的安装
 
 ![验证安装](../assets/install-tl/install-finish.png)
 
+<!--
+TODO: 为什么改了图片？若是单纯为了升级版本，我认为没必要，因为未来也做不到每个版本改一次图片。
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3036426467
+-->
+
 出现类似的输出，说明我们编译器安装应该是没有问题的。
 
 准备就绪后，我们还需要选择一个趁手的编辑器，请转到 [📃 配置编辑器](./configure-and-compile.md) 页面进行进一步的操作。
@@ -460,3 +557,13 @@ biber --version #验证 biber 的安装
 	}
 }
 </style>
+
+<!--
+TODO: 可暂缓或忽略的小问题：我记得用 naive ui 好像不需要单独写`<style>`，写的话未来升级需要检查样式，略微麻烦一点。
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3033116156
+-->
+
+<!--
+TODO: 可以暂缓或忽略的小问题：这个`gap: 1.5rem`有什么依据吗？若有，最好写到注释里，方便未来维护；若无，建议删掉，保留 naive ui 默认。
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3033101284
+-->

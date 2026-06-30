@@ -42,12 +42,10 @@ import TemplateList from '../.vitepress/theme/TemplateList.vue'
 
 请单击页面下方“下一页”，继续阅读[教程简介](./intro.md)。
 
-### Q：我能修改 BIThesis 使得它能够满足以毕业设计为模板修改而来的课程报告或者其他文档吗？
+### Q：我能修改 BIThesis 用于课程报告等文档吗？
 
-**A：当然可以！**
+如果文档格式简化自本科生毕业设计论文，那么建议直接使用[上表](#q-bithesis-都包含哪些模板)中的「读书报告」模板，其`main.tex`展示了如何修改页眉和封面字段。
 
-若是课程报告、读书报告之类的需求，建议直接使用上方模板表格中列出的[读书报告模板](#qbithesis-都包含哪些模板)（`reading-report.zip`）。它本身是简化版的本科毕业设计模板，适用于信息与电子学院「电磁场与电磁波」等课程和一些公选课，参考其示例内容修改即可。
-
-若需要在此基础上做更深入的定制，或改造为其它类型的文档，请参照 [详细配置手册`bithesis.pdf`][bithesis-pdf] 来调整模板细节。
+如需进一步定制，可参考[详细配置手册`bithesis.pdf`][bithesis-pdf]。
 
 [bithesis-pdf]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis.pdf
