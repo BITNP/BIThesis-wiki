@@ -31,7 +31,7 @@ importers:
         version: 2.44.1(vue@3.5.39(typescript@6.0.3))
       prettier:
         specifier: ^3.8.1
-        version: 3.8.1
+        version: 3.9.4
       typescript:
         specifier: ^6.0.0
         version: 6.0.3
@@ -817,8 +817,8 @@ packages:
   preact@10.29.0:
     resolution: {integrity: sha512-wSAGyk2bYR1c7t3SZ3jHcM6xy0lcBcDel6lODcs9ME6Th++Dx2KU+6D3HD8wMMKGA8Wpw7OMd3/4RGzYRpzwRg==}
 
-  prettier@3.8.1:
-    resolution: {integrity: sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==}
+  prettier@3.9.4:
+    resolution: {integrity: sha512-yWG/o/4oJfo036EKAfK6ACAoDOfHeRHx4tuxkfBZiauURiaSmYwlpOr5LQqKtIkRD2z1PLteme2WoxEnj4tHTg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -1728,7 +1728,7 @@ snapshots:
 
   preact@10.29.0: {}
 
-  prettier@3.8.1: {}
+  prettier@3.9.4: {}
 
   property-information@7.1.0: {}
 
