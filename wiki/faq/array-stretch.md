@@ -49,4 +49,4 @@ tag:
 \renewcommand*{\arraystretch}{1.6}
 ```
 
-不过这会同时影响表格和矩阵，用于中文并不合适——表格里写方块字，矩阵里写字母，前者行高应大于后者。[[pkg]]的`misc/tabularRowSeparation`选项也用`\arraystretch`实现，不过只影响表格，不影响矩阵。
+不过这会同时影响表格和矩阵，用于中文并不合适——表格里写方块字，矩阵里写字母，前者行高应大于后者。[[pkg:bithesis]]的`misc/tabularRowSeparation`选项也用`\arraystretch`实现，不过只影响表格，不影响矩阵。

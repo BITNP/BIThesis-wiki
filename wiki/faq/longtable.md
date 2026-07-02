@@ -6,7 +6,7 @@ tag: package
 
 <!-- https://github.com/BITNP/BIThesis/discussions/503 -->
 
-使用[[pkg]]制作跨页三线表（续表）。
+使用[[pkg:longtable]]制作跨页三线表（续表）。
 
 ::: details 效果截图
 ![](../assets/longtable.png)

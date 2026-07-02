@@ -57,7 +57,7 @@ $\hbar$
 
 ## 另法
 
-也可如下导入[[pkg]]，全盘更换字体。
+也可如下导入[[pkg:mathdesign]]，全盘更换字体。
 
 ```latex
 \usepackage{mathdesign}

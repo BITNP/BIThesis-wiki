@@ -6,7 +6,7 @@ tag: package
 
 <!-- https://github.com/BITNP/BIThesis/discussions/527 -->
 
-在论文中不可避免的要加入「代码块」。一般我们代码高亮使用的都是[[pkg]]。
+在论文中不可避免的要加入「代码块」。一般我们代码高亮使用的都是[[pkg:minted]]。
 
 ## 使用示例
 

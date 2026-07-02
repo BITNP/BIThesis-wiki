@@ -17,7 +17,7 @@ Latexmk: Doing main (small) clean up for 'main.tex'
 
 此命令也可用于释放磁盘空间或保持文件整洁。
 
-更多细节请查阅[[texdoc]]或 [tldr 太长不看版](https://tldr.inbrowser.app/pages/common/latexmk)。
+更多细节请查阅[[texdoc:latexmk]]或 [tldr 太长不看版](https://tldr.inbrowser.app/pages/common/latexmk)。
 
 ## 统计字数
 
@@ -56,7 +56,7 @@ Subcounts:
 
 :::
 
-更多细节请查阅[[texdoc]]或 [tldr 太长不看版](https://tldr.inbrowser.app/pages/common/texcount)。
+更多细节请查阅[[texdoc:TeXcount]]或 [tldr 太长不看版](https://tldr.inbrowser.app/pages/common/texcount)。
 
 ## 查找帮助文档 {#texdoc}
 
@@ -64,7 +64,7 @@ Subcounts:
 
 - `texdoc biblatex-gb7714-2015`
 
-  👆打开指定宏包的文档，这里会弹出《[[texdoc]]》
+  👆打开指定宏包的文档，这里会弹出《[[texdoc:biblatex-gb7714-2015|符合 GB/T 7714-2015 标准的 biblatex 参考文献样式]]》
 
 - `texdoc texcount`
 
@@ -72,7 +72,7 @@ Subcounts:
 
 - `texdoc lshort-zh-cn`
 
-  👆打开指定参考资料，这里会弹出《[[texdoc]]》
+  👆打开指定参考资料，这里会弹出《[[texdoc:lshort-zh-cn|一份（不太）简短的 LaTeX2e 介绍]]》
 
 ## 补充安装缺失的包 {#tlmgr}
 
@@ -105,4 +105,4 @@ psnfss:
         texmf-dist/tex/latex/psnfss/times.sty
 ```
 
-更多细节请查阅[[texdoc]]或 [tldr 太长不看版](https://tldr.inbrowser.app/pages/common/tlmgr)。
+更多细节请查阅[[texdoc:tlmgr]]或 [tldr 太长不看版](https://tldr.inbrowser.app/pages/common/tlmgr)。
