@@ -10,7 +10,7 @@ tag:
 
 1. 常见修改需求：用选项设置
 
-   搜索[[texdoc:bithesis]]，找到相关设置，然后编辑`main.tex`，设置`\BITSetup{…}`，例如：
+   搜索[[texdoc]]，找到相关设置，然后编辑`main.tex`，设置`\BITSetup{…}`，例如：
 
    ```latex
    \BITSetup{

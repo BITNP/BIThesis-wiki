@@ -35,4 +35,4 @@ tag:
 }
 ```
 
-此外`printbibliography`还支持`notkeyword=<keyword>`、`subtype=<subtype>`等筛选选项，详情请参考[[texdoc:biblatex]]。
+此外`printbibliography`还支持`notkeyword=<keyword>`、`subtype=<subtype>`等筛选选项，详情请参考[[texdoc]]。

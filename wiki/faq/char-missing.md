@@ -33,7 +33,7 @@ tag: font
 
    `\CJKfamily`会切换字体，影响之后所有内容。故另套`{}`来分组，限制其作用范围。
 
-更多解释请参考[[texdoc:lshort-zh-cn]]或[[texdoc:ctex]]。
+更多解释请参考[[texdoc]]或[[texdoc]]。
 
 ::: warning ↕️​​ 字可能上下错位
 有个别同学反映，自定义字体的字会上下错位。这是因为不同字体的基线没对齐。可以考虑用`\raisebox{<竖直位移>}{<内容>}`等方法微调，或者忽略。
@@ -45,7 +45,7 @@ tag: font
 
 - 关闭`\BITSetup`里`style`中的选项`windowsSimSunFakeBold = true`。（删除或修改为`false`）
 
-- 直接设置[[pkg:ctex]]：
+- 直接设置[[pkg]]：
 
   ```latex
   \PassOptionsToClass{fontset=windows}{ctexbook}  % [!code ++]

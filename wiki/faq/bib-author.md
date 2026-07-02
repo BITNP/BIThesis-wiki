@@ -21,7 +21,7 @@ tag:
 }
 ```
 
-具体解释请参考[`pub.bib`中的注释](https://github.com/BITNP/BIThesis/blob/424e5b851df44d42cbf26900874480b5de58484a/templates/graduate-thesis/reference/pub.bib#L32-L33)，或者[[texdoc:bithesis]]。
+具体解释请参考[`pub.bib`中的注释](https://github.com/BITNP/BIThesis/blob/424e5b851df44d42cbf26900874480b5de58484a/templates/graduate-thesis/reference/pub.bib#L32-L33)，或者[[texdoc]]。
 
 ```latex
 % 再比如，若论文作者为「李四、张三、王五、赵六」（你是共同二作），则应该写成：

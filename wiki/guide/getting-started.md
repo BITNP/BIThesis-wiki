@@ -19,7 +19,7 @@
 
 :::details 🔼 要求 TeX Live 至少 2021，请尽量使用最新版（单击展开详情）
 
-为满足我校要求，BIThesis 实现[[texdoc:biblatex-gb7714-2015|参考文献著录]]、[[texdoc:ctex|章节层次]]等细节时，使用了新版特性，不支持早于 2021 的 TeX Live。
+为满足我校要求，BIThesis 实现[[texdoc]]、[[texdoc]]等细节时，使用了新版特性，不支持早于 2021 的 TeX Live。
 
 若之前安装过旧版 TeX Live，请按下文安装最新版[^multiple-texlive]，或考虑使用在线平台。
 

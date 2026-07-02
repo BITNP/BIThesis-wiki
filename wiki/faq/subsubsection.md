@@ -18,9 +18,9 @@ tag:
 \ctexset{tocdepth = subsubsection}
 ```
 
-更多用法请参考[[texdoc:ctex]]。
+更多用法请参考[[texdoc]]。
 
-如需进一步调整目录样式，请使用[[pkg:titletoc]]的`\titlecontents`命令。
+如需进一步调整目录样式，请使用[[pkg]]的`\titlecontents`命令。
 
 - 用法
 
@@ -30,7 +30,7 @@ tag:
     {⟨filler-page-format⟩}[⟨below-code⟩]
   ```
 
-- [[pkg:bithesis]]示例
+- [[pkg]]示例
 
   ::: code-group
 
@@ -62,4 +62,4 @@ tag:
 \hypersetup{bookmarksdepth = subsubsection}
 ```
 
-在[[pkg:ctex]]统一设置目录和书签后，以上代码用[[pkg:hyperref]]重新设置了书签。更多用法请参考[[texdoc:hyperref]]。
+在[[pkg]]统一设置目录和书签后，以上代码用[[pkg]]重新设置了书签。更多用法请参考[[texdoc]]。

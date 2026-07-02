@@ -13,12 +13,12 @@ tag:
 -->
 
 ::: tip 也可换用 cleveref
-如果`\autoref`不能满足需求，可换用[[pkg:cleveref]]的`\cref`，详见[如何使用 cleveref](./cleveref.md)。
+如果`\autoref`不能满足需求，可换用[[pkg]]的`\cref`，详见[如何使用 cleveref](./cleveref.md)。
 :::
 
-[[pkg:hyperref]]提供的`\autoref`可以在交叉引用时自动带上 figure, table, chapter 等名称。
+[[pkg]]提供的`\autoref`可以在交叉引用时自动带上 figure, table, chapter 等名称。
 
-- `\autoref`是给空格分词的语言准备的，按现在[[pkg:bithesis]]的实现，`\autoref{fig:sth}啊` ⇒ `图 1-1啊`，数字前有空格，数字后没空格。改为`\autoref{fig:sth} 啊`（⇒ `图 1-1 啊`）或再像下面那样定义`\figureautorefname`即可。
+- `\autoref`是给空格分词的语言准备的，按现在[[pkg]]的实现，`\autoref{fig:sth}啊` ⇒ `图 1-1啊`，数字前有空格，数字后没空格。改为`\autoref{fig:sth} 啊`（⇒ `图 1-1 啊`）或再像下面那样定义`\figureautorefname`即可。
 
 - 在导言区加下面这段可实现`\autoref{ch:whatever}` ⇒ `第2章`等。
 

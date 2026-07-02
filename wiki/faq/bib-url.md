@@ -24,4 +24,4 @@ tag:
 }
 ```
 
-不要使用`howpublished`字段。若用`howpublished`字段，URL 不含空格或`-`字符时，断行可能出现问题，必须手动处理；此外还要专门转义特殊字符。详见[[texdoc:biblatex-gb7714-2015]]。
+不要使用`howpublished`字段。若用`howpublished`字段，URL 不含空格或`-`字符时，断行可能出现问题，必须手动处理；此外还要专门转义特殊字符。详见[[texdoc]]。

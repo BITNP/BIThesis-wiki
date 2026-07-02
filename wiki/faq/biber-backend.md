@@ -39,6 +39,6 @@ tag:
 
 **原因**：模板要求用 biber 程序编译，但实际用了 bibtex 程序。
 
-**背景原因**：LaTeX 传统上用 BibTeX 排版参考文献，但这种方法对中文支持差。因此，[[pkg:bithesis]]等国内 LaTeX 模板多用[[pkg:biblatex]]，其默认后端是 biber 程序。
+**背景原因**：LaTeX 传统上用 BibTeX 排版参考文献，但这种方法对中文支持差。因此，[[pkg]]等国内 LaTeX 模板多用[[pkg]]，其默认后端是 biber 程序。
 
 **解决方法**：换用 biber。具体请结合自己的编辑器查询互联网或[人工智能](../guide/ask-computer.md)。

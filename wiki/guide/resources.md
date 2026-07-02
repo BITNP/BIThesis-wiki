@@ -36,7 +36,7 @@
 如欲进一步了解，可尝试搜索或阅读以下资料。
 
 1. 手册《[**一份（不太）简短的 LaTeX2e 介绍**——或 111 分钟了解 LaTeX2e](https://mirrors.ctan.org/info/lshort/chinese/lshort-zh-cn.pdf '通常你也可在终端运行“texdoc lshort-zh-cn”获取')》
-   - [[texdoc:lshort|`lshort`]]中文版，考虑了中文的特殊之处。
+   - [[texdoc]]中文版，考虑了中文的特殊之处。
 
    - 有许多小技巧。
 
