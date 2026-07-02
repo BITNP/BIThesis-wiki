@@ -16,7 +16,7 @@ tag:
 更多例子与说明请参考：
 
 - [GB/T 7714—2015《信息与文献　参考文献著录规则》](https://lib.tsinghua.edu.cn/wj/GBT7714-2015.pdf)
-- [[texdoc:biblatex-gb7714-2015]]
+- [[texdoc]]
 
 ## 期刊
 

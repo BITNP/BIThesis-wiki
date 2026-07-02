@@ -23,7 +23,7 @@ tag: par
 
 - 在公式之间写些字，比如介绍一下怎么推导的。
 
-- 将连续的多个`equation`换成单个`align`（该环境由[[pkg:amsmath]]提供）：
+- 将连续的多个`equation`换成单个`align`（该环境由[[pkg]]提供）：
 
   ```latex
   \begin{align}
