@@ -41,3 +41,11 @@ import TemplateList from '../.vitepress/theme/TemplateList.vue'
 ### Q：我该如何使用 BIThesis？
 
 请单击页面下方“下一页”，继续阅读[教程简介](./intro.md)。
+
+### Q：我能修改 BIThesis 用于课程报告等文档吗？
+
+如果文档格式简化自本科生毕业设计论文，那么建议直接使用[上表](#q-bithesis-都包含哪些模板)中的「读书报告」模板，其`main.tex`展示了如何修改页眉和封面字段。
+
+如需进一步定制，可参考[详细配置手册`bithesis.pdf`][bithesis-pdf]。
+
+[bithesis-pdf]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis.pdf

@@ -60,9 +60,9 @@ export default defineConfig({
           text: '食用方法',
           items: [
             { text: '教程简介', link: '/guide/intro' },
-            { text: '安装环境', link: '/guide/getting-started' },
-            { text: '下载模板', link: '/guide/downloading-using-templates' },
-            { text: '编辑器配置与模板编译', link: '/guide/configure-and-compile' },
+            { text: '下载与使用模板', link: '/guide/downloading-using-templates' },
+            { text: '安装 LaTeX 环境', link: '/guide/getting-started' },
+            { text: '配置编辑器', link: '/guide/configure-and-compile' },
           ],
         },
         {
@@ -191,6 +191,9 @@ export default defineConfig({
       const { prev, next } = generate_prev_next_links(page)
       page.frontmatter.prev ??= prev
       page.frontmatter.next ??= next
+    } else if (page.relativePath.startsWith('guide/install-tl/')) {
+      page.frontmatter.prev ??= { text: '安装 LaTeX 环境', link: '/guide/getting-started#安装工作' }
+      page.frontmatter.next ??= { text: '确认安装', link: '/guide/getting-started#确认安装' }
     }
 
     // Set outline level for `/news/*`
