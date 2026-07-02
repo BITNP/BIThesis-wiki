@@ -23,4 +23,4 @@ tag: package
 
 详见：[列表项的行距过大 · Issue #293 · BITNP/BIThesis · GitHub](https://github.com/BITNP/BIThesis/issues/293)
 
-以上功能由[[pkg]]支持，详见[[texdoc]]。（[[pkg]]已经自动导入该宏包。）
+以上功能由[[pkg:enumitem]]支持，详见[[texdoc:enumitem]]。（[[pkg:bithesis]]已经自动导入该宏包。）

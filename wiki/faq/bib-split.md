@@ -15,7 +15,7 @@ tag:
 ![内页](../assets/bib-split-chapter.jpg)
 :::
 
-[[pkg]]提供了`refsection=chapter`选项自动实现，但[[pkg]]间接使用了[[pkg]]，会冲突，无效。于是暂时只能手动实现。
+[[pkg:biblatex]]提供了`refsection=chapter`选项自动实现，但[[pkg:bithesis]]间接使用了[[pkg:titletoc]]，会冲突，无效。于是暂时只能手动实现。
 
 ## 手动方法
 

@@ -18,11 +18,11 @@ tag: font
 \documentclass[…, ctex={fontset=windows}]{bithesis}  % [!code ++]
 ```
 
-这会让[[pkg]]跳过操作系统检测，直接使用 Windows 平台默认的中易字库。
+这会让[[pkg:ctex]]跳过操作系统检测，直接使用 Windows 平台默认的中易字库。
 
 ::: details 其它 LaTeX 文档怎么办？
 
-以上方法仅限[[pkg]]。自己直接用[[pkg]]请如下设置：
+以上方法仅限[[pkg:bithesis]]。自己直接用[[pkg:ctex]]请如下设置：
 
 ```latex
 \documentclass{ctexbook}  % [!code --]
@@ -38,7 +38,7 @@ tag: font
 
 :::
 
-如上设置后，若[[pkg]]报错`The font "SimSun" cannot be found`，说明您的平台并无中易字库，需补充准备字体文件，请继续操作。
+如上设置后，若[[pkg:fontspec]]报错`The font "SimSun" cannot be found`，说明您的平台并无中易字库，需补充准备字体文件，请继续操作。
 
 ## 准备字体文件
 
@@ -86,11 +86,11 @@ fc-cache -fv
 
 ::: details 原因
 
-[[pkg]]使用[[pkg]]调用字体，调用时按**字体名**（如 SimSun），而非**文件名**（如`simsun.ttc`）。这可能是考虑到文件名能随意更改，不反映文件中的实际字体。
+[[pkg:ctex]]使用[[pkg:fontspec]]调用字体，调用时按**字体名**（如 SimSun），而非**文件名**（如`simsun.ttc`）。这可能是考虑到文件名能随意更改，不反映文件中的实际字体。
 
-根据[[texdoc]] §2 Font selection，按字体名调用时，只支持 XeTeX/LuaTeX 已知的系统字体（≈ 操作系统字体目录的字体）；按文件名调用时，才会搜索当前工作目录（≈ LaTeX 项目）中的字体文件。
+根据[[texdoc:fontspec]] §2 Font selection，按字体名调用时，只支持 XeTeX/LuaTeX 已知的系统字体（≈ 操作系统字体目录的字体）；按文件名调用时，才会搜索当前工作目录（≈ LaTeX 项目）中的字体文件。
 
-然而在线平台上，我们没有权限添加系统字体。于是只好绕过[[pkg]]默认机制，自己按文件名调用字体。
+然而在线平台上，我们没有权限添加系统字体。于是只好绕过[[pkg:ctex]]默认机制，自己按文件名调用字体。
 
 :::
 
@@ -103,7 +103,7 @@ fc-cache -fv
    <<< ../assets/word-font-ctex-fontset-windows.def{latex}
 
    ::: warning 📅 最后检查于2025年10月
-   以上内容修改自[[pkg]] 2.5.10 2022-07-14 的`ctex-fontset-windows.def`，以后可能需要参考 [CTeX-org/ctex-kit 源代码](https://github.com/CTeX-org/ctex-kit/blob/1ee66c6f130802d3400f893db01fd6a6701ab164/ctex/ctex.dtx#L11065-L11172)更新。
+   以上内容修改自[[pkg:ctex]] 2.5.10 2022-07-14 的`ctex-fontset-windows.def`，以后可能需要参考 [CTeX-org/ctex-kit 源代码](https://github.com/CTeX-org/ctex-kit/blob/1ee66c6f130802d3400f893db01fd6a6701ab164/ctex/ctex.dtx#L11065-L11172)更新。
    :::
 
    ::::
@@ -134,9 +134,9 @@ fc-cache -fv
 
 ## 参考
 
-- [[texdoc]]
-- [[texdoc]]
-- [[texdoc]]
+- [[texdoc:ctex]]
+- [[texdoc:xeCJK]]
+- [[texdoc:fontspec]]
 - [Overleaf 中的 CJK 字体设置 | sikouhjw.github.io](https://sikouhjw.github.io/2021/02/14/2021-02-14-fontset-overleaf/)
 - [SimSun font family - Typography | Microsoft Learn](https://learn.microsoft.com/zh-cn/typography/font-list/simsun)
 - [字体重新分发常见问题解答 - Typography | Microsoft Learn][ms-font-faq]

@@ -16,4 +16,4 @@ tag: biblatex-gb7714-2015
 \setcounter{gbrefcompress}{3}
 ```
 
-详见[[texdoc]]。
+详见[[texdoc:biblatex-gb7714-2015]]。

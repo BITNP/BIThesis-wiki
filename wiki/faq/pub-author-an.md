@@ -26,7 +26,7 @@ const generated = useTemplateRef('generated')
 ## 用法说明
 
 > [!TIP]
-> 以下摘自[[texdoc]]。
+> 以下摘自[[texdoc:bithesis]]。
 
 ### `author+an`字段
 
@@ -41,8 +41,8 @@ const generated = useTemplateRef('generated')
 以上这样的`author+an`字段用于标注（annotate）论文作者的位置，其中
 
 - `1`——论文作者的位置，即论文作者的位置是第1个。
-- `myself`——[[pkg]]固定标记，不需要修改。
-- `\Author`——[[pkg]]提供的 LaTeX 命令，普通模式显示作者姓名，盲审模式显示`第一作者`，更多用法见下。
+- `myself`——[[pkg:bithesis]]固定标记，不需要修改。
+- `\Author`——[[pkg:bithesis]]提供的 LaTeX 命令，普通模式显示作者姓名，盲审模式显示`第一作者`，更多用法见下。
 
 ### `\Author`和`\AuthorEn`命令
 

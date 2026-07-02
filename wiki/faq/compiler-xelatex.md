@@ -6,7 +6,7 @@ tag:
 
 # 空模板无法编译（如何换用 XeLaTeX？）
 
-很可能是编译器设置成了 pdfLaTeX。该编译器几乎不支持汉字，请换成[[pkg]]支持的 XeLaTeX。
+很可能是编译器设置成了 pdfLaTeX。该编译器几乎不支持汉字，请换成[[pkg:bithesis]]支持的 XeLaTeX。
 
 - 本地平台——请参考 [📃 编辑器配置与模板编译](../guide/configure-and-compile.md)
   - **徒手`latexmk`和 TeXstudio**——默认识别`! TeX`魔术注释和`latexmkrc`，正常没有问题。

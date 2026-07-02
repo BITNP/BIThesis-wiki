@@ -6,7 +6,7 @@ tag:
 
 # 怎样让空白页有页眉页脚？
 
-可以[通过`\cleardoublepage`或`openright`在正文插入空白页](./clear-double-page.md)。[[pkg]]默认这种空白页无页眉页脚，不标页码但计入页码。这种做法与很多专业出版社排的纸书一致。
+可以[通过`\cleardoublepage`或`openright`在正文插入空白页](./clear-double-page.md)。[[pkg:bithesis]]默认这种空白页无页眉页脚，不标页码但计入页码。这种做法与很多专业出版社排的纸书一致。
 
 如果你想让空白页也有页眉页脚，可以编辑`main.tex`，**在`\mainmatter`之后**加入以下代码。
 

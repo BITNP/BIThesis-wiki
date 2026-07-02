@@ -14,7 +14,7 @@ tag:
 
   ![](../assets/weird-font-comma.png)
 
-- [[pkg]]的`them`定理环境中汉字倾斜
+- [[pkg:bithesis]]的`them`定理环境中汉字倾斜
 
   （正常情况：楷体）
 

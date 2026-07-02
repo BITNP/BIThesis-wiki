@@ -29,12 +29,12 @@ const generated = useTemplateRef('generated')
 }
 ```
 
-注意，以上只展示`\BITSetup`用法，不会验证选项是否有效；具体请参考[[texdoc]]。
+注意，以上只展示`\BITSetup`用法，不会验证选项是否有效；具体请参考[[texdoc:bithesis]]。
 
 ## 用法说明
 
 > [!TIP]
-> 以下删改自[[texdoc]]“参数设置”一节。
+> 以下删改自[[texdoc:bithesis]]“参数设置”一节。
 
 BIThesis 模板提供了一系列选项，您（文章作者）可用`\BITSetup`命令设置它们。该命令的参数是 LaTeX3 风格的多层键值列表。
 

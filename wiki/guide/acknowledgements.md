@@ -97,5 +97,5 @@ import Contribution from '../.vitepress/theme/Contribution.vue'
 |  🎨   |         Design         |     项目 logo、图标等素材设计      |
 |  🌍   |      Translation       | 国际化，文档、注释与参考资料的翻译 |
 |  📓   |      User Testing      |              参与测试              |
-|   🎞   | Video Tutorial Editing |         视频教程文案、剪辑         |
-|   🎙   |      Voice/Sound       |         视频教程配音、调音         |
+|  🎞   | Video Tutorial Editing |         视频教程文案、剪辑         |
+|  🎙   |      Voice/Sound       |         视频教程配音、调音         |

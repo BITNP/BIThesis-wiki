@@ -8,7 +8,7 @@ tag:
 
 有以下三种互不兼容的方式。
 
-## [[pkg]]方式（推荐）{#algorithm2e}
+## [[pkg:algorithm2e]]方式（推荐）{#algorithm2e}
 
 引入宏包时，要加上选项 `algochapter` 才能按学校要求分章编号，示例如下。
 
@@ -27,9 +27,9 @@ tlmgr install algorithm2e endfloat ifoddpage tocbibind
 
 :::
 
-## [[pkg]] + X 方式
+## [[pkg:algorithms|algorithm]] + X 方式
 
-引入[[pkg]]时，要加上选项 `chapter` 才能按学校要求分章编号，示例如下。
+引入[[pkg:algorithms|algorithm]]时，要加上选项 `chapter` 才能按学校要求分章编号，示例如下。
 
 ```latex
 \usepackage[chapter]{algorithm}
@@ -39,12 +39,12 @@ tlmgr install algorithm2e endfloat ifoddpage tocbibind
 使用示例请参考 [Algorithms - Overleaf 文档](https://www.overleaf.com/learn/latex/Algorithms)。
 
 ::: warning 🧓 不推荐
-[[pkg]]2009年后就未再更新，有些小问题，我们不推荐使用（除非您已有现成代码）。例如，`algorithm`环境按`H`与`h/t/b/p`方式浮动时，算法内部的行距不同；再比如`\IF`等命令设计得不好，LaTeX 源代码难以自动缩进。
+[[pkg:algorithms]]2009年后就未再更新，有些小问题，我们不推荐使用（除非您已有现成代码）。例如，`algorithm`环境按`H`与`h/t/b/p`方式浮动时，算法内部的行距不同；再比如`\IF`等命令设计得不好，LaTeX 源代码难以自动缩进。
 :::
 
 ::: tip 📏 微调下边线宽度
 
-`algorithm`环境默认采用[[pkg]]提供的`ruled`样式，这种样式会在算法内容上下画边线。
+`algorithm`环境默认采用[[pkg:float]]提供的`ruled`样式，这种样式会在算法内容上下画边线。
 
 然而下边线默认会比上边线细，有部分盲评专家建议改粗。如果你想改粗，请在`\usepackage{algorithmic}`之后加上以下代码。
 

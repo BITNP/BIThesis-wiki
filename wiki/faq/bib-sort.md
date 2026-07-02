@@ -54,7 +54,7 @@ tag:
 
 例如，上面这样可保证它在`sortkey = {001}`那项后面，且在没标`sortkey`的其它项前面。
 
-详细解释可参考[[texdoc]]（中文）或[[texdoc]]（英文）。
+详细解释可参考[[texdoc:biblatex-gb7714-2015]]（中文）或[[texdoc:biblatex]]（英文）。
 
 ::: details 更全面的例子
 

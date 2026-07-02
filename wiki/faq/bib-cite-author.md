@@ -23,13 +23,13 @@ tag:
 
 > 正文中引用多著者文献时，对欧美著者只需标注第一个著者的姓，其后附“et al.”；对于中国著者应标注第一著者的姓名，其后附“等”字。姓氏与“et al.”“等”之间留适当空隙。
 
-[[pkg]]的默认样式可能是由此外推而来。
+[[pkg:biblatex-gb7714-2015]]的默认样式可能是由此外推而来。
 
 :::
 
 ## 若想始终用“等”并保留空格
 
-请编辑`main.tex`，在导入[[pkg]]时设置`gbcitelocal=chinese`。
+请编辑`main.tex`，在导入[[pkg:biblatex]]时设置`gbcitelocal=chinese`。
 
 ```latex {5}
 \usepackage[
@@ -60,4 +60,4 @@ tag:
 
 > 吴伟仁等<sup>[1]</sup>和 Su 等<sup>[2]</sup>都涉及“嫦娥”任务。
 
-更新信息请参考[[texdoc]]。
+更新信息请参考[[texdoc:biblatex-gb7714-2015]]。

@@ -34,7 +34,7 @@ tag: meta
   - `$max_repeat = 1`：检测编译无限循环时，限制最多调用一次`*latex`
   - `$force_mode = 1`：发现 LaTeX 有交叉引用等方面的小问题时，仍继续处理，而不是直接报错
 
-  详见[[texdoc]]。
+  详见[[texdoc:latexmk]]。
 
   :::
 

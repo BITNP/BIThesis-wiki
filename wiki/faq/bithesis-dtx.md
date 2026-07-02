@@ -14,4 +14,4 @@ tag:
 
 - dtx 里的`@@`表示`_bithesis`。
 
-更多细节请移步[`DEVELOPMENT.md` · BITNP/BIThesis](https://github.com/BITNP/BIThesis/blob/main/DEVELOPMENT.md)或查阅[[texdoc]]。
+更多细节请移步[`DEVELOPMENT.md` · BITNP/BIThesis](https://github.com/BITNP/BIThesis/blob/main/DEVELOPMENT.md)或查阅[[texdoc:docstrip]]。
