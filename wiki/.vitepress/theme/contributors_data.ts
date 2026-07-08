@@ -96,6 +96,11 @@ export const contributors: Contributor[] = [
     homepage: 'https://github.com/Aaron-Gp',
     avatar: 'https://i0.wp.com/wx4.sinaimg.cn/mw690/0096VMbkgy1i6vhh13qj9j30v40v441g.jpg?crop=5,5,85,85',
   },
+  {
+    name: 'IDDFS',
+    homepage: 'https://github.com/IDDFS',
+    avatar: 'https://files.seeusercontent.com/2026/04/28/dmR4/github-IDDFS-avatar.jpg',
+  },
 ]
 
 /** Get a `Contributor` by his/her `name` */
