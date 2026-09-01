@@ -7,7 +7,9 @@ retry_wait_time = 30 # seconds
 exclude = [
   # 无需检查
   '^https://github\.com/BITNP/BIThesis-wiki/edit/main/',
+  '^https://github\.com/BITNP/BIThesis/projects',
   '^file://.*/\.vitepress/dist/assets/.+\.(css|js|woff2)',
+  '^https://web\.archive\.org/web/',
 
   # 403 Forbidden，但仅作存档，已不再使用
   '^https://join\.slack\.com/t/bithesis/shared_invite',
