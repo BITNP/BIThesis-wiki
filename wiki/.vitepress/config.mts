@@ -60,9 +60,9 @@ export default defineConfig({
           text: '食用方法',
           items: [
             { text: '教程简介', link: '/guide/intro' },
-            { text: '安装环境', link: '/guide/getting-started' },
-            { text: '下载模板', link: '/guide/downloading-using-templates' },
-            { text: '编辑器配置与模板编译', link: '/guide/configure-and-compile' },
+            { text: '下载或使用模板', link: '/guide/downloading-using-templates' },
+            { text: '安装 LaTeX 环境', link: '/guide/getting-started' },
+            { text: '配置编辑器', link: '/guide/configure-and-compile' },
           ],
         },
         {
