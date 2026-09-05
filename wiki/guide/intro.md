@@ -1,6 +1,6 @@
 # 教程简介
 
-## Q：我该如何学习使用 BIThesis？
+<!-- ## Q：我该如何学习使用 BIThesis？
 
 A：有以下**两种选择**。无论哪种，都几乎涵盖了使用 BIThesis 所需的编译环境和基础知识，请大家放心食用。
 
@@ -11,19 +11,17 @@ A：有以下**两种选择**。无论哪种，都几乎涵盖了使用 BIThesis
 2. 「**食用方法**」（本站后续页面）
    - 面向有一定计算机基础的同学
    - 一系列网页
-   - 详细介绍各种情况的使用方法和注意事项
+   - 详细介绍各种情况的使用方法和注意事项 -->
+
+BIThesis 为使用者提供了两种学习方式，一种是在线的 PDF 「**快速使用指南**」，另一种则是本网站的后续部分 「**食用方法**」。
 
 <aside hidden>
 此外也可直接前往「[系列视频指导](../video/intro.md)」，根据视频的介绍进行学习使用。（录制于 2020 年，与目前的模板使用方式有些许出入；仅供参考）——你好，考古学家！
 </aside>
 
-阅读完毕即可开始写作。到时有需要再进一步参考[详细配置手册`bithesis.pdf`][bithesis-pdf]。
-
-[bithesis-pdf]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis.pdf
-
 :::warning ✋ 遇到问题？{#help}
 
-如果遇到问题，你可以——
+无论选择哪种学习方式，遇到问题时你都可以——
 
 1. 搜索本站 [🥑 疑难杂症](../faq/)（搜索栏在页面上方）
 2. 查询互联网及 [🤖 人工智能](./ask-computer.md)
@@ -31,21 +29,64 @@ A：有以下**两种选择**。无论哪种，都几乎涵盖了使用 BIThesis
 
 :::
 
+## 快速使用指南
+
+<!--
+TODO: 退回旧版
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3032914158
+
+> 预览：[新](https://deploy-preview-601--bithesis-wiki.netlify.app/guide/intro.html) vs. [旧](https://bithesis.bitnp.net/guide/intro.html#q-%E6%88%91%E8%AF%A5%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8-bithesis)
+
+呃，我倾向于这里保持旧版。
+
+理由：
+
+- 这段内容仅仅是说有两条学习路线，本身并不提供信息，那篇幅应该越短越好。
+
+- 新版几乎紧挨着写了两句意思相同的话：
+
+  > 目前包含 LaTeX 环境安装、编辑器配置、模板下载与使用三部分
+
+  > 配置 BIThesis 的方法相应分为三步：……
+
+
+<details><summary>截图</summary>
+
+### 旧版
+
+<img width="600" alt="Image" src="https://github.com/user-attachments/assets/4a1c1875-10be-476c-b387-165be09fd351" />
+
+### 新版
+
+<img width="600" alt="Image" src="https://github.com/user-attachments/assets/08ab55c0-aebd-48ce-9bd5-46d109acedab" />
+
+</details>
+-->
+
+快速使用指南为面向初学者、没有太多计算机基础的同学而编写的一份附图 PDF 文档，该文档涵盖了使用 BIThesis 的基础知识，能够较为直观、快速地上手 BIThesis。
+
+快速使用指南提供 [本科][undergraduate-handbook] 与 [硕博][graduate-handbook] 两个版本，点击即可打开相应界面。
+
+阅读完毕即可开始写作。到时有需要再进一步参考[详细配置手册`bithesis.pdf`][bithesis-pdf]，该手册会随着模板包一同发布。
+
+[bithesis-pdf]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis.pdf
 [undergraduate-handbook]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis-handbook-undergraduate.pdf
 [graduate-handbook]: https://mirrors.ctan.org/macros/unicodetex/latex/bithesis/bithesis-handbook-graduate.pdf
 
 ## 食用方法
 
+食用方法为该网站的后续网页，通过本站的一系列网页你会在本地搭建好 LaTeX 写作环境，本站未来会提供一份简明的 LaTeX 学习指导手册。
+
 下图展示了 LaTeX 典型写作环境。编辑**文本文件**（左半图以`.tex`结尾的文件），让编辑器**调用**一些**工具**，生成 PDF（右半图本科毕业设计封面）。
 
 ![Screenshot of Undergraduate Thesis template](../assets/screenshot-undergrad.png)
 
-食用方法相应分为三步：
+配置 BIThesis 的方法相应分为三步：
 
-1. [🍌 安装 LaTeX 环境](./getting-started.md)——下载并安装这些**工具**
-2. [📁 下载与使用模板](./downloading-using-templates.md)——下载 BIThesis 提供的**文本文件**
-3. [📃 编辑器配置与模板编译](./configure-and-compile.md)——告知编辑器如何**调用**工具
+1. [📁 下载或使用模板](./downloading-using-templates.md)——根据你选择的写作方式，下载或使用 BIThesis 提供的对应**模板包**
+2. [🍌 安装 LaTeX 环境](./getting-started.md)——下载并安装 LaTeX **工具**，完成编译环境的配置
+3. [📃 配置编辑器](./configure-and-compile.md)——告知编辑器如何**调用**工具，并成功编译模板包中提供的示例文件
 
 完成三步后，应该就能开始写作了。
 
-不过注意写作需按 LaTeX **语法**编辑文本文件。如您之前未接触过，可参考[上方《快速使用指南》](#q-我该如何学习使用-bithesis)的第3章与第4章或本站 [👩‍🏫 LaTeX 学习与使用资源](./resources.md)。
+不过注意写作需按 LaTeX **语法**编辑文本文件。如您之前未接触过，可参考 [上方《快速使用指南》](#快速使用指南)的第3章与第4章或本站 [👩‍🏫 LaTeX 学习与使用资源](./resources.md)。
