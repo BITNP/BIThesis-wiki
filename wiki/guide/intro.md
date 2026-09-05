@@ -42,7 +42,7 @@ A：有以下**两种选择**。无论哪种，都几乎涵盖了使用 BIThesis
 
 食用方法相应分为三步：
 
-1. [🍌 安装 LaTeX 环境](./getting-started.md)——下载并安装这些**工具**
+1. [🍌 安装 LaTeX 环境](./latex-env.md)——下载并安装这些**工具**
 2. [📁 下载与使用模板](./downloading-using-templates.md)——下载 BIThesis 提供的**文本文件**
 3. [📃 编辑器配置与模板编译](./configure-and-compile.md)——告知编辑器如何**调用**工具
 

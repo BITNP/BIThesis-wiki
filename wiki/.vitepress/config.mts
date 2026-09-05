@@ -1,10 +1,12 @@
 import assert from 'node:assert'
+import path from 'node:path'
 
 import footnote from 'markdown-it-footnote'
 import { defineConfig, type DefaultTheme } from 'vitepress'
 
 import { generate_sitemap_page } from './sitemap_page'
 import { vite_ssr, postRender, transformHtml } from './naive-ui-adapter/config'
+import { createRedirectPlugin, writePlatformRedirects } from './redirects'
 import { generate_index_tex, generate_prev_next_links } from './theme/faq_data'
 import LinkRender from './theme/link_render'
 
@@ -60,7 +62,7 @@ export default defineConfig({
           text: '食用方法',
           items: [
             { text: '教程简介', link: '/guide/intro' },
-            { text: '安装环境', link: '/guide/getting-started' },
+            { text: '安装环境', link: '/guide/latex-env' },
             { text: '下载模板', link: '/guide/downloading-using-templates' },
             { text: '编辑器配置与模板编译', link: '/guide/configure-and-compile' },
           ],
@@ -172,6 +174,7 @@ export default defineConfig({
   },
   async buildEnd(site) {
     await Promise.all([generate_index_tex(site), generate_sitemap_page(site)])
+    writePlatformRedirects(site)
   },
   transformPageData(page, context) {
     // Add pre/next links to `/faq/*`
@@ -200,7 +203,10 @@ export default defineConfig({
     }
   },
   // Naive UI adapter
-  vite: { ssr: vite_ssr },
+  vite: {
+    ssr: vite_ssr,
+    plugins: [createRedirectPlugin(path.resolve(process.cwd(), 'wiki'))],
+  },
   postRender,
   transformHtml,
 })
