@@ -1,3 +1,21 @@
+<!--
+TODO: 图片 windows-basic.png 的文件名是否应该是 advanced 而非 basic？
+
+https://github.com/BITNP/BIThesis-wiki/pull/601#discussion_r3031060337
+
+另外这张图与之前的`advanced.png`有重要区别吗？如果有，建议像之前一样用亮暗和文字标注哪里需要修改；若仅仅是把 2025 改成 2026，建议不替换图片，因为未来估计做不到每年更新截图。
+
+#### 之前
+
+<img width="600" alt="Image" src="https://github.com/user-attachments/assets/536760bb-6002-4fd2-8d2c-d5a5a6749bf4" />
+
+#### 现在
+
+<img width="600" alt="Image" src="https://github.com/user-attachments/assets/cefd9bef-cf06-4871-8456-5852997eee06" />
+
+2026年6月30日更新：现在这张图片好像没用到。
+-->
+
 <div align="center">
   <img src="./assets/bithesis_icon.svg" alt="BIThesis Icon" />
 
