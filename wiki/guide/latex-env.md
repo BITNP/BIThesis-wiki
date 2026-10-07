@@ -1,3 +1,8 @@
+---
+redirect-from:
+  - /guide/getting-started
+---
+
 # 🍌 如何开始——安装 LaTeX 环境
 
 ## 准备工作
