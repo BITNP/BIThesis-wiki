@@ -57,9 +57,11 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           # 必须检查构建结果，因为有些链接在 *.md 里没有，如 wiki/.vitepress/theme/link_render.ts
+          # 另：会写完整 URL 的只有 sitemap.xml，故只有这次调用需要 remap
           args: >-
             --verbose
             --no-progress
             --config .github/lychee.toml
             --root-dir "${{ github.workspace }}/wiki/.vitepress/dist/"
+            --remap "^https://bithesis\.bitnp\.net file://${{ github.workspace }}/wiki/.vitepress/dist/"
             ./wiki/.vitepress/dist/
